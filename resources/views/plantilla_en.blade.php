@@ -72,26 +72,26 @@
                     <div class="img1-carousel">
                     </div>
                     <div class="carousel-caption">
-                        <h1 class="text-primary">@php echo $textos[6]["spanish"]; @endphp</h1>
-                        <h3 class="text-primary">@php echo $textos[7]["spanish"]; @endphp</h3>
+                        <h1 class="text-primary">@php echo $textos[6]["english"]; @endphp</h1>
+                        <h3 class="text-primary">@php echo $textos[7]["english"]; @endphp</h3>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="img2-carousel"></div>
                     <div class="carousel-caption">
-                        <h1 class="text-primary">@php echo $textos[8]["spanish"]; @endphp</h1>
+                        <h1 class="text-primary">@php echo $textos[8]["english"]; @endphp</h1>
                         <div class="row d-flex justify-content-around">
                             <div class="col-xs-12 col-md-4 d-flex align-items-center">
                                 <img src="images/slider-icon2.png" alt="">
-                                <h3 class="text-primary">@php echo $textos[9]["spanish"]; @endphp</h3>
+                                <h3 class="text-primary">@php echo $textos[9]["english"]; @endphp</h3>
                             </div>
                             <div class="col-xs-12 col-md-4 d-flex align-items-center"><img src="images/slider-icon2.png"
                                     alt="">
-                                <h3 class="text-primary">@php echo $textos[10]["spanish"]; @endphp</h3>
+                                <h3 class="text-primary">@php echo $textos[10]["english"]; @endphp</h3>
                             </div>
                             <div class="col-xs-12 col-md-4 d-flex align-items-center"><img src="images/slider-icon2.png"
                                     alt="">
-                                <h3 class="text-primary">@php echo $textos[11]["spanish"]; @endphp</h3>
+                                <h3 class="text-primary">@php echo $textos[11]["english"]; @endphp</h3>
                             </div>
                         </div>
                     </div>
@@ -110,21 +110,21 @@
 
     <section class="container-fluid d-flex justify-content-center seccion-dos">
         <div class="col-xs-12 col-md-6 align-self-center bg-white columna">
-            <h3 class="text-center">@php echo $textos[12]["spanish"]; @endphp</h3>
-            <p class="text-justify">@php echo $textos[13]["spanish"]; @endphp</p>
+            <h3 class="text-center">@php echo $textos[12]["english"]; @endphp</h3>
+            <p class="text-justify">@php echo $textos[13]["english"]; @endphp</p>
         </div>
     </section>
 
     <section class="container-fluid d-flex justify-content-end seccion-tres">
         <div class="col-xs-12 col-md-6 align-self-center bg-white columna">
-            <h3 class="text-center">@php echo $textos[14]["spanish"]; @endphp</h3>
-            <h4 class="text-center">@php echo $textos[15]["spanish"]; @endphp</h4>
+            <h3 class="text-center">@php echo $textos[14]["english"]; @endphp</h3>
+            <h4 class="text-center">@php echo $textos[15]["english"]; @endphp</h4>
             <div class="row d-flex">
                 <div class="col-xs-2 col-md-1 align-self-center">
                     <img src="images/icon-decor-1.png" alt="" class="rounded-circle" style="background-color: #ddb2c6;">
                 </div>
                 <div class="col-xs-10 col-md-11 align-self-center">
-                    <p class="text-justify">@php echo $textos[16]["spanish"]; @endphp</p>
+                    <p class="text-justify">@php echo $textos[16]["english"]; @endphp</p>
                 </div>
             </div>
             <div class="row">
@@ -132,7 +132,7 @@
                     <img src="images/icon-decor-2.png" alt="" class="rounded-circle" style="background-color: #ddad9f;">
                 </div>
                 <div class="col-xs-10 col-md-11 align-self-center">
-                    <p class="text-justify">@php echo $textos[17]["spanish"]; @endphp</p>
+                    <p class="text-justify">@php echo $textos[17]["english"]; @endphp</p>
                 </div>
             </div>
             <div class="row">
@@ -140,7 +140,7 @@
                     <img src="images/icon-decor-3.png" alt="" class="rounded-circle" style="background-color: #b4c0ca;">
                 </div>
                 <div class="col-xs-10 col-md-11 align-self-center">
-                    <p class="text-justify">@php echo $textos[18]["spanish"]; @endphp</p>
+                    <p class="text-justify">@php echo $textos[18]["english"]; @endphp</p>
                 </div>
             </div>
             <div class="row">
@@ -148,7 +148,7 @@
                     <img src="images/icon-decor-1.png" alt="" class="rounded-circle" style="background-color: #ddb2c6;">
                 </div>
                 <div class="col-xs-10 col-md-11 align-self-center">
-                    <p class="text-justify">@php echo $textos[19]["spanish"]; @endphp
+                    <p class="text-justify">@php echo $textos[19]["english"]; @endphp
                     </p>
                 </div>
             </div>
@@ -157,7 +157,7 @@
                     <img src="images/icon-decor-1.png" alt="" class="rounded-circle" style="background-color: #ddad9f;">
                 </div>
                 <div class="col-xs-10 col-md-11 align-self-center">
-                    <p class="text-justify">@php echo $textos[20]["spanish"]; @endphp</p>
+                    <p class="text-justify">@php echo $textos[20]["english"]; @endphp</p>
                 </div>
             </div>
         </div>
@@ -165,14 +165,14 @@
 
     <section class="container-fluid d-flex justify-content-start seccion-cuatro">
         <div class="col-xs-5 col-md-6 align-self-center bg-white columna">
-            <h3 class="text-center">@php echo $textos[21]["spanish"]; @endphp</h3>
-            <h4 class="text-center">@php echo $textos[22]["spanish"]; @endphp</h4>
+            <h3 class="text-center">@php echo $textos[21]["english"]; @endphp</h3>
+            <h4 class="text-center">@php echo $textos[22]["english"]; @endphp</h4>
             <div class="row">
                 <div class="col-xs-2 col-md-1 align-self-center">
                     <img src="images/icon-decor-1.png" alt="" class="rounded-circle" style="background-color: #ddb2c6;">
                 </div>
                 <div class="col-xs-10 col-md-11">
-                    <p class="text-justify">@php echo $textos[23]["spanish"]; @endphp</p>
+                    <p class="text-justify">@php echo $textos[23]["english"]; @endphp</p>
                 </div>
             </div>
             <div class="row">
@@ -180,7 +180,7 @@
                     <img src="images/icon-decor-2.png" alt="" class="rounded-circle" style="background-color: #ddad9f;">
                 </div>
                 <div class="col-xs-10 col-md-11">
-                    <p class="text-justify">@php echo $textos[24]["spanish"]; @endphp</p>
+                    <p class="text-justify">@php echo $textos[24]["english"]; @endphp</p>
                 </div>
             </div>
             <div class="row">
@@ -188,7 +188,7 @@
                     <img src="images/icon-decor-3.png" alt="" class="rounded-circle" style="background-color: #b4c0ca;">
                 </div>
                 <div class="col-xs-10 col-md-11">
-                    <p class="text-juestify">@php echo $textos[25]["spanish"]; @endphp</p>
+                    <p class="text-juestify">@php echo $textos[25]["english"]; @endphp</p>
                 </div>
             </div>
         </div>
@@ -196,8 +196,8 @@
 
     <section class="container-fluid d-flex justify-content-end seccion-cinco">
         <div class="col-xs-6 col-md-6 align-self-center bg-white columna">
-            <h3 class="text-center">@php echo $textos[26]["spanish"]; @endphp</h3>
-            <h4 class="text-center">@php echo $textos[27]["spanish"]; @endphp</h4>
+            <h3 class="text-center">@php echo $textos[26]["english"]; @endphp</h3>
+            <h4 class="text-center">@php echo $textos[27]["english"]; @endphp</h4>
             <div class="row">
                 <div class="col-xs-6 col-md-12 align-self-center text-center">
                     <iframe src="https://www.youtube.com/embed/3fJfN_DbgVo" frameborder="0"
@@ -206,7 +206,7 @@
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
-                <p class="text-justify">@php echo $textos[28]["spanish"]; @endphp</p>
+                <p class="text-justify">@php echo $textos[28]["english"]; @endphp</p>
                 <a href="#" class="btn btn-primary btn-block">Solicita Más información</a>
             </div>
         </div>
@@ -218,9 +218,9 @@
                 <img src="images/problemas-de-espalda-.png" class="img-fluid" alt="">
             </div>
             <div class="col-xs-12 col-md-6 columna">
-                <h1 class="text-center">@php echo $textos[29]["spanish"]; @endphp</h1>
+                <h1 class="text-center">@php echo $textos[29]["english"]; @endphp</h1>
                 <div>
-                    @php echo $textos[30]["spanish"]; @endphp
+                    @php echo $textos[30]["english"]; @endphp
                 </div>
             </div>
         </div>
@@ -228,14 +228,14 @@
 
     <section class="container-fluid d-flex justify-content-center seccion-siete">
         <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
-            <h3 class="text-center">@php echo $textos[31]["spanish"]; @endphp</h3>
-            <h4 class="text-center">@php echo $textos[32]["spanish"]; @endphp</h4>
+            <h3 class="text-center">@php echo $textos[31]["english"]; @endphp</h3>
+            <h4 class="text-center">@php echo $textos[32]["english"]; @endphp</h4>
             <div class="row">
                 <div class="col-1 col-xl-1 align-self-center">
                     <img src="images/icon-decor-1.png" alt="" class="rounded-circle" style="background-color: #b4c0ca;">
                 </div>
                 <div class="col-11">
-                    <p class="text-justify">@php echo $textos[33]["spanish"]; @endphp</p>
+                    <p class="text-justify">@php echo $textos[33]["english"]; @endphp</p>
                 </div>
             </div>
             <div class="row">
@@ -243,7 +243,7 @@
                     <img src="images/icon-decor-2.png" alt="" class="rounded-circle" style="background-color: #ddad9f;">
                 </div>
                 <div class="col-11">
-                    <p class="text-justify">@php echo $textos[34]["spanish"]; @endphp</p>
+                    <p class="text-justify">@php echo $textos[34]["english"]; @endphp</p>
                 </div>
             </div>
             <div class="row">
@@ -251,7 +251,7 @@
                     <img src="images/icon-decor-3.png" alt="" class="rounded-circle" style="background-color: #ddb2c6;">
                 </div>
                 <div class="col-11">
-                    <p class="text-justify">@php echo $textos[35]["spanish"]; @endphp</p>
+                    <p class="text-justify">@php echo $textos[35]["english"]; @endphp</p>
                 </div>
             </div>
         </div>

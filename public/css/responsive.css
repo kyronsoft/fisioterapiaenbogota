@@ -945,11 +945,14 @@
     }
 
     .seccion-catorce {
-        height: 600px;
-        padding-top: 80px;
+        height: 700px;
     }
 
-    .seccion-catorce h2 {
+    .seccion-catorce .fila {
+        margin-top: 80px;
+    }
+
+     .seccion-catorce h2 {
         font-size: 2.5em;
         font-weight: 600;
         margin-bottom: 40px;
@@ -962,6 +965,8 @@
 
     .seccion-catorce p {
         font-size: 1.5em;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .acerca-uno h3,
@@ -1026,8 +1031,11 @@
     }
 
     .pie-pagina {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        height: 400px;
+    }
+
+    .pie-pagina .creditos {
+        margin-top: 30px;
     }
 
     .contacto {

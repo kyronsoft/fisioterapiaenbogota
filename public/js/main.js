@@ -1,11 +1,10 @@
 $(document).ready(function () {
     $('.slider-faq').slick({
-        dots: true,
         infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    });
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+      });
 
     $('.counter-count').each(function () {
         $(this).prop('Counter', 0).animate({

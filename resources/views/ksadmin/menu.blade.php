@@ -7,10 +7,11 @@
                 </li>
                 <li class="menu-title">Fisioterapiaenbogota.com</li><!-- /.menu-title -->
                 <li class="menu-item-has-children dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Página Inicio</a>
-                    <ul class="sub-menu children dropdown-menu">                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Sección Uno</a></li>
-                        <li><i class="fa fa-id-badge"></i><a href="ui-badges.html">Sección Dos</a></li>
-                        <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Sección Tres</a></li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Página Inicio</a>
+                    <ul class="sub-menu children dropdown-menu"><li><i class="fa fa-puzzle-piece"></i><a href="{{url('ks-admin/superior')}}">Franja Superior</a></li>
+                        <li><i class="fa fa-puzzle-piece"></i><a href="{{url('ks-admin/sliders')}}">Sliders</a></li>
+                        <li><i class="fa fa-id-badge"></i><a href="{{url('ks-admin/secciondos')}}">Sección Dos</a></li>
+                        <li><i class="fa fa-bars"></i><a href="{{url('ks-admin/secciontres')}}">Sección Tres</a></li>
                         <li><i class="fa fa-id-card-o"></i><a href="ui-cards.html">Sección Cuatro</a></li>
                         <li><i class="fa fa-exclamation-triangle"></i><a href="ui-alerts.html">Sección Cinco</a></li>
                         <li><i class="fa fa-spinner"></i><a href="ui-progressbar.html">Sección Seis</a></li>

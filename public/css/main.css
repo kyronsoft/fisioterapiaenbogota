@@ -9,6 +9,14 @@ p {
     font-family: 'Quicksand', sans-serif;
 }
 
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    color: white;
+  }
+
 #nombre::placeholder,
 #telefono::placeholder {
     color: white;
@@ -316,4 +324,8 @@ option {
 
 .social-networks-footer .fa-youtube:hover {
     color: #b30c0c;
+}
+
+.seccion-catorce {
+    background-color: #dcdcdc;
 }

@@ -13,41 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('plantilla');
-});
-Route::get('/acerca', function () {
-    return view('paginas.acerca');
-});
-Route::get('/nace', function () {
-    return view('paginas.nace');
-});
-Route::get('/telerehab', function () {
-    return view('paginas.telerehabilitacion');
-});
-Route::get('/cuello', function () {
-    return view('paginas.cuello');
-});
-Route::get('/espalda', function () {
-    return view('paginas.espalda');
-});
-Route::get('/rodilla', function () {
-    return view('paginas.rodilla');
-});
-Route::get('/deportivas', function () {
-    return view('paginas.deportivas');
-});
-Route::get('/contacto', function () {
-    return view('paginas.contacto');
-});
-Route::get('/contactanos', function () {
-    return view('paginas.contactanos');
-});
+Route::get('/','PaginaInicioController@mostrar_es');
+Route::get('/home','PaginaInicioController@mostrar_en');
 
-Route::get('/ks-admin', function () {
+
+Route::get('/ks-admin',function () {
     return view('ksadmin.panel');
 });
+Route::get('/ks-admin/superior','KSAdminController@GetSuperior');
+Route::get('/ks-admin/sliders','KSAdminController@GetSliders');
+Route::get('/ks-admin/secciondos','KSAdminController@GetSeccionDos');
+Route::get('/ks-admin/secciontres','KSAdminController@GetSeccionTres');
 
-Route::get('/tiendaonline', function () {
-    return view('tiendaonline.inicio');
-});

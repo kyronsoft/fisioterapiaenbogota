@@ -2,49 +2,49 @@
     <div class="row d-flex justify-content-center">
         <div class="col-12 align-self-center text-center">
             <div>
-            <img src="{{url('/')}}/images/logo-fisioterapia-en-bogota.png" alt="logo-fisiotera" />
+            <img src="{{url('/')}}/images/logo-fisioterapia-en-bogota.png" alt="logo-fisiotera"/>
             </div>
         </div>
         <div class="col-12 align-self-center text-center">
             <div>
                 <ul class="list-inline">
                     <li class="list-inline-item">
-                        <a href="index.html">Inicio</a>
+                        <a href="{{url('/')}}">Inicio</a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="acerca.html">Quien soy</a>
+                        <a href="{{url('acerca')}}">Quien soy</a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="telerehabilitacion.html">Servicios</a>
+                        <a href="{{url('telerehab')}}">Servicios</a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#">Blog</a>
+                    <a href="{{url('blog')}}">Blog</a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="contacto.html">Contacto</a>
+                        <a href="{{url('contacti')}}">Contacto</a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="tienda/index.html">Tienda</a>
+                    <a href="{{url('tiendaonline')}}}">Tienda</a>
                     </li>
                 </ul>
                 <ul class="list-inline social-networks-footer">
                     <li class="list-inline-item">
-                        <a v-bind:href="linkedin">
+                        <a href="{{url($textos[5]["spanish"])}}">
                             <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a v-bind:href="facebook">
+                        <a href="{{url($textos[2]["spanish"])}}">
                             <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a v-bind:href="instagram">
+                        <a href="{{url($textos[3]["spanish"])}}">
                             <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a v-bind:href="youtube">
+                        <a href="{{url($textos[4]["spanish"])}}">
                             <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
@@ -53,9 +53,15 @@
         </div>
         <div class="col-12 align-self-center text-center creditos">
             <div class="align-self-end text-white">
-                <h6 v-html="titulo1"></h6>
-                <h6 v-html="titulo2"></h6>
-                <h6 v-html="titulo3"></h6>
+                <h6 class="text-center">@php
+                    echo $textos[101]["spanish"];
+                @endphp</h6>
+                <h6 class="text-center">@php
+                    echo $textos[102]["spanish"];
+                @endphp</h6>
+                <h6 class="text-center">@php
+                    echo $textos[103]["spanish"];
+                @endphp</h6>
             </div>
         </div>
     </div>
@@ -67,12 +73,12 @@
             </h6>
         </div>
     </div>
-    <div class="text-right">
+    {{-- <div class="text-right">
         <a class="ir-arriba" javascript:void(0) title="Volver arriba">
             <span class="fa-stack">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
             </span>
         </a>
-    </div>
+    </div> --}}
 </footer>

@@ -3478,4 +3478,18 @@ footer.site-footer .footer-inner a {
     right: 20px !important;
 }
 
+label {
+    font-weight: bold;
+}
+
+#imagen1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#imagen2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */
