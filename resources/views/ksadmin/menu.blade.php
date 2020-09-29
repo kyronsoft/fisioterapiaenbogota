@@ -12,15 +12,15 @@
                         <li><i class="fa fa-puzzle-piece"></i><a href="{{url('ks-admin/sliders')}}">Sliders</a></li>
                         <li><i class="fa fa-id-badge"></i><a href="{{url('ks-admin/secciondos')}}">Sección Dos</a></li>
                         <li><i class="fa fa-bars"></i><a href="{{url('ks-admin/secciontres')}}">Sección Tres</a></li>
-                        <li><i class="fa fa-id-card-o"></i><a href="ui-cards.html">Sección Cuatro</a></li>
-                        <li><i class="fa fa-exclamation-triangle"></i><a href="ui-alerts.html">Sección Cinco</a></li>
-                        <li><i class="fa fa-spinner"></i><a href="ui-progressbar.html">Sección Seis</a></li>
-                        <li><i class="fa fa-fire"></i><a href="ui-modals.html">Sección Siete</a></li>
-                        <li><i class="fa fa-book"></i><a href="ui-switches.html">Sección Ocho</a></li>
-                        <li><i class="fa fa-th"></i><a href="ui-grids.html">Sección Nueve</a></li>
-                        <li><i class="fa fa-file-word-o"></i><a href="ui-typgraphy.html">Sección Diez</a></li>
-                        <li><i class="fa fa-file-word-o"></i><a href="ui-typgraphy.html">Sección Once</a></li>
-                        <li><i class="fa fa-file-word-o"></i><a href="ui-typgraphy.html">Sección Doce</a></li>
+                        <li><i class="fa fa-id-card-o"></i><a href="{{url('ks-admin/seccioncuatro')}}">Sección Cuatro</a></li>
+                        <li><i class="fa fa-exclamation-triangle"></i><a href={{url('ks-admin/seccioncinco')}}">Sección Cinco</a></li>
+                        <li><i class="fa fa-spinner"></i><a href="{{url('ks-admin/seccionseis')}}">Sección Seis</a></li>
+                        <li><i class="fa fa-fire"></i><a href="{{url('ks-admin/seccionsiete')}}">Sección Siete</a></li>
+                        <li><i class="fa fa-book"></i><a href="{{url('ks-admin/seccionocho')}}">Sección Ocho</a></li>
+                        <li><i class="fa fa-th"></i><a href="{{url('ks-admin/seccionnueve')}}">Sección Nueve</a></li>
+                        <li><i class="fa fa-file-word-o"></i><a href="{{url('ks-admin/secciondiez')}}">Sección Diez</a></li>
+                        <li><i class="fa fa-file-word-o"></i><a href="{{url('ks-admin/secciononce')}}">Sección Once</a></li>
+                        <li><i class="fa fa-file-word-o"></i><a href="{{url('ks-admin/secciondoce')}}">Sección Doce</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children dropdown">

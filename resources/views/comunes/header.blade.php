@@ -1,11 +1,11 @@
 <div class="container-fluid bg-primary barra-superior">
     <div class="row">
-        <div class="col-xs-3 col-sm-3 align-self-center text-white text-center">Fisioterapia en Bogotá</div>
+    <div class="col-xs-3 col-sm-3 align-self-center text-white text-center">{{$textos[0]['spanish']}}</div>
         <div class="col-xs-9 col-sm-3 align-self-center text-white text-center"><i class="fa fa-phone-square"
-                aria-hidden="true"></i>@php echo $textos[0]["spanish"]; @endphp
+                aria-hidden="true"></i>{{$textos[1]['spanish']}}
         </div>
         <div class="d-none d-sm-block col-sm-3 d-none d-sm-block align-self-center text-white text-center"><i
-                class="fa fa-envelope" aria-hidden="true"></i>@php echo $textos[1]["spanish"]; @endphp</div>
+                class="fa fa-envelope" aria-hidden="true"></i>{{$textos[2]['spanish']}}</div>
         <div class="d-none d-sm-block col-sm-3 text-white text-center pt-3 redes-up">
             <ul class="list-inline">
             <li class="list-inline-item"><a href="{{url($textos[5]["spanish"])}}"target="_target"><i class="fa fa-linkedin-square fa-2x"

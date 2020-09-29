@@ -29,22 +29,22 @@
                 </ul>
                 <ul class="list-inline social-networks-footer">
                     <li class="list-inline-item">
-                        <a href="{{url($textos[5]["spanish"])}}">
+                        <a href="{{url($textos[6]["spanish"])}}">
                             <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{{url($textos[2]["spanish"])}}">
+                        <a href="{{url($textos[3]["spanish"])}}">
                             <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{{url($textos[3]["spanish"])}}">
+                        <a href="{{url($textos[4]["spanish"])}}">
                             <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{{url($textos[4]["spanish"])}}">
+                        <a href="{{url($textos[5]["spanish"])}}">
                             <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
@@ -54,13 +54,13 @@
         <div class="col-12 align-self-center text-center creditos">
             <div class="align-self-end text-white">
                 <h6 class="text-center">@php
-                    echo $textos[101]["spanish"];
+                    echo $textos[125]["spanish"];
                 @endphp</h6>
                 <h6 class="text-center">@php
-                    echo $textos[102]["spanish"];
+                    echo $textos[126]["spanish"];
                 @endphp</h6>
                 <h6 class="text-center">@php
-                    echo $textos[103]["spanish"];
+                    echo $textos[127]["spanish"];
                 @endphp</h6>
             </div>
         </div>
@@ -68,8 +68,7 @@
     <div class="row d-flex justify-content-center developer">
         <div class="col-6 text-center">
             <h6 class="text-white">
-                Construido por
-                <a href="https://www.kyronsoft.com">Kyronsoft</a>
+               @php echo $textos[128]['spanish']; @endphp
             </h6>
         </div>
     </div>

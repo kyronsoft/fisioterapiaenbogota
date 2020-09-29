@@ -3,30 +3,48 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Textos;
+use Illuminate\Support\Facades\DB;
+use App\TextosEs;
 
 class KSAdminController extends Controller
 {
-    public function GetSuperior(){
-    $textos = Textos::where('pagina','Inicio')->get();
+    public function GetTextos() {
+        $textos = DB::table('textos_es')
+        ->join('textos_en','textos_es.id','=','textos_en.id')
+        ->select('textos_es.id','textos_es.spanish','textos_en.english')->get();
 
-        return view("ksadmin.superior",array("textos"=>$textos));
+        return $textos;
     }
 
-    public function GetSliders(){
-        $textos = Textos::where('pagina','Inicio')->get();
-    
-            return view("ksadmin.sliders",array("textos"=>$textos));
-        }
+    public function GetSuperior()
+    {
 
-        public function GetSeccionDos(){
-            $textos = Textos::where('pagina','Inicio')->get();
-        
-                return view("ksadmin.secciondos",array("textos"=>$textos));
-            }
-            public function GetSeccionTres(){
-                $textos = Textos::where('pagina','Inicio')->get();
-            
-                    return view("ksadmin.secciontres",array("textos"=>$textos));
-                }
+        return view("ksadmin.superior", array("textos" => self::GetTextos()));
+    }
+
+    public function GetSliders()
+    {
+        return view("ksadmin.sliders", array("textos" => self::GetTextos()));
+    }
+
+    public function GetSeccionDos()
+    {
+        $textos = TextosEs::where('pagina', 'Inicio')->get();
+
+        return view("ksadmin.secciondos", array("textos" => $textos));
+    }
+
+    public function GetSeccionTres()
+    {
+        $textos = TextosEs::where('pagina', 'Inicio')->get();
+
+        return view("ksadmin.secciontres", array("textos" => $textos));
+    }
+
+    public function GetSeccionCuatro()
+    {
+        $textos = TextosEs::where('pagina', 'Inicio')->get();
+
+        return view("ksadmin.seccioncuatro", array("textos" => $textos));
+    }
 }

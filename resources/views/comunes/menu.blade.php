@@ -8,44 +8,44 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-            <a class="nav-link menu-inicio" href="{{url('/')}}">Inicio</a>
+            <a class="nav-link menu-inicio" href="{{url('/')}}">{{$textos[7]['spanish']}}</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">Quien Soy</a>
+                    aria-haspopup="true" aria-expanded="false">{{$textos[8]['spanish']}}</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{{url('acerca')}}">Acerca De Adriana</a></li>
+                    <li><a class="dropdown-item" href="{{url('acerca')}}">{{$textos[9]['spanish']}}</a></li>
                     <div class="dropdown-divider"></div>
-                    <li><a class="dropdown-item" href="{{url('nace')}}">Como Nace Fysiopuntura</a></li>
+                    <li><a class="dropdown-item" href="{{url('nace')}}">{{$textos[10]['spanish']}}</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">Servicios</a>
+                    aria-haspopup="true" aria-expanded="false">{{$textos[11]['spanish']}}</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{{'telerehab'}}">Telerehabilitación</a></li>
+                    <li><a class="dropdown-item" href="{{url('telerehab')}}">{{$textos[12]['spanish']}}</a></li>
                     <div class="dropdown-divider"></div>
-                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Fisioterapia</a>
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="{{url('fisioterapia')}}">{{$textos[13]['spanish']}}</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{url('cuello')}}">Dolor de Cuello</a></li>
+                            <li><a class="dropdown-item" href="{{url('cuello')}}">{{$textos[14]['spanish']}}</a></li>
                             <div class="dropdown-divider"></div>
-                            <li><a class="dropdown-item" href="{{url('espalda')}}">Dolor De Espalda</a></li>
+                            <li><a class="dropdown-item" href="{{url('espalda')}}">{{$textos[15]['spanish']}}</a></li>
                             <div class="dropdown-divider"></div>
-                            <li><a class="dropdown-item" href="{{url('rodilla')}}">Dolor En Las Rodillas</a></li>
+                            <li><a class="dropdown-item" href="{{url('rodilla')}}">{{$textos[16]['spanish']}}</a></li>
                             <div class="dropdown-divider"></div>
-                            <li><a class="dropdown-item" href="{{url('deportivas')}}">Lesiones Deportivas</a></li>
+                            <li><a class="dropdown-item" href="{{url('deportivas')}}">{{$textos[17]['spanish']}}</a></li>
                         </ul>
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{url('blog')}}">Blog</a>
+                <a class="nav-link" href="{{url('blog')}}">{{$textos[18]['spanish']}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{url('contacto')}}">Contacto</a>
+                <a class="nav-link" href="{{url('contacto')}}">{{$textos[19]['spanish']}}</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Idiomas</a>
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{$textos[20]['spanish']}}</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item" href="{{url('home')}}"><img src="images/united-states-of-america.png" alt=""
                                 style="width: 16px;"> English</a></li>
@@ -55,7 +55,7 @@
             </li>
         </ul>
     </div>
-    <a href="{{url('contactanos')}}" class="btn btn-primary contact-menu btncontact d-none d-sm-block">Contáctanos</a>
+    <a href="{{url('contactanos')}}" class="btn btn-primary contact-menu btncontact d-none d-sm-block">{{$textos[21]['spanish']}}</a>
     <a href="{{url('tiendaonline')}}" class="btn btn-primary btntienda contact-menu"><i class="fa fa-shopping-cart"
-            aria-hidden="true"></i> Tienda</a>
+            aria-hidden="true"></i> {{$textos[22]['spanish']}}</a>
 </nav>

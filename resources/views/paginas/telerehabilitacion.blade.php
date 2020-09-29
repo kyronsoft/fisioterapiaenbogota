@@ -66,74 +66,34 @@
 
     <section class="container-fluid d-flex justify-content-end teler-uno">
         <div class="col-5 align-self-center bg-white">
-            <h3 class="mt-5 text-center">Telerehabilitación en Bogotá</h3>
-            <p class="text-left py-3">La Tele Rehabilitación también conocida como Fisioterapia virtual, Fisioterapia
-                online o Fisioterapia remota hace referencia al servicio de Fisioterapia suministrado en tiempo real a
-                través de una plataforma tecnológica en lugar de una sesión presencial en consultorio.
-                <br>
-                <br>
-                <br>
-                Si bien es cierto que las terapias pasivas como son la terapia manual (masaje, movilizaciones
-                articulares) y el uso de modalidades físicas como calor, electroterapia o ultrasonido hacen parte de
-                algunos de nuestros tratamientos, bajo ninguna circunstancia son la parte más importante, ni la única de
-                una sesión de Terapia Física. De hecho, es bien sabido que el uso indiscriminado de las terapias pasivas
-                genera dependencia del paciente hacia su terapeuta y por sí sola no ofrece resultados a largo plazo.
-                <br>
-                <br>
-                <br>
-                La medicina basada en la evidencia ha venido transformando nuestras opciones de tratamiento en
-                Fisioterapia- haciendo que las modalidades pasivas pierdan cada vez más fuerza. Nuestro rol de
-                Fisioterapeutas, como expertos del movimiento es educar al paciente. Lo que todo paciente necesita en
-                realidad es actividad física y mucha educación. Por esta razón, la necesidad de visitas presenciales es
-                cada vez menos imprescindible.
+        <h3 class="mt-5 text-center">{{$textos[143]['spanish']}}</h3>
+            <p class="text-justify">@php echo $textos[144]['spanish']; @endphp
             </p>
         </div>
     </section>
 
     <section class="container-fluid d-flex justify-content-center teler-dos">
         <div class="col-5 align-self-center bg-white">
-            <h3 class="mt-5 text-center">Fisioterapia online y Telerehabilitación</h3>
-            <h4 class="text-center">Adriana Lucia Ramirez Bonilla</h4>
-            <p class="text-left py-3">La TeleRehabilitación es una modalidad excelente para educar a aquellos pacientes
-                que no pueden desplazarse físicamente a un consultorio sea por razones de la cuarentena o por
-                dificultades de tiempo y desplazamiento.
-                <br>
-                <br>
-                <br>
-                La fisioterapia online se ha constituido en la mejor forma de iniciar y/o continuar tus tratamientos de
-                rehabilitación física sin tiempos y costos extras de desplazamiento, con rápido agendamiento de cita en
-                horarios convenientes, desde la comodidad de tu casa (u oficina) y reduciendo al máximo el riesgo de
-                contagio por COVID-19.
+            <h3 class="mt-5 text-center">{{$textos[145]['spanish']}}</h3>
+            <h4 class="text-center">{{$textos[146]['spanish']}}</h4>
+            <p class="text-justify">@php echo $textos[147]['spanish']; @endphp
             </p>
         </div>
     </section>
 
     <section class="container-fluid d-flex justify-content-end teler-tres">
         <div class="col-5 align-self-center bg-white">
-            <h3 class="text-center">¿Qué dicen las investigaciones respecto a la Telerehabilitación?</h3>
-            <p class="mt-5 text-left">Existen varias investigaciones que han evaluado los resultados obtenidos con
-                terapia presencial en consultorio y terapias online. Te alegrará saber que los hallazgos en varios
-                estudios realizados en EEUU y Australia, indican que los resultados obtenidos con la fisioterapia online
-                son bastante similares a los resultados obtenidos en la terapia presencial.
-                <br>
-                <br>
-                <br>
-                El ejercicio físico, la educación del paciente sobre estilos de vida saludables y prevención de
-                lesiones, sobre su condición médica y cómo manejarla el mismo; y la reeducación neuromuscular (enseñanza
-                de buenos hábitos de postura y formas de movimiento saludables) son excelentes en mejorar la movilidad,
-                reducir el dolor y romper el ciclo de perpetuación de los síntomas, pues manejan la causa real del
-                problema y no solo el dolor; y se constituyen en soluciones efectivas y duraderas a largo plazo.
-                <span><a href="#">(Fuente)</a></span>
+            <h3 class="text-center">{{$textos[148]['spanish']}}</h3>
+            <p class="text-justify">@php echo $textos[149]['spanish']; @endphp
+            </p>
             </p>
         </div>
     </section>
 
     <section class="container-fluid d-flex justify-content-center teler-cuatro">
         <div class="col-5 align-self-center bg-white">
-            <h3 class="text-center mt-5">¿ES LA TELEREHABILITACIÓN LEGAL?</h3>
-            <p class="mt-5 text-left">Si, totalmente. La Secretaria Distrital de Salud y el Ministerio de Salud de
-                Colombia autorizan y habilitan los servicios de Telemedicina para servicios de Terapias. Habilitada por
-                la Secretaría Distrital de Salud.
+            <h3 class="text-center mt-5">{{$textos[150]['spanish']}}</h3>
+            <p class="text-justify">@php echo $textos[151]['spanish']; @endphp
             </p>
             <div class="text-center mb-5">
                 <img src="images/prestadores-de-servicios-de-salud.jpg" alt="" class="img-fluid">
@@ -143,17 +103,8 @@
 
     <section class="container-fluid d-flex justify-content-end teler-cinco">
         <div class="col-5 align-self-center bg-white">
-            <h3 class="text-center">¿QUÉ NECESITO PARA UNA TELESESIÓN?</h3>
-            <p class="mt-5 text-left">Un computador o un teléfono celular con buena calidad de sonido y video.
-                Idealmente un portátil o una tableta que puedas mover a diferentes alturas y distancias.<br><br>
-                Conexión a internet de buena velocidad que te permita videoconferencia sin interrupciones<br><br>
-                Ropa cómoda y que permitan a tu terapeuta visualizar el area de tu cuerpo que vamos a trabajar<br><br>
-                Un espacio silencioso con buena iluminación y sin sombras, de unos 3×3 metros para poder moverte y hacer
-                ejercicio físico sin interrupciones<br><br>
-                Ayuda- pero no es obligatorio, si tienes una pelota de Pilates, una colchoneta, bandas elásticas, pesas,
-                rollo de espuma, una bola de bosu o un cojín de balance. Si no tienes estos o todos estos elementos, no
-                te preocupes, trabajaremos con lo que tengas en casa.<br><br>
-                Una mente abierta y un deseo de aprender cómo puedes ayudar a mejorar tu condición física.
+            <h3 class="text-center">{{$textos[152]['spanish']}}</h3>
+            <p class="text-justify">@php echo $textos[153]['spanish']; @endphp
             </p>
             <a href="#" class="btn btn-primary btn-block mb-5">Más Información</a>
         </div>

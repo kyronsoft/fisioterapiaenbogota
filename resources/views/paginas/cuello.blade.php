@@ -66,112 +66,17 @@
 
     <section class="container-fluid d-flex justify-content-center cuello-uno">
         <div class="col-5">
-            <h3 class="text-center">Fisioterapia en Bogotá</h3>
-            <h4 class="text-info text-center">Adriana Lucia Ramirez Bonilla</h4>
+        <h3 class="text-center">{{$textos[185]['spanish']}}</h3>
+            <h4 class="text-info text-center">{{$textos[186]['spanish']}}</h4>
             <div class="alert alert-info text-center mt-5" role="alert">
-                Dolor de Cuello Y Hombro
+                {{$textos[157]['spanish']}}
             </div>
             <br>
-            <h3 class="text-center">¿Te identificas con esto?</h3>
+            <h3 class="text-center">{{$textos[158]['spanish']}}</h3>
             <br>
-            <p class="text-left">¿Tienes dolor de cuello y hombro que es casi constante que puede o no irradiarse al
-                brazo o incluso a tu
-                mano?
-                <br>
-                <br>
-                <br>
-                ¿Sufres de dolores en la base de tu cráneo y alrededor de la frente como si tuvieras una banda alrededor
-                de la cabeza?
-                <br>
-                <br>
-                <br>
-                ¿Tienes dificultad para mover el cuello, manejar, trabajar en el computador, dormir, levantar objetos y
-                practicar deporte?
-                <br>
-                <br>
-                <br>
-                Estas son las quejas más comunes de pacientes que han acudido a mi cuando sufren de dolor de cabeza,
-                cuello u hombro.
-                <br>
-                <br>
-                <br>
-                Ellos al igual que tú, han probado analgésicos, han tomado un descanso de las actividades que les causa
-                dolor, han pasado por las manos de masajistas, han cambiado de almohada, han utilizado un corrector de
-                postura, quizás han probado fisioterapia, quiropraxia o acupuntura e incluso cirugía con resultados
-                limitados y no siempre duraderos. Por qué?
-                <br>
-                <br>
-                <br>
-                Estas modalidades usadas por si solas con frecuencia no ofrecen resultados a largo plazo. Quitar el
-                dolor no es un indicador confiable de haber resuelto la causa del problema.
-                <br>
-                <br>
-                <br>
-                Te estarás preguntando, ¿por qué me está pasando esto a mí? ¿Por que llevo semanas o meses con este
-                dolor y no se va? ¿Será que son achaques de la edad? ¿Será que estoy condenado a vivir con este dolor el
-                resto de mi vida? ¿Que puedo hacer?
-                <br>
-                <br>
-                <br>
-                Lo primero que te recomiendo que hagas es respira profundo y relaja tus hombros, siéntate derecho sin
-                generar excesiva tensión muscular en ninguna área de tu cuerpo, sigue respirando y sigue leyendo…
-                <br>
-                <br>
-                <br>
-                Hay un elemento común a los dolores de cuello, de hombro (y de espalda): Debilidad de los músculos que
-                sostienen tu columna lo cual conlleva a mala postura.
-                <br>
-                <br>
-                <br>
-                Hay otros factores que también contribuyen como son malos hábitos, formas erróneas de movernos,
-                lesiones, estrés, en algunos casos factores de la anatomía de tu cuerpo que te predisponen a tener estos
-                problemas o una combinación de varios de estos factores.
-                <br>
-                <br>
-                <br>
-                No te desanimes, ¡hay buenas noticias! De esos factores mencionados sólo dos están fuera de tu control:
-                lesiones y anatomía predisponente, el resto son totalmente corregibles.
-                <br>
-                <br>
-                <br>
-                Incluso en casos de lesiones, el cuerpo tiene una capacidad de recuperación impresionante.
-                <br>
-                <br>
-                <br>
-                Y en casos de anatomía predisponente, con frecuencia la corrección de los otros factores puede ser
-                suficiente para resolver tus síntomas. De este último grupo sólo un pequeño porcentaje de casos podría
-                requerir cirugía. Es decir, hay mucho que puedes hacer para retomar el control de tu salud.</p>
-                <br>
-            <h3 class="text-center">¿Por dónde empiezo?</h3>
-            <br>
-            <p>Ya lo estás haciendo, educación. El hecho de que ya hayas identificado que este dolor no se va a resolver
-                por sí solo y que estés buscando respuestas a tus preguntas y soluciones a tus problemas es un buen
-                comienzo.
-                <br>
-                <br>
-                <br>
-                Busca ayuda profesional y deja de tratar de adivinar qué te ocurre y qué hacer para resolver tu
-                cervicalgia o dolor de hombro. Para eso hay personas que nos capacitamos en esto y manejamos casos como
-                el tuyo todos los días. No tienes que reinventar la llanta, ya está inventada.
-                <br>
-                <br>
-                <br>
-                Solo tienes que encontrar el profesional adecuado que te pueda guiar y acompañar en tu recuperación.
-                <br>
-                <br>
-                <br>
-                Alguien experto en manejar no solo los síntomas sino también la causa de tu patología. Alguien que se
-                tome el tiempo de enseñarte lo que está ocurriendo, que lo agrava, que lo mejora y que ayude a corregir
-                los hábitos que no te están favoreciendo y que están perpetuando tus síntomas.
-                <br>
-                <br>
-                <br>
-                Descarga gratis mis mejores tips en español o inglés para prevenir que tu dolor siga progresando fuera
-                de control. Es mi regalo para ti en reconocimiento a que no te estás dando por vencido y que
-                intuitivamente sabes que hay algo y alguien que te puede ayudar y lo estás buscando.</p>
-                <ul>
-                    <li><a href="#">Descargar Guía</a></li>
-                </ul>
+            <p class="text-justiy">@php echo $textos[187]['spanish']; @endphp</p>
+        <h3 class="text-center">{{$textos[188]['spanish']}}</h3>
+            <p class="text-justiy">@php echo $textos[189]['spanish']; @endphp</p>
         </div>
     </section>
 

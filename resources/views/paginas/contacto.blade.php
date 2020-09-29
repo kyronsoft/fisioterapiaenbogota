@@ -62,7 +62,7 @@
 
 <body>
     @include('comunes.header')
-@include('comunes.menu') 
+    @include('comunes.menu') 
 
     <section class="container-fluid d-flex justify-content-center contacto">
         <div class="row">
@@ -70,7 +70,7 @@
                 <img src="images/flower-decor.png" alt="" style="width: 60px;">
             </div>
             <div class="align-self-center">
-                <h2 class="text-center ml-3">Contacto</h2>
+                <h2 class="text-center ml-3">{{$textos[203]['spanish']}}</h2>
             </div>
         </div>
     </section>
@@ -78,21 +78,18 @@
     <section class="container-fluid d-flex justify-content-around contacto1">
         <div class="row align-self-center">
             <div class="col-xs-12 col-md-6 align-self-center">
-                <h3 class="text-center">Teléfono:</h3>
+                <h3 class="text-center">{{$textos[204]['spanish']}}</h3>
                 <ul>
-                    <li><i class="fa fa-phone-square" aria-hidden="true"></i> +57 310 695 1073</li>
+                    <li><i class="fa fa-phone-square" aria-hidden="true"></i> {{$textos[205]['spanish']}}</li>
                 </ul>
-                <h3 class="text-center">Email:</h3>
+                <h3 class="text-center">Correo Electrónico</h3>
                 <ul>
-                    <li><i class="fa fa-envelope" aria-hidden="true"></i> info@fisioterapiaenbogota.com</li>
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i> {{$textos[208]['spanish']}}</li>
                 </ul>
             </div>
             <div class="col-xs-12 col-md-6 align-self-center">
-                <h3 class="text-center">Horario de atención:</h3>
-                <ul>
-                    <li>Lunes a Viernes de 7 am a 7 pm ( Cita previa )</li>
-                    <li>Sábados de 7 am a 1pm ( Cita previa )</li>
-                </ul>
+                <h3 class="text-center">{{$textos[206]['spanish']}}</h3>
+                <p>@php echo $textos[207]['spanish']; @endphp</p>
             </div>
         </div>
     </section>

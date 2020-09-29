@@ -67,12 +67,12 @@
     <section class="container-fluid contactanos">
         <div class="row d-flex justify-content-center">
             <div class="col-xs-12 col-md-6 align-self-center">
-                <h3 class="text-center text-white">¿Estás soportando el dolor? No tienes por que sufrir innecesariamente. Yo te puedo ayudar ...</h3>
+                <h3 class="text-center text-white">{{$textos[209]['spanish']}}</h3>
             </div>
         </div>
         <div class="row d-flex justify-content-center">
             <div class="col-xs-12 col-md-6 align-self-center">
-                <h4 class="text-center text-white">Describe tu problema para poder ayudarte mejor</h3>
+                <h4 class="text-center text-white">{{$textos[210]['spanish']}}</h3>
             </div>
         </div>
         <form action="">
@@ -80,24 +80,24 @@
                 <div class="col-xs-12 col-md-4"><input type="text" class="form-control bg-transparent text-white" name="nombre" id="nombre" placeholder="Nombres y Apellidos *"></div>
                 <div class="col-xs-12 col-md-4">
                     <select class="form-control bg-transparent text-white" name="areadolor" id="areadolor">
-                        <option value="0">Área dolorosa/parte del cuerpo afectada</option>
-                        <option value="1">Dolor de cuello y hombro</option>
-                        <option value="2">Dolor de espalda/lumbar</option>
-                        <option value="3">Dolor de cadera</option>
-                        <option value="4">Dolor de rodilla</option>
-                        <option value="5">Dolor de tobillo y pie</option>
-                        <option value="6">No sé de donde viene el dolor</option>
-                        <option value="7">Lesión muscular Deportiva o por ejercicio</option>
-                        <option value="8">Pérdida de balance y equilibrio</option>
+                        @php
+                            for($i=215;$i<223;$i++){
+                        @endphp
+                            <option value=@php echo $i; @endphp>@php echo $textos[$i]['spanish']; @endphp</option>
+                        @php
+                            }
+                        @endphp
                     </select>
                 </div>
                 <div class="col-xs-12 col-md-4">
                     <select class="form-control bg-transparent text-white" name="preocupacion" id="preocupacion">
-                        <option value="0">Cuál es tu principal preocupación debido a este problema</option>
-                        <option value="1">Dependencia de analgésicos</option>
-                        <option value="2">No saber que es lo que está pasando con mi cuerpo</option>
-                        <option value="3">Miedo de perder movilidad e independencia</option>
-                        <option value="4">Riesgo de tener que someterte a cirugía</option>
+                        @php
+                            for($i=224;$i<228;$i++){
+                        @endphp
+                            <option value=@php echo $i; @endphp>@php echo $textos[$i]['spanish']; @endphp</option>
+                        @php
+                            }
+                        @endphp
                     </select>
                 </div>
             </div>
@@ -106,29 +106,24 @@
                 <div class="col-xs-12 col-md-4"><input type="text" class="form-control bg-transparent" name="telefono" id="telefono" placeholder="Teléfono *"></div>
                 <div class="col-xs-12 col-md-4">
                     <select class="form-control bg-transparent text-white" name="actividades" id="actividades">
-                        <option value="0">Que actividades no puedes realizar o están limitadas por este problema?</option>
-                        <option value="1">Dormir</option>
-                        <option value="2">Permenecer Sentado</option>
-                        <option value="3">Permanecer de Pie</option>
-                        <option value="4">Levantar Objetos</option>
-                        <option value="5">Caminar</option>
-                        <option value="6">Trotar</option>
-                        <option value="7">Jugar Tenis</option>
-                        <option value="8">Subir Escaleras</option>
-                        <option value="9">Viajar</option>
-                        <option value="10">Disfrutar con familia y amigos</option>
-                        <option value="11">Otra</option>
+                        @php
+                            for($i=229;$i<240;$i++){
+                        @endphp
+                            <option value=@php echo $i; @endphp>@php echo $textos[$i]['spanish']; @endphp</option>
+                        @php
+                            }
+                        @endphp
                     </select>
                 </div>
                 <div class="col-xs-12 col-md-4">
                     <select class="form-control bg-transparent text-white" name="tiempo" id="tiempo">
-                        <option value="0">Cuanto tiempo llevas sufriendo este problema?</option>
-                        <option value="1">Unos pocos días</option>
-                        <option value="2">1-2 semanas</option>
-                        <option value="3">2-4 semanas</option>
-                        <option value="4">1-3 meses</option>
-                        <option value="5">6-12 meses</option>
-                        <option value="6">Varios años</option>
+                        @php
+                            for($i=241;$i<247;$i++){
+                        @endphp
+                            <option value=@php echo $i; @endphp>@php echo $textos[$i]['spanish']; @endphp</option>
+                        @php
+                            }
+                        @endphp
                     </select>
                 </div>
             </div>
@@ -137,18 +132,13 @@
                 <div class="col-xs-12 col-md-4"><input type="text" class="form-control bg-transparent" name="telefono" id="telefono" placeholder="Teléfono *"></div>
                 <div class="col-xs-12 col-md-4">
                     <select class="form-control bg-transparent text-white" name="actividades" id="actividades">
-                        <option value="0">Que actividades no puedes realizar o están limitadas por este problema?</option>
-                        <option value="1">Dormir</option>
-                        <option value="2">Permenecer Sentado</option>
-                        <option value="3">Permanecer de Pie</option>
-                        <option value="4">Levantar Objetos</option>
-                        <option value="5">Caminar</option>
-                        <option value="6">Trotar</option>
-                        <option value="7">Jugar Tenis</option>
-                        <option value="8">Subir Escaleras</option>
-                        <option value="9">Viajar</option>
-                        <option value="10">Disfrutar con familia y amigos</option>
-                        <option value="11">Otra</option>
+                        @php
+                            for($i=248;$i<260;$i++){
+                        @endphp
+                            <option value=@php echo $i; @endphp>@php echo $textos[$i]['spanish']; @endphp</option>
+                        @php
+                            }
+                        @endphp
                     </select>
                 </div>
                 <div class="col-xs-12 col-md-4 d-flex justify-content-around">
@@ -156,12 +146,12 @@
                         <input type="checkbox" id="politicadedatos">
                     </div>
                     <div class="align-self-center">
-                        <h2 class="text-center text-white poldatos">Acepto las políticas de tratamiento de datos</h2>
+                        <h2 class="text-center text-white poldatos">{{$textos[214]['spanish']}}</h2>
                     </div>
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
-                <button type="submit" class="btn btn-info btnpoldatos">Enviar</button>
+                <button type="submit" class="btn btn-info btnpoldatos">{{$textos[260]['spanish']}}</button>
             </div>
         </form>
     </section>

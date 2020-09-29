@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Textos extends Model
+class TextosEs extends Model
 {
-    protected $table="textos";
+    protected $table="textos_es";
 }

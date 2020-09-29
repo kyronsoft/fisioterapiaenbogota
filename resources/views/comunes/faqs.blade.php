@@ -1,56 +1,8 @@
 <section class="container-fluid seccion-catorce">
     <div class="row d-flex justify-content-center fila">
         <div class="col-8 align-self-center">
-            <h3 class="text-center">@php echo $textos[62]["spanish"]; @endphp</h3>
+            <h3 class="text-center">@php echo $textos[86]["spanish"]; @endphp</h3>
             <div class="slider-faq">
-                <div>
-                    <h3 class="text-center">@php echo $textos[63]["spanish"]; @endphp</h3>
-                    <p class="text-justify">@php echo $textos[64]["spanish"]; @endphp</p>
-                </div>
-                <div>
-                    <h3 class="text-center">@php echo $textos[65]["spanish"]; @endphp</h3>
-                    <p class="text-justify">@php echo $textos[66]["spanish"]; @endphp</p>
-                </div>
-                <div>
-                    <h3 class="text-center">@php echo $textos[67]["spanish"]; @endphp</h3>
-                    <p class="text-justify">@php echo $textos[68]["spanish"]; @endphp</p>
-                </div>
-                <div>
-                    <h3 class="text-center">@php echo $textos[69]["spanish"]; @endphp</h3>
-                    <p class="text-justify">@php echo $textos[70]["spanish"]; @endphp</p>
-                </div>
-                <div>
-                    <h3 class="text-center">@php echo $textos[71]["spanish"]; @endphp</h3>
-                    <p class="text-justify">@php echo $textos[72]["spanish"]; @endphp</p>
-                </div>
-                <div>
-                    <h3 class="text-center">@php echo $textos[73]["spanish"]; @endphp</h3>
-                    <p class="text-justify">@php echo $textos[74]["spanish"]; @endphp</p>
-                </div>
-                <div>
-                    <h3 class="text-center">@php echo $textos[75]["spanish"]; @endphp</h3>
-                    <p class="text-justify">@php echo $textos[76]["spanish"]; @endphp</p>
-                </div>
-                <div>
-                    <h3 class="text-center">@php echo $textos[77]["spanish"]; @endphp</h3>
-                    <p class="text-justify">@php echo $textos[78]["spanish"]; @endphp</p>
-                </div>
-                <div>
-                    <h3 class="text-center">@php echo $textos[79]["spanish"]; @endphp</h3>
-                    <p class="text-justify">@php echo $textos[80]["spanish"]; @endphp</p>
-                </div>
-                <div>
-                    <h3 class="text-center">@php echo $textos[81]["spanish"]; @endphp</h3>
-                    <p class="text-justify">@php echo $textos[82]["spanish"]; @endphp</p>
-                </div>
-                <div>
-                    <h3 class="text-center">@php echo $textos[83]["spanish"]; @endphp</h3>
-                    <p class="text-justify">@php echo $textos[84]["spanish"]; @endphp</p>
-                </div>
-                <div>
-                    <h3 class="text-center">@php echo $textos[85]["spanish"]; @endphp</h3>
-                    <p class="text-justify">@php echo $textos[86]["spanish"]; @endphp</p>
-                </div>
                 <div>
                     <h3 class="text-center">@php echo $textos[87]["spanish"]; @endphp</h3>
                     <p class="text-justify">@php echo $textos[88]["spanish"]; @endphp</p>
@@ -70,6 +22,54 @@
                 <div>
                     <h3 class="text-center">@php echo $textos[95]["spanish"]; @endphp</h3>
                     <p class="text-justify">@php echo $textos[96]["spanish"]; @endphp</p>
+                </div>
+                <div>
+                    <h3 class="text-center">@php echo $textos[97]["spanish"]; @endphp</h3>
+                    <p class="text-justify">@php echo $textos[98]["spanish"]; @endphp</p>
+                </div>
+                <div>
+                    <h3 class="text-center">@php echo $textos[99]["spanish"]; @endphp</h3>
+                    <p class="text-justify">@php echo $textos[100]["spanish"]; @endphp</p>
+                </div>
+                <div>
+                    <h3 class="text-center">@php echo $textos[101]["spanish"]; @endphp</h3>
+                    <p class="text-justify">@php echo $textos[102]["spanish"]; @endphp</p>
+                </div>
+                <div>
+                    <h3 class="text-center">@php echo $textos[103]["spanish"]; @endphp</h3>
+                    <p class="text-justify">@php echo $textos[104]["spanish"]; @endphp</p>
+                </div>
+                <div>
+                    <h3 class="text-center">@php echo $textos[105]["spanish"]; @endphp</h3>
+                    <p class="text-justify">@php echo $textos[106]["spanish"]; @endphp</p>
+                </div>
+                <div>
+                    <h3 class="text-center">@php echo $textos[107]["spanish"]; @endphp</h3>
+                    <p class="text-justify">@php echo $textos[108]["spanish"]; @endphp</p>
+                </div>
+                <div>
+                    <h3 class="text-center">@php echo $textos[109]["spanish"]; @endphp</h3>
+                    <p class="text-justify">@php echo $textos[110]["spanish"]; @endphp</p>
+                </div>
+                <div>
+                    <h3 class="text-center">@php echo $textos[111]["spanish"]; @endphp</h3>
+                    <p class="text-justify">@php echo $textos[112]["spanish"]; @endphp</p>
+                </div>
+                <div>
+                    <h3 class="text-center">@php echo $textos[113]["spanish"]; @endphp</h3>
+                    <p class="text-justify">@php echo $textos[114]["spanish"]; @endphp</p>
+                </div>
+                <div>
+                    <h3 class="text-center">@php echo $textos[115]["spanish"]; @endphp</h3>
+                    <p class="text-justify">@php echo $textos[117]["spanish"]; @endphp</p>
+                </div>
+                <div>
+                    <h3 class="text-center">@php echo $textos[118]["spanish"]; @endphp</h3>
+                    <p class="text-justify">@php echo $textos[119]["spanish"]; @endphp</p>
+                </div>
+                <div>
+                    <h3 class="text-center">@php echo $textos[120]["spanish"]; @endphp</h3>
+                    <p class="text-justify">@php echo $textos[121]["spanish"]; @endphp</p>
                 </div>
             </div>
         </div>

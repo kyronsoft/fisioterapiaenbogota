@@ -7,11 +7,35 @@
                 <hr>
                 <div class="form-group">
                     <label for="telefono">Titulo</label>
-                  <input type="text" class="form-control" name="telefono" value="{{$textos[6]['spanish']}}">
+                    <input type="hidden" value="{{$textos[23]->id}}">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">ES</span>
+                        </div>
+                        <input type="text" class="form-control" name="titulo" value="{{$textos[23]->spanish}}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">US</span>
+                        </div>
+                        <input type="text" class="form-control" name="titulo" value="{{$textos[23]->english}}">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="telefono">Subtitulo</label>
-                  <input type="text" class="form-control" name="telefono" value="{{$textos[7]['spanish']}}">
+                    <input type="hidden" value="{{$textos[24]->id}}">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">ES</span>
+                        </div>
+                        <input type="text" class="form-control" name="subtitulo" value="{{$textos[24]->spanish}}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">US</span>
+                        </div>
+                        <input type="text" class="form-control" name="subtitulo" value="{{$textos[24]->english}}">
+                    </div>
                 </div>
             </div>
             <div class="col-6">
@@ -19,19 +43,63 @@
                 <hr>
                 <div class="form-group">
                     <label for="telefono">Titulo</label>
-                  <input type="text" class="form-control" name="telefono" value="{{$textos[8]['spanish']}}">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">ES</span>
+                        </div>
+                        <input type="text" class="form-control" name="titulo1" value="{{$textos[26]->spanish}}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">US</span>
+                        </div>
+                        <input type="text" class="form-control" name="titulo1" value="{{$textos[26]->english}}">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="telefono">Subtitulo Uno</label>
-                  <input type="text" class="form-control" name="telefono" value="{{$textos[9]['spanish']}}">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">ES</span>
+                        </div>
+                        <input type="text" class="form-control" name="subtitulo1" value="{{$textos[27]->spanish}}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">US</span>
+                        </div>
+                        <input type="text" class="form-control" name="subtitulo1" value="{{$textos[27]->english}}">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="telefono">Subtitulo Dos</label>
-                  <input type="text" class="form-control" name="telefono" value="{{$textos[10]['spanish']}}">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">ES</span>
+                        </div>
+                        <input type="text" class="form-control" name="subtitulo2" value="{{$textos[28]->spanish}}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">US</span>
+                        </div>
+                        <input type="text" class="form-control" name="subtitulo2" value="{{$textos[28]->english}}">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="telefono">Subtitulo Tres</label>
-                  <input type="text" class="form-control" name="telefono" value="{{$textos[11]['spanish']}}">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">ES</span>
+                        </div>
+                        <input type="text" class="form-control" name="subtitulo3" value="{{$textos[29]->spanish}}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">US</span>
+                        </div>
+                        <input type="text" class="form-control" name="subtitulo3" value="{{$textos[29]->english}}">
+                    </div>
                 </div>
             </div>
         </div>
