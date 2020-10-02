@@ -13,37 +13,47 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','InicioController@mostrar');
-Route::get('/acerca','AcercaController@mostrar');
-Route::get('/telerehab','TeleController@mostrar');
-Route::get('/fisioterapia','FisioController@mostrar');
-Route::get('/cuello','CuelloController@mostrar');
-Route::get('/espalda','EspaldaController@mostrar');
-Route::get('/rodilla','RodillaController@mostrar');
-Route::get('/deportivas','DeportivasController@mostrar');
-Route::get('/contacto','ContactoController@mostrar');
-Route::get('/contactanos','ContactanosController@mostrar');
+Route::get('/', 'TextosEsController@index');
+Route::get('/acerca', 'AcercaController@index');
+Route::get('/nace', 'NaceController@index');
 
-Route::get('/home','HomeController@mostrar');
-Route::get('/about','AboutController@mostrar');
-Route::get('/nace','NaceController@mostrar');
-Route::get('/born','BornController@mostrar');
-Route::get('/tele','TeleEnController@mostrar');
-Route::get('/physio','PhysioController@mostrar');
-Route::get('/neck','NeckController@mostrar');
-Route::get('/back','BackController@mostrar');
-Route::get('/knee','KneeController@mostrar');
-Route::get('/sports','SportsController@mostrar');
-Route::get('/contact','ContactController@mostrar');
-Route::get('/contact_us','ContactusController@mostrar');
+Route::get('/contacto', 'ContactoController@index');
+Route::get('/contactanos', 'ContactanosController@index');
 
+Route::get('/init', 'TextosEnController@index');
+Route::get('/about', 'AcercaEnController@index');
+Route::get('/born', 'NaceEnController@index');
 
-Route::get('/ks-admin',function () {
-    return view('ksadmin.panel');
+Route::get('/contact', 'ContactoEnController@index');
+Route::get('/contact_us', 'ContactanosEnController@index');
+
+Route::get('/ks-admin', 'KSAdminController@showmain');
+Route::get('/barrasup', 'BarraSupController@index');
+Route::resource('/ks-admin/barrasup', 'BarraSupController');
+Route::resource('/ks-admin/menu', 'MenuController');
+Route::resource('/ks-admin/sliders', 'SlidersController');
+Route::resource('/ks-admin/inicio/seccion1', 'Seccion1Controller');
+Route::resource('/ks-admin/inicio/seccion2', 'Seccion2Controller');
+Route::resource('/ks-admin/inicio/seccion3', 'Seccion3Controller');
+Route::resource('/ks-admin/inicio/seccion4', 'Seccion4Controller');
+Route::resource('/ks-admin/inicio/seccion5', 'Seccion5Controller');
+Route::resource('/ks-admin/inicio/seccion6', 'Seccion6Controller');
+
+Route::resource('/ks-admin/inicio/seccion7', 'Seccion7Controller');
+Route::resource('/ks-admin/inicio/seccion8', 'Seccion8Controller');
+Route::resource('/ks-admin/inicio/seccion9', 'Seccion9Controller');
+Route::resource('/ks-admin/inicio/seccion10', 'Seccion10Controller');
+Route::resource('/ks-admin/inicio/seccion11', 'Seccion11Controller');
+Route::resource('/ks-admin/inicio/seccion12', 'Seccion12Controller');
+
+Route::resource('/ks-admin/nace', 'KSNaceController');
+Route::resource('/ks-admin/acerca', 'KSAcercaController');
+Route::resource('/ks-admin/inicio/footer', 'FooterController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/ckeditor', function () {
+    return view('blog.ckeditor');
 });
-Route::get('/ks-admin/superior','KSAdminController@GetSuperior');
-Route::get('/ks-admin/sliders','KSAdminController@GetSliders');
-Route::get('/ks-admin/secciondos','KSAdminController@GetSeccionDos');
-Route::get('/ks-admin/secciontres','KSAdminController@GetSeccionTres');
-Route::get('/ks-admin/seccioncuatro','KSAdminController@GetSeccionCuatro');
-
+Route::resource('/blog', 'BlogController');

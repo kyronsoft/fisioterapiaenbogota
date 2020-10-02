@@ -3,9 +3,7 @@ body {
     font-size: 15px;
 }
 
-h1,
-h3,
-p {
+h1, h3, p {
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -15,10 +13,9 @@ footer {
     width: 100%;
     height: 300px;
     color: white;
-  }
+}
 
-#nombre::placeholder,
-#telefono::placeholder {
+#nombre::placeholder, #telefono::placeholder {
     color: white;
 }
 
@@ -35,15 +32,11 @@ option {
     margin-top: 20px;
 }
 
-.barra-superior .fa-linkedin-square,
-.barra-superior .fa-facebook-square,
-.barra-superior .fa-instagram,
-.barra-superior .fa-youtube {
+.barra-superior .fa-linkedin-square, .barra-superior .fa-facebook-square, .barra-superior .fa-instagram, .barra-superior .fa-youtube {
     color: #ffffff;
 }
 
-.barra-superior .fa-phone-square,
-.barra-superior .fa-envelope {
+.barra-superior .fa-phone-square, .barra-superior .fa-envelope {
     padding-right: 5px;
 }
 
@@ -55,8 +48,7 @@ option {
     position: relative;
 }
 
-.dropdown-item,
-.contact-menu {
+.dropdown-item, .contact-menu {
     font-size: 13px !important;
 }
 
@@ -105,7 +97,7 @@ option {
     width: 80%;
 }
 
-.seccion-dos {
+.seccion-dos, .blog-header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/telerehabilitacion-para-bogota.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -313,7 +305,6 @@ option {
     background-size: cover;
 }
 
-
 .contactanos {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/telerehabilitacion-en-colombia-bogota-2.jpg');
     background-repeat: no-repeat;
@@ -352,4 +343,41 @@ option {
 
 .seccion-catorce {
     background-color: #dcdcdc;
+}
+
+.fecha {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    padding: 5px 11px;
+    color: #aaa;
+    font-size: 14px;
+    background: url(../img/globo.jpg);
+    background-size: cover;
+    background-position: center top;
+    height: 40px;
+}
+
+.fechaArticulo {
+    padding: 13px 30px;
+    color: #aaa;
+    font-size: 15px;
+    background: url(../img/globo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60px;
+}
+
+.ir-arriba {
+    display: none;
+    padding: 10px;
+    background: #024959;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 20px 20px 20px 20px;
 }
