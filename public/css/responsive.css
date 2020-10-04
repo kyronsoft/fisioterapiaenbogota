@@ -1,346 +1,268 @@
 /* Small devices (landscape phones, 320px and up) */
 
 @media (min-width: 320px) {
-
-    .img1-carousel,
-    .img2-carousel {
+    .img1-carousel, .img2-carousel {
         width: 100%;
         height: 400px;
         background-size: cover;
     }
-
     .carousel-caption h1 {
         font-size: 28px;
         font-weight: 600;
     }
-
     .carousel-caption h3 {
         font-size: 18px;
         margin-left: 10px;
     }
-
     .carousel-caption img {
         margin-left: 40px;
     }
-
     .seccion-dos {
         height: 700px;
     }
-
     .seccion-dos h3 {
         font-size: 20px;
         margin-bottom: 10px;
     }
-
     .seccion-dos .columna {
         padding: 20px;
     }
-
     .seccion-dos p {
         font-size: 16px;
     }
-
     .seccion-tres {
         height: 1300px;
     }
-
     .seccion-tres h3 {
         font-size: 24px;
         font-weight: 600;
     }
-
     .seccion-tres h4 {
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 50px;
     }
-
     .seccion-tres .columna {
         padding: 20px;
     }
-
     .seccion-tres p {
         margin-left: 30px;
         font-size: 14px;
     }
-
     .seccion-tres img {
         width: 40px;
         padding: 5px;
     }
-
     .seccion-cuatro {
         height: 1300px;
     }
-
     .seccion-cuatro h3 {
         font-size: 24px;
         font-weight: 600;
     }
-
     .seccion-cuatro h4 {
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 50px;
     }
-
     .seccion-cuatro .columna {
         padding: 20px;
     }
-
     .seccion-cuatro p {
         margin-left: 30px;
         font-size: 14px;
     }
-
     .seccion-cuatro img {
         width: 40px;
         padding: 5px;
     }
-
     .seccion-cinco {
         height: 1000px;
     }
-
     .seccion-cinco h3 {
         font-size: 22px;
         font-weight: 600;
     }
-
     .seccion-cinco h4 {
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 50px;
     }
-
     .seccion-cinco .columna {
         padding: 40px;
     }
-
     .seccion-cinco p {
         margin-left: 30px;
         font-size: 16px;
     }
-
     .seccion-cinco a {
         margin: 15px;
     }
-
     iframe {
         width: 220px;
         height: 200px;
         margin-bottom: 20px;
     }
-
     .seccion-seis {
         padding-top: 60px;
         padding-bottom: 60px;
     }
-
     .seccion-seis h1 {
         font-size: 22px;
         font-weight: 600;
         margin-bottom: 50px;
     }
-
     .seccion-seis h3 {
         font-size: 20px;
         font-weight: 500;
     }
-
     .seccion-seis li {
         font-size: 16px;
     }
-
     .seccion-seis .columna {
         padding-right: 30px;
     }
-
     .seccion-siete {
         height: 1000px;
     }
-
     .seccion-siete .columna {
         padding-bottom: 60px;
     }
-
     .seccion-siete h3 {
         font-size: 22px;
         font-weight: 600;
         padding-top: 60px;
     }
-
     .seccion-siete h4 {
         font-size: 20px;
         margin-bottom: 50px;
     }
-
     .seccion-siete p {
         margin-left: 30px;
         font-size: 16px;
     }
-
     .seccion-siete img {
         width: 40px;
         padding: 5px;
     }
-
     .seccion-nueve .fila {
         padding-top: 60px;
     }
-
     .seccion-nueve img {
         max-width: 200px;
     }
-
     .seccion-nueve a {
         margin-top: 20px;
         margin-bottom: 60px;
     }
-
     .seccion-diez h1 {
         font-size: 26px;
         font-weight: 600;
         margin-bottom: 30px;
     }
-
     .seccion-diez .columna {
         padding-bottom: 30px;
     }
-
     .seccion-diez p {
         font-size: 16px;
     }
-
     .seccion-once .fila {
         padding-top: 30px;
     }
-
     .seccion-once img {
         width: 85%;
         margin-bottom: 20px;
     }
-
     .seccion-once h3 {
         margin-bottom: 20px;
     }
-
     .seccion-once p {
         font-size: 18px;
     }
-
     .seccion-once a {
         margin: 20px;
     }
-
     .seccion-doce .fila-counter {
         padding-top: 100px;
     }
-
     .seccion-doce .col-counter {
         margin-bottom: 40px;
     }
-
     .seccion-trece h3 {
         padding-top: 80px;
         font-weight: 600;
         margin-bottom: 40px;
     }
-
     .seccion-trece h4 {
         margin-bottom: 40px;
         font-weight: 500;
     }
-
     .pie-pagina img {
         width: 100px;
         margin-bottom: 20px;
     }
-
     .pie-pagina {
         padding-top: 60px;
         padding-bottom: 60px;
     }
-
     .developer h6 {
         font-size: 0.8em;
     }
-
     .seccion-catorce {
         height: 700px;
         padding-top: 80px;
     }
-
     .seccion-catorce h2 {
         font-size: 1.5em;
         font-weight: 600;
         margin-bottom: 40px;
     }
-
     .seccion-catorce h3 {
         font-size: 1em;
         font-weight: 600;
         margin-bottom: 30px;
     }
-
     .seccion-catorce p {
         font-size: 0.85em;
     }
-
     .acerca-uno {
         height: 1000px;
     }
-
     .acerca-uno h3 {
         font-size: 20px;
         margin-bottom: 40px;
         font-weight: 600;
     }
-
-    .acerca-uno,
-    .acerca-dos,
-    .acerca-tres,
-    .acerca-cuatro,
-    .acerca-cinco {
+    .acerca-uno, .acerca-dos, .acerca-tres, .acerca-cuatro, .acerca-cinco {
         height: 800px;
     }
-
     .acerca-uno p {
         font-size: 14px;
     }
-
     .contacto {
         height: 200px;
     }
-
     .contacto1 {
         height: 500px;
         padding-top: 60px;
     }
-
     .contacto1 li {
         font-size: 16px;
     }
-
     .contacto1 h3 {
         margin-bottom: 40px;
     }
-
-    .contacto1 .fa-phone-square,
-    .contacto1 .fa-envelope {
+    .contacto1 .fa-phone-square, .contacto1 .fa-envelope {
         display: none;
     }
-
     .contactanos {
         height: 900px;
         padding-top: 100px;
     }
-
     .contactanos h3 {
         font-size: 20px;
         margin-bottom: 60px;
     }
-
     .contactanos h4 {
         font-size: 18px;
     }
@@ -349,119 +271,93 @@
 /* Small devices (landscape phones, 568px and up) */
 
 @media (min-width: 568px) {
-
-    .img1-carousel,
-    .img2-carousel {
+    .img1-carousel, .img2-carousel {
         width: 100%;
         height: 400px;
         background-size: cover;
     }
-
     .carousel-caption h1 {
         font-size: 38px;
         font-weight: 600;
     }
-
     .carousel-caption h3 {
         font-size: 28px;
         margin-left: 10px;
     }
-
     .carousel-caption img {
         margin-left: 90px;
     }
-
     .seccion-dos {
         height: 500px;
     }
-
     .seccion-dos h3 {
         font-size: 24px;
         margin-bottom: 40px;
         font-weight: 600;
     }
-
     .seccion-dos .columna {
         padding: 30px;
     }
-
     .seccion-dos p {
         font-size: 20px;
     }
-
     .seccion-tres {
         height: 1000px;
     }
-
     .seccion-tres h3 {
         font-size: 28px;
         font-weight: 600;
     }
-
     .seccion-tres h4 {
         font-size: 22px;
         font-weight: 500;
         margin-bottom: 50px;
     }
-
     .seccion-tres .columna {
         padding: 30px;
     }
-
     .seccion-tres p {
         margin-left: 30px;
         font-size: 16px;
     }
-
     .seccion-tres img {
         width: 40px;
         padding: 5px;
     }
-
     .seccion-cuatro {
         height: 1000px;
     }
-
     .seccion-tres h3 {
         font-size: 28px;
         font-weight: 600;
     }
-
     .seccion-cuatro h4 {
         font-size: 22px;
         font-weight: 500;
         margin-bottom: 50px;
     }
-
     .seccion-cuatro .columna {
         padding: 30px;
     }
-
     .seccion-cuatro p {
         margin-left: 30px;
         font-size: 16px;
     }
-
     .seccion-cuatro img {
         width: 40px;
         padding: 5px;
     }
-
     .seccion-once img {
         width: 55%;
         margin-bottom: 20px;
     }
-
     .seccion-catorce p {
         font-size: 1.2em;
     }
-
     .contacto1 li {
         font-size: 20px;
     }
-
-    .contacto1 .fa-phone-square,
-    .contacto1 .fa-envelope {
+    .contacto1 .fa-phone-square, .contacto1 .fa-envelope {
         display: initial;
     }
 }
@@ -469,116 +365,92 @@
 /* Small devices (landscape phones, 667px and up) */
 
 @media (min-width: 667px) {
-
-    .img1-carousel,
-    .img2-carousel {
+    .img1-carousel, .img2-carousel {
         width: 100%;
         height: 400px;
         background-size: cover;
     }
-
     .carousel-caption h1 {
         font-size: 38px;
         font-weight: 600;
     }
-
     .carousel-caption h3 {
         font-size: 28px;
         margin-left: 10px;
     }
-
     .carousel-caption img {
         margin-left: 90px;
     }
-
     .seccion-tres {
         height: 1200px;
     }
-
     .seccion-tres h3 {
         font-size: 32px;
         font-weight: 600;
     }
-
     .seccion-tres h4 {
         font-size: 24px;
         font-weight: 500;
         margin-bottom: 50px;
     }
-
     .seccion-tres .columna {
         padding: 30px;
     }
-
     .seccion-tres p {
         margin-left: 30px;
         font-size: 18px;
     }
-
     .seccion-tres img {
         width: 50px;
         padding: 5px;
     }
-
     .seccion-cuatro {
         height: 1200px;
     }
-
     .seccion-cuatro h3 {
         font-size: 32px;
         font-weight: 600;
     }
-
     .seccion-cuatro h4 {
         font-size: 24px;
         font-weight: 500;
         margin-bottom: 50px;
     }
-
     .seccion-cuatro .columna {
         padding: 30px;
     }
-
     .seccion-cuatro p {
         margin-left: 30px;
         font-size: 18px;
     }
-
     .seccion-cuatro img {
         width: 50px;
         padding: 5px;
     }
-
     iframe {
         width: 420px;
         height: 300px;
         margin-bottom: 20px;
     }
-
     .seccion-siete {
         height: 800px;
     }
-
     .seccion-siete .columna {
         padding: 40px;
     }
-
     .seccion-siete h3 {
         font-size: 26px;
         font-weight: 600;
         padding-top: 60px;
     }
-
     .seccion-siete h4 {
         font-size: 22px;
         margin-bottom: 50px;
     }
-
     .seccion-siete p {
         margin-left: 30px;
         font-size: 18px;
     }
-
     .seccion-siete img {
         width: 60px;
         padding: 8px;
@@ -588,30 +460,22 @@
 /* Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 576px) {
-
-    .barra-superior .fa-phone-square,
-    .barra-superior .fa-envelope,
-    .barra-superior .fa-youtube {
+    .barra-superior .fa-phone-square, .barra-superior .fa-envelope, .barra-superior .fa-youtube {
         display: none;
     }
-
     .barra-superior {
         font-size: 13px;
     }
-
-    .img1-carousel,
-    .img2-carousel {
+    .img1-carousel, .img2-carousel {
         width: 576px;
         height: 400px;
         background-size: cover;
     }
-
     iframe {
         width: 320px;
         height: 200px;
         margin-bottom: 20px;
     }
-
     .seccion-once img {
         width: 45%;
         margin-bottom: 20px;
@@ -621,25 +485,17 @@
 /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
-
-    .barra-superior .fa-phone-square,
-    .barra-superior .fa-envelope,
-    .barra-superior .fa-instagram,
-    .barra-superior .fa-youtube {
+    .barra-superior .fa-phone-square, .barra-superior .fa-envelope, .barra-superior .fa-instagram, .barra-superior .fa-youtube {
         display: initial;
     }
-
     .barra-superior {
         font-size: 13px;
     }
-
-    .img1-carousel,
-    .img2-carousel {
+    .img1-carousel, .img2-carousel {
         width: 100%;
         height: 400px;
         background-size: cover;
     }
-
     .seccion-catorce p {
         font-size: 1.5em;
     }
@@ -652,43 +508,33 @@
         font-size: 48px;
         font-weight: 600;
     }
-
     .carousel-caption h3 {
         font-size: 28px;
         margin-left: 10px;
     }
-
     .carousel-caption img {
         margin-left: 30px;
     }
-
     .carousel-caption {
         width: 90%;
     }
-
-    .seccion-tres,
-    .seccion-cuatro {
+    .seccion-tres, .seccion-cuatro {
         height: 1500px;
     }
-
     .seccion-nueve img {
         max-width: 100%;
     }
-
     .seccion-diez h1 {
         font-size: 36px;
         font-weight: 600;
         margin-bottom: 30px;
     }
-
     .seccion-diez .columna {
         padding-bottom: 30px;
     }
-
     .seccion-diez p {
         font-size: 22px;
     }
-
     .seccion-once img {
         width: 35%;
         margin-bottom: 20px;
@@ -706,367 +552,265 @@
 /* Extra large devices (large desktops, 1200px and up) */
 
 @media (min-width: 1200px) {
-
-    .barra-superior .fa-phone-square,
-    .barra-superior .fa-envelope,
-    .barra-superior .fa-instagram,
-    .barra-superior .fa-youtube {
+    .barra-superior .fa-phone-square, .barra-superior .fa-envelope, .barra-superior .fa-instagram, .barra-superior .fa-youtube {
         display: initial;
     }
-
     .barra-superior {
         font-size: 16px;
     }
-
-    .img1-carousel,
-    .img2-carousel {
+    .img1-carousel, .img2-carousel {
         height: 880px;
         width: 100%;
     }
-
     .carousel-caption h1 {
         font-size: 6em;
         font-weight: 600;
     }
-
     .carousel-caption h3 {
         font-size: 2.5em;
     }
-
     .seccion-dos {
         height: 600px;
     }
-
     .seccion-dos h3 {
         font-size: 2.5em;
         margin-bottom: 50px;
     }
-
     .seccion-dos .columna {
         padding: 40px;
     }
-
     .seccion-dos p {
         font-size: 1.5em;
     }
-
     .seccion-tres {
         height: 900px;
     }
-
     .seccion-tres h3 {
         font-size: 2.5em;
     }
-
     .seccion-tres h4 {
         font-size: 1.5em;
         margin-bottom: 50px;
     }
-
     .seccion-tres .columna {
         padding: 40px;
     }
-
     .seccion-tres p {
         margin-left: 30px;
         font-size: 1.15em;
     }
-
     .seccion-tres img {
         padding: 5px;
     }
-
     .seccion-cuatro {
         height: 800px;
     }
-
     .seccion-cuatro h3 {
         font-size: 2.5em;
     }
-
     .seccion-cuatro h4 {
         font-size: 2em;
         margin-bottom: 50px;
     }
-
     .seccion-cuatro .columna {
         padding: 40px;
     }
-
     .seccion-cuatro p {
         margin-left: 30px;
         font-size: 1.15em;
     }
-
     .seccion-cuatro img {
         padding: 5px;
     }
-
     .seccion-cinco {
         height: 1000px;
     }
-
     .seccion-cinco h3 {
         font-size: 2.5em;
     }
-
     .seccion-cinco h4 {
         font-size: 2em;
         margin-bottom: 50px;
     }
-
     .seccion-cinco .columna {
         padding: 40px;
     }
-
     .seccion-cinco p {
         margin-left: 30px;
         font-size: 1.15em;
     }
-
     .seccion-cinco a {
         margin: 15px;
     }
-
     iframe {
         width: 600px;
         height: 420px;
     }
-
     .seccion-seis {
         padding-top: 60px;
         padding-bottom: 60px;
     }
-
     .seccion-seis h1 {
         margin-bottom: 60px;
     }
-
     .seccion-seis li {
         font-size: 24px;
     }
-
     .seccion-seis .columna {
         padding-right: 60px;
     }
-
     .seccion-siete {
         height: 700px;
         padding: 30px;
     }
-
     .seccion-siete .columna {
         padding: 30px;
     }
-
     .seccion-siete h3 {
         font-size: 2.5em;
     }
-
     .seccion-siete h4 {
         font-size: 2em;
         margin-bottom: 50px;
     }
-
     .seccion-siete .columna {
         padding: 40px;
     }
-
     .seccion-siete p {
         margin-left: 30px;
         font-size: 1.25em;
     }
-
     .seccion-siete img {
         padding: 8px;
     }
-
     .seccion-nueve .fila {
         padding: 60px;
     }
-
     .seccion-nueve img {
         width: 90%;
     }
-
     .seccion-nueve a {
         margin-top: 30px;
         margin-left: 10px;
     }
-
     .seccion-diez h1 {
         margin-bottom: 60px;
     }
-
     .seccion-diez .columna {
         padding-bottom: 60px;
     }
-
     .seccion-diez p {
         font-size: 1.5em;
     }
-
     .seccion-once .fila {
         padding: 60px;
     }
-
     .seccion-once img {
         width: 85%;
         margin-bottom: 20px;
     }
-
     .seccion-once h3 {
         margin-bottom: 20px;
     }
-
     .seccion-once p {
         font-size: 18px;
     }
-
     .seccion-once a {
         margin: 20px;
     }
-
     .seccion-doce {
         height: 600px;
     }
-
     .seccion-doce .fila-counter {
         padding-top: 250px;
     }
-
     .seccion-trece {
         height: 700px;
     }
-
     .swiper-container {
         width: 800px;
         height: 100%;
     }
-
     .seccion-catorce {
         height: 700px;
     }
-
     .seccion-catorce .fila {
         margin-top: 80px;
     }
-
-     .seccion-catorce h2 {
+    .seccion-catorce h2 {
         font-size: 2.5em;
         font-weight: 600;
         margin-bottom: 40px;
     }
-
     .seccion-catorce h3 {
         font-size: 2em;
         margin-bottom: 30px;
     }
-
     .seccion-catorce p {
         font-size: 1.5em;
         padding-left: 15px;
         padding-right: 15px;
     }
-
-    .acerca-uno h3,
-    .nace-uno h3,
-    .nace-dos h3,
-    .nace-tres h3,
-    .nace-cuatro h3,
-    .nace-cinco h3 {
+    .acerca-uno h3, .nace-uno h3, .nace-dos h3, .nace-tres h3, .nace-cuatro h3, .nace-cinco h3 {
         font-size: 2.2em;
         margin-bottom: 40px;
         font-weight: 600;
     }
-
     .acerca-uno {
         height: 1000px;
     }
-
     .columna {
         padding: 60px;
     }
-
-    .acerca-uno p,
-    .acerca-dos p,
-    .acerca-tres p,
-    .acerca-cuatro p,
-    .acerca-cinco p,
-    .nace-uno p,
-    .nace-dos p,
-    .nace-tres p,
-    .nace-cuatro p,
-    .nace-cinco p,
-    .teler-uno p,
-    .teler-dos p,
-    .teler-tres p,
-    .teler-cuatro p,
-    .teler-cinco p {
+    .acerca-uno p, .acerca-dos p, .acerca-tres p, .acerca-cuatro p, .acerca-cinco p, .nace-uno p, .nace-dos p, .nace-tres p, .nace-cuatro p, .nace-cinco p, .teler-uno p, .teler-dos p, .teler-tres p, .teler-cuatro p, .teler-cinco p {
         font-size: 20px;
     }
-
-    .nace-uno,
-    .nace-dos,
-    .nace-tres,
-    .teler-tres,
-    .teler-cuatro {
+    .nace-uno, .nace-dos, .nace-tres, .teler-tres, .teler-cuatro {
         height: 900px;
     }
-
-    .teler-uno,
-    .teler-cinco {
+    .teler-uno, .teler-cinco {
         height: 1000px;
     }
-
-    .nace-cuatro,
-    .nace-cinco,
-    .teler-dos,
-    .fisio-uno,
-    .fisio-dos,
-    .fisio-tres {
+    .nace-cuatro, .nace-cinco, .teler-dos, .fisio-uno, .fisio-dos, .fisio-tres {
         height: 600px;
     }
-
     .pie-pagina img {
         width: 100px;
         margin-bottom: 20px;
     }
-
     .pie-pagina {
         height: 400px;
     }
-
     .pie-pagina .creditos {
         margin-top: 30px;
     }
-
     .contacto {
         height: 200px;
     }
-
     .contacto1 {
         height: 300px;
         padding-top: 60px;
     }
-
     .contacto1 li {
         font-size: 1.3em;
     }
-
     .contacto1 h3 {
         margin-bottom: 30px;
     }
-
     .contactanos {
         height: 800px;
     }
-
-    form,
-    .contactanos h3 {
+    .dolores {
+        height: 1100px;
         margin-top: 80px;
     }
-
+    .cuello, .espalda, .rodilla, .deportivas {
+        margin-top: 80px;
+        height: 1700px;
+    }
+    form, .contactanos h3 {
+        margin-top: 80px;
+    }
     .blog-header {
         height: 200px;
     }

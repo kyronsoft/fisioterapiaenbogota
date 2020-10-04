@@ -18,7 +18,7 @@
     <link rel="stylesheet"
         href="{{ url('/') }}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- summernote -->
-    <link rel="stylesheet" href="{{ url('/') }}/plugins/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="{{ url('/') }}/plugins/summernote/summernote-lite.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -58,7 +58,7 @@
     <script src="{{ url('/') }}/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <!-- Summernote -->
-    <script src="{{ url('/') }}/plugins/summernote/summernote-bs4.min.js"></script>
+    <script src="{{ url('/') }}/plugins/summernote/summernote-lite.min.js"></script>
     <!-- overlayScrollbars -->
     <script src="{{ url('/') }}/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js">
     </script>

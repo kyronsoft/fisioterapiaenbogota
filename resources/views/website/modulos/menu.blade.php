@@ -23,7 +23,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">{{$websitemenu[4]->spanish}}</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{{url('telerehab')}}">{{$websitemenu[5]->spanish}}</a></li>
+                    <li><a class="dropdown-item" href="{{url('telerehabilitacion')}}">{{$websitemenu[5]->spanish}}</a></li>
                     <div class="dropdown-divider"></div>
                     <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="{{url('fisioterapia')}}">{{$websitemenu[6]->spanish}}</a>
                         <ul class="dropdown-menu">
@@ -47,10 +47,10 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{$websitemenu[13]->spanish}}</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{{url('init')}}"><img src="images/united-states-of-america.png" alt=""
+                    <li><a class="dropdown-item" href="{{url('init')}}"><img src="{{url('/')}}/images/united-states-of-america.png" alt=""
                                 style="width: 16px;"> English</a></li>
                     <div class="dropdown-divider"></div>
-                    <li><a class="dropdown-item" href="{{url('/')}}"><img src="images/spain.png" alt="" style="width: 16px;">
+                    <li><a class="dropdown-item" href="{{url('/')}}"><img src="{{url('/')}}/images/spain.png" alt="" style="width: 16px;">
                             Español</a></li>
             </li>
         </ul>

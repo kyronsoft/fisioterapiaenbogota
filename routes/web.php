@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'TextosEsController@index');
 Route::get('/acerca', 'AcercaController@index');
 Route::get('/nace', 'NaceController@index');
+Route::get('/telerehabilitacion', 'TelerController@index');
+Route::get('/fisioterapia', 'FisioController@index');
+Route::get('/cuello', 'CuelloController@index');
+Route::get('/espalda', 'EspaldaController@index');
+Route::get('/rodilla', 'RodillaController@index');
+Route::get('/deportivas', 'DeportivasController@index');
 
 Route::get('/contacto', 'ContactoController@index');
 Route::get('/contactanos', 'ContactanosController@index');
@@ -23,6 +29,12 @@ Route::get('/contactanos', 'ContactanosController@index');
 Route::get('/init', 'TextosEnController@index');
 Route::get('/about', 'AcercaEnController@index');
 Route::get('/born', 'NaceEnController@index');
+Route::get('/telerehabilitation', 'TelerEnController@index');
+Route::get('/phisiotherapy', 'FisioEnController@index');
+Route::get('/neck', 'CuelloEnController@index');
+Route::get('/back', 'EspaldaEnController@index');
+Route::get('/knee', 'RodillaEnController@index');
+Route::get('/sports_injuries', 'DeportivasEnController@index');
 
 Route::get('/contact', 'ContactoEnController@index');
 Route::get('/contact_us', 'ContactanosEnController@index');
@@ -48,6 +60,12 @@ Route::resource('/ks-admin/inicio/seccion12', 'Seccion12Controller');
 
 Route::resource('/ks-admin/nace', 'KSNaceController');
 Route::resource('/ks-admin/acerca', 'KSAcercaController');
+Route::resource('/ks-admin/telerehabilitacion', 'KSTelerController');
+Route::resource('/ks-admin/fisioterapia', 'KSFisioController');
+Route::resource('/ks-admin/cuello', 'KSCuelloController');
+Route::resource('/ks-admin/espalda', 'KSEspaldaController');
+Route::resource('/ks-admin/rodilla', 'KSRodillaController');
+Route::resource('/ks-admin/deportivas', 'KSDeportivasController');
 Route::resource('/ks-admin/inicio/footer', 'FooterController');
 
 Auth::routes();
@@ -56,4 +74,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/ckeditor', function () {
     return view('blog.ckeditor');
 });
-Route::resource('/blog', 'BlogController');
+Route::get('/blog', 'BlogController@index');
+Route::get('/blog/entrada', 'EntradaBlogController@index');
+Route::get('/articulo/{id}', 'BlogController@show');

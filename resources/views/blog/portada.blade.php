@@ -78,26 +78,28 @@
 
         <section class="container-fluid d-flex justify-content-center blog-header">
             <div class="col-xs-12 col-md-6 align-self-center bg-transparent">
-                <h3 class="text-justify text-white">Bienvenidos a mi Blog</h3>
+                <h2 class="text-center text-white">Bienvenidos a mi Blog</h2>
             </div>
         </section>
 
         <section class="container-fluid">
             @foreach($articulos as $element)
-                <div class="row">
+                <div class="row mt-5">
                     <div class="col-8">
                         <div>
                             <img src="{{ $element->portada_articulo }}" alt="" style="width: 50%;">
                         </div>
-                        <div style="vertical-align: middle;">
+                        <div class="mt-3">
                             <h3>{{ $element->titulo_articulo }}</h3>
                             <h6>{{ $element->descripcion_articulo }}</h6>
                             <hr>
-                            <small class="btn btn-info btn-sm m-1">{{ date_format(date_create($element->fecha_articulo),'d-m-Y') }}</small>
-                            <small class="btn btn-info btn-sm m-1"><i class="fa fa-eye" aria-hidden="true"></i> {{ $element->vistas_articulo }}</small>
-                            <example-component />
+                            <small
+                                class="btn btn-info btn-sm m-1">{{ date_format(date_create($element->fecha_articulo),'d-m-Y') }}</small>
+                            <small class="btn btn-info btn-sm m-1"><i class="fa fa-eye" aria-hidden="true"></i>
+                                {{ $element->vistas_articulo }}</small>
+                            <cant-comentarios></cant-comentarios>
+                            <a href="http://localhost:8000/articulo/@php echo $element->id_articulo; @endphp">Leer Más</a>
                             <hr>
-                            <a href="">Leer Más</a>
                         </div>
                     </div>
                     <div class="col-4">
@@ -112,24 +114,31 @@
                     </div>
                 </div>
             @endforeach
+
+            <div class="row d-flex justify-content-center">
+                <div>
+                    {{ $articulos->links() }}
+                </div>
+            </div>
         </section>
+    </div>
 
-        @include('website.modulos.footer')
+    @include('website.modulos.footer')
 
-        <span class="ir-arriba"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
-
-
-
+    <span class="ir-arriba"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="{{ asset('js/app.js') }}"></script>
-        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script type="text/javascript" src="{{ url('/') }}/js/slick/slick.min.js"></script>
-        <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
-        <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
-        <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="{{ url('/') }}/js/slick/slick.min.js"></script>
+    <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
+    <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
 </body>
 
 </html>

@@ -23,17 +23,17 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">{{$websitemenu[4]->english}}</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{{url('telerehab')}}">{{$websitemenu[5]->english}}</a></li>
+                    <li><a class="dropdown-item" href="{{url('telerehabilitation')}}">{{$websitemenu[5]->english}}</a></li>
                     <div class="dropdown-divider"></div>
-                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="{{url('fisioterapia')}}">{{$websitemenu[6]->english}}</a>
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="{{url('phisiotherapy')}}">{{$websitemenu[6]->english}}</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{url('cuello')}}">{{$websitemenu[7]->english}}</a></li>
+                            <li><a class="dropdown-item" href="{{url('neck')}}">{{$websitemenu[7]->english}}</a></li>
                             <div class="dropdown-divider"></div>
-                            <li><a class="dropdown-item" href="{{url('espalda')}}">{{$websitemenu[8]->english}}</a></li>
+                            <li><a class="dropdown-item" href="{{url('back')}}">{{$websitemenu[8]->english}}</a></li>
                             <div class="dropdown-divider"></div>
-                            <li><a class="dropdown-item" href="{{url('rodilla')}}">{{$websitemenu[9]->english}}</a></li>
+                            <li><a class="dropdown-item" href="{{url('knee')}}">{{$websitemenu[9]->english}}</a></li>
                             <div class="dropdown-divider"></div>
-                            <li><a class="dropdown-item" href="{{url('deportivas')}}">{{$websitemenu[10]->english}}</a></li>
+                            <li><a class="dropdown-item" href="{{url('sports_injuries')}}">{{$websitemenu[10]->english}}</a></li>
                         </ul>
                 </ul>
             </li>
@@ -47,10 +47,10 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{$websitemenu[13]->english}}</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{{url('/init')}}"><img src="images/united-states-of-america.png" alt=""
+                    <li><a class="dropdown-item" href="{{url('/init')}}"><img src="{{url('/')}}/images/united-states-of-america.png" alt=""
                                 style="width: 16px;"> English</a></li>
                     <div class="dropdown-divider"></div>
-                    <li><a class="dropdown-item" href="{{url('/')}}"><img src="images/spain.png" alt="" style="width: 16px;">
+                    <li><a class="dropdown-item" href="{{url('/')}}"><img src="{{url('/')}}/images/spain.png" alt="" style="width: 16px;">
                             Español</a></li>
             </li>
         </ul>
