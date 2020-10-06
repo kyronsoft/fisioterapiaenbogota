@@ -4,9 +4,7 @@
             <img src="images/problemas-de-espalda-.png" class="img-fluid" alt="">
         </div>
         <div class="col-xs-12 col-md-6 columna">
-            <div>
-                @php echo $inicioseccion5[0]->spanish; @endphp
-            </div>
+            @php echo $inicioseccion5[0]->spanish; @endphp
         </div>
     </div>
 </section>

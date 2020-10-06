@@ -28,36 +28,22 @@
         href="https://fonts.googleapis.com/css2?family=Courgette&family=Quicksand:wght@500;700&family=Raleway:ital,wght@0,200;0,400;1,200;1,400&display=swap"
         rel="stylesheet">
 
-    <link rel="apple-touch-icon" sizes="57x57"
-        href="{{ url('/') }}/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60"
-        href="{{ url('/') }}/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72"
-        href="{{ url('/') }}/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76"
-        href="{{ url('/') }}/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114"
-        href="{{ url('/') }}/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120"
-        href="{{ url('/') }}/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144"
-        href="{{ url('/') }}/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152"
-        href="{{ url('/') }}/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="{{ url('/') }}/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"
-        href="{{ url('/') }}/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="{{ url('/') }}/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96"
-        href="{{ url('/') }}/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="{{ url('/') }}/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ url('/') }}/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ url('/') }}/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ url('/') }}/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ url('/') }}/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ url('/') }}/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ url('/') }}/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ url('/') }}/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ url('/') }}/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('/') }}/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url('/') }}/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('/') }}/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ url('/') }}/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('/') }}/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="{{ url('/') }}/images/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage"
-        content="{{ url('/') }}/images/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="{{ url('/') }}/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="{{ url('/') }}/css/normalize.css">
@@ -78,49 +64,89 @@
 
         <section class="container-fluid d-flex justify-content-center blog-header">
             <div class="col-xs-12 col-md-6 align-self-center bg-transparent">
-                <h2 class="text-center text-white">Bienvenidos a mi Blog</h2>
+                <h1 class="text-center text-white">Bienvenidos a mi Blog</h1>
             </div>
         </section>
 
         <section class="container-fluid">
-            @foreach($articulos as $element)
-                <div class="row mt-5">
-                    <div class="col-8">
-                        <div>
-                            <img src="{{ $element->portada_articulo }}" alt="" style="width: 50%;">
+            <hr>
+            <div class="row d-flex justify-content-around">
+                <div class="col-8 align-self-start">
+                    @foreach ($articulos as $element)
+                        <div class="row mt-5">
+                            <div class="col-10 d-flex">
+                                <div class="align-self-center">
+                                    <img src="{{ $element->portada_articulo }}" alt="" style="width: 300px;">
+                                </div>
+                                <div class="col-8 mt-3 float-right align-self-center">
+                                    <h3 class="pl-3">{{ $element->titulo_articulo }}</h3>
+                                    <h6 class="pl-3">{{ $element->descripcion_articulo }}</h6>
+                                    <hr>
+                                    <small
+                                        class="btn btn-info btn-sm ml-3">{{ date_format(date_create($element->fecha_articulo), 'd-m-Y') }}</small>
+                                    <small class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>
+                                        {{ $element->vistas_articulo }}</small>
+                                    <cant-comentarios></cant-comentarios>
+                                    <small class="btn btn-info btn-sm"><i class="fa fa-heart" aria-hidden="true"></i> 290</small>
+                                    <a href="http://localhost:8000/articulo/@php echo $element->id_articulo; @endphp"
+                                        class="float-right">Leer Más</a>
+                                    <hr>
+                                    <h4>Etiquetas</h4>
+                                    @php
+                                    $tags = json_decode($element->p_claves_articulo, true);
+                                    if ($tags)
+                                    foreach ($tags as $key => $value): @endphp
+                                    <a href="localhost:8000" class="btn btn-secondary btn-sm m-1">@php echo $value;
+                                        @endphp</a>
+                                    @php endforeach
+                                    @endphp
+                                </div>
+                            </div>
                         </div>
-                        <div class="mt-3">
-                            <h3>{{ $element->titulo_articulo }}</h3>
-                            <h6>{{ $element->descripcion_articulo }}</h6>
-                            <hr>
-                            <small
-                                class="btn btn-info btn-sm m-1">{{ date_format(date_create($element->fecha_articulo),'d-m-Y') }}</small>
-                            <small class="btn btn-info btn-sm m-1"><i class="fa fa-eye" aria-hidden="true"></i>
-                                {{ $element->vistas_articulo }}</small>
-                            <cant-comentarios></cant-comentarios>
-                            <a href="http://localhost:8000/articulo/@php echo $element->id_articulo; @endphp">Leer Más</a>
-                            <hr>
+                    @endforeach
+                </div>
+                <div class="col-4 align-self-start">
+                    <div class="row justify-content-center">
+                        <form action="">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-search"
+                                            aria-hidden="true"></i></span>
+                                </div>
+                                <input type="text" class="form-control" name="buscar_articulo">
+                                <button type="submit" class="btn btn-primary ml-3 float-right">Buscar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <hr>
+                    <h3>Destacados</h3>
+                    <hr>
+                    @php
+                    for ($i=0;$i<5;$i++) { @endphp <div class="row d-flex justify-content-around">
+                        <div class="col-4 align-self-center">
+                            <img src="{{ $destacados[$i]->portada_articulo }}" alt="" style="width: 150px;">
                         </div>
-                    </div>
-                    <div class="col-4">
-                        <h4>Etiquetas</h4>
-                        @php
-                            $tags = json_decode($element->p_claves_articulo, true);
-                        @endphp
-
-                        @php foreach ($tags as $key => $value): @endphp
-                            <a href="localhost:8000" class="btn btn-secondary btn-sm m-1">@php echo $value; @endphp</a>
-                            @php endforeach @endphp
-                    </div>
+                        <div class="col-8 align-self-center">
+                            <a
+                                href="{{ url('/') }}/articulo/{{ $destacados[$i]->id_articulo }}">{{ $destacados[$i]->titulo_articulo }}</a>
+                            <hr>
+                            <h6>{{ $destacados[$i]->descripcion_articulo }}</h6>
+                        </div>
                 </div>
-            @endforeach
-
-            <div class="row d-flex justify-content-center">
-                <div>
-                    {{ $articulos->links() }}
-                </div>
+                <hr>
+                @php
+                }
+                @endphp
             </div>
-        </section>
+    </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div>
+            {{ $articulos->links() }}
+        </div>
+    </div>
+    </section>
     </div>
 
     @include('website.modulos.footer')

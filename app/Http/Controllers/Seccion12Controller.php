@@ -232,7 +232,6 @@ class Seccion12Controller extends Controller
             );
         }
 
-
         DB::table('textos')->where("id", $id)->update($datos);
         $textos = DB::table('textos')->get();
 

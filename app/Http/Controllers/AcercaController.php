@@ -10,7 +10,7 @@ class AcercaController extends Controller
 {
     public function index()
     {
-        $textoses = Textos::all();
+        $textoses = DB::table('textos')->where('pagina','=','Acerca')->get();
         $websiteheader = DB::table('website_header')->get();
         $websitemenu = DB::table('website_menu')->get();
         $blinfo = DB::table('website_info')->get();

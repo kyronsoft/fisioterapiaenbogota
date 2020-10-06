@@ -14,9 +14,9 @@ footer {
     height: 200px;
 }
 
-#nombre::placeholder, #telefono::placeholder {
+/* #nombre::placeholder, #telefono::placeholder {
     color: white;
-}
+} */
 
 /* option {
     background-color: black !important;
@@ -281,7 +281,7 @@ footer {
 }
 
 .teler-cinco {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/telerehabilitacion-en-colombia-bogota-1.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/telerehabilitacion-en-colombia-bogota-2.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;

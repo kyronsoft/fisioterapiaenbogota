@@ -6,7 +6,7 @@
                 <img src="images/icon-decor-1.png" alt="" class="rounded-circle" style="background-color: #ddb2c6;">
             </div>
             <div class="col-xs-10 col-md-11 align-self-center">
-                <p class="text-justify">@php echo $inicioseccion2[1]->spanish; @endphp</p>
+                <div class="texto-sec3">@php echo $inicioseccion2[1]->spanish; @endphp</div>
             </div>
         </div>
         <div class="row">
@@ -14,7 +14,7 @@
                 <img src="images/icon-decor-2.png" alt="" class="rounded-circle" style="background-color: #ddad9f;">
             </div>
             <div class="col-xs-10 col-md-11 align-self-center">
-                <p class="text-justify">@php echo $inicioseccion2[2]->spanish; @endphp</p>
+                <div class="texto-sec3">@php echo $inicioseccion2[2]->spanish; @endphp</div>
             </div>
         </div>
         <div class="row">
@@ -22,7 +22,7 @@
                 <img src="images/icon-decor-3.png" alt="" class="rounded-circle" style="background-color: #b4c0ca;">
             </div>
             <div class="col-xs-10 col-md-11 align-self-center">
-                <p class="text-justify">@php echo $inicioseccion2[3]->spanish; @endphp</p>
+                <div class="texto-sec3">@php echo $inicioseccion2[3]->spanish; @endphp</div>
             </div>
         </div>
         <div class="row">
@@ -30,16 +30,15 @@
                 <img src="images/icon-decor-1.png" alt="" class="rounded-circle" style="background-color: #ddb2c6;">
             </div>
             <div class="col-xs-10 col-md-11 align-self-center">
-                <p class="text-justify">@php echo $inicioseccion2[4]->spanish; @endphp
-                </p>
+                <div class="texto-sec3">@php echo $inicioseccion2[4]->spanish; @endphp</div>
             </div>
         </div>
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <div class="col-xs-2 col-md-1 align-self-center">
                 <img src="images/icon-decor-1.png" alt="" class="rounded-circle" style="background-color: #ddad9f;">
             </div>
             <div class="col-xs-10 col-md-11 align-self-center">
-                <p class="text-justify">@php echo $inicioseccion2[5]->spanish; @endphp</p>
+                <div class="texto-sec3">@php echo $inicioseccion2[5]->spanish; @endphp</div>
             </div>
         </div>
     </div>

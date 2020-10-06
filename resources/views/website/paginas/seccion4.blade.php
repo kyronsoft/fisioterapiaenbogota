@@ -9,8 +9,10 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <p class="text-justify">@php echo $videoyt[2]->spanish; @endphp</p>
-            <a href="#" class="btn btn-primary btn-block">Solicita más información</a>
+            <div class="col-11 align-self-center">
+                @php echo $videoyt[2]->spanish; @endphp
+                <a href="{{ url('/') }}/contactanos" class="btn btn-primary btn-block">Solicita más información</a>
+            </div>
         </div>
     </div>
 </section>

@@ -1,7 +1,7 @@
 <section class="container-fluid seccion-catorce">
     <div class="row d-flex justify-content-center fila">
         <div class="col-8 align-self-center">
-            <h3 class="text-center">@php echo $textos[44]->spanish; @endphp</h3>
+            <h2 class="text-center">@php echo $textos[44]->spanish; @endphp</h2>
             <div class="slider-faq">
                 <div>
                     <div>@php echo $textos[45]->spanish; @endphp</div>

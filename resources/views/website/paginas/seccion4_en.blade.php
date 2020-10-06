@@ -10,7 +10,7 @@
         </div>
         <div class="row d-flex justify-content-center">
             <p class="text-justify">@php echo $videoyt[2]->english; @endphp</p>
-            <a href="#" class="btn btn-primary btn-block">Solicita más información</a>
+        <a href="{{url('/')}}/contact_us" class="btn btn-primary btn-block">Solicita más información</a>
         </div>
     </div>
 </section>

@@ -14,7 +14,7 @@ class KSAcercaController extends Controller
      */
     public function index()
     {
-        $textos = DB::table('textos')->where('pagina', '=', 'Nace')->get();
+        $textos = DB::table('textos')->where('pagina', '=', 'Acerca')->get();
 
         return view('ksadmin.paginas.acerca', array('textos' => $textos));
     }
@@ -28,61 +28,61 @@ class KSAcercaController extends Controller
      */
     public function update($id, Request $request)
     {
-        if ($id == 68 && $request->input("parrafo1_es") != "") {
+        if ($id == 63 && $request->input("parrafo1_es") != "") {
             $datos = array(
                 "spanish" => $request->input("parrafo1_es")
             );
         }
 
-        if ($id == 68 && $request->input("parrafo1_en") != "") {
+        if ($id == 63 && $request->input("parrafo1_en") != "") {
             $datos = array(
                 "english" => $request->input("parrafo1_en")
             );
         }
 
-        if ($id == 69 && $request->input("parrafo2_es") != "") {
+        if ($id == 64 && $request->input("parrafo2_es") != "") {
             $datos = array(
                 "spanish" => $request->input("parrafo2_es")
             );
         }
 
-        if ($id == 69 && $request->input("parrafo2_en") != "") {
+        if ($id == 64 && $request->input("parrafo2_en") != "") {
             $datos = array(
                 "english" => $request->input("parrafo2_en")
             );
         }
 
-        if ($id == 70 && $request->input("parrafo3_es") != "") {
+        if ($id == 65 && $request->input("parrafo3_es") != "") {
             $datos = array(
                 "spanish" => $request->input("parrafo3_es")
             );
         }
 
-        if ($id == 70 && $request->input("parrafo3_en") != "") {
+        if ($id == 65 && $request->input("parrafo3_en") != "") {
             $datos = array(
                 "english" => $request->input("parrafo3_en")
             );
         }
 
-        if ($id == 71 && $request->input("parrafo4_es") != "") {
+        if ($id == 66 && $request->input("parrafo4_es") != "") {
             $datos = array(
                 "spanish" => $request->input("parrafo4_es")
             );
         }
 
-        if ($id == 71 && $request->input("parrafo4_en") != "") {
+        if ($id == 66 && $request->input("parrafo4_en") != "") {
             $datos = array(
                 "english" => $request->input("parrafo4_en")
             );
         }
 
-        if ($id == 72 && $request->input("parrafo5_es") != "") {
+        if ($id == 67 && $request->input("parrafo5_es") != "") {
             $datos = array(
                 "spanish" => $request->input("parrafo5_es")
             );
         }
 
-        if ($id == 72 && $request->input("parrafo5_en") != "") {
+        if ($id == 67 && $request->input("parrafo5_en") != "") {
             $datos = array(
                 "english" => $request->input("parrafo5_en")
             );

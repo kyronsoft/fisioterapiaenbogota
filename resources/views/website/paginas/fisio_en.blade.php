@@ -79,31 +79,31 @@
 
         <section class="container-fluid d-flex justify-content-start teler-uno">
             <div class="col-xs-6 col-md-6 align-self-center bg-white">
-                <div class="text-justify">@php echo $teler[0]->english; @endphp</div>
+                <div class="text-justify">@php echo $fisio[0]->english; @endphp</div>
             </div>
         </section>
 
         <section class="container-fluid d-flex justify-content-end teler-dos">
             <div class="col-xs-6 col-md-6 align-self-center bg-white">
-                <div class="text-justify">@php echo $teler[1]->english; @endphp</div>
+                <div class="text-justify">@php echo $fisio[1]->english; @endphp</div>
             </div>
         </section>
 
         <section class="container-fluid d-flex justify-content-start teler-tres">
             <div class="col-xs-6 col-md-6 align-self-center bg-white">
-                <div class="text-left py-5">@php echo $teler[2]->english; @endphp</div>
+                <div class="text-left py-5">@php echo $fisio[2]->english; @endphp</div>
             </div>
         </section>
 
         <section class="container-fluid d-flex justify-content-end teler-cuatro">
             <div class="col-xs-6 col-md-6 align-self-center bg-white">
-                <div class="text-left py-5">@php echo $teler[3]->english; @endphp</div>
+                <div class="text-left py-5">@php echo $fisio[3]->english; @endphp</div>
             </div>
         </section>
 
         <section class="container-fluid d-flex justify-content-start teler-cinco">
             <div class="col-xs-6 col-md-6 align-self-center bg-white">
-                <div class="text-left py-5">@php echo $teler[4]->english; @endphp</div>
+                <div class="text-left py-5">@php echo $fisio[4]->english; @endphp</div>
             </div>
         </section>
     </div>

@@ -22,7 +22,7 @@ Route::get('/cuello', 'CuelloController@index');
 Route::get('/espalda', 'EspaldaController@index');
 Route::get('/rodilla', 'RodillaController@index');
 Route::get('/deportivas', 'DeportivasController@index');
-
+Route::get('/descargar_cuello', 'DescargarCuelloController@index');
 Route::get('/contacto', 'ContactoController@index');
 Route::get('/contactanos', 'ContactanosController@index');
 
@@ -30,7 +30,7 @@ Route::get('/init', 'TextosEnController@index');
 Route::get('/about', 'AcercaEnController@index');
 Route::get('/born', 'NaceEnController@index');
 Route::get('/telerehabilitation', 'TelerEnController@index');
-Route::get('/phisiotherapy', 'FisioEnController@index');
+Route::get('/physiotherapy', 'FisioEnController@index');
 Route::get('/neck', 'CuelloEnController@index');
 Route::get('/back', 'EspaldaEnController@index');
 Route::get('/knee', 'RodillaEnController@index');
@@ -77,3 +77,4 @@ Route::get('/ckeditor', function () {
 Route::get('/blog', 'BlogController@index');
 Route::get('/blog/entrada', 'EntradaBlogController@index');
 Route::get('/articulo/{id}', 'BlogController@show');
+Route::post('/articulo', 'BlogController@store');

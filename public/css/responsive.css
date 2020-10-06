@@ -20,9 +20,9 @@
     .seccion-dos {
         height: 700px;
     }
-    .seccion-dos h3 {
-        font-size: 20px;
-        margin-bottom: 10px;
+    .texto-seccion2 {
+        font-size: 16px !important;
+        margin-bottom: 10px !important;
     }
     .seccion-dos .columna {
         padding: 20px;
@@ -33,9 +33,9 @@
     .seccion-tres {
         height: 1300px;
     }
-    .seccion-tres h3 {
-        font-size: 24px;
-        font-weight: 600;
+    .texto-sec3 {
+        font-size: 20px !important;
+        font-weight: 500 !important;
     }
     .seccion-tres h4 {
         font-size: 18px;
@@ -798,7 +798,7 @@
         margin-bottom: 30px;
     }
     .contactanos {
-        height: 800px;
+        height: 900px;
     }
     .dolores {
         height: 1100px;
@@ -808,7 +808,7 @@
         margin-top: 80px;
         height: 1700px;
     }
-    form, .contactanos h3 {
+    .contactanos h3 {
         margin-top: 80px;
     }
     .blog-header {

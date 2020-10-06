@@ -67,14 +67,16 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ url('/') }}/blog">Artículos</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{ $articulo[0]->titulo_articulo }}</li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        {{ $articulo[0]->titulo_articulo }}</li>
                 </ol>
             </nav>
-            <div class="row mt-2">
-                <div class="col-12">
-                    <h3>{{ $categoria[0]->titulo_categoria }}</h3>
-                    <h4>{{ $articulo[0]->titulo_articulo }}</h4>
-                    <div class="text-justify">@php echo $articulo[0]->contenido_articulo @endphp</div>
+            <div class="row mt-2 d-flex justify-content-center">
+                <div class="col-10 align-self-center">
+                    <h3>Categoría: <u>{{ $categoria[0]->titulo_categoria }}</u></h3>
+                    <h4><span class="font-weight-bold">Título:</span> {{ $articulo[0]->titulo_articulo }}</h4>
+                    <hr>
+                    <div class="text-justify mt-5">@php echo $articulo[0]->contenido_articulo @endphp</div>
                 </div>
             </div>
             <div class="row d-flex justify-content-end">
@@ -87,6 +89,51 @@
                 </div>
                 <div class="align-self-center">
                     <articulo-likes></articulo-likes>
+                </div>
+            </div>
+            <hr>
+            <h3 class="font-weight-bold mb-3">Comentarios: </h3>
+            <div class="row d-flex justify-content-center">
+                <div class="col-10 align-self-center">
+                    @php
+                    if ($opiniones) {
+                    foreach ($opiniones as $key => $value) {
+                    if ($value->aprobacion_opinion == 1) {
+                    @endphp
+                    <h4 class="font-weight-bold"><i class="fa fa-commenting-o" aria-hidden="true"></i>@php echo ' '.
+                        $value->nombre_opinion; @endphp<small class="ml-5"><i class="fa fa-calendar-check-o"
+                                aria-hidden="true"></i>@php echo ' ',
+                            date_format(date_create($value->fecha_opinion),'Y-m-d'); @endphp </small></h4>
+                    <h5 class="font-italic pl-5">@php echo $value->contenido_opinion; @endphp</h5>
+                    <h4 class="font-weight-bold"><i class="fa fa-comments-o" aria-hidden="true"></i> Adriana Ramírez
+                        <small class="ml-5"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>@php echo ' ',
+                            date_format(date_create($value->fecha_respuesta),'Y-m-d'); @endphp</small></h4>
+                    <h5 class="font-italic pl-5">@php echo $value->respuesta_opinion; @endphp</h5>
+                    @php
+                    }
+                    }
+                    }
+                    @endphp
+                    <hr>
+                    <form action="{{ url('/') }}/articulo" method="POST" class="mb-5">
+                        @csrf
+                        <div class="col-5">
+                            <input type="hidden" name="id_comentario" value="{{ $id_articulo }}">
+                            <div class="form-group">
+                                <label for="nombre_opinion">Nombre</label>
+                                <input type="text" class="form-control" id="nombre_opinion" name="nombre_opinion">
+                            </div>
+                            <div class="form-group">
+                                <label for="correo_opinion">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="correo_opinion" name="correo_opinion">
+                            </div>
+                            <div class="form-group">
+                                <label for="contenido_opinion">Comentario</label>
+                                <input type="text" class="form-control" id="contenido_opinion" name="contenido_opinion">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

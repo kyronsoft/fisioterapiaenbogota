@@ -7,7 +7,7 @@
                 <div class="carousel-caption">
                     <h1 class="text-primary">{{ $websitesliders[0]->english }}</h1>
                     <h3 class="text-primary">{{ $websitesliders[1]->english }}</h3>
-                    <a href="#" class="btn btn-primary">Más información sobre Fisioterapia</a>
+                    <a href="{{url('/')}}/physiotherapy" class="btn btn-primary">Más información sobre Fisioterapia</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -27,7 +27,7 @@
                                 alt="">
                             <h3 class="text-primary">{{ $websitesliders[5]->english }}</h3>
                         </div>
-                        <a href="{{ url('/') }}/telerehab" class="btn btn-primary">Más información sobre
+                        <a href="{{ url('/') }}/telerehabilitation" class="btn btn-primary">Más información sobre
                             Telerehabilitación</a>
                     </div>
                 </div>

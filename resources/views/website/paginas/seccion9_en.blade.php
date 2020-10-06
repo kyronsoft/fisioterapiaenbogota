@@ -5,7 +5,7 @@
                 class="img-thumbnail rounded-circle">
             <h3>@php echo $inicioseccion9[0]->spanish; @endphp</h3>
             <p class="text-justify">@php echo $inicioseccion9[1]->english; @endphp</p>
-            <a href="#" class="btn btn-primary">More Information</a>
+            <a href="{{ url('/') }}/telerehabilitation" class="btn btn-primary">More Information</a>
         </div>
         <div class="col-xs-12 col-lg-3">
             <img src="{{ url('/') }}/images/fisioterapia-en-bogota-colombia.jpg" alt=""
@@ -13,7 +13,7 @@
             <h3>@php echo $inicioseccion9[2]->english; @endphp</h3>
             <p class="text-justify">@php echo $inicioseccion9[3]->english; @endphp
             </p>
-            <a href="#" class="btn btn-primary">More Information</a>
+            <a href="{{ url('/') }}/physiotherapy" class="btn btn-primary">More Information</a>
         </div>
         <div class="col-xs-12 col-lg-3">
             <img src="{{ url('/') }}/images/acupuntura-en-bogota-copia.jpg" alt=""

@@ -55,7 +55,8 @@
     <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slick/slick-theme.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    {{-- <script src="{{ asset('ckeditor5/ckeditor.js') }}"></script>
+    --}}
 </head>
 
 <body>
@@ -88,13 +89,13 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
-                    <textarea name="editor1"></textarea>
+                <div id="editor">
+                    <p>Here goes the initial content of the editor.</p>
                 </div>
             </div>
             <hr>
             <div class="row d-flex justify-content-center">
-                <div class="button btn btn-primary mb-5">Guardar</div>
+                <div class="button btn btn-primary mb-5" id="guardar">Guardar</div>
             </div>
         </section>
     </div>
@@ -115,10 +116,7 @@
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
-    <script>
-        CKEDITOR.replace('editor1');
-
-    </script>
+    <script type="text/javascript" src="{{ url('/') }}/js/prueba.js"></script>
 </body>
 
 </html>

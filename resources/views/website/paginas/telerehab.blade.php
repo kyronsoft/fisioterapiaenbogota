@@ -63,34 +63,34 @@
         @include('website.modulos.menu')
 
 
-        <section class="container-fluid d-flex justify-content-start teler-uno">
+        <section class="container-fluid d-flex justify-content-end teler-uno">
             <div class="col-xs-6 col-md-6 align-self-center bg-white">
                 <div class="text-justify">@php echo $teler[0]->spanish; @endphp</div>
             </div>
         </section>
 
-        <section class="container-fluid d-flex justify-content-end teler-dos">
+        <section class="container-fluid d-flex justify-content-center teler-dos">
             <div class="col-xs-6 col-md-6 align-self-center bg-white">
                 <div class="text-justify">@php echo $teler[1]->spanish; @endphp</div>
             </div>
         </section>
 
-        <section class="container-fluid d-flex justify-content-start teler-tres">
+        <section class="container-fluid d-flex justify-content-end teler-tres">
             <div class="col-xs-6 col-md-6 align-self-center bg-white">
                 <div class="text-left py-5">@php echo $teler[2]->spanish; @endphp</div>
             </div>
         </section>
 
-        <section class="container-fluid d-flex justify-content-end teler-cuatro">
+        <section class="container-fluid d-flex justify-content-center teler-cuatro">
             <div class="col-xs-6 col-md-6 align-self-center bg-white">
                 <div class="text-left py-5">@php echo $teler[3]->spanish; @endphp</div>
                 <div class="text-center mb-5">
-                    <img src="{{ url('/') }}/images/prestadores-de-servicios-de-salud.jpg" alt="">
+                    <img src="{{ url('/') }}/images/prestadores-de-servicios-de-salud.jpg" alt="" style="width: 50%">
                 </div>
             </div>
         </section>
 
-        <section class="container-fluid d-flex justify-content-start teler-cinco">
+        <section class="container-fluid d-flex justify-content-end teler-cinco">
             <div class="col-xs-6 col-md-6 align-self-center bg-white">
                 <div class="text-left py-5">@php echo $teler[4]->spanish; @endphp</div>
             </div>
