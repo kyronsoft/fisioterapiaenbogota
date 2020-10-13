@@ -1,6 +1,6 @@
 <section class="container-fluid d-flex justify-content-end seccion-tres">
     <div class="col-xs-12 col-md-6 align-self-center bg-white columna">
-        <div class="text-center">@php echo $inicioseccion2[0]->spanish; @endphp</div>
+        <div>@php echo $inicioseccion2[0]->spanish; @endphp</div>
         <div class="row d-flex">
             <div class="col-xs-2 col-md-1 align-self-center">
                 <img src="images/icon-decor-1.png" alt="" class="rounded-circle" style="background-color: #ddb2c6;">

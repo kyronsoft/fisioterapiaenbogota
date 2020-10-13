@@ -8,7 +8,7 @@
         </div>
         <div class="col-12 align-self-center text-center">
             <div>
-                <ul class="list-inline">
+                <ul class="list-inline menu-footer">
                     <li class="list-inline-item">
                         <a href="{{ url('/') }}">Inicio</a>
                     </li>
@@ -22,10 +22,10 @@
                         <a href="{{ url('blog') }}">Blog</a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{{ url('contacti') }}">Contacto</a>
+                        <a href="{{ url('contacto') }}">Contacto</a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{{ url('tiendaonline') }}">Tienda</a>
+                        <a href="http://localhost/frontend">Tienda</a>
                     </li>
                 </ul>
                 <ul class="list-inline social-networks-footer">
@@ -54,9 +54,8 @@
         </div>
         <div class="col-12 align-self-center text-center creditos">
             <div class="align-self-end text-white">
-                <h6 class="text-center">@php
-                    echo $footer[0]->spanish;
-                    @endphp</h6>
+                <p class="text-center">Derechos reservados Fisioterapia Online 2020 - Telerehabilitación en Bogotá -
+                    Adriana Lucia Ramírez Bonilla</p>
             </div>
         </div>
     </div>

@@ -1,20 +1,20 @@
 <section class="container-fluid d-flex justify-content-between seccion-nueve">
     <div class="row align-content-between fila">
         <div class="col-xs-12 col-md-3 text-center">
-            <img src="{{ url('/') }}/images/port-2-spa.png" class="img-fluid" alt="">
-            <a href="#" class="btn btn-primary">Download</a>
+            <img src="{{ url('/') }}/images/port-3-spa.png" class="img-fluid" alt="">
+            <a href="{{ url('/') }}/download_neck" class="btn btn-primary">Download</a>
         </div>
         <div class="col-xs-12 col-md-3 text-center">
-            <img src="images/port-1-spa.png" class="img-fluid" alt="">
-            <a href="#" class="btn btn-primary">Download</a>
+            <img src="{{ url('/') }}/images/port-1-spa.png" class="img-fluid" alt="">
+            <a href="{{ url('/') }}/download_back" class="btn btn-primary">Download</a>
         </div>
         <div class="col-xs-12 col-md-3 text-center">
             <img src="{{ url('/') }}/images/port-4-spa.png" class="img-fluid" alt="">
-            <a href="#" class="btn btn-primary">Download</a>
+            <a href="{{ url('/') }}/download_knee" class="btn btn-primary">Download</a>
         </div>
         <div class="col-xs-12 col-md-3 text-center">
-            <img src="{{ url('/') }}/images/port-3-spa.png" class="img-fluid" alt="">
-            <a href="#" class="btn btn-primary">Download</a>
+            <img src="{{ url('/') }}/images/port-2-spa.png" class="img-fluid" alt="">
+            <a href="{{ url('/') }}/download_sports" class="btn btn-primary">Download</a>
         </div>
     </div>
 </section>

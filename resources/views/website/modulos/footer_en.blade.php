@@ -8,44 +8,44 @@
         </div>
         <div class="col-12 align-self-center text-center">
             <div>
-                <ul class="list-inline">
+                <ul class="list-inline menu-footer">
                     <li class="list-inline-item">
-                        <a href="{{ url('/') }}">Inicio</a>
+                        <a href="{{ url('/') }}">Home</a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{{ url('acerca') }}">Quien soy</a>
+                        <a href="{{ url('acerca') }}">Who Am I</a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{{ url('telerehab') }}">Servicios</a>
+                        <a href="{{ url('telerehab') }}">Services</a>
                     </li>
                     <li class="list-inline-item">
                         <a href="{{ url('blog') }}">Blog</a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{{ url('contacti') }}">Contacto</a>
+                        <a href="{{ url('contacto') }}">Contact</a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{{ url('tiendaonline') }}">Tienda</a>
+                        <a href="http://localhost/frontend">Shop Online</a>
                     </li>
                 </ul>
                 <ul class="list-inline social-networks-footer">
                     <li class="list-inline-item">
-                        <a href="{{ url($websiteheader[6]->english) }}">
+                        <a href="{{ url($websiteheader[6]->spanish) }}">
                             <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{{ url($websiteheader[3]->english) }}">
+                        <a href="{{ url($websiteheader[3]->spanish) }}">
                             <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{{ url($websiteheader[4]->english) }}">
+                        <a href="{{ url($websiteheader[4]->spanish) }}">
                             <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{{ url($websiteheader[5]->english) }}">
+                        <a href="{{ url($websiteheader[5]->spanish) }}">
                             <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
@@ -54,15 +54,14 @@
         </div>
         <div class="col-12 align-self-center text-center creditos">
             <div class="align-self-end text-white">
-                <h6 class="text-center">@php
-                    echo $footer[0]->english;
-                    @endphp</h6>
+                <p class="text-center">All rights reserved Fisioterapia Online 2020 - Telerehabilitación en Bogotá -
+                    Adriana Lucia Ramírez Bonilla</p>
             </div>
         </div>
     </div>
     <div class="row d-flex justify-content-center developer">
         <div class="col-6 text-center">
-            <h6 class="text-white">Desarrollado por <a href="https://www.kyronsoft.com" target="_blank">Kyronsoft</a>
+            <h6 class="text-white">Developed by <a href="https://www.kyronsoft.com" target="_blank">Kyronsoft</a>
             </h6>
         </div>
     </div>

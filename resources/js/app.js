@@ -3,6 +3,7 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+import VueSweetalert2 from 'vue-sweetalert2';
 
 require('./bootstrap');
 
@@ -19,9 +20,16 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('cant-comentarios', require('./components/CantComentarios.vue').default);
-Vue.component('articulo-likes', require('./components/LikeArticuloComponent.vue').default);
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.use(VueSweetalert2);
+Vue.component('aprobar-component', require('./components/AprobarComponent.vue').default);
+Vue.component('cantidad-gusta', require('./components/CantidadGustaComponent.vue').default);
+Vue.component('cantidad-vistas', require('./components/CantidadVistasComponent.vue').default);
+Vue.component('agregar-vista', require('./components/VistasComponent.vue').default);
+Vue.component('me-gusta', require('./components/MeGustaComponent.vue').default);
+Vue.component('descargar-folleto', require('./components/DescargarFolletoComponent.vue').default);
+Vue.component('descargar-folleto-en', require('./components/DescargarFolletoEnComponent.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -32,5 +40,3 @@ Vue.component('articulo-likes', require('./components/LikeArticuloComponent.vue'
 const app = new Vue({
     el: '#app',
 });
-
-

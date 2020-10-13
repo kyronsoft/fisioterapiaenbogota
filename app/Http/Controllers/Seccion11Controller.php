@@ -138,7 +138,7 @@ class Seccion11Controller extends Controller
 
 
         DB::table('textos')->where("id", $id)->update($datos);
-        $textos = DB::table('textos')->get();
+        $textos = DB::table('textos')->where("seccion","=","Testimonios")->get();
 
         return view('ksadmin.paginas.inicioseccion11', array('textos' => $textos));
     }

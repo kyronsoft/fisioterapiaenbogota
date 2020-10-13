@@ -4,25 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fisioterapia en Bogotá ✅ Telerehabilitación en Bogotá 🧿</title>
-    <meta name="description"
-        content="Fisioterapia Online Bogotá y Telerehabilitación en Bogotá ✅ Adriana Lucia Ramirez Bonilla ✅ Especialista en Tele Rehabilitacion en Bogotá">
-    <meta name="robots" content="index, follow" />
-    <meta name="keywords" content="game, reciclapp, gaming, business, ps4, xbox, steam, android">
 
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <link rel="canonical" href="https://fisioterapiaenbogota.com/" />
+    <meta name="title" content="Fisioterapia en Bogotá ✅ Telerehabilitación en Bogotá 🧿">
     <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Fisioterapia en Bogotá ✅ Telerehabilitación en Bogotá 🧿" />
-    <meta property="og:description"
-        content="Fisioterapia Online Bogotá y Telerehabilitación en Bogotá ✅ Adriana Lucia Ramirez Bonilla ✅ Especialista en Tele Rehabilitacion en Bogotá" />
+    <meta name="description"
+        content="Fisioterapia Online Bogotá y Telerehabilitación en Bogotá ✅ Adriana Lucia Ramirez Bonilla ✅ Especialista en Tele Rehabilitacion en Bogotá">
+    <meta name="keyword" content="Fisioterapia, Telerehabilitacion, Dolor, Consulta, Dolor de Cuello, Dolor de Espalda, Dolor de Hombro, Dolor de Cadera, 
+            Dolor de Rodilla, Acondicionamiento Fisico, Estiramientos, Tobillos, Lesiones Deportivas">
     <meta property="og:url" content="https://fisioterapiaenbogota.com/" />
     <meta property="og:site_name" content="Fisioterapia en Bogotá 🧿 Telerehabilitación ✅" />
     <meta property="og:image:width" content="621" />
     <meta property="og:image:height" content="603" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Lesiones Deportivas">
+    <meta property="og:url" content="http://fisioterapiaenbogota/deportivas">
+    <meta property="og:description" content="Si llevas un estilo de vida físicamente activo, eres un atleta de fin de semana, un atleta aficionado o un atleta profesional
+         sabrás por experiencia propia que las lesiones deportivas son bastante frecuentes.">
+    <meta property="og:image" content="http://fisioterapiaenbogota.com/images/fisioterapia-en-bogota-colombia-1.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Fysiopuntura">
+    <meta property="og:locale" content="es_CO">
+
+
+    <meta itemprop="name" content="Lesiones Deportivas">
+    <meta itemprop="url" content="http://fisioterapiaenbogota/deportivas">
+    <meta itemprop="description" content="Si llevas un estilo de vida físicamente activo, eres un atleta de fin de semana, un atleta aficionado o un atleta profesional
+         sabrás por experiencia propia que las lesiones deportivas son bastante frecuentes.">
+    <meta itemprop="image" content="http://fisioterapiaenbogota.com/images/fisioterapia-en-bogota-colombia-1.jpg">
+
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Lesiones Deportivas">
+    <meta name="twitter:url" content="http://fisioterapiaenbogota/deportivas">
+    <meta name="twitter:description" content="Si llevas un estilo de vida físicamente activo, eres un atleta de fin de semana, un atleta aficionado o un atleta profesional
+         sabrás por experiencia propia que las lesiones deportivas son bastante frecuentes.">
+    <meta name="twitter:image" content="http://fisioterapiaenbogota.com/images/fisioterapia-en-bogota-colombia-1.jpg">
+    <meta name="twitter:site" content="@fysiopuntura">
+
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://fisioterapiaenbogota.com/" />
 
     <link
         href="https://fonts.googleapis.com/css2?family=Courgette&family=Quicksand:wght@500;700&family=Raleway:ital,wght@0,200;0,400;1,200;1,400&display=swap"
@@ -65,8 +89,8 @@
         <section class="container-fluid cuello">
             <div class="row">
                 <div class="col-12">
-                    <h3 class="text-center">Fisioterapia en Bogotá</h3>
-                    <h2 class="text-center text-primary">Adriana Lucia Ramírez Bonilla</h2>
+                    <h2 class="text-center">Fisioterapia en Bogotá</h2>
+                    <h3 class="text-center text-primary">Adriana Lucia Ramírez Bonilla</h3>
                     <div class="card">
                         <div class="card-header text-center bg-info">Lesiones Deportivas</div>
                     </div>
@@ -74,8 +98,8 @@
             </div>
             <hr class="my-5">
             <div class="row d-flex justify-content-center">
-                <div class="col-6">
-                    @php echo $textos[81]->spanish; @endphp
+                <div class="col-xs-12 col-md-8">
+                    @php echo $textos[82]->spanish; @endphp
                     <br>
                     @php echo $cuello[0]->spanish; @endphp
                 </div>
@@ -107,6 +131,16 @@
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169704393-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169704393-1');
+</script>
 </body>
 
 </html>

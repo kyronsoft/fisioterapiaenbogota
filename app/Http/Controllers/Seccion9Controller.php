@@ -78,28 +78,27 @@ class Seccion9Controller extends Controller
 
         if ($id == 5 && $request->input("titulo3_es") != "") {
             $datos = array(
-                "spanish" => $request->input("titulo2_es")
+                "spanish" => $request->input("titulo3_es")
             );
         }
 
         if ($id == 5 && $request->input("titulo3_en") != "") {
             $datos = array(
-                "english" => $request->input("titulo2_en")
+                "english" => $request->input("titulo3_en")
             );
         }
 
         if ($id == 6 && $request->input("parrafo3_es") != "") {
             $datos = array(
-                "spanish" => $request->input("parrafo2_es")
+                "spanish" => $request->input("parrafo3_es")
             );
         }
 
         if ($id == 6 && $request->input("parrafo3_en") != "") {
             $datos = array(
-                "english" => $request->input("parrafo2_en")
+                "english" => $request->input("parrafo3_en")
             );
         }
-
 
         DB::table('website_servicios')->where("id", $id)->update($datos);
         $textos = DB::table('website_servicios')->get();

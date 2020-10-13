@@ -28,15 +28,24 @@ class Seccion1Controller extends Controller
      */
     public function update($id, Request $request)
     {
-        if ($id == 1 && $request->input("html_es") != "") {
+        $contenido_es = $request->input("html_es");
+        $contenido_en = $request->input("html_en");
+
+        if ($contenido_es == "")
+            $contenido_es = ' ';
+
+        if ($contenido_en == "")
+            $contenido_en = ' ';
+
+        if ($id == 1) {
             $datos = array(
-                "spanish" => $request->input("html_es")
+                "spanish" => $contenido_es
             );
         }
 
         if ($id == 1 && $request->input("html_en") != "") {
             $datos = array(
-                "english" => $request->input("html_en")
+                "english" => $contenido_en
             );
         }
 

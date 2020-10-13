@@ -55,6 +55,9 @@
     <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slick/slick-theme.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script type="text/javascript"
+        src="https://platform-api.sharethis.com/js/sharethis.js#property=5f831873a599fe0011b8b9dd&product=inline-share-buttons"
+        async="async"></script>
 </head>
 
 <body>
@@ -85,11 +88,14 @@
                         class="btn btn-info btn-sm">{{ date_format(date_create($articulo[0]->fecha_articulo), 'd-m-Y') }}</small>
                     <small class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>
                         {{ $articulo[0]->vistas_articulo }}</small>
-                    <cant-comentarios></cant-comentarios>
+
                 </div>
                 <div class="align-self-center">
-                    <articulo-likes></articulo-likes>
+                    <me-gusta id="{{ $id_articulo }}"></me-gusta>
                 </div>
+            </div>
+            <div class="row d-flex justify-content-around my-3">
+                <div class="sharethis-inline-share-buttons"></div>
             </div>
             <hr>
             <h3 class="font-weight-bold mb-3">Comentarios: </h3>
@@ -100,15 +106,16 @@
                     foreach ($opiniones as $key => $value) {
                     if ($value->aprobacion_opinion == 1) {
                     @endphp
-                    <h4 class="font-weight-bold"><i class="fa fa-commenting-o" aria-hidden="true"></i>@php echo ' '.
+                    <h5 class="font-weight-bold"><i class="fa fa-commenting-o" aria-hidden="true"></i>@php echo ' '.
                         $value->nombre_opinion; @endphp<small class="ml-5"><i class="fa fa-calendar-check-o"
                                 aria-hidden="true"></i>@php echo ' ',
-                            date_format(date_create($value->fecha_opinion),'Y-m-d'); @endphp </small></h4>
-                    <h5 class="font-italic pl-5">@php echo $value->contenido_opinion; @endphp</h5>
-                    <h4 class="font-weight-bold"><i class="fa fa-comments-o" aria-hidden="true"></i> Adriana Ramírez
+                            date_format(date_create($value->fecha_opinion),'Y-m-d'); @endphp </small></h5>
+                    <h6 class="font-italic pl-5">@php echo $value->contenido_opinion; @endphp</h6>
+                    <h5 class="font-weight-bold"><i class="fa fa-comments-o" aria-hidden="true"></i> Adriana Ramírez
                         <small class="ml-5"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>@php echo ' ',
-                            date_format(date_create($value->fecha_respuesta),'Y-m-d'); @endphp</small></h4>
-                    <h5 class="font-italic pl-5">@php echo $value->respuesta_opinion; @endphp</h5>
+                            date_format(date_create($value->fecha_respuesta),'Y-m-d'); @endphp</small></h5>
+                    <hr>
+                    <h6 class="font-italic pl-5">@php echo $value->respuesta_opinion; @endphp</h6>
                     @php
                     }
                     }

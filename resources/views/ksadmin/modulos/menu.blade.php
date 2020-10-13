@@ -33,21 +33,57 @@
                       </a>
                       <ul class="nav nav-treeview">
                           <li class="nav-item">
-                              <a href="pages/examples/invoice.html" class="nav-link">
+                              <a href="{{ url('/') }}/ks-admin/blog/lista_entradas" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Lista Entradas</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="{{ url('/') }}/ks-admin/blog/entrada" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Nueva Entrada</p>
                               </a>
                           </li>
                           <li class="nav-item">
-                              <a href="pages/examples/invoice.html" class="nav-link">
+                              <a href="{{ url('/') }}/ks-admin/blog/comentarios" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Autorizar Comentarios</p>
                               </a>
                           </li>
                           <li class="nav-item">
-                              <a href="pages/examples/invoice.html" class="nav-link">
+                              <a href="{{ url('/') }}/ks-admin/blog/categorias" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Categorías</p>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="nav-header">ENGLISH BLOG</li>
+                  <li class="nav-item has-treeview">
+                      <a href="#" class="nav-link">
+                          <i class="nav-icon fas fa-book"></i>
+                          <p>
+                              Manage
+                              <i class="fas fa-angle-left right"></i>
+                          </p>
+                      </a>
+                      <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="{{ url('/') }}/ks-admin/blog/lista_entradas_en" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Articles List</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="{{ url('/') }}/ks-admin/blog/entrada_en" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>New Article</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="{{ url('/') }}/ks-admin/blog/comentarios_en" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Approve Comment</p>
                               </a>
                           </li>
                       </ul>
@@ -118,12 +154,6 @@
                               <a href="{{ url('/') }}/ks-admin/inicio/seccion6" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Sección 6</p>
-                              </a>
-                          </li>
-                          <li class="nav-item">
-                              <a href="{{ url('/') }}/ks-admin/inicio/seccion7" class="nav-link">
-                                  <i class="far fa-circle nav-icon"></i>
-                                  <p>Folletos</p>
                               </a>
                           </li>
                           <li class="nav-item">
@@ -207,7 +237,7 @@
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a href="{{ url('/') }}/ks-admin/espalda" class="nav-link">
+                      <a href="{{ url('/') }}/ks-admin/rodilla" class="nav-link">
                           <i class="nav-icon far fa-image"></i>
                           <p>
                               Dolor de Rodilla
@@ -219,14 +249,6 @@
                           <i class="nav-icon far fa-image"></i>
                           <p>
                               Lesiones Deportivas
-                          </p>
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a href="pages/gallery.html" class="nav-link">
-                          <i class="nav-icon far fa-image"></i>
-                          <p>
-                              Contactanos
                           </p>
                       </a>
                   </li>

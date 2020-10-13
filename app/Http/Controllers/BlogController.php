@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Opiniones;
+use App\Articulos;
 
 class BlogController extends Controller
 {
@@ -15,8 +16,44 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $articulos = DB::table('articulos')->orderBy('id_articulo', 'desc')->paginate(5);
-        $destacados = DB::table('articulos')->orderBy('vistas_articulo', 'desc')->select('articulos.id_articulo', 'articulos.portada_articulo', 'articulos.titulo_articulo', 'articulos.descripcion_articulo')->get();
+        $articulos = DB::table('articulos')->where('idioma', '=', 'ES')->orderBy('id_articulo', 'desc')->paginate(5);
+        $destacados = DB::table('articulos')->where('idioma', '=', 'ES')->orderBy('vistas_articulo', 'desc')
+            ->select('articulos.id_articulo', 'articulos.portada_articulo', 'articulos.titulo_articulo', 'articulos.descripcion_articulo')->get();
+        $blog = DB::table('blog')->get();
+
+        $websiteheader = DB::table('website_header')->get();
+        $websitemenu = DB::table('website_menu')->get();
+        $blinfo = DB::table('website_info')->get();
+        $servicios = DB::table('website_servicios')->get();
+        $footer = DB::table('website_footer')->get();
+
+        return view("blog.portada", array(
+            "blog" => $blog,
+            "articulos" => $articulos,
+            "destacados" => $destacados,
+            "websiteheader" => $websiteheader,
+            "websitemenu" => $websitemenu,
+            "inicioseccion8" => $blinfo,
+            "inicioseccion9" => $servicios,
+            "footer" => $footer,
+        ));
+    }
+
+    public function busqueda(Request $request)
+    {
+        $criterio = array("criterio" => $request->input("buscar_articulo"));
+
+        $articulos = DB::table('articulos')->where('idioma', '=', 'ES')
+            ->orWhere(function ($query) use ($criterio) {
+                $param = '%' . $criterio["criterio"] . '%';
+                $query->where('titulo_articulo', 'like', $param)
+                    ->where('descripcion_articulo', 'like', $param)
+                    ->where('contenido_articulo', 'like', $param);
+            })
+            ->orderBy('id_articulo', 'desc')->paginate(5);
+
+        $destacados = DB::table('articulos')->where('idioma', '=', 'ES')->orderBy('vistas_articulo', 'desc')
+            ->select('articulos.id_articulo', 'articulos.portada_articulo', 'articulos.titulo_articulo', 'articulos.descripcion_articulo')->get();
         $blog = DB::table('blog')->get();
 
         $websiteheader = DB::table('website_header')->get();
@@ -69,7 +106,7 @@ class BlogController extends Controller
         $comentario->id_art = $datos["id_art"];
 
         $comentario->save();
-        $url = "http://localhost:8000/articulo/" . $datos["id_art"];
+        $url = "/articulo/" . $datos["id_art"];
 
         return redirect($url);
     }
@@ -85,7 +122,7 @@ class BlogController extends Controller
         $articulo = DB::table('articulos')->where('id_articulo', '=', $id)->get();
 
         $categoria = DB::table('categorias')->join('articulos', 'categorias.id_categoria', '=', 'articulos.id_cat')->select('categorias.*')->get();
-        $opiniones = DB::table('opiniones')->join('articulos', 'opiniones.id_art', '=', 'articulos.id_articulo')->select('opiniones.*')->where('opiniones.id_art', '=', $id)->get();
+        $opiniones = DB::table('opiniones')->join('articulos', 'opiniones.id_art', '=', 'articulos.id_articulo')->select('opiniones.*')->where([['opiniones.id_art', '=', $id], ['opiniones.idioma', '=', 'ES']])->get();
         $administrador = DB::table('users')->join('opiniones', 'opiniones.id_adm', '=', 'users.id')->where([['opiniones.aprobacion_opinion', '=', 1], ['opiniones.id_art', '=', $id]])->select('opiniones.*', 'users.*')->get();
         $websiteheader = DB::table('website_header')->get();
         $websitemenu = DB::table('website_menu')->get();
@@ -123,6 +160,13 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $megusta = DB::table('articulos')->where('id_articulo', '=', $id)->select('megusta')->get();
+
+        $cantidad = $megusta[0]->megusta;
+        $cantidad++;
+        $datos = array("megusta" => $cantidad);
+
+        Articulos::where('id_articulo', $id)->update($datos);
     }
 
     /**
@@ -134,5 +178,30 @@ class BlogController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function megusta($id)
+    {
+        $cantidad = DB::table('articulos')->where('id_articulo', '=', $id)->select('megusta')->get();
+
+        return $cantidad[0]->megusta;
+    }
+
+    public function vistas($id)
+    {
+        $cantidad = DB::table('articulos')->where('id_articulo', '=', $id)->select('vistas_articulo')->get();
+
+        return $cantidad[0]->vistas_articulo;
+    }
+
+    public function addvista($id)
+    {
+        $vista = DB::table('articulos')->where('id_articulo', '=', $id)->select('vistas_articulo')->get();
+
+        $cantidad = $vista[0]->vistas_articulo;
+        $cantidad++;
+        $datos = array("vistas_articulo" => $cantidad);
+
+        Articulos::where('id_articulo', $id)->update($datos);
     }
 }

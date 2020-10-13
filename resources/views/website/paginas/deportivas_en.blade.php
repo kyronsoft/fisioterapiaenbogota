@@ -4,47 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fisioterapia en Bogotá ✅ Telerehabilitación en Bogotá 🧿</title>
+
+    <meta name="title" content="Physiotherapy in Bogotá ✅ Telerehabilitation in Bogotá 🧿">
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="website" />
     <meta name="description"
-        content="Fisioterapia Online Bogotá y Telerehabilitación en Bogotá ✅ Adriana Lucia Ramirez Bonilla ✅ Especialista en Tele Rehabilitacion en Bogotá">
+        content="Physiotherapy Online Bogotá and Tele Rehabilitation in Bogotá ✅ Adriana Lucia Ramirez Bonilla ✅ Tele Rehabilitation Specialist in Bogotá">
+    <meta name="keyword" content="Physiotherapy, Tele Rehabilitation, Pain, Consult, Neck Pain, Back Pain, Shoulder Pain, Hip Pain, 
+            Knee Pain, physical conditioning, stretching, ankles, Sports Injuries">
+    <meta property="og:url" content="https://fisioterapiaenbogota.com/" />
+    <meta property="og:site_name" content="Physiotherapy in 🧿 Telerehabilitation in Bogotá ✅" />
+    <meta property="og:image:width" content="621" />
+    <meta property="og:image:height" content="603" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="robots" content="index, follow" />
-    <meta name="keywords" content="game, reciclapp, gaming, business, ps4, xbox, steam, android">
+
+    <meta property="og:title" content="Sports Injuries">
+    <meta property="og:url" content="http://fisioterapiaenbogota/physiotherapy">
+    <meta property="og:description"
+        content="If you live a physically active lifestyle, are a weekend athlete, an amateur athlete or a professional athlete, you will know from personal 
+        experience that sport injuries are quite frequent. Interestingly enough, we exercise first, because we enjoy it and second, to stay healthy.">
+    <meta property="og:image" content="http://fisioterapiaenbogota.com/images/fisioterapia-en-bogota-colombia-1.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Fysiopuntura">
+    <meta property="og:locale" content="es_CO">
+
+
+    <meta itemprop="name" content="Sports Injuries">
+    <meta itemprop="url" content="http://fisioterapiaenbogota/physiotherapy">
+    <meta itemprop="description"
+        content="If you live a physically active lifestyle, are a weekend athlete, an amateur athlete or a professional athlete, you will know from personal 
+        experience that sport injuries are quite frequent. Interestingly enough, we exercise first, because we enjoy it and second, to stay healthy.">
+    <meta itemprop="image" content="http://fisioterapiaenbogota.com/images/fisioterapia-en-bogota-colombia-1.jpg">
+
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Sports Injuries">
+    <meta name="twitter:url" content="http://fisioterapiaenbogota/physiotherapy">
+    <meta name="twitter:description"
+        content="If you live a physically active lifestyle, are a weekend athlete, an amateur athlete or a professional athlete, you will know from personal 
+        experience that sport injuries are quite frequent. Interestingly enough, we exercise first, because we enjoy it and second, to stay healthy.">
+    <meta name="twitter:image" content="http://fisioterapiaenbogota.com/images/fisioterapia-en-bogota-colombia-1.jpg">
+    <meta name="twitter:site" content="@fysiopuntura">
 
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://fisioterapiaenbogota.com/" />
-    <meta property="og:locale" content="es_ES" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Fisioterapia en Bogotá ✅ Telerehabilitación en Bogotá 🧿" />
-    <meta property="og:description"
-        content="Fisioterapia Online Bogotá y Telerehabilitación en Bogotá ✅ Adriana Lucia Ramirez Bonilla ✅ Especialista en Tele Rehabilitacion en Bogotá" />
-    <meta property="og:url" content="https://fisioterapiaenbogota.com/" />
-    <meta property="og:site_name" content="Fisioterapia en Bogotá 🧿 Telerehabilitación ✅" />
-    <meta property="og:image:width" content="621" />
-    <meta property="og:image:height" content="603" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Courgette&family=Quicksand:wght@500;700&family=Raleway:ital,wght@0,200;0,400;1,200;1,400&display=swap"
-        rel="stylesheet">
-
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ url('/') }}/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ url('/') }}/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ url('/') }}/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ url('/') }}/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ url('/') }}/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ url('/') }}/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ url('/') }}/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ url('/') }}/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('/') }}/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ url('/') }}/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('/') }}/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ url('/') }}/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('/') }}/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="{{ url('/') }}/images/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ url('/') }}/images/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="{{ url('/') }}/css/normalize.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -65,8 +70,8 @@
         <section class="container-fluid cuello">
             <div class="row">
                 <div class="col-12">
-                    <h3 class="text-center">Physiotherapy in Bogotá</h3>
-                    <h2 class="text-center text-primary">Adriana Lucia Ramírez Bonilla</h2>
+                    <h2 class="text-center">Physiotherapy in Bogotá</h2>
+                    <h3 class="text-center text-primary">Adriana Lucia Ramírez Bonilla</h3>
                     <div class="card">
                         <div class="card-header text-center bg-info">Sports Injuries</div>
                     </div>
@@ -107,6 +112,16 @@
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169704393-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169704393-1');
+</script>
 </body>
 
 </html>

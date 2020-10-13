@@ -4,7 +4,7 @@ $(document).ready(function () {
         speed: 500,
         fade: true,
         cssEase: 'linear'
-      });
+    });
 
     $('.counter-count').each(function () {
         $(this).prop('Counter', 0).animate({

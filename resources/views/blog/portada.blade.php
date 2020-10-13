@@ -68,85 +68,76 @@
             </div>
         </section>
 
-        <section class="container-fluid">
-            <hr>
-            <div class="row d-flex justify-content-around">
-                <div class="col-8 align-self-start">
-                    @foreach ($articulos as $element)
-                        <div class="row mt-5">
-                            <div class="col-10 d-flex">
-                                <div class="align-self-center">
-                                    <img src="{{ $element->portada_articulo }}" alt="" style="width: 300px;">
-                                </div>
-                                <div class="col-8 mt-3 float-right align-self-center">
-                                    <h3 class="pl-3">{{ $element->titulo_articulo }}</h3>
-                                    <h6 class="pl-3">{{ $element->descripcion_articulo }}</h6>
-                                    <hr>
-                                    <small
-                                        class="btn btn-info btn-sm ml-3">{{ date_format(date_create($element->fecha_articulo), 'd-m-Y') }}</small>
-                                    <small class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>
-                                        {{ $element->vistas_articulo }}</small>
-                                    <cant-comentarios></cant-comentarios>
-                                    <small class="btn btn-info btn-sm"><i class="fa fa-heart" aria-hidden="true"></i> 290</small>
-                                    <a href="http://localhost:8000/articulo/@php echo $element->id_articulo; @endphp"
-                                        class="float-right">Leer Más</a>
-                                    <hr>
-                                    <h4>Etiquetas</h4>
-                                    @php
-                                    $tags = json_decode($element->p_claves_articulo, true);
-                                    if ($tags)
-                                    foreach ($tags as $key => $value): @endphp
-                                    <a href="localhost:8000" class="btn btn-secondary btn-sm m-1">@php echo $value;
-                                        @endphp</a>
-                                    @php endforeach
-                                    @endphp
-                                </div>
+        <section class="container-fluid d-flex justify-content-center">
+            <div class="row my-5">
+                <div class="col-xs-12">
+                    <form action="/blog/busqueda">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
                             </div>
+                            <input type="text" class="form-control" name="buscar_articulo">
+                            <button type="submit" class="btn btn-primary ml-3 float-right">Buscar</button>
                         </div>
-                    @endforeach
+                    </form>
                 </div>
-                <div class="col-4 align-self-start">
-                    <div class="row justify-content-center">
-                        <form action="">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa fa-search"
-                                            aria-hidden="true"></i></span>
-                                </div>
-                                <input type="text" class="form-control" name="buscar_articulo">
-                                <button type="submit" class="btn btn-primary ml-3 float-right">Buscar</button>
-                            </div>
-                        </form>
-                    </div>
-                    <hr>
-                    <h3>Destacados</h3>
-                    <hr>
-                    @php
-                    for ($i=0;$i<5;$i++) { @endphp <div class="row d-flex justify-content-around">
-                        <div class="col-4 align-self-center">
-                            <img src="{{ $destacados[$i]->portada_articulo }}" alt="" style="width: 150px;">
-                        </div>
-                        <div class="col-8 align-self-center">
-                            <a
-                                href="{{ url('/') }}/articulo/{{ $destacados[$i]->id_articulo }}">{{ $destacados[$i]->titulo_articulo }}</a>
-                            <hr>
-                            <h6>{{ $destacados[$i]->descripcion_articulo }}</h6>
-                        </div>
-                </div>
-                <hr>
-                @php
-                }
-                @endphp
             </div>
-    </div>
-    </div>
+        </section>
 
-    <div class="row d-flex justify-content-center">
-        <div>
-            {{ $articulos->links() }}
-        </div>
-    </div>
-    </section>
+        <section class="container-fluid articulos-blog">
+            @foreach ($articulos as $element)
+                <div class="row">
+                    <div class="d-none d-md-block col-md-3 col-lg-3 align-self-center">
+                        <img src="{{ url('/') }}/{{ $element->portada_articulo }}" alt="">
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-6">
+                        <h3>{{ $element->titulo_articulo }}</h3>
+                        <h5>{{ $element->descripcion_articulo }}</h5>
+                        <hr>
+                        <small
+                            class="btn btn-info btn-sm">{{ date_format(date_create($element->fecha_articulo), 'd-m-Y') }}</small>
+                        <cantidad-vistas id="{{ $element->id_articulo }}"></cantidad-vistas>
+                        <cantidad-gusta id="{{ $element->id_articulo }}"></cantidad-gusta>
+                        <a href="{{ url('/') }}/articulo/{{ $element->id_articulo }}" class="float-right">Leer Más</a>
+                        <hr class="my-3">
+                        <h4>Etiquetas</h4>
+                        @php
+                        $tags = json_decode($element->p_claves_articulo, true);
+                        if ($tags)
+                        foreach ($tags as $key => $value): @endphp
+                        <a href="#" class="btn btn-secondary btn-sm">@php echo $value;
+                            @endphp</a>
+                        @php endforeach
+                        @endphp
+                    </div>
+                    <div class="d-none d-xl-block col-lg-3">
+                        <h3>Destacados</h3>
+                        <div class="row">
+                            @php
+                            for($i=0;$i<5;$i++){ $imagen=$destacados[$i]->portada_articulo;
+                                $titulo = $destacados[$i]->titulo_articulo;
+                                $id_articulo = $destacados[$i]->id_articulo;
+                                @endphp
+                                <div class="col-2">
+                                    <img src="{{ url('/') }}/{{ $imagen }}" alt="" style="width:50px;">
+                                </div>
+                                <div class="col-10 align-self-center">
+                                    <a href="{{ url('/') }}/articulo/{{ $id_articulo }}">{{ $titulo }}</a>
+                                </div>
+                                @php
+                                }
+                                @endphp
+                        </div>
+                    </div>
+                </div>
+                <hr class="py-5">
+            @endforeach
+            <div class="row d-flex justify-content-center">
+                <div>
+                    {{ $articulos->links() }}
+                </div>
+            </div>
+        </section>
     </div>
 
     @include('website.modulos.footer')

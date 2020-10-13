@@ -8,7 +8,8 @@ $(".summernote-sm").summernote({
         ['para', ['ul', 'ol', 'paragraph']],
         ['height', ['height']],
         ['insert', ['picture', 'hr']],
-        ['table', ['table']]
+        ['table', ['table']],
+        ['view', ['fullscreen', 'codeview', 'help']],
     ],
     fontSizes: ['8', '9', '10', '11', '12', '14', '18', '20', '22', '24', '26', '28', '30']
 });
