@@ -1,3 +1,8 @@
+<section class="container">
+    <div class="row mt-5">
+        <h3 class="texto-reclamar text-justify">Para reclamar tus tips de regalo, da click en el folleto correspondiente al área que te duele</h3>
+    </div>
+</section>
 <section class="container-fluid d-flex justify-content-between seccion-nueve">
     <div class="row align-content-between fila">
         <div class="col-xs-12 col-md-3 text-center">

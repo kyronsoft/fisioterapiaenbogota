@@ -10,7 +10,7 @@ class RodillaController extends Controller
     public function index()
     {
         $textos = DB::table('textos')->get();
-        $espalda = DB::table('textos')->where('pagina', '=', 'Espalda')->get();
+        $rodilla = DB::table('textos')->where('pagina', '=', 'Rodilla')->get();
         $websiteheader = DB::table('website_header')->get();
         $websitemenu = DB::table('website_menu')->get();
         $blinfo = DB::table('website_info')->get();
@@ -22,7 +22,7 @@ class RodillaController extends Controller
 
         return view("website.paginas.rodilla", array(
             "textos" => $textos,
-            "cuello" => $espalda,
+            "rodilla" => $rodilla,
             "websiteheader" => $websiteheader,
             "websitemenu" => $websitemenu,
             "inicioseccion8" => $blinfo,

@@ -245,12 +245,50 @@
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a href="{{ url('/') }}/ks-admin/espalda" class="nav-link">
+                      <a href="{{ url('/') }}/ks-admin/deportivas" class="nav-link">
                           <i class="nav-icon far fa-image"></i>
                           <p>
                               Lesiones Deportivas
                           </p>
                       </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url('/') }}/ks-admin/screening" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                            Screening
+                        </p>
+                    </a>
+                </li>
+                  <li class="nav-header">ADICIONALES</li>
+                  <li class="nav-item has-treeview">
+                      <a href="#" class="nav-link">
+                          <i class="nav-icon fas fa-book"></i>
+                          <p>
+                              Elementos
+                              <i class="fas fa-angle-left right"></i>
+                          </p>
+                      </a>
+                      <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="{{ url('/') }}/ks-admin/clientes" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Lista Clientes</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="{{ url('/') }}/ks-admin/clave_documentos" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Contraseña Documentos</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="{{ url('/') }}/ks-admin/talleres" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Talleres</p>
+                              </a>
+                          </li>
+                      </ul>
                   </li>
               </ul>
           </nav>

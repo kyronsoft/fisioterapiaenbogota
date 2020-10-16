@@ -100,34 +100,71 @@
             </div>
         </section>
 
-        <section class="container-fluid d-flex justify-content-around documentacion">
+        <section class="container d-flex justify-content-center mt-5">
             <div class="col-xs-10 col-md-10">
+                <h5 class="text-justify">You will need to download a total of five documents, four of them <b>(Informed
+                        consent,
+                        registration form, service agreement and entry form (either version in Spanish or English)</b>
+                    must be
+                    completed and sent by email to <a
+                        href="mailto:info@fisioterapiaenbogota.com">info@fisioterapiaenbogota.com</a> along with a
+                    <b>legible copy of both sides of your identity document before
+                        your session</b> of Initial Assessment The fifth document is for your information and will give
+                    you
+                    details on how to prepare and enter your tele session.</h5>
+            </div>
+        </section>
+
+        <section class="container-fluid d-flex justify-content-around documentacion">
+            <div class="col-xs-10 col-md-10 columna-pdf">
                 <div class="row align-self-center">
-                    <div class="col-xs-12 col-md-4">
-                        <a href="{{ url('/') }}/descargas/CONSENTIMIENTO INFORMADO PARA TELEREHABILITACION ALRB.pdf"><img
-                                src="{{ url('/') }}/images/cover-consentimiento.png" alt=""></a>
+                    <div class="col-xs-12 col-md-6 justify-content-center">
+                        <h4 class="text-center mb-3">Informed<br>Consent for<br><br>Telerehabilitation</h4>
+                        <div class="container d-flex justify-content-center">
+                            <a
+                                href="{{ url('/') }}/descargas/CONSENTIMIENTO INFORMADO PARA TELEREHABILITACION ALRB.pdf"><img
+                                    src="{{ url('/') }}/images/logo_pdf.png" alt="" style="width: 80px"></a>
+                        </div>
                     </div>
-                    <div class="col-xs-12 col-md-4">
-                        <a href="{{ url('/') }}/descargas/Formato de registro INGLES-ESPANOL.pdf"><img
-                                src="{{ url('/') }}/images/cover-form-ingles-espanol.png" alt=""></a>
+                    <div class="col-xs-12 col-md-6">
+                        <h4 class="text-center mb-3">Register<br>Format<br><br>English</h4>
+                        <div class="container d-flex justify-content-center">
+                            <a href="{{ url('/') }}/descargas/Formato de registro INGLES-ESPANOL.pdf"><img
+                                    src="{{ url('/') }}/images/logo_pdf.png" alt="" style="width: 80px"></a>
+                        </div>
                     </div>
-                    <div class="col-xs-12 col-md-4">
-                        <a href="{{ url('/') }}/descargas/Formato de Ingreso ESPANOL.pdf"><img
-                                src="{{ url('/') }}/images/cover-ingreso-espa.png" alt=""></a>
-                    </div>
+                    {{-- <div class="col-xs-12 col-md-4">
+                        <h4 class="text-center mb-3">Formato de<br>Ingreso<br><br>Español</h4>
+                        <div class="container d-flex justify-content-center">
+                            <a href="{{ url('/') }}/descargas/Formato de Ingreso ESPANOL.pdf"><img
+                                    src="{{ url('/') }}/images/logo_pdf.png" alt="" style="width: 80px"></a>
+                        </div>
+                    </div> --}}
+
                 </div>
-                <div class="row align-self-center">
+                <div class="row align-self-center fila-pdf">
                     <div class="col-xs-12 col-md-4">
-                        <a href="{{ url('/') }}/descargas/Formato de Ingreso INGLES.pdf"><img
-                                src="{{ url('/') }}/images/cover-ingreso-eng.png" alt=""></a>
+                        <h4 class="text-center mb-3">Register<br>Format<br><br>English</h4>
+                        <div class="container d-flex justify-content-center">
+                            <a href="{{ url('/') }}/descargas/Formato de Ingreso INGLES.pdf"><img
+                                    src="{{ url('/') }}/images/logo_pdf.png" alt="" style="width: 80px"></a>
+                        </div>
                     </div>
                     <div class="col-xs-12 col-md-4">
-                        <a href="{{ url('/') }}/descargas/Acuerdo de servicio TeleRehabilitacion ALRB.pdf"><img
-                                src="{{ url('/') }}/images/acuerdo-telerehabilitacion.png" alt=""></a>
+                        <h4 class="text-center mb-3">Service<br>Agreement<br><br>Telerehabilitation</h4>
+                        <div class="container d-flex justify-content-center">
+                            <a href="{{ url('/') }}/descargas/Acuerdo de servicio TeleRehabilitacion ALRB.pdf"><img
+                                    src="{{ url('/') }}/images/logo_pdf.png" alt="" style="width: 80px"></a>
+                        </div>
                     </div>
                     <div class="col-xs-12 col-md-4">
-                        <a href="{{ url('/') }}/descargas/Telerehabilitacion LO QUE NECESITA SP-ENG google meet.pdf"><img
-                                src="{{ url('/') }}/images/elementos-necesarios.png" alt=""></a>
+                        <h4 class="text-center mb-3">What you need<br>for you session of<br><br>Telerehabilitation
+                        </h4>
+                        <div class="container d-flex justify-content-center">
+                            <a
+                                href="{{ url('/') }}/descargas/Telerehabilitacion LO QUE NECESITA SP-ENG google meet.pdf"><img
+                                    src="{{ url('/') }}/images/logo_pdf.png" alt="" style="width: 80px"></a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -7,53 +7,63 @@
     </div>
     <hr class="my-5">
     <div class="row d-flex justify-content-around">
-        <div class="col-xs-12 col-md-8">
-            <ul class="nav nav-tabs text-center" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#cuello" role="tab"
-                        aria-controls="home" aria-selected="true">Neck and Shoulder Pain</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#espalda" role="tab"
-                        aria-controls="profile" aria-selected="false">Back Pain</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#rodilla" role="tab"
-                        aria-controls="contact" aria-selected="false">Knee and Hip Pain</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#deportivas" role="tab"
-                        aria-controls="contact" aria-selected="false">Sport Injuries</a>
-                </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="cuello" role="tabpanel" aria-labelledby="home-tab">
-                    <div class="mt-5">@php echo $textos[78]->english; @endphp</div>
-                    <div class="text-center mt-5">
-                        <a href="#" class="btn btn-primary">More Information</a>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="espalda" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="mt-5">@php echo $textos[79]->english; @endphp</div>
-                    <div class="text-center mt-5">
-                        <a href="#" class="btn btn-primary">More Information</a>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="rodilla" role="tabpanel" aria-labelledby="contact-tab">
-                    <div class="mt-5">@php echo $textos[80]->english; @endphp</div>
-                    <div class="text-center mt-5">
-                        <a href="#" class="btn btn-primary">More Information</a>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="deportivas" role="tabpanel" aria-labelledby="contact-tab">
-                    <div class="mt-5">@php echo $textos[81]->english; @endphp</div>
-                    <div class="text-center mt-5">
-                        <a href="#" class="btn btn-primary">More Information</a>
+        <div class="col-xs-12 col-md-7">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body">
+                        <ul class="nav nav-pills nav-pill-bordered nav-justified">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="active-pill1" data-toggle="pill" href="#cuello"
+                                    aria-expanded="true">Dolor De Cuello y Hombro</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="link-pill1" data-toggle="pill" href="#espalda"
+                                    aria-expanded="false">Dolor De Espalda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="link-pill1" data-toggle="pill" href="#rodilla"
+                                    aria-expanded="false">Dolor De Cadera Y Rodilla</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="link-pill1" data-toggle="pill" href="#deportivas"
+                                    aria-expanded="false">Lesiones Deportivas</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content px-1 pt-1">
+                            <div role="tabpanel" class="tab-pane active" id="cuello" aria-labelledby="active-pill1"
+                                aria-expanded="true">
+                                <div class="mt-5">@php echo $textos[78]->english; @endphp</div>
+                                <div class="text-center mt-5">
+                                    <a href="{{ url('/') }}/neck" class="btn btn-primary">Mas Información</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="espalda" role="tabpanel" aria-labelledby="link-pill1"
+                                aria-expanded="false">
+                                <div class="mt-5">@php echo $textos[79]->english; @endphp</div>
+                                <div class="text-center mt-5">
+                                    <a href="{{ url('/') }}/back" class="btn btn-primary">Mas Información</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="rodilla" role="tabpanel" aria-labelledby="dropdownOpt2-pill1"
+                                aria-expanded="false">
+                                <div class="mt-5">@php echo $textos[80]->english; @endphp</div>
+                                <div class="text-center mt-5">
+                                    <a href="{{ url('/') }}/knee" class="btn btn-primary">Mas Información</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="deportivas" role="tabpanel" aria-labelledby="dropdownOpt2-pill2"
+                                aria-expanded="false">
+                                <div class="mt-5">@php echo $textos[81]->english; @endphp</div>
+                                <div class="text-center mt-5">
+                                    <a href="{{ url('/') }}/sports_injuries" class="btn btn-primary">Mas Información</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="d-none d-md-block col-md-4 align-self-center">
+        <div class="d-none d-md-block col-md-5 align-self-center">
             <img src="images/problemas-de-espalda-.png" class="img-fluid" alt="">
         </div>
     </div>

@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Textos;
+use App\Blog;
 
 class TextosEsController extends Controller
 {
     public function index()
     {
         $textoses = Textos::all();
+        $talleres = DB::table('blog')->select('blog.talleres')->get();
         $websiteheader = DB::table('website_header')->get();
         $websitemenu = DB::table('website_menu')->get();
         $sliders = DB::table('website_sliders')->get();
@@ -29,6 +31,7 @@ class TextosEsController extends Controller
 
         return view("website.inicio", array(
             "textos" => $textoses,
+            "talleres" => $talleres,
             "websiteheader" => $websiteheader,
             "websitemenu" => $websitemenu,
             "websitesliders" => $sliders,

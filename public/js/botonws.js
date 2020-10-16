@@ -1,21 +1,10 @@
-(function () {
-    var options = {
-        whatsapp: "57",
-        call_to_action: "Escribenos",
-        button_color: "#FF6550",
-        position: "left",
-        order: "facebook,whatsapp",
-    };
-    var proto = document.location.protocol,
-        host = "whatshelp.io",
-        url = proto + "//static." + host;
-    var s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.async = true;
-    s.src = url + '/widget-send-button/js/init.js';
-    s.onload = function () {
-        WhWidgetSendButton.init(host, proto, options);
-    };
-    var x = document.getElementsByTagName('script')[0];
-    x.parentNode.insertBefore(s, x);
-})();
+$(function () {
+    $('#WAButton').floatingWhatsApp({
+        phone: '573106951073', //WhatsApp Business phone number International format-
+        headerTitle: 'Chatea con nosotros en WhatsApp!', //Popup Title
+        popupMessage: 'Hola, ¿Cómo puedo ayudarte?', //Popup Message
+        showPopup: true, //Enables popup display
+        buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg"/>', //Button Image
+        position: "left"
+    });
+});

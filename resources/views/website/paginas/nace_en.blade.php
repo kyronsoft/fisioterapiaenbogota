@@ -124,7 +124,7 @@
 
     @include('website.modulos.footer_en')
 
-
+    <div id="WAButton"></div>
     <span class="ir-arriba"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
 
 

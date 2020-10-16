@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <meta name="title" content="Physiotherapy in Bogotá ✅ Telerehabilitation in Bogotá 🧿">
     <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="website" />
@@ -76,8 +76,7 @@
     <link rel="stylesheet" href="{{ url('/') }}/css/responsive.css">
     <script src="js/fontawesome/fontawesome.js"></script>
     <link rel="stylesheet" href="{{ url('/') }}/css/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slick/slick-theme.css" />
+    <link rel="stylesheet" href="{{ url('/') }}/css/textslider/textslider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
@@ -86,13 +85,17 @@
     @include('website.modulos.menu_en')
 
     <div id="app">
-        <section class="container-fluid cuello">
+        <section class="container-fluid rodilla">
             <div class="row">
                 <div class="col-12">
                     <h2 class="text-center">Physiotherapy in Bogotá</h2>
-                    <h3 class="text-center text-primary">Adriana Lucia Ramírez Bonilla</h3>
-                    <div class="card">
-                        <div class="card-header text-center bg-info">Knee Pain</div>
+                    <h3 class="text-center text-info">Adriana Lucia Ramírez Bonilla</h3>
+                    <div class="container d-flex justify-content-center">
+                        <div class="col-xs-7 col-md-6">
+                            <div class="card">
+                                <div class="card-header text-center bg-primary">Knee Pain</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -101,7 +104,9 @@
                 <div class="col-6">
                     @php echo $textos[80]->english; @endphp
                     <br>
-                    @php echo $cuello[0]->english; @endphp
+                    @php echo $rodilla[0]->english; @endphp
+                    <img src="{{ url('/') }}/images/port-4-spa.png" class="img-fluid" alt="">
+                    <a href="{{ url('/') }}/download_knee" class="btn btn-primary">Download</a>
                 </div>
             </div>
         </section>
@@ -127,20 +132,24 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="{{ url('/') }}/js/slick/slick.min.js"></script>
+    <script src="{{ url('/') }}/js/textslider/textslider.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169704393-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169704393-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-169704393-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169704393-1');
+
+    </script>
 </body>
 
 </html>

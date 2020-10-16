@@ -75,8 +75,7 @@
     <link rel="stylesheet" href="{{ url('/') }}/css/responsive.css">
     <script src="js/fontawesome/fontawesome.js"></script>
     <link rel="stylesheet" href="{{ url('/') }}/css/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slick/slick-theme.css" />
+    <link rel="stylesheet" href="{{ url('/') }}/css/textslider/textslider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
@@ -135,7 +134,7 @@
     @include('website.modulos.footer_en')
 
 
-
+    <div id="WAButton"></div>
     <span class="ir-arriba"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
 
 
@@ -146,7 +145,7 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="{{ url('/') }}/js/slick/slick.min.js"></script>
+    <script src="{{ url('/') }}/js/textslider/textslider.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>

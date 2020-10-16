@@ -1,11 +1,4 @@
 $(document).ready(function () {
-    $('.slider-faq').slick({
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear'
-    });
-
     $('.counter-count').each(function () {
         $(this).prop('Counter', 0).animate({
             Counter: $(this).text()
@@ -59,4 +52,13 @@ $(document).ready(function () {
         });
         $('.ir-abajo').click(function () { $('body,html').animate({ scrollTop: '1000px' }, 1000); });
     }
+    $(".img-services").hover(function () {
+        $(this).addClass("animate__animated animate__backInDown");
+    });
+    $(".img-item").hover(function () {
+        $(this).addClass("animate__animated animate__fadeInLeft");
+    });
+    $(".img-sec3").hover(function() {
+        $(this).addClass("animate__animated animate__flip");
+    });
 });

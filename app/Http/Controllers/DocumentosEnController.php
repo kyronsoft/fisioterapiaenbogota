@@ -25,8 +25,10 @@ class DocumentosEnController extends Controller
     public function verificar(Request $request)
     {
         $clave = $request->input("password");
+        $valor_actual = DB::table('clave_docs')->where('id', '=', 1)->select('clave_docs.password')->get();
+        $comprobar = '[{"password":"' . md5($clave) . '"}]';
 
-        if ($clave == 'AdriLuchi11!') {
+        if ($comprobar == $valor_actual) {
             $websiteheader = DB::table('website_header')->get();
             $websitemenu = DB::table('website_menu')->get();
             $footer = DB::table('website_footer')->get();
@@ -37,8 +39,8 @@ class DocumentosEnController extends Controller
                 "footer" => $footer,
             ));
         } else {
-            $url = "/documentos";
-            return redirect($url)->with("status", "Contraseña no válida!");
+            $url = "/documents";
+            return redirect($url)->with("no-password", "");
         }
     }
 }

@@ -30,22 +30,22 @@
                 </ul>
                 <ul class="list-inline social-networks-footer">
                     <li class="list-inline-item">
-                        <a href="{{ url($websiteheader[6]->spanish) }}">
+                        <a href="{{ url($websiteheader[3]->spanish) }}">
                             <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{{ url($websiteheader[3]->spanish) }}">
+                        <a href="{{ url($websiteheader[4]->spanish) }}">
                             <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{{ url($websiteheader[4]->spanish) }}">
+                        <a href="{{ url($websiteheader[5]->spanish) }}">
                             <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{{ url($websiteheader[5]->spanish) }}">
+                        <a href="{{ url($websiteheader[6]->spanish) }}">
                             <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>

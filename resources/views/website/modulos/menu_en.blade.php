@@ -6,7 +6,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav">
             <li class="nav-item active">
                 <a class="nav-link menu-inicio" href="{{ url('/init') }}">{{ $websitemenu[0]->english }}</a>
             </li>
@@ -42,8 +42,13 @@
                                     href="{{ url('sports_injuries') }}">{{ $websitemenu[10]->english }}</a></li>
                         </ul>
                         <div class="dropdown-divider"></div>
-                    <li><a class="dropdown-item" href="{{ url('documents') }}">Documents</a></li>
+                    <li><a class="dropdown-item" href="{{ url('screening_en') }}">Screening Injuries Prevent</a></li>
+                    <div class="dropdown-divider"></div>
+                    <li><a class="dropdown-item" href="{{ url('acupuncture') }}">Acupuntura (próximamente)</a></li>
                 </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('/documents') }}">Documents</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('/blog_en') }}">{{ $websitemenu[11]->english }}</a>

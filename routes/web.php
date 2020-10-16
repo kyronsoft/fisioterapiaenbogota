@@ -41,6 +41,9 @@ Route::post('/articulo', 'BlogController@store');
 Route::post('/folletos', 'FolletosController@store');
 Route::get('/documentos', 'DocumentosController@index');
 Route::post('/requisitos', 'DocumentosController@verificar');
+Route::post('/preguntas', 'PreguntasController@store');
+Route::get('/screening', 'ScreeningController@index');
+Route::get('/screening_en', 'ScreeningController@busqueda');
 
 
 /* Rutas para el website en Inglés */
@@ -67,12 +70,13 @@ Route::put('/articulo_en/{id}', 'BlogEnController@update');
 Route::post('/articulo_en', 'BlogEnController@store');
 Route::get('/documents', 'DocumentosEnController@index');
 Route::post('/requeriments', 'DocumentosEnController@verificar');
+Route::post('/questions', 'PreguntasEnController@store');
 
 
 /* Rutas para el Administrador del website y Blog */
 Route::get('/ks-admin', 'KSAdminController@showmain');
-Route::get('/barrasup', 'BarraSupController@index');
-Route::resource('/ks-admin/barrasup', 'BarraSupController');
+Route::get('/ks-admin/barrasup', 'BarraSupController@index');
+Route::put('/ks-admin/barrasup/{id}', 'BarraSupController@update');
 Route::resource('/ks-admin/menu', 'MenuController');
 Route::resource('/ks-admin/sliders', 'SlidersController');
 Route::resource('/ks-admin/inicio/seccion1', 'Seccion1Controller');
@@ -95,7 +99,13 @@ Route::resource('/ks-admin/cuello', 'KSCuelloController');
 Route::resource('/ks-admin/espalda', 'KSEspaldaController');
 Route::resource('/ks-admin/rodilla', 'KSRodillaController');
 Route::resource('/ks-admin/deportivas', 'KSDeportivasController');
+Route::resource('/ks-admin/clientes', 'ClientesController');
+Route::get('/ks-admin/clave_documentos', 'ClaveDocsController@index');
+Route::put('/ks-admin/clave_documentos/{id}', 'ClaveDocsController@update');
+Route::get('/ks-admin/talleres', 'TalleresController@index');
+Route::put('/ks-admin/talleres/{id}', 'TalleresController@update');
 Route::resource('/ks-admin/inicio/footer', 'FooterController');
+Route::resource('/ks-admin/screening', 'KSScreeningController');
 
 Route::resource('/ks-admin/blog/entrada', 'EntradaBlogController');
 Route::resource('/ks-admin/blog/entrada_en', 'EntradaEnBlogController');
@@ -121,4 +131,10 @@ Route::get('/ks-admin/blog/lista_entradas_en', 'ListaEntradasEnController@index'
 Route::get('/ks-admin/blog/comentarios_en', 'ComentariosEnController@index');
 Route::put('/ks-admin/blog/comentarios_en/{id}', 'ComentariosEnController@update');
 Route::resource('/ks-admin/blog/categorias_en', 'CategoriasEnController');
+
+Route::post('sendbasicemail', 'MailController@basic_email');
+Route::post('sendbasicemail_en', 'MailController@basic_email_en');
+Route::post('agenda_gratis', 'MailController@basic_email_agenda');
+Route::post('book_free', 'MailController@basic_email_agenda_en');
+
 Auth::routes();

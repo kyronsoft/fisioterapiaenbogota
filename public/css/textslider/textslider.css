@@ -1,0 +1,121 @@
+#carousel-faq {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#text-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 650px;
+}
+
+#text-slider ul {
+    list-style: none;
+    width: 100%;
+    height: 250px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#text-slider li {
+    width: 100%;
+    height: 250px;
+    float: left;
+    text-align: center;
+    position: relative;
+    font-family: lato, sans-serif;
+}
+
+/* Styling for prev and next buttons */
+
+@media (min-width: 320px) {
+    .btn-bar {
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+    #buttons {
+        padding-left: 40px;
+    }
+    #buttons a {
+        text-align: center;
+        display: block;
+        font-size: 30px;
+        float: left;
+        outline: 0;
+        color: #0063BF;
+        text-decoration: none;
+        display: block;
+        width: 35px;
+    }
+}
+
+@media (min-width: 992px) {
+    .btn-bar {
+        max-width: 346px;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        top: 40px;
+        width: 100%;
+    }
+    #buttons {
+        padding: 0 0 40px 0;
+        float: right;
+    }
+    #buttons a {
+        text-align: center;
+        display: block;
+        font-size: 50px;
+        float: left;
+        outline: 0;
+        margin: 0 60px;
+        color: #0063BF;
+        text-decoration: none;
+        display: block;
+        padding: 9px;
+        width: 35px;
+    }
+    .quote-phrase, .quote-author {
+        font-family: sans-serif;
+        font-weight: 300;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 5px 20px;
+        font-family: 'Lato', Calibri, Arial, sans-serif;
+    }
+    .quote-phrase {
+        height: 200px;
+        font-size: 22px;
+        color: #000000;
+        font-style: italic;
+        text-shadow: .5px 0px #0063BF;
+    }
+    .quoteContainer, .authorContainer {
+        display: table;
+        width: 100%;
+    }
+}
+
+a#prev:hover, a#next:hover {
+    color: #12A1BD;
+    text-shadow: .5px 0px #0063BF;
+}
+
+.quote-marks {
+    font-size: 30px;
+    padding: 0 3px 3px;
+    position: inherit;
+}
+
+.quote-author {
+    font-style: normal;
+    font-size: 20px;
+    color: #0063BF;
+    font-weight: 400;
+    height: 30px;
+}

@@ -22,7 +22,7 @@ class EspaldaController extends Controller
 
         return view("website.paginas.espalda", array(
             "textos" => $textos,
-            "cuello" => $espalda,
+            "espalda" => $espalda,
             "websiteheader" => $websiteheader,
             "websitemenu" => $websitemenu,
             "inicioseccion8" => $blinfo,

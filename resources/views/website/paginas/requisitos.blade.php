@@ -100,35 +100,72 @@
             </div>
         </section>
 
-        <section class="container-fluid d-flex justify-content-around documentacion">
+        <section class="container d-flex justify-content-center mt-5">
             <div class="col-xs-10 col-md-10">
+                <h5 class="text-justify">Deberás descargar un total de cinco documentos, cuatro de ellos
+                    <b>(Consentimiento
+                        informado, formato de
+                        registro, acuerdo de servicio y formato de ingreso (sea versión en español o inglés)</b> deberán
+                    ser
+                    diligenciados y enviados por email a <a
+                        href="mailto:info@fisioterapiaenbogota.com">info@fisioterapiaenbogota.com</a> junto con <b>copia
+                        legible de
+                        ambas caras de tu documento de
+                        identidad antes</b> de tu sesión de valoración inicial. El quinto documento es para tu
+                    información y te
+                    dará los detalles sobre cómo prepararte e ingresar a tu tele sesión.</h5>
+            </div>
+        </section>
+
+        <section class="container-fluid d-flex justify-content-center documentacion">
+            <div class="col-xs-10 col-md-10 columna-pdf">
                 <div class="row align-self-center">
-                    <div class="col-xs-12 col-md-4">
-                        <a href="{{ url('/') }}/descargas/CONSENTIMIENTO INFORMADO PARA TELEREHABILITACION ALRB.pdf"><img
-                                src="{{ url('/') }}/images/cover-consentimiento.png" alt=""></a>
+                    <div class="col-xs-12 col-md-4 justify-content-center">
+                        <h4 class="text-center mb-3">Consentimiendo<br>Informado<br><br>para Telerehabilitación</h4>
+                        <div class="container d-flex justify-content-center">
+                            <a
+                                href="{{ url('/') }}/descargas/CONSENTIMIENTO INFORMADO PARA TELEREHABILITACION ALRB.pdf"><img
+                                    src="{{ url('/') }}/images/logo_pdf.png" alt="" style="width: 80px"></a>
+                        </div>
                     </div>
                     <div class="col-xs-12 col-md-4">
-                        <a href="{{ url('/') }}/descargas/Formato de registro INGLES-ESPANOL.pdf"><img
-                                src="{{ url('/') }}/images/cover-form-ingles-espanol.png" alt=""></a>
+                        <h4 class="text-center mb-3">Formato de<br>Registro<br><br>Español</h4>
+                        <div class="container d-flex justify-content-center">
+                            <a href="{{ url('/') }}/descargas/Formato de registro ENG-ESP.pdf"><img
+                                    src="{{ url('/') }}/images/logo_pdf.png" alt="" style="width: 80px"></a>
+                        </div>
                     </div>
                     <div class="col-xs-12 col-md-4">
-                        <a href="{{ url('/') }}/descargas/Formato de Ingreso ESPANOL.pdf"><img
-                                src="{{ url('/') }}/images/cover-ingreso-espa.png" alt=""></a>
+                        <h4 class="text-center mb-3">Formato de<br>Ingreso<br><br>Español</h4>
+                        <div class="container d-flex justify-content-center">
+                            <a href="{{ url('/') }}/descargas/Formato de Ingreso ESPANOL.pdf"><img
+                                    src="{{ url('/') }}/images/logo_pdf.png" alt="" style="width: 80px"></a>
+                        </div>
                     </div>
 
                 </div>
-                <div class="row align-self-center">
-                    <div class="col-xs-12 col-md-4">
-                        <a href="{{ url('/') }}/descargas/Formato de Ingreso INGLES.pdf"><img
-                                src="{{ url('/') }}/images/cover-ingreso-eng.png" alt=""></a>
+                <div class="row align-self-center fila-pdf">
+                    {{-- <div class="col-xs-12 col-md-4">
+                        <h4 class="text-center mb-3">Formato de<br>Ingreso<br><br>Inglés</h4>
+                        <div class="container d-flex justify-content-center">
+                            <a href="{{ url('/') }}/descargas/Formato de Ingreso INGLES.pdf"><img
+                                    src="{{ url('/') }}/images/logo_pdf.png" alt="" style="width: 80px"></a>
+                        </div>
+                    </div> --}}
+                    <div class="col-xs-12 col-md-6">
+                        <h4 class="text-center mb-3">Acuerdo de<br>Servicio<br><br>Telerehabilitación</h4>
+                        <div class="container d-flex justify-content-center">
+                            <a href="{{ url('/') }}/descargas/Acuerdo de servicio TeleRehabilitacion ALRB.pdf"><img
+                                    src="{{ url('/') }}/images/logo_pdf.png" alt="" style="width: 80px"></a>
+                        </div>
                     </div>
-                    <div class="col-xs-12 col-md-4">
-                        <a href="{{ url('/') }}/descargas/Acuerdo de servicio TeleRehabilitacion ALRB.pdf"><img
-                                src="{{ url('/') }}/images/acuerdo-telerehabilitacion.png" alt=""></a>
-                    </div>
-                    <div class="col-xs-12 col-md-4">
-                        <a href="{{ url('/') }}/descargas/Telerehabilitacion LO QUE NECESITA SP-ENG google meet.pdf"><img
-                                src="{{ url('/') }}/images/elementos-necesarios.png" alt=""></a>
+                    <div class="col-xs-12 col-md-6">
+                        <h4 class="text-center mb-3">Lo que necesitas para<br>tu sesión de<br><br>Telerehabilitacion
+                        </h4>
+                        <div class="container d-flex justify-content-center">
+                            <a href="{{ url('/') }}/descargas/Telerehabilitacion LO QUE NECESITA SP-ESP google meet.pdf"><img
+                                    src="{{ url('/') }}/images/logo_pdf.png" alt="" style="width: 80px"></a>
+                        </div>
                     </div>
                 </div>
             </div>

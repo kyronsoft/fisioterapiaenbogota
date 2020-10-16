@@ -11,7 +11,12 @@
           />
         </div>
         <div class="col-xs-12 col-md-4">
-          <select class="form-control" name="" id="area_dolorosa">
+          <select
+            class="form-control"
+            name="pregunta1"
+            id="area_dolorosa"
+            v-model="preguntas.pregunta1"
+          >
             <option value="A">Área dolorosa/parte del cuerpo afectada</option>
             <option value="1">Dolor de cuello y hombro</option>
             <option value="2">Dolor de espalda/lumbar</option>
@@ -24,7 +29,12 @@
           </select>
         </div>
         <div class="col-xs-12 col-md-4">
-          <select class="form-control" name="" id="preocupacion">
+          <select
+            class="form-control"
+            name="pregunta2"
+            id="preocupacion"
+            v-model="preguntas.pregunta2"
+          >
             <option value="B">
               Cuál es tu principal preocupación debido a este problema?
             </option>
@@ -50,7 +60,12 @@
           />
         </div>
         <div class="col-xs-12 col-md-4">
-          <select class="form-control" name="" id="actividades">
+          <select
+            class="form-control"
+            name="pregunta3"
+            id="actividades"
+            v-model="preguntas.pregunta3"
+          >
             <option value="C">
               Que actividades no puedes realizar o están limitadas por este
               problema
@@ -69,7 +84,12 @@
           </select>
         </div>
         <div class="col-xs-12 col-md-4">
-          <select class="form-control" name="" id="actividades">
+          <select
+            class="form-control"
+            name="pregunta4"
+            id="actividades"
+            v-model="preguntas.pregunta4"
+          >
             <option value="D">
               Cuanto tiempo llevas sufriendo por este problema?
             </option>
@@ -95,7 +115,12 @@
           />
         </div>
         <div class="col-xs-12 col-md-4">
-          <select class="form-control" name="metas" id="metas">
+          <select
+            class="form-control"
+            name="pregunta5"
+            id="metas"
+            v-model="preguntas.pregunta5"
+          >
             <option value="E">
               La meta principal que te gustaría que te ayudara a lograr es:
             </option>
@@ -187,6 +212,13 @@ export default {
         mensaje: "",
         condiciones: false,
       },
+      preguntas: {
+        pregunta1: "",
+        pregunta2: "",
+        pregunta3: "",
+        pregunta4: "",
+        pregunta5: "",
+      },
       folletos: [
         "material-cuello-y-hombro-espanol.pdf",
         "material-dolor-lumbar-espanol.pdf",
@@ -199,15 +231,17 @@ export default {
   methods: {
     procesarform() {
       axios
-        .get(
-          this.url +
-            `/email_form.php?fname=$this.cliente.nombres&lname=$this.cliente.telefono&femail=$this.cliente.email&fsendmail=$this.cliente.mensaje`
-        )
+        .post(this.url + "/preguntas", {
+          cliente: this.cliente,
+          preguntas: this.preguntas,
+        })
         .then((resp) => {
-          if (resp.status == 200) {
-            this.download(this.tipo);
-          }
-        });
+          console.log(resp);
+          // if (resp.status == 200) {
+          //   this.download(this.tipo);
+          // }
+        })
+        .catch((error) => console.log(error));
     },
     download(parte) {
       var a = document.createElement("a");

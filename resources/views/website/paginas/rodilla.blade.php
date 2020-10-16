@@ -21,7 +21,8 @@
 
     <meta property="og:title" content="Dolor en Rodilla">
     <meta property="og:url" content="http://fisioterapiaenbogota/fisioterapia">
-    <meta property="og:description" content="¿Llevas semanas o incluso años con dolor de cadera y/o rodilla y has empezado a cojear, a perder movilidad y capacidad para realizar actividades que antes no eran problema?">
+    <meta property="og:description"
+        content="¿Llevas semanas o incluso años con dolor de cadera y/o rodilla y has empezado a cojear, a perder movilidad y capacidad para realizar actividades que antes no eran problema?">
     <meta property="og:image" content="http://fisioterapiaenbogota.com/images/fisioterapia-en-bogota-colombia-1.jpg">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Fysiopuntura">
@@ -30,14 +31,16 @@
 
     <meta itemprop="name" content="Fisioterapia">
     <meta itemprop="url" content="http://fisioterapiaenbogota/fisioterapia">
-    <meta itemprop="description" content="¿Llevas semanas o incluso años con dolor de cadera y/o rodilla y has empezado a cojear, a perder movilidad y capacidad para realizar actividades que antes no eran problema?">
+    <meta itemprop="description"
+        content="¿Llevas semanas o incluso años con dolor de cadera y/o rodilla y has empezado a cojear, a perder movilidad y capacidad para realizar actividades que antes no eran problema?">
     <meta itemprop="image" content="http://fisioterapiaenbogota.com/images/fisioterapia-en-bogota-colombia-1.jpg">
 
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Fisioterapia">
     <meta name="twitter:url" content="http://fisioterapiaenbogota/fisioterapia">
-    <meta name="twitter:description" content="¿Llevas semanas o incluso años con dolor de cadera y/o rodilla y has empezado a cojear, a perder movilidad y capacidad para realizar actividades que antes no eran problema?">
+    <meta name="twitter:description"
+        content="¿Llevas semanas o incluso años con dolor de cadera y/o rodilla y has empezado a cojear, a perder movilidad y capacidad para realizar actividades que antes no eran problema?">
     <meta name="twitter:image" content="http://fisioterapiaenbogota.com/images/fisioterapia-en-bogota-colombia-1.jpg">
     <meta name="twitter:site" content="@fysiopuntura">
 
@@ -73,9 +76,10 @@
     <link rel="stylesheet" href="{{ url('/') }}/css/responsive.css">
     <script src="js/fontawesome/fontawesome.js"></script>
     <link rel="stylesheet" href="{{ url('/') }}/css/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slick/slick-theme.css" />
+    <link rel="stylesheet" href="{{ url('/') }}/css/textslider/textslider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
 </head>
 
 <body>
@@ -87,18 +91,24 @@
             <div class="row">
                 <div class="col-12">
                     <h2 class="text-center">Fisioterapia en Bogotá</h2>
-                    <h3 class="text-center text-primary">Adriana Lucia Ramírez Bonilla</h3>
-                    <div class="card">
-                        <div class="card-header text-center bg-info">Dolor En Las Rodillas</div>
+                    <h3 class="text-center text-info">Adriana Lucia Ramírez Bonilla</h3>
+                    <div class="container d-flex justify-content-center">
+                        <div class="col-xs-7 col-md-6">
+                            <div class="card">
+                                <div class="card-header text-center bg-primary">Dolor De Rodilla</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <hr class="my-5">
             <div class="row d-flex justify-content-center">
                 <div class="col-xs-12 col-md-8">
-                    @php echo $textos[81]->spanish; @endphp
+                    @php echo $textos[80]->spanish; @endphp
                     <br>
-                    @php echo $cuello[0]->spanish; @endphp
+                    @php echo $rodilla[0]->spanish; @endphp
+                    <img src="{{ url('/') }}/images/port-4-spa.png" class="img-fluid" alt="">
+                    <a href="{{ url('/') }}/descargar_rodilla" class="btn btn-primary">Descargar</a>
                 </div>
             </div>
         </section>
@@ -114,6 +124,9 @@
 
     @include('website.modulos.footer')
 
+
+
+    <div id="WAButton"></div>
     <span class="ir-arriba"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
 
 
@@ -124,20 +137,26 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="{{ url('/') }}/js/slick/slick.min.js"></script>
+    <script src="{{ url('/') }}/js/textslider/textslider.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
+    <script type="text/javascript"
+        src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js">
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169704393-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169704393-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-169704393-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169704393-1');
+
+    </script>
 </body>
 
 </html>

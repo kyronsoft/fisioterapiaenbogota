@@ -6,7 +6,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav">
             <li class="nav-item active">
                 <a class="nav-link menu-inicio" href="{{ url('/') }}">{{ $websitemenu[0]->spanish }}</a>
             </li>
@@ -42,10 +42,13 @@
                                     href="{{ url('deportivas') }}">{{ $websitemenu[10]->spanish }}</a></li>
                         </ul>
                         <div class="dropdown-divider"></div>
-                    <li><a class="dropdown-item" href="{{ url('documentos') }}">Documentos</a></li>
+                    <li><a class="dropdown-item" href="{{ url('screening') }}">Screening Prevención de Lesiones</a></li>
                     <div class="dropdown-divider"></div>
-                    <li><a class="dropdown-item" href="{{ url('documentos') }}">Screening Prevención de Lesiones</a></li>
+                    <li><a class="dropdown-item" href="{{ url('acupuntura') }}">Acupuntura (próximamente)</a></li>
                 </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('documentos') }}">Documentos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('blog') }}">{{ $websitemenu[11]->spanish }}</a>
@@ -68,6 +71,6 @@
         </ul>
     </div>
     <a href="{{ url('contactanos') }}" class="btn btn-primary contact-menu btncontact d-none d-sm-block">Contactanos</a>
-    <a href="http://localhost/frontend" class="btn btn-primary btntienda contact-menu"><i class="fa fa-shopping-cart"
+    <a href="http://localhost:8000/frontend" class="btn btn-primary btntienda contact-menu"><i class="fa fa-shopping-cart"
             aria-hidden="true"></i> Tienda</a>
 </nav>

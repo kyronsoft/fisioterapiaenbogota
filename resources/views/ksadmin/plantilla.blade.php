@@ -25,6 +25,7 @@
     <link href="{{ url('/') }}/froala/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
     <link href="{{ url('/') }}/froala/css/froala_style.min.css" rel="stylesheet" type="text/css" />
     <link href="{{ url('/') }}/plugins/tagsinput/tagsinput.css" rel="stylesheet" type="text/css" />
+    <link href="{{ url('/') }}/plugins/notiejs/notie.min.css" rel="stylesheet" type="text/css" />
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=5f831873a599fe0011b8b9dd&product=inline-share-buttons"
@@ -32,18 +33,19 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
+    <div id="app">
+        <div class="wrapper">
 
-    <div class="wrapper">
+            @include('ksadmin.modulos.header')
+            @include('ksadmin.modulos.menu')
 
-        @include('ksadmin.modulos.header')
-        @include('ksadmin.modulos.menu')
+            @yield('contents')
 
-        @yield('contents')
-
+        </div>
     </div>
 
-
-    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
     <script src="{{ url('/') }}/plugins/jquery/jquery.min.js"></script>
     <script src="{{ url('/') }}/plugins/jquery-ui/jquery-ui.min.js"></script> --}}
     <!-- Summernote -->
@@ -57,6 +59,7 @@
     <script src="{{ url('/') }}/plugins/datatables/dataTables.responsive.min.js"></script>
     <script src="{{ url('/') }}/plugins/datatables/responsive.bootstrap.min.js"></script>
     <script src="{{ url('/') }}/js/adminlte.min.js"></script>
+    <script src="{{ url('/') }}/plugins/notiejs/notie.min.js"></script>
     <script src="{{ url('/') }}/js/codigo.js"></script>
     <script src="{{ url('/') }}/froala/js/froala_editor.pkgd.min.js"></script>
     <script src="{{ url('/') }}/froala/js/plugins/files_manager.min.js"></script>
@@ -85,6 +88,20 @@
         });
 
     </script>
+
+    @if (Session::has('ok-password'))
+
+        <script>
+            notie.alert({
+                type: 1,
+                text: '¡La contraseña se cambió correctamente!',
+                time: 10,
+                position: 'bottom'
+            })
+
+        </script>
+
+    @endif
 </body>
 
 </html>

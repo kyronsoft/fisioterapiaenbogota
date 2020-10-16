@@ -79,6 +79,8 @@
     <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slick/slick-theme.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
 </head>
 
 <body>
@@ -99,41 +101,131 @@
                     <h4 class="text-center text-white">Describe your problem so I can help you better</h4>
                 </div>
             </div>
-            <form action="">
+            <form action="{{ url('/') }}/sendbasicemail_en" method="POST">
+                @csrf
                 <div class="row d-flex justify-content-around">
-                    <div class="col-xs-12 col-md-4"><input type="text" class="form-control bg-transparent text-white"
-                            name="nombre" id="nombre" placeholder="Nombres y Apellidos *"></div>
+                    <div class="col-xs-12 col-md-4"><input type="text" class="form-control text-white" name="nombre"
+                            id="nombre" placeholder="Name and Surname *" required></div>
                     <div class="col-xs-12 col-md-4">
+                        <select class="form-control" name="pregunta1" id="area_dolorosa">
+                            <option value="A">Painful area / part of the body affected</option>
+                            <option value="Neck and shoulder pain">Neck and shoulder pain</option>
+                            <option value="Back / lumbar pain">Back / lumbar pain</option>
+                            <option value="Hip pain">Hip pain</option>
+                            <option value="Knee pain">Knee pain</option>
+                            <option value="Ankle and foot pain">Ankle and foot pain</option>
+                            <option value="I don't know where the pain comes from">I don't know where the pain comes
+                                from</option>
+                            <option value="Sports or exercise muscle injury">Sports or exercise muscle injury</option>
+                            <option value="Loss of balance and equilibrium">Loss of balance and equilibrium</option>
+                        </select>
                     </div>
                     <div class="col-xs-12 col-md-4">
+                        <select class="form-control" name="pregunta2" id="preocupacion">
+                            <option value="B">
+                                What is your main concern due to this problem?
+                            </option>
+                            <option value="Painkiller dependence">Painkiller dependence</option>
+                            <option value="Not knowing what is happening to my body">Not knowing what is happening to my
+                                body</option>
+                            <option value="Fear of losing mobility and independence">Fear of losing mobility and
+                                independence</option>
+                            <option value="Risk of having to undergo surgery">Risk of having to undergo surgery</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row">&nbsp;</div>
                 <div class="row d-flex justify-content-around">
-                    <div class="col-xs-12 col-md-4"><input type="text" class="form-control bg-transparent"
-                            name="telefono" id="telefono" placeholder="Teléfono *"></div>
+                    <div class="col-xs-12 col-md-4"><input type="text" class="form-control" name="telefono"
+                            id="telefono" placeholder="Phone *" required></div>
                     <div class="col-xs-12 col-md-4">
+                        <select class="form-control" name="pregunta3" id="actividades1">
+                            <option value="C">
+                                What activities you cannot perform or are limited by this problem?
+                            </option>
+                            <option value="Sleep">Sleep</option>
+                            <option value="Stay seated">Stay seated</option>
+                            <option value="Standing up">Standing up</option>
+                            <option value="Lift objects">Lift objects</option>
+                            <option value="Walk">Walk</option>
+                            <option value="Jogging">Jogging</option>
+                            <option value="Play tennis">Play tennis</option>
+                            <option value="Climbing stairs">Climbing stairs</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Enjoy with family and friends">Enjoy with family and friends</option>
+                            <option value="Other">Other</option>
+                        </select>
                     </div>
                     <div class="col-xs-12 col-md-4">
+                        <select class="form-control" name="pregunta4" id="actividades">
+                            <option value="D">
+                                How long have you been suffering from this problem?
+                            </option>
+                            <option value="A few days">A few days</option>
+                            <option value="1-2 weeks">1-2 weeks</option>
+                            <option value="2-4 weeks">2-4 weeks</option>
+                            <option value="1-3 months">1-3 months</option>
+                            <option value="6-12 months">6-12 months</option>
+                            <option value="Several years">Several years</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row">&nbsp;</div>
-                <div class="row d-flex justify-content-around">
-                    <div class="col-xs-12 col-md-4"><input type="text" class="form-control bg-transparent"
-                            name="telefono" id="telefono" placeholder="Teléfono *"></div>
+                <div class="row d-flex justify-content-start">
+                    <div class="col-xs-12 col-md-4"><input type="email" class="form-control" name="email" id="email"
+                            placeholder="Email *"></div>
                     <div class="col-xs-12 col-md-4">
+                        <select class="form-control" name="pregunta5" id="metas">
+                            <option value="E">
+                                The main goal that you would like me to help you achieve is:
+                            </option>
+                            <option value="Reduce pain">Reduce pain</option>
+                            <option value="Reduce stiffness and improve mobility">Reduce stiffness and improve mobility
+                            </option>
+                            <option value="Start physical activity">Start physical activity</option>
+                            <option value="Maintain my level of physical activity">Maintain my level of physical
+                                activity</option>
+                            <option value="Avoid dependence on painkillers">Avoid dependence on painkillers</option>
+                            <option value="Understand my pathology">Understand my pathology</option>
+                            <option value="Learn to manage my pathology">Learn to manage my pathology</option>
+                            <option value="Stay active and resolve my pain before it gets worse">
+                                Stay active and resolve my pain before it gets worse
+                            </option>
+                            <option value="Improve my balance and balance">Improve my balance and balance</option>
+                            <option value="Learn the correct way to exercise and progress them">
+                                Learn the correct way to exercise and progress them
+                            </option>
+                            <option value="Avoid or postpone surgery">Avoid or postpone surgery</option>
+                        </select>
                     </div>
-                    <div class="col-xs-12 col-md-4 d-flex justify-content-around">
+                </div>
+                <div class="row">&nbsp;</div>
+                <div class="row d-flex justify-content-start">
+                    <div class="col-xs-6 col-md-6">
+                        <div class="form-group">
+                            <label class="text-white" for="mensaje">Message</label>
+                            <textarea class="form-control" name="mensaje" id="mensaje" cols="50" rows="5"
+                                required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">&nbsp;</div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-5 d-flex justify-content-around">
                         <div class="align-self-center">
                             <input type="checkbox" id="politicadedatos">
                         </div>
                         <div class="align-self-center">
-                            <h2 class="text-center text-white poldatos">I accept the Data Processing Policies</h2>
+                            <h4 class="text-center"><a
+                                    href="{{ url('/') }}/descargas/Politica de protección y tratamiento de datos ALRB.pdf"
+                                    class="text-white">I agree
+                                    Data Processing Policies
+                                </a></h4>
                         </div>
                     </div>
                 </div>
                 <div class="row d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary btnpoldatos">Send</button>
+                    <button type="submit" class="btn btn-primary btnpoldatos" disabled>Send</button>
                 </div>
             </form>
         </section>
@@ -144,7 +236,7 @@
     @include('website.modulos.footer_en')
 
 
-
+    <div id="WAButton"></div>
     <span class="ir-arriba"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
 
 
@@ -157,18 +249,45 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/slick/slick.min.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
+    <script type="text/javascript"
+        src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js">
+        < script type = "text/javascript"
+        src = "{{ url('/') }}/js/main.js" >
+
+    </script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169704393-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+        $("#politicadedatos").on('click', function() {
+            $(".btnpoldatos").prop("disabled", false);
+        });
 
-  gtag('config', 'UA-169704393-1');
-</script>
+    </script>
+
+    @if (Session::has('response'))
+        <script>
+            notie.alert({
+                type: 1,
+                text: '¡The message was send successfully!',
+                time: 5
+            })
+
+        </script>
+    @endif
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169704393-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169704393-1');
+
+    </script>
 </body>
 
 </html>

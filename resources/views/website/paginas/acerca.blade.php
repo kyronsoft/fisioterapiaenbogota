@@ -130,7 +130,7 @@
     @include('website.modulos.footer')
 
 
-
+    <div id="WAButton"></div>
     <span class="ir-arriba"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
 
 

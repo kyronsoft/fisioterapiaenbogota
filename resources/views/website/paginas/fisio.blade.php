@@ -80,9 +80,10 @@
     <link rel="stylesheet" href="{{ url('/') }}/css/responsive.css">
     <script src="js/fontawesome/fontawesome.js"></script>
     <link rel="stylesheet" href="{{ url('/') }}/css/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slick/slick-theme.css" />
+    <link rel="stylesheet" href="{{ url('/') }}/css/textslider/textslider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
 </head>
 
 <body>
@@ -204,7 +205,7 @@
     @include('website.modulos.footer')
 
 
-
+    <div id="WAButton"></div>
     <span class="ir-arriba"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
 
 
@@ -215,20 +216,29 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="{{ url('/') }}/js/slick/slick.min.js"></script>
+    <script src="{{ url('/') }}/js/textslider/textslider.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
-    <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
+    <script type="text/javascript"
+        src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js">
+        < script type = "text/javascript"
+        src = "{{ url('/') }}/js/botonws.js" >
+
+    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169704393-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169704393-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-169704393-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169704393-1');
+
+    </script>
 </body>
 
 </html>

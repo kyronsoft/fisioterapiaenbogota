@@ -15,6 +15,7 @@ class KSDeportivasController extends Controller
     public function index()
     {
         $textos = DB::table('textos')->where('pagina', '=', 'Deportivas')->get();
+
         return view('ksadmin.paginas.deportivas', array('textos' => $textos));
     }
 

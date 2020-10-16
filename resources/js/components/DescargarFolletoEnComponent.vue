@@ -6,12 +6,17 @@
           <input
             type="text"
             class="form-control bg-transparent text-white"
-            placeholder="Nombres y Apellidos *"
+            placeholder="Name and Surname *"
             v-model.trim="cliente.nombres"
           />
         </div>
         <div class="col-xs-12 col-md-4">
-          <select class="form-control" name="" id="area_dolorosa">
+          <select
+            class="form-control"
+            name="pregunta1"
+            id="area_dolorosa"
+            v-model="preguntas.pregunta1"
+          >
             <option value="A">Painful area / part of the body affected</option>
             <option value="1">Neck and shoulder pain</option>
             <option value="2">Back / lumbar pain</option>
@@ -24,7 +29,12 @@
           </select>
         </div>
         <div class="col-xs-12 col-md-4">
-          <select class="form-control" name="" id="preocupacion">
+          <select
+            class="form-control"
+            name="pregunta2"
+            id="preocupacion"
+            v-model="preguntas.pregunta2"
+          >
             <option value="B">
               What is your main concern due to this problem?
             </option>
@@ -43,12 +53,17 @@
             class="form-control bg-transparent"
             name="telefono"
             id="telefono"
-            placeholder="Teléfono *"
+            placeholder="Phone *"
             v-model.trim="cliente.telefono"
           />
         </div>
         <div class="col-xs-12 col-md-4">
-          <select class="form-control" name="" id="actividades">
+          <select
+            class="form-control"
+            name="pregunta3"
+            id="actividades"
+            v-model="preguntas.pregunta3"
+          >
             <option value="C">
               What activities you cannot perform or are limited by this problem
             </option>
@@ -66,7 +81,12 @@
           </select>
         </div>
         <div class="col-xs-12 col-md-4">
-          <select class="form-control" name="" id="actividades">
+          <select
+            class="form-control"
+            name="pregunta4"
+            id="actividades"
+            v-model="preguntas.pregunta4"
+          >
             <option value="D">
               How long have you been suffering from this problem?
             </option>
@@ -92,7 +112,12 @@
           />
         </div>
         <div class="col-xs-12 col-md-4">
-          <select class="form-control" name="metas" id="metas">
+          <select
+            class="form-control"
+            name="pregunta5"
+            id="metas"
+            v-model="preguntas.pregunta5"
+          >
             <option value="E">
               The main goal that you would like me to help you achieve is:
             </option>
@@ -118,7 +143,7 @@
       <div class="row d-flex justify-content-center">
         <div class="col-xs-6 col-md-6">
           <div class="form-group">
-            <label class="text-dark" for="mensaje">Mensaje</label>
+            <label class="text-dark" for="mensaje">Message</label>
             <textarea
               class="form-control"
               name="mensaje"
@@ -143,14 +168,14 @@
             />
             <label class="form-check-label" for="inlineCheckbox1"
               ><a v-bind:href="url_link"
-                >You accept the terms and conditions</a
+                >I accept the terms and conditions</a
               ></label
             >
           </div>
         </div>
         <div class="col-xs-6 col-md-6">
           <button class="btn btn-primary" type="submit" :disabled="bloquear">
-            Descargar
+            Download
           </button>
         </div>
       </div>
@@ -181,6 +206,13 @@ export default {
         mensaje: "",
         condiciones: false,
       },
+      preguntas: {
+        pregunta1: "",
+        pregunta2: "",
+        pregunta3: "",
+        pregunta4: "",
+        pregunta5: "",
+      },
       folletos: [
         "material-cuello-y-hombro-ingles.pdf",
         "material-dolor-lumbar-ingles.pdf",
@@ -193,10 +225,10 @@ export default {
   methods: {
     procesarform() {
       axios
-        .get(
-          this.url +
-            `/email_form.php?fname=$this.cliente.nombres&lname=$this.cliente.telefono&femail=$this.cliente.email&fsendmail=$this.cliente.mensaje`
-        )
+        .post(this.url + "/questions", {
+          cliente: this.cliente,
+          preguntas: this.preguntas,
+        })
         .then((resp) => {
           if (resp.status == 200) {
             this.download(this.tipo);

@@ -10,7 +10,7 @@ class DeportivasEnController extends Controller
     public function index()
     {
         $textos = DB::table('textos')->get();
-        $espalda = DB::table('textos')->where('pagina', '=', 'Espalda')->get();
+        $deportivas = DB::table('textos')->where('pagina', '=', 'Deportivas')->get();
         $websiteheader = DB::table('website_header')->get();
         $websitemenu = DB::table('website_menu')->get();
         $blinfo = DB::table('website_info')->get();
@@ -22,7 +22,7 @@ class DeportivasEnController extends Controller
 
         return view("website.paginas.deportivas_en", array(
             "textos" => $textos,
-            "cuello" => $espalda,
+            "deportivas" => $deportivas,
             "websiteheader" => $websiteheader,
             "websitemenu" => $websitemenu,
             "inicioseccion8" => $blinfo,
