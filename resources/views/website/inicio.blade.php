@@ -84,6 +84,247 @@
     <link rel="stylesheet"
         href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
 
+    <style>
+        .block {
+            float: left;
+            width: 25%;
+            height: 100px;
+        }
+        .hovicon1 {
+            display: inline-block;
+            font-size: 45px;
+            line-height: 90px;
+            cursor: pointer;
+            margin: 20px;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            text-align: center;
+            position: relative;
+            text-decoration: none;
+            z-index: 1;
+            background-color: #b4c0ca;
+        }
+
+        .hovicon1:after {
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            content: '';
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+        }
+
+        .hovicon1:before {
+            speak: none;
+            font-size: 48px;
+            line-height: 90px;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            display: block;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .hovicon1.effect-3 {
+            box-shadow: 0 0 0 4px #blue;
+            -webkit-transition: color 0.3s;
+            -moz-transition: color 0.3s;
+            transition: color 0.3s;
+        }
+
+        .hovicon1.effect-3:after {
+            top: -2px;
+            left: -2px;
+            padding: 2px;
+            z-index: -1;
+            background-color: #b4c0ca;
+            -webkit-transition: -webkit-transform 0.2s, opacity 0.3s;
+            -moz-transition: -moz-transform 0.2s, opacity 0.3s;
+            transition: transform 0.2s, opacity 0.3s;
+        }
+
+        /* Effect 3a */
+        .hovicon1.effect-3.sub-a,
+        .hovicon1.effect-3.sub-a i {
+            color: #000;
+        }
+
+        .hovicon1.effect-3.sub-a:hover,
+        .hovicon1.effect-3.sub-a:hover i {
+            color: #000;
+        }
+
+        .hovicon1.effect-3.sub-a:hover:after {
+            -webkit-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            transform: scale(1.3);
+            opacity: 0;
+        }
+
+        /**** 2 *****/
+        .hovicon2 {
+            display: inline-block;
+            font-size: 45px;
+            line-height: 90px;
+            cursor: pointer;
+            margin: 20px;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            text-align: center;
+            position: relative;
+            text-decoration: none;
+            z-index: 1;
+            background-color: #ddad9f;
+        }
+
+        .hovicon2:after {
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            content: '';
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+        }
+
+        .hovicon2:before {
+            speak: none;
+            font-size: 48px;
+            line-height: 90px;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            display: block;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .hovicon2.effect-3 {
+            box-shadow: 0 0 0 4px #blue;
+            -webkit-transition: color 0.3s;
+            -moz-transition: color 0.3s;
+            transition: color 0.3s;
+        }
+
+        .hovicon2.effect-3:after {
+            top: -2px;
+            left: -2px;
+            padding: 2px;
+            z-index: -1;
+            background-color: #ddad9f;
+            -webkit-transition: -webkit-transform 0.2s, opacity 0.3s;
+            -moz-transition: -moz-transform 0.2s, opacity 0.3s;
+            transition: transform 0.2s, opacity 0.3s;
+        }
+
+        /* Effect 3a */
+        .hovicon2.effect-3.sub-a,
+        .hovicon2.effect-3.sub-a i {
+            color: #000;
+        }
+
+        .hovicon2.effect-3.sub-a:hover,
+        .hovicon2.effect-3.sub-a:hover i {
+            color: #000;
+        }
+
+        .hovicon2.effect-3.sub-a:hover:after {
+            -webkit-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            transform: scale(1.3);
+            opacity: 0;
+        }
+
+        /**** 3 *****/
+        .hovicon3 {
+            display: inline-block;
+            font-size: 45px;
+            line-height: 90px;
+            cursor: pointer;
+            margin: 20px;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            text-align: center;
+            position: relative;
+            text-decoration: none;
+            z-index: 1;
+            background-color: #ddb2c6;
+        }
+
+        .hovicon3:after {
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            content: '';
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+        }
+
+        .hovicon3:before {
+            speak: none;
+            font-size: 48px;
+            line-height: 90px;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            display: block;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .hovicon3.effect-3 {
+            box-shadow: 0 0 0 4px #blue;
+            -webkit-transition: color 0.3s;
+            -moz-transition: color 0.3s;
+            transition: color 0.3s;
+        }
+
+        .hovicon3.effect-3:after {
+            top: -2px;
+            left: -2px;
+            padding: 2px;
+            z-index: -1;
+            background-color: #ddb2c6;
+            -webkit-transition: -webkit-transform 0.2s, opacity 0.3s;
+            -moz-transition: -moz-transform 0.2s, opacity 0.3s;
+            transition: transform 0.2s, opacity 0.3s;
+        }
+
+        /* Effect 3a */
+        .hovicon3.effect-3.sub-a,
+        .hovicon3.effect-3.sub-a i {
+            color: #000;
+        }
+
+        .hovicon3.effect-3.sub-a:hover,
+        .hovicon3.effect-3.sub-a:hover i {
+            color: #000;
+        }
+
+        .hovicon3.effect-3.sub-a:hover:after {
+            -webkit-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            transform: scale(1.3);
+            opacity: 0;
+        }
+
+    </style>
+
 </head>
 
 <body>

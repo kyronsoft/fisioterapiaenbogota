@@ -153,6 +153,7 @@ class MailController extends Controller
         $data = array(
             'name' => 'Adriana Lucía Ramírez Bonilla',
             "nombre" => $datos["nombre"],
+            "email" => $datos["email"],
             "mensaje" => $datos["mensaje"],
             "telefono" => $datos["telefono"],
             "pregunta1" => $preguntas["pregunta1"],

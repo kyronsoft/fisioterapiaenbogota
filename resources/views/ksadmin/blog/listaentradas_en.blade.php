@@ -40,7 +40,7 @@
                                 <td>{{ date_format(date_create($item->fecha_articulo), 'd-m-Y') }}</td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href="{{ url('/') }}/ks-admin/blog/entrada_en/{{ $item->id_articulo }}"
+                                        <a href="{{ url('/') }}/ks-admin/blog/entrada_en/{{ $item->id_articulo }}/edit"
                                             class="btn btn-outline-primary btn-sm mr-2">Show</a>
                                     </div>
                                 </td>

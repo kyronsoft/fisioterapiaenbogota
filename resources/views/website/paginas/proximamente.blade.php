@@ -75,6 +75,7 @@
 
     <link rel="stylesheet" href="{{ url('/') }}/css/normalize.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url('/') }}/css/responsive.css">
     <link rel="stylesheet"
         href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
 
@@ -82,31 +83,38 @@
 
 <body style="background-color: #12A1BD">
     <div id="app">
-        <section class="container">
+        <section class="container-fluid d-flex justify-content-around proxima">
             <div class="row mt-5">
-                <img src="{{ url('/') }}/images/logo-fisioterapia-en-bogota.png" alt="" style="width:20%;">
-                <h1 class="align-self-center float-right font-weight-bold" style="margin-left:150px; padding-right: 100px">Fisioterapia en
-                    Bogotá</h1>
-                <img src="{{ url('/') }}/images/shopping-06-512.png" alt="" style="width:20%;">
-            </div>
-            <div class="row d-flex justify-content-center">
-                <h1 class="font-weight-bold">Tienda Virtual<br>Próximamente</h1>
+                <div class="col-xs-12 col-md-4 text-center">
+                    <img src="{{ url('/') }}/images/logo-fisioterapia-en-bogota.png" alt="" style="width:40%;">
+                </div>
+                <div class="col-xs-12 col-md-5 align-self-center">
+                    <div class="row d-flex justify-content-center">
+                        <h1 class="font-weight-bold text-center my-5">Fisioterapia en Bogotá</h1>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <h1 class="font-weight-bold text-center">Tienda Virtual Próximamente</h1>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 text-center">
+                    <img src="{{ url('/') }}/images/shopping-06-512.png" alt="" style="width:60%;">
+                </div>
             </div>
         </section>
 
         <section class="container mt-5">
-            <div class="row d-flex justify-content-around">
-                <div class="col-xs-12 col-md-3">
-                    <img src="{{ url('/') }}/images/tienda/Video1-ES.jpg" alt="" style="width:80%;">
+            <div class="row d-flex justify-content-around videos-esp">
+                <div class="col-xs-12 col-md-3 align-content-center">
+                    <img src="{{ url('/') }}/images/tienda/espalda_esjpg" alt="" style="width:80%">
                 </div>
-                <div class="col-xs-12 col-md-3">
-                    <img src="{{ url('/') }}/images/tienda/Video2-ES.jpg" alt="" style="width:80%;">
+                <div class="col-xs-12 col-md-3 align-content-center">
+                    <img src="{{ url('/') }}/images/tienda/cargar_es.jpg" alt="" style="width:80%;">
                 </div>
-                <div class="col-xs-12 col-md-3">
-                    <img src="{{ url('/') }}/images/tienda/Video3-ES.jpg" alt="" style="width:80%;">
+                <div class="col-xs-12 col-md-3 align-content-center">
+                    <img src="{{ url('/') }}/images/tienda/mecanica_es.jpg" alt="" style="width:80%;">
                 </div>
-                <div class="col-xs-12 col-md-3">
-                    <img src="{{ url('/') }}/images/tienda/Video4-ES.jpg" alt="" style="width:80%;">
+                <div class="col-xs-12 col-md-3 align-content-center">
+                    <img src="{{ url('/') }}/images/tienda/sentarte_es.jpg" alt="" style="width:80%;">
                 </div>
             </div>
         </section>
