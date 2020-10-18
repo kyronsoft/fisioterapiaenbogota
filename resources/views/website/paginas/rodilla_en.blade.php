@@ -78,6 +78,8 @@
     <link rel="stylesheet" href="{{ url('/') }}/css/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="{{ url('/') }}/css/textslider/textslider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet"
+    href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
 </head>
 
 <body>
@@ -85,7 +87,7 @@
     @include('website.modulos.menu_en')
 
     <div id="app">
-        <section class="container-fluid rodilla">
+        <section class="container-fluid rodilla punto-partida">
             <div class="row">
                 <div class="col-12">
                     <h2 class="text-center">Physiotherapy in Bogotá</h2>
@@ -105,7 +107,14 @@
                     @php echo $textos[80]->english; @endphp
                     <br>
                     @php echo $rodilla[0]->english; @endphp
-                    <img src="{{ url('/') }}/images/port-4-spa.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xs-12 col-md-8">
+                    <img src="{{ url('/') }}/images/port-4-eng.png" class="img-fluid" alt="" id="libro_dolor">
                     <a href="{{ url('/') }}/download_knee" class="btn btn-primary">Download</a>
                 </div>
             </div>
@@ -122,6 +131,7 @@
 
     @include('website.modulos.footer_en')
 
+    <div id="WAButton"></div>
     <span class="ir-arriba"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
 
 
@@ -134,6 +144,10 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="{{ url('/') }}/js/textslider/textslider.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript"
+        src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js">
+    </script>
+    <script src="{{ url('/') }}/plugins/waypoints/jquery.waypoints.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
 

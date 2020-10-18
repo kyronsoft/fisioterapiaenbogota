@@ -92,7 +92,7 @@
         @include('website.modulos.header_en')
         @include('website.modulos.menu_en')
 
-        <section class="container-fluid d-flex justify-content-center contacto">
+        <section class="container-fluid d-flex justify-content-center contacto punto-partida">
             <div class="row">
                 <div class="align-self-center">
                     <img src="images/flower-decor.png" alt="" style="width: 60px;">
@@ -155,6 +155,8 @@
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript"
         src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js">
+    </script>
+    <script type="text/javascript" src="{{ url('/') }}/plugins/waypoints/jquery.waypoints.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
 

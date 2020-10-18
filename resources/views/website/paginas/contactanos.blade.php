@@ -71,10 +71,11 @@
         @include('website.modulos.menu')
 
 
-        <section class="container-fluid contactanos">
+        <section class="container-fluid contactanos punto-partida">
             <div class="row d-flex justify-content-center">
                 <div class="col-xs-12 col-md-6 align-self-center">
-                    <h3 class="text-center text-white cabecera mb-5">¿Estás soportando el dolor? No tienes por que sufrir
+                    <h3 class="text-center text-white cabecera my-5">¿Estás soportando el dolor? No tienes por que
+                        sufrir
                         innecesariamente. Yo te puedo ayudar ...</h3>
                 </div>
             </div>
@@ -87,91 +88,129 @@
             <form action="{{ url('/') }}/sendbasicemail" method="POST">
                 @csrf
                 <div class="row d-flex justify-content-around">
-                    <div class="col-xs-12 col-md-4"><input type="text" class="form-control text-white" name="nombre"
-                            id="nombre" placeholder="Nombres y Apellidos *" required></div>
                     <div class="col-xs-12 col-md-4">
-                        <select class="form-control" name="pregunta1" id="area_dolorosa">
-                            <option value="A">Área dolorosa/parte del cuerpo afectada</option>
-                            <option value="Dolor de cuello y hombro">Dolor de cuello y hombro</option>
-                            <option value="Dolor de espalda/lumbar">Dolor de espalda/lumbar</option>
-                            <option value="Dolor de cadera">Dolor de cadera</option>
-                            <option value="Dolor de rodilla">Dolor de rodilla</option>
-                            <option value="Dolor de tobillo y pie">Dolor de tobillo y pie</option>
-                            <option value="No sé de donde viene el dolor">No sé de donde viene el dolor</option>
-                            <option value="Lesión muscular deportiva o por ejercicio">Lesión muscular deportiva o por
-                                ejercicio</option>
-                            <option value="Pérdida de balance y equilibrio">Pérdida de balance y equilibrio</option>
-                        </select>
+                        <div class="form-group">
+                            <label for="nombre">&nbsp;</label>
+                            <input type="text" class="form-control text-white" name="nombre" id="nombre"
+                                placeholder="Nombres y Apellidos *" required>
+                        </div>
                     </div>
                     <div class="col-xs-12 col-md-4">
-                        <select class="form-control" name="pregunta2" id="preocupacion">
-                            <option value="B">Cuál es tu principal preocupación debido a este problema?</option>
-                            <option value="Dependencia de analgésicos">Dependencia de analgésicos</option>
-                            <option value="No saber que es lo que está pasando con mi cuerpo">No saber que es lo que
-                                está pasando con mi cuerpo</option>
-                            <option value="Miedo a perder movilidad e independencia">Miedo a perder movilidad e
-                                independencia</option>
-                            <option value="Riesgo de tener que someterme a cirugia">Riesgo de tener que someterme a
-                                cirugia</option>
-                        </select>
+                        <div class="form-group">
+                            <label for="area_dolorosa" class="text-white">Área dolorosa/parte del cuerpo
+                                afectada</label>
+                            <select class="form-control" name="pregunta1" id="area_dolorosa">
+                                <option value="0">--- Seleccionar ---</option>
+                                <option value="Dolor de cuello y hombro">Dolor de cuello y hombro</option>
+                                <option value="Dolor de espalda/lumbar">Dolor de espalda/lumbar</option>
+                                <option value="Dolor de cadera">Dolor de cadera</option>
+                                <option value="Dolor de rodilla">Dolor de rodilla</option>
+                                <option value="Dolor de tobillo y pie">Dolor de tobillo y pie</option>
+                                <option value="No sé de donde viene el dolor">No sé de donde viene el dolor</option>
+                                <option value="Lesión muscular deportiva o por ejercicio">Lesión muscular deportiva o
+                                    por
+                                    ejercicio</option>
+                                <option value="Pérdida de balance y equilibrio">Pérdida de balance y equilibrio</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="form-group">
+                            <label for="preocupacion" class="text-white">Cuál es tu principal preocupación debido a este
+                                problema?</label>
+                            <select class="form-control" name="pregunta2" id="preocupacion">
+                                <option value="0">--- Seleccionar ---</option>
+                                <option value="Dependencia de analgésicos">Dependencia de analgésicos</option>
+                                <option value="No saber que es lo que está pasando con mi cuerpo">No saber que es lo que
+                                    está pasando con mi cuerpo</option>
+                                <option value="Miedo a perder movilidad e independencia">Miedo a perder movilidad e
+                                    independencia</option>
+                                <option value="Riesgo de tener que someterme a cirugia">Riesgo de tener que someterme a
+                                    cirugia</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="row">&nbsp;</div>
                 <div class="row d-flex justify-content-around">
-                    <div class="col-xs-12 col-md-4"><input type="text" class="form-control" name="telefono"
-                            id="telefono" placeholder="Teléfono *" required></div>
                     <div class="col-xs-12 col-md-4">
-                        <select class="form-control" name="pregunta3" id="actividades1">
-                            <option value="C">Que actividades no puedes realizar o están limitadas por este problema
-                            </option>
-                            <option value="Dormir">Dormir</option>
-                            <option value="Permanecer sentado">Permanecer sentado</option>
-                            <option value="Permanecer de pie">Permanecer de pie</option>
-                            <option value="Levantar objetos">Levantar objetos</option>
-                            <option value="Caminar">Caminar</option>
-                            <option value="Trotar">Trotar</option>
-                            <option value="Jugar Tenis">Jugar Tenis</option>
-                            <option value="Subir escaleras">Subir escaleras</option>
-                            <option value="Viajar">Viajar</option>
-                            <option value="Disfrutar con familia y amigos">Disfrutar con familia y amigos</option>
-                            <option value="Otra">Otra</option>
-                        </select>
+                        <div class="form-group">
+                            <label for="telefono">&nbsp;</label>
+                            <input type="text" class="form-control" name="telefono" id="telefono"
+                                placeholder="Teléfono *" required>
+                        </div>
                     </div>
                     <div class="col-xs-12 col-md-4">
-                        <select class="form-control" name="pregunta4" id="actividades">
-                            <option value="D">Cuanto tiempo llevas sufriendo por este problema?</option>
-                            <option value="Unos pocos días">Unos pocos días</option>
-                            <option value="1-2 semanas">1-2 semanas</option>
-                            <option value="2-4 semanas">2-4 semanas</option>
-                            <option value="1-3 meses">1-3 meses</option>
-                            <option value="6-12 meses">6-12 meses</option>
-                            <option value="Varios años">Varios años</option>
-                        </select>
+                        <div class="form-group">
+                            <label for="actividades1" class="text-white">Cual actividad no puedes realizar o están
+                                limitadas?</label>
+                            <select class="form-control" name="pregunta3" id="actividades1">
+                                <option value="0">--- Seleccionar ---
+                                </option>
+                                <option value="Dormir">Dormir</option>
+                                <option value="Permanecer sentado">Permanecer sentado</option>
+                                <option value="Permanecer de pie">Permanecer de pie</option>
+                                <option value="Levantar objetos">Levantar objetos</option>
+                                <option value="Caminar">Caminar</option>
+                                <option value="Trotar">Trotar</option>
+                                <option value="Jugar Tenis">Jugar Tenis</option>
+                                <option value="Subir escaleras">Subir escaleras</option>
+                                <option value="Viajar">Viajar</option>
+                                <option value="Disfrutar con familia y amigos">Disfrutar con familia y amigos</option>
+                                <option value="Otra">Otra</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="form-group">
+                            <label for="actividades" class="text-white">Cuanto tiempo llevas sufriendo por este
+                                problema?</label>
+                            <select class="form-control" name="pregunta4" id="actividades">
+                                <option value="D">--- Seleccionar ---</option>
+                                <option value="Unos pocos días">Unos pocos días</option>
+                                <option value="1-2 semanas">1-2 semanas</option>
+                                <option value="2-4 semanas">2-4 semanas</option>
+                                <option value="1-3 meses">1-3 meses</option>
+                                <option value="6-12 meses">6-12 meses</option>
+                                <option value="Varios años">Varios años</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="row">&nbsp;</div>
                 <div class="row d-flex justify-content-start">
-                    <div class="col-xs-12 col-md-4"><input type="email" class="form-control" name="email" id="email"
-                            placeholder="Email *"></div>
                     <div class="col-xs-12 col-md-4">
-                        <select class="form-control" name="pregunta5" id="metas">
-                            <option value="E">La meta principal que te gustaría que te ayudara a lograr es:</option>
-                            <option value="Reducir el dolor">Reducir el dolor</option>
-                            <option value="Reducir rigidez y mejorar movilidad">Reducir rigidez y mejorar movilidad
-                            </option>
-                            <option value="Empezar actividad física">Empezar actividad física</option>
-                            <option value="Mantener mi nivel de actividad física">Mantener mi nivel de actividad física
-                            </option>
-                            <option value="Evitar dependencia a analgésicos">Evitar dependencia a analgésicos</option>
-                            <option value="Entender mi patología">Entender mi patología</option>
-                            <option value="Aprender a manejar mi patología">Aprender a manejar mi patología</option>
-                            <option value="Mantenerme activo y resolver mi dolor antes de que empeore">Mantenerme activo
-                                y resolver mi dolor antes de que empeore</option>
-                            <option value="Mejorar mi balance y equilibrio">Mejorar mi balance y equilibrio</option>
-                            <option value="Aprender la forma correcta de hacer ejercicios y progresarlos">Aprender la
-                                forma correcta de hacer ejercicios y progresarlos</option>
-                            <option value="Evitar o posponer cirugía">Evitar o posponer cirugía</option>
-                        </select>
+                        <div class="form-group">
+                            <label for="email">&nbsp;</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email *">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="form-group">
+                            <label for="metas" class="text-white">La meta principal que te gustaría que te ayudara a lograr es:</label>
+                            <select class="form-control" name="pregunta5" id="metas">
+                                <option value="0">--- Seleccionar ---</option>
+                                <option value="Reducir el dolor">Reducir el dolor</option>
+                                <option value="Reducir rigidez y mejorar movilidad">Reducir rigidez y mejorar movilidad
+                                </option>
+                                <option value="Empezar actividad física">Empezar actividad física</option>
+                                <option value="Mantener mi nivel de actividad física">Mantener mi nivel de actividad
+                                    física
+                                </option>
+                                <option value="Evitar dependencia a analgésicos">Evitar dependencia a analgésicos
+                                </option>
+                                <option value="Entender mi patología">Entender mi patología</option>
+                                <option value="Aprender a manejar mi patología">Aprender a manejar mi patología</option>
+                                <option value="Mantenerme activo y resolver mi dolor antes de que empeore">Mantenerme
+                                    activo
+                                    y resolver mi dolor antes de que empeore</option>
+                                <option value="Mejorar mi balance y equilibrio">Mejorar mi balance y equilibrio</option>
+                                <option value="Aprender la forma correcta de hacer ejercicios y progresarlos">Aprender
+                                    la
+                                    forma correcta de hacer ejercicios y progresarlos</option>
+                                <option value="Evitar o posponer cirugía">Evitar o posponer cirugía</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="row">&nbsp;</div>
@@ -225,11 +264,9 @@
     <script type="text/javascript" src="{{ url('/') }}/plugins/notiejs/notie.min.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript"
-        src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js">
-        < script type = "text/javascript"
-        src = "{{ url('/') }}/js/main.js" >
-
-    </script>
+        src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
+    <script src="{{ url('/') }}/plugins/waypoints/jquery.waypoints.min.js"></script>
+    <script type = "text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
     <script>
         $("#politicadedatos").on('click', function() {

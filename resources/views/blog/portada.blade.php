@@ -62,9 +62,9 @@
         @include('website.modulos.header')
         @include('website.modulos.menu')
 
-        <section class="container-fluid d-flex justify-content-center blog-header">
+        <section class="container-fluid d-flex justify-content-center blog-header punto-partida">
             <div class="col-xs-12 col-md-6 align-self-center bg-transparent">
-                <h1 class="text-center text-white">Bienvenidos a mi Blog</h1>
+                <h1 class="text-center text-white mt-5">Bienvenidos a mi Blog</h1>
             </div>
         </section>
 
@@ -154,6 +154,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/slick/slick.min.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url('/') }}/plugins/waypoints/jquery.waypoints.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
 </body>

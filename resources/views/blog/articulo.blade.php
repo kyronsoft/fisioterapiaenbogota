@@ -58,6 +58,8 @@
     <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=5f831873a599fe0011b8b9dd&product=inline-share-buttons"
         async="async"></script>
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
 </head>
 
 <body>
@@ -65,7 +67,7 @@
         @include('website.modulos.header')
         @include('website.modulos.menu')
 
-        <section class="container-fluid">
+        <section class="container-fluid punto-partida">
             <hr>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
@@ -148,6 +150,7 @@
 
     @include('website.modulos.footer')
 
+    <div id="WAButton"></div>
     <span class="ir-arriba"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
 
 
@@ -160,6 +163,10 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/slick/slick.min.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url('/') }}/plugins/waypoints/jquery.waypoints.min.js"></script>
+    <script type="text/javascript"
+        src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js">
+    </script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
 </body>

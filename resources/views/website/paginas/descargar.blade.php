@@ -64,13 +64,24 @@
         @include('website.modulos.header')
         @include('website.modulos.menu')
 
-        <section class="contacto d-flex justify-content-center">
+        <section class="contacto d-flex justify-content-center punto-partida">
             <div class="row d-flex justify-content-center align-self-center">
                 <div class="align-self-center">
                     <img src="images/flower-decor.png" alt="" style="width: 60px;">
                 </div>
                 <div class="col-12 align-self-center">
-                    <h1 class="text-center">Reporte Gratis</h1>
+                    @if ($tipo == 'cuello')
+                    <h1 class="text-center mt-2">Reporte Gratis De Cuello</h1>
+                    @endif
+                    @if ($tipo == 'espalda')
+                    <h1 class="text-center mt-2">Reporte Gratis De Espalda</h1>
+                    @endif
+                    @if ($tipo == 'rodilla')
+                    <h1 class="text-center mt-2">Reporte Gratis De Rodilla</h1>
+                    @endif
+                    @if ($tipo == 'deportivas')
+                    <h1 class="text-center mt-2">Reporte Gratis<br>Lesiones Deportivas</h1>
+                    @endif
                 </div>
             </div>
         </section>
@@ -111,11 +122,9 @@
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
 
     <script type="text/javascript"
-        src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js">
-        < script type = "text/javascript"
-        src = "{{ url('/') }}/js/main.js" >
-
-    </script>
+        src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
+    <script src="{{ url('/') }}/plugins/waypoints/jquery.waypoints.min.js"></script>
+    <script type = "text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->

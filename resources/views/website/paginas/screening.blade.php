@@ -67,7 +67,7 @@
         @include('website.modulos.menu')
 
 
-        <section class="container-fluid d-flex justify-content-end screening-uno">
+        <section class="container-fluid d-flex justify-content-end screening-uno punto-partida">
             <div class="col-xs-6 col-md-5 align-self-center bg-white columna1">
                 <div class="text-justify">@php echo $textos[0]->spanish; @endphp</div>
             </div>
@@ -145,6 +145,7 @@
     <script src="{{ url('/') }}/js/textslider/textslider.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/plugins/notiejs/notie.min.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url('/') }}/plugins/waypoints/jquery.waypoints.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript"
         src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js">

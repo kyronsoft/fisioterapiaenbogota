@@ -11,7 +11,7 @@
         <div class="row d-flex justify-content-center">
             <div class="col-11 align-self-center">
                 <div class="texto-sec5">@php echo $videoyt[2]->english; @endphp</div>
-                <a href="{{ url('/') }}/contactanos" class="btn btn-primary btn-block enlace-video">
+                <a href="{{ url('/') }}/contact_us" class="btn btn-primary btn-block enlace-video">
                     Request more information</a>
             </div>
         </div>

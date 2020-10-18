@@ -65,7 +65,7 @@
     @include('website.modulos.menu')
 
     <div id="app">
-        <section class="container-fluid espalda">
+        <section class="container-fluid espalda punto-partida">
             <div class="row">
                 <div class="col-12">
                     <h2 class="text-center">Fisioterapia en Bogotá</h2>
@@ -85,7 +85,14 @@
                     @php echo $textos[79]->spanish; @endphp
                     <br>
                     @php echo $espalda[0]->spanish; @endphp
-                    <img src="{{ url('/') }}/images/port-1-spa.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xs-12 col-md-8">
+                    <img src="{{ url('/') }}/images/port-1-spa.png" class="img-fluid" alt="" id="libro_dolor">
                     <a href="{{ url('/') }}/descargar_espalda" class="btn btn-primary">Descargar</a>
                 </div>
             </div>
@@ -117,6 +124,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="{{ url('/') }}/js/textslider/textslider.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url('/') }}/plugins/waypoints/jquery.waypoints.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript"
         src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js">

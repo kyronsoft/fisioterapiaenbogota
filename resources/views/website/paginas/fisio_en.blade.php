@@ -77,6 +77,8 @@
     <link rel="stylesheet" href="{{ url('/') }}/css/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="{{ url('/') }}/css/textslider/textslider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
 </head>
 
 <body>
@@ -84,7 +86,7 @@
         @include('website.modulos.header_en')
         @include('website.modulos.menu_en')
 
-        <section class="container-fluid d-flex justify-content-end fisio-uno">
+        <section class="container-fluid d-flex justify-content-end fisio-uno punto-partida">
             <div class="col-xs-12 col-md-4 align-self-center bg-white columna">
                 <div>@php echo $fisio[0]->english @endphp</div>
             </div>
@@ -209,10 +211,14 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="{{ url('/') }}/js/slick/slick.min.js"></script>
     <script src="{{ url('/') }}/js/textslider/textslider.js"></script>
+    <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url('/') }}/plugins/waypoints/jquery.waypoints.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
-    <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
+    <script type="text/javascript"
+        src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js">
+    
+    <script type = "text/javascript" src = "{{ url('/') }}/js/botonws.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169704393-1"></script>

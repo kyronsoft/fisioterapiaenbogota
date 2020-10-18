@@ -91,7 +91,7 @@
         @include('website.modulos.header')
         @include('website.modulos.menu')
 
-        <section class="container-fluid d-flex justify-content-end fisio-uno">
+        <section class="container-fluid d-flex justify-content-end fisio-uno punto-partida">
             <div class="col-xs-12 col-md-4 align-self-center bg-white columna">
                 <div>@php echo $fisio[0]->spanish @endphp</div>
             </div>
@@ -218,6 +218,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="{{ url('/') }}/js/textslider/textslider.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url('/') }}/plugins/waypoints/jquery.waypoints.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript"
         src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js">

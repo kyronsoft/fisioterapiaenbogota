@@ -89,7 +89,7 @@
         @include('website.modulos.header')
         @include('website.modulos.menu')
 
-        <section class="container-fluid d-flex justify-content-center contacto">
+        <section class="container-fluid d-flex justify-content-center contacto punto-partida">
             <div class="row">
                 <div class="align-self-center">
                     <img src="images/flower-decor.png" alt="" style="width: 60px;">
@@ -102,7 +102,7 @@
 
         <section class="container d-flex justify-content-center mt-5">
             <div class="col-xs-10 col-md-10">
-                <h5 class="text-justify">Deberás descargar un total de cinco documentos, cuatro de ellos
+                <h4 class="text-justify">Deberás descargar un total de cinco documentos, cuatro de ellos
                     <b>(Consentimiento
                         informado, formato de
                         registro, acuerdo de servicio y formato de ingreso (sea versión en español o inglés)</b> deberán
@@ -113,7 +113,7 @@
                         ambas caras de tu documento de
                         identidad antes</b> de tu sesión de valoración inicial. El quinto documento es para tu
                     información y te
-                    dará los detalles sobre cómo prepararte e ingresar a tu tele sesión.</h5>
+                    dará los detalles sobre cómo prepararte e ingresar a tu tele sesión.</h4>
             </div>
         </section>
 
@@ -121,7 +121,7 @@
             <div class="col-xs-10 col-md-10 columna-pdf">
                 <div class="row align-self-center">
                     <div class="col-xs-12 col-md-4 justify-content-center">
-                        <h4 class="text-center mb-3">Consentimiendo<br>Informado<br><br>para Telerehabilitación</h4>
+                        <h4 class="text-center mb-3 text-primary font-weight-bold">Consentimiendo<br>Informado<br>para Telerehabilitación</h4>
                         <div class="container d-flex justify-content-center">
                             <a
                                 href="{{ url('/') }}/descargas/CONSENTIMIENTO INFORMADO PARA TELEREHABILITACION ALRB.pdf"><img
@@ -129,14 +129,14 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-4">
-                        <h4 class="text-center mb-3">Formato de<br>Registro<br><br>Español</h4>
+                        <h4 class="text-center mb-3 text-primary font-weight-bold">Formato de<br>Registro<br><br></h4>
                         <div class="container d-flex justify-content-center">
                             <a href="{{ url('/') }}/descargas/Formato de registro ENG-ESP.pdf"><img
                                     src="{{ url('/') }}/images/logo_pdf.png" alt="" style="width: 80px"></a>
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-4">
-                        <h4 class="text-center mb-3">Formato de<br>Ingreso<br><br>Español</h4>
+                        <h4 class="text-center mb-3 text-primary font-weight-bold">Formato de<br>Ingreso<br><br></h4>
                         <div class="container d-flex justify-content-center">
                             <a href="{{ url('/') }}/descargas/Formato de Ingreso ESPANOL.pdf"><img
                                     src="{{ url('/') }}/images/logo_pdf.png" alt="" style="width: 80px"></a>
@@ -153,14 +153,14 @@
                         </div>
                     </div> --}}
                     <div class="col-xs-12 col-md-6">
-                        <h4 class="text-center mb-3">Acuerdo de<br>Servicio<br><br>Telerehabilitación</h4>
+                        <h4 class="text-center mb-3 text-primary font-weight-bold">Acuerdo de<br>Servicio<br><br>Telerehabilitación</h4>
                         <div class="container d-flex justify-content-center">
                             <a href="{{ url('/') }}/descargas/Acuerdo de servicio TeleRehabilitacion ALRB.pdf"><img
                                     src="{{ url('/') }}/images/logo_pdf.png" alt="" style="width: 80px"></a>
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-6">
-                        <h4 class="text-center mb-3">Lo que necesitas para<br>tu sesión de<br><br>Telerehabilitacion
+                        <h4 class="text-center mb-3 text-primary font-weight-bold">Lo que necesitas para<br>tu sesión de<br><br>Telerehabilitacion
                         </h4>
                         <div class="container d-flex justify-content-center">
                             <a href="{{ url('/') }}/descargas/Telerehabilitacion LO QUE NECESITA SP-ESP google meet.pdf"><img
@@ -190,6 +190,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/slick/slick.min.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url('/') }}/plugins/waypoints/jquery.waypoints.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
 

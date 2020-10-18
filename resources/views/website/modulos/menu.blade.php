@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky">
     <a class="navbar-brand pb-2" href="{{ url('/') }}"><img src="{{ url('/') }}/images/logo-fisioterapia-en-bogota.png"
             alt="logo-menu" style="width: 50px;"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -7,20 +7,21 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link menu-inicio" href="{{ url('/') }}">{{ $websitemenu[0]->spanish }}</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">{{ $websitemenu[1]->spanish }}</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{{ url('acerca') }}">{{ $websitemenu[2]->spanish }}</a></li>
+                    <li><a class="dropdown-item acerca-menu"
+                            href="{{ url('acerca') }}">{{ $websitemenu[2]->spanish }}</a></li>
                     <div class="dropdown-divider"></div>
                     <li><a class="dropdown-item" href="{{ url('nace') }}">{{ $websitemenu[3]->spanish }}</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">{{ $websitemenu[4]->spanish }}</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item"
@@ -42,7 +43,8 @@
                                     href="{{ url('deportivas') }}">{{ $websitemenu[10]->spanish }}</a></li>
                         </ul>
                         <div class="dropdown-divider"></div>
-                    <li><a class="dropdown-item" href="{{ url('screening') }}">Screening Prevención de Lesiones</a></li>
+                    <li><a class="dropdown-item" href="{{ url('screening') }}">Screening Prevención de Lesiones</a>
+                    </li>
                     <div class="dropdown-divider"></div>
                     <li><a class="dropdown-item" href="{{ url('acupuntura') }}">Acupuntura (próximamente)</a></li>
                 </ul>
@@ -57,7 +59,7 @@
                 <a class="nav-link" href="{{ url('contacto') }}">{{ $websitemenu[12]->spanish }}</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">{{ $websitemenu[13]->spanish }}</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item" href="{{ url('init') }}"><img
@@ -70,7 +72,7 @@
             </li>
         </ul>
     </div>
-    <a href="{{ url('contactanos') }}" class="btn btn-primary contact-menu btncontact d-none d-sm-block">Contactanos</a>
-    <a href="http://localhost:8000/frontend" class="btn btn-primary btntienda contact-menu"><i class="fa fa-shopping-cart"
+    <a href="{{ url('contactanos') }}" class="btn btn-info contact-menu btncontact d-none d-sm-block">Contactanos</a>
+    <a href="{{ url('/') }}/tiendavirtual" class="btn btn-info btntienda contact-menu"><i class="fa fa-shopping-cart"
             aria-hidden="true"></i> Tienda</a>
 </nav>

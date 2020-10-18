@@ -1,4 +1,4 @@
-<section class="container-fluid carrusel-top">
+<section class="container-fluid carrusel-top punto-partida">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">

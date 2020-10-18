@@ -58,7 +58,33 @@ $(document).ready(function () {
     $(".img-item").hover(function () {
         $(this).addClass("animate__animated animate__fadeInLeft");
     });
-    $(".img-sec3").hover(function() {
+    $(".img-sec3").hover(function () {
         $(this).addClass("animate__animated animate__flip");
+    });
+
+
+    var url = window.location.href;
+    url = url.substr(url.lastIndexOf("/") + 1);
+    $('#navbarNavDropdown li').each(function () {
+        var href = $(this).find('a').attr('href');
+
+        href = href.substr(href.lastIndexOf("/") + 1);
+        if (href == url) {
+            $(this).children().addClass('active');
+        }
+    });
+
+    $('.punto-partida').waypoint(function (direction) {
+        if (direction == 'down') {
+            $(".navbar").removeClass('sticky');
+            $(".navbar").addClass('animate__animated animate__fadeInDown');
+            $(".barra-superior").addClass('animate__animated animate__fadeOutUp');
+            $(".navbar").addClass('sticky-top');
+        } else {
+            $(".navbar").addClass('sticky');
+            $(".navbar").removeClass('animate__animated animate__fadeInDown');
+            $(".barra-superior").removeClass('animate__animated animate__fadeOutUp');
+            $(".navbar").removeClass('sticky-top');
+        }
     });
 });

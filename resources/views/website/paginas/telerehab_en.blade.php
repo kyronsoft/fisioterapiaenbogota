@@ -85,7 +85,7 @@
         @include('website.modulos.menu_en')
 
 
-        <section class="container-fluid d-flex justify-content-end teler-uno">
+        <section class="container-fluid d-flex justify-content-end teler-uno punto-partida">
             <div class="col-xs-6 col-md-5 align-self-center bg-white columna1">
                 <div>@php echo $teler[0]->english; @endphp</div>
             </div>
@@ -106,8 +106,8 @@
         <section class="container-fluid d-flex justify-content-center teler-cuatro">
             <div class="col-xs-6 col-md-5 align-self-center bg-white columna4">
                 <div>@php echo $teler[3]->english; @endphp</div>
-                <div class="text-center mb-5">
-                    <img src="{{ url('/') }}/images/prestadores-de-servicios-de-salud.jpg" alt="">
+                <div class="text-center mb-5 ">
+                    <img src="{{ url('/') }}/images/prestadores-de-servicios-de-salud.jpg" class="animate__animated animate__zoomInDown" alt="">
                 </div>
             </div>
         </section>
@@ -147,6 +147,9 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="{{ url('/') }}/js/textslider/textslider.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript"
+        src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
+    <script src="{{ url('/') }}/plugins/waypoints/jquery.waypoints.min.js" ></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
 

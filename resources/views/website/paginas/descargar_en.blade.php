@@ -64,13 +64,24 @@
         @include('website.modulos.header_en')
         @include('website.modulos.menu_en')
 
-        <section class="contacto d-flex justify-content-center">
+        <section class="contacto d-flex justify-content-center punto-partida">
             <div class="row d-flex justify-content-center align-self-center">
                 <div class="align-self-center">
                     <img src="images/flower-decor.png" alt="" style="width: 60px;">
                 </div>
                 <div class="col-12 align-self-center">
-                    <h1 class="text-center">Free Report</h1>
+                    @if ($tipo == 'neck')
+                        <h1 class="text-center mt-2">Neck Free Report</h1>
+                    @endif
+                    @if ($tipo == 'espalda')
+                        <h1 class="text-center mt-2">Low Back Free Report</h1>
+                    @endif
+                    @if ($tipo == 'rodilla')
+                        <h1 class="text-center mt-2">Knee Free Report</h1>
+                    @endif
+                    @if ($tipo == 'deportivas')
+                        <h1 class="text-center mt-2">Sport Injuries<br>Free Report</h1>
+                    @endif
                 </div>
             </div>
         </section>
@@ -109,12 +120,11 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/slick/slick.min.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript"
-        src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js">
-        < script type = "text/javascript"
-        src = "{{ url('/') }}/js/main.js" >
 
-    </script>
+    <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
+    
+    <script type="text/javascript" src="{{ url('/') }}/plugins/waypoints/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->

@@ -6,6 +6,7 @@ use App\Mensajes;
 use App\Mensajes_Preguntas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\MailController;
 
 class PreguntasController extends Controller
 {
@@ -63,6 +64,9 @@ class PreguntasController extends Controller
             $preguntas->idioma = 'ES';
             $preguntas->save();
         }
+
+        $email = new MailController;
+        $resp = $email->basic_email_docs($datos, $data_preguntas);
     }
 
     /**

@@ -44,6 +44,9 @@ Route::post('/requisitos', 'DocumentosController@verificar');
 Route::post('/preguntas', 'PreguntasController@store');
 Route::get('/screening', 'ScreeningController@index');
 Route::get('/screening_en', 'ScreeningController@busqueda');
+Route::get('/tiendavirtual', function () {
+    return view('website.paginas.proximamente');
+});
 
 
 /* Rutas para el website en Inglés */
@@ -71,6 +74,9 @@ Route::post('/articulo_en', 'BlogEnController@store');
 Route::get('/documents', 'DocumentosEnController@index');
 Route::post('/requeriments', 'DocumentosEnController@verificar');
 Route::post('/questions', 'PreguntasEnController@store');
+Route::get('/shoponline', function () {
+    return view('website.paginas.comingsoon');
+});
 
 
 /* Rutas para el Administrador del website y Blog */

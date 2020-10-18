@@ -444,11 +444,7 @@
     .screening-dos {
         height: 800px;
     }
-    .screening-uno p, .screening-uno div, .screening-uno span,
-    .screening-dos p, .screening-dos div, .screening-dos span,
-    .screening-tres p, .screening-tres div, .screening-tres span,
-    .screening-cuatro p, .screening-cuatro div, .screening-cuatro span,
-    .screening-cinco p, .screening-cinco div, .screening-cinco span {
+    .screening-uno p, .screening-uno div, .screening-uno span, .screening-dos p, .screening-dos div, .screening-dos span, .screening-tres p, .screening-tres div, .screening-tres span, .screening-cuatro p, .screening-cuatro div, .screening-cuatro span, .screening-cinco p, .screening-cinco div, .screening-cinco span {
         font-size: 18px !important;
         text-align: center !important;
     }
@@ -802,8 +798,8 @@
         margin-bottom: 30px;
         font-size: 30px;
     }
-    .nace-uno p, .nace-dos p, .nace-tres p, .nace-cuatro p, .nace-cinco p {
-        font-size: 20px;
+    .nace-uno p, .nace-dos p, .nace-tres p, .nace-cuatro p, .nace-cinco p, .nace-uno div, .nace-dos div, .nace-tres div, .nace-cuatro div, .nace-cinco div {
+        font-size: 22px;
     }
     .nace-uno .columna1 {
         padding: 40px;
@@ -915,6 +911,9 @@
     .teler-cinco .columna5 {
         padding: 30px;
     }
+    .teler-uno p, .teler-dos p, .teler-tres p, .teler-cuatro p, .teler-uno div, .teler-dos div, .teler-tres div, .teler-cuatro div, .teler-uno span, .teler-dos span, .teler-tres span, .teler-cuatro span {
+        font-size: 20px !important;
+    }
     .fisio-uno {
         height: 600px;
     }
@@ -938,7 +937,7 @@
         padding: 5px;
     }
     .fisio-tres {
-        height: 700px;
+        height: 900px;
     }
     .fisio-tres .columna {
         font-size: 20px;
@@ -949,7 +948,7 @@
         padding: 5px;
     }
     .cuello h2 {
-        margin-top: 60px;
+        margin-top: 160px;
         font-size: 34px;
         font-weight: 600;
     }
@@ -969,7 +968,7 @@
         font-weight: 600;
     }
     .espalda h2 {
-        margin-top: 60px;
+        margin-top: 160px;
         font-size: 34px;
         font-weight: 600;
     }
@@ -978,8 +977,8 @@
         font-weight: 500;
         margin-bottom: 40px;
     }
-    .rodilla h2 {
-        margin-top: 60px;
+    .rodilla h2, .deportivas h2 {
+        margin-top: 160px;
         font-size: 34px;
         font-weight: 600;
     }
@@ -989,7 +988,7 @@
         margin-bottom: 40px;
     }
     .contacto {
-        height: 200px;
+        height: 300px;
     }
     .contacto1 {
         height: 400px;
@@ -1011,13 +1010,9 @@
         margin-right: 40px;
     }
     .screening-dos {
-        height: 500px;
+        height: 900px;
     }
-    .screening-uno p, .screening-uno div, .screening-uno span,
-    .screening-dos p, .screening-dos div, .screening-dos span,
-    .screening-tres p, .screening-tres div, .screening-tres span,
-    .screening-cuatro p, .screening-cuatro div, .screening-cuatro span,
-    .screening-cinco p, .screening-cinco div, .screening-cinco span {
+    .screening-uno p, .screening-uno div, .screening-uno span, .screening-dos p, .screening-dos div, .screening-dos span, .screening-tres p, .screening-tres div, .screening-tres span, .screening-cuatro p, .screening-cuatro div, .screening-cuatro span, .screening-cinco p, .screening-cinco div, .screening-cinco span {
         font-size: 22px !important;
     }
     .dolores {
@@ -1052,7 +1047,7 @@
         font-size: 22px;
     }
     .contactanos {
-        height: 800px;
+        height: 900px;
     }
     .contactanos .cabecera {
         padding-top: 100px;
@@ -1071,6 +1066,12 @@
     }
     .columna-pdf h4, .fila-pdf h4 {
         font-weight: 600;
+    }
+    #libro_dolor {
+        margin-left: 170px;
+        margin-bottom: 60px;
+        margin-top: 60px;
+        width: 40%;
     }
 }
 

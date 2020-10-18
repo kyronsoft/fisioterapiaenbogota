@@ -3,143 +3,171 @@
     <form @submit.prevent="procesarform">
       <div class="row d-flex justify-content-around">
         <div class="col-xs-12 col-md-4">
-          <input
-            type="text"
-            class="form-control bg-transparent text-white"
-            placeholder="Nombres y Apellidos *"
-            v-model.trim="cliente.nombres"
-          />
+          <div class="form-group">
+            <label for="nombre">&nbsp;</label>
+            <input
+              type="text"
+              class="form-control bg-transparent text-white"
+              placeholder="Nombres y Apellidos *"
+              id="nombre"
+              v-model.trim="cliente.nombres"
+            />
+          </div>
         </div>
         <div class="col-xs-12 col-md-4">
-          <select
-            class="form-control"
-            name="pregunta1"
-            id="area_dolorosa"
-            v-model="preguntas.pregunta1"
-          >
-            <option value="A">Área dolorosa/parte del cuerpo afectada</option>
-            <option value="1">Dolor de cuello y hombro</option>
-            <option value="2">Dolor de espalda/lumbar</option>
-            <option value="3">Dolor de cadera</option>
-            <option value="4">Dolor de rodilla</option>
-            <option value="5">Dolor de tobillo y pie</option>
-            <option value="6">No sé de donde viene el dolor</option>
-            <option value="7">Lesión muscular deportiva o por ejercicio</option>
-            <option value="8">Pérdida de balance y equilibrio</option>
-          </select>
+          <div class="form-group">
+            <label for="area_dolorosa"
+              >Área dolorosa/parte del cuerpo afectada</label
+            >
+            <select
+              class="form-control"
+              name="pregunta1"
+              id="area_dolorosa"
+              v-model="preguntas.pregunta1"
+            >
+              <option value="1">Dolor de cuello y hombro</option>
+              <option value="2">Dolor de espalda/lumbar</option>
+              <option value="3">Dolor de cadera</option>
+              <option value="4">Dolor de rodilla</option>
+              <option value="5">Dolor de tobillo y pie</option>
+              <option value="6">No sé de donde viene el dolor</option>
+              <option value="7">
+                Lesión muscular deportiva o por ejercicio
+              </option>
+              <option value="8">Pérdida de balance y equilibrio</option>
+            </select>
+          </div>
         </div>
         <div class="col-xs-12 col-md-4">
-          <select
-            class="form-control"
-            name="pregunta2"
-            id="preocupacion"
-            v-model="preguntas.pregunta2"
-          >
-            <option value="B">
-              Cuál es tu principal preocupación debido a este problema?
-            </option>
-            <option value="9">Dependencia de analgésicos</option>
-            <option value="10">
-              No saber que es lo que está pasando con mi cuerpo
-            </option>
-            <option value="11">Miedo a perder movilidad e independencia</option>
-            <option value="12">Riesgo de tener que someterme a cirugia</option>
-          </select>
+          <div class="form-group">
+            <label for="preocupacion"
+              >Cuál es tu principal preocupación debido a este problema?</label
+            >
+            <select
+              class="form-control"
+              name="pregunta2"
+              id="preocupacion"
+              v-model="preguntas.pregunta2"
+            >
+              <option value="9">Dependencia de analgésicos</option>
+              <option value="10">
+                No saber que es lo que está pasando con mi cuerpo
+              </option>
+              <option value="11">
+                Miedo a perder movilidad e independencia
+              </option>
+              <option value="12">
+                Riesgo de tener que someterme a cirugia
+              </option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="row">&nbsp;</div>
       <div class="row d-flex justify-content-around">
         <div class="col-xs-12 col-md-4">
-          <input
-            type="text"
-            class="form-control bg-transparent"
-            name="telefono"
-            id="telefono"
-            placeholder="Teléfono *"
-            v-model.trim="cliente.telefono"
-          />
+          <div class="form-group">
+            <label for="telefono">&nbsp;</label>
+            <input
+              type="text"
+              class="form-control bg-transparent"
+              name="telefono"
+              id="telefono"
+              placeholder="Teléfono *"
+              v-model.trim="cliente.telefono"
+            />
+          </div>
         </div>
         <div class="col-xs-12 col-md-4">
-          <select
-            class="form-control"
-            name="pregunta3"
-            id="actividades"
-            v-model="preguntas.pregunta3"
-          >
-            <option value="C">
-              Que actividades no puedes realizar o están limitadas por este
-              problema
-            </option>
-            <option value="13">Dormir</option>
-            <option value="14">Permanecer sentado</option>
-            <option value="15">Permanecer de pie</option>
-            <option value="16">Levantar objetos</option>
-            <option value="17">Caminar</option>
-            <option value="18">Trotar</option>
-            <option value="19">Jugar Tenis</option>
-            <option value="20">Subir escaleras</option>
-            <option value="21">Viajar</option>
-            <option value="22">Disfrutar con familia y amigos</option>
-            <option value="23">Otra</option>
-          </select>
+          <div class="form-group">
+            <label for="actividades"
+              >Qué actividad no puedes realizar por este problema?</label
+            >
+            <select
+              class="form-control"
+              name="pregunta3"
+              id="actividades"
+              v-model="preguntas.pregunta3"
+            >
+              <option value="13">Dormir</option>
+              <option value="14">Permanecer sentado</option>
+              <option value="15">Permanecer de pie</option>
+              <option value="16">Levantar objetos</option>
+              <option value="17">Caminar</option>
+              <option value="18">Trotar</option>
+              <option value="19">Jugar Tenis</option>
+              <option value="20">Subir escaleras</option>
+              <option value="21">Viajar</option>
+              <option value="22">Disfrutar con familia y amigos</option>
+              <option value="23">Otra</option>
+            </select>
+          </div>
         </div>
         <div class="col-xs-12 col-md-4">
-          <select
-            class="form-control"
-            name="pregunta4"
-            id="actividades"
-            v-model="preguntas.pregunta4"
-          >
-            <option value="D">
-              Cuanto tiempo llevas sufriendo por este problema?
-            </option>
-            <option value="24">Unos pocos días</option>
-            <option value="25">1-2 semanas</option>
-            <option value="26">2-4 semanas</option>
-            <option value="27">1-3 meses</option>
-            <option value="28">6-12 meses</option>
-            <option value="29">Varios años</option>
-          </select>
+          <div class="form-group">
+            <label for="actividades1"
+              >Cuanto tiempo llevas sufriendo por este problema?</label
+            >
+            <select
+              class="form-control"
+              name="pregunta4"
+              id="actividades1"
+              v-model="preguntas.pregunta4"
+            >
+              <option value="24">Unos pocos días</option>
+              <option value="25">1-2 semanas</option>
+              <option value="26">2-4 semanas</option>
+              <option value="27">1-3 meses</option>
+              <option value="28">6-12 meses</option>
+              <option value="29">Varios años</option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="row">&nbsp;</div>
       <div class="row d-flex justify-content-start">
         <div class="col-xs-12 col-md-4">
-          <input
-            type="email"
-            class="form-control bg-transparent"
-            name="email"
-            id="email"
-            placeholder="Email *"
-            v-model.trim="cliente.email"
-          />
+          <div class="form-group">
+            <label for="email">&nbsp;</label>
+            <input
+              type="email"
+              class="form-control bg-transparent"
+              name="email"
+              id="email"
+              placeholder="Email *"
+              v-model.trim="cliente.email"
+            />
+          </div>
         </div>
         <div class="col-xs-12 col-md-4">
-          <select
-            class="form-control"
-            name="pregunta5"
-            id="metas"
-            v-model="preguntas.pregunta5"
-          >
-            <option value="E">
-              La meta principal que te gustaría que te ayudara a lograr es:
-            </option>
-            <option value="30">Reducir el dolor</option>
-            <option value="31">Reducir rigidez y mejorar movilidad</option>
-            <option value="32">Empezar actividad física</option>
-            <option value="33">Mantener mi nivel de actividad física</option>
-            <option value="34">Evitar dependencia a analgésicos</option>
-            <option value="35">Entender mi patología</option>
-            <option value="36">Aprender a manejar mi patología</option>
-            <option value="37">
-              Mantenerme activo y resolver mi dolor antes de que empeore
-            </option>
-            <option value="38">Mejorar mi balance y equilibrio</option>
-            <option value="39">
-              Aprender la forma correcta de hacer ejercicios y progresarlos
-            </option>
-            <option value="40">Evitar o posponer cirugía</option>
-          </select>
+          <div class="form-group">
+            <label for="metas"
+              >La meta principal que te gustaría que te ayudara a lograr
+              es:</label
+            >
+            <select
+              class="form-control"
+              name="pregunta5"
+              id="metas"
+              v-model="preguntas.pregunta5"
+            >
+              <option value="30">Reducir el dolor</option>
+              <option value="31">Reducir rigidez y mejorar movilidad</option>
+              <option value="32">Empezar actividad física</option>
+              <option value="33">Mantener mi nivel de actividad física</option>
+              <option value="34">Evitar dependencia a analgésicos</option>
+              <option value="35">Entender mi patología</option>
+              <option value="36">Aprender a manejar mi patología</option>
+              <option value="37">
+                Mantenerme activo y resolver mi dolor antes de que empeore
+              </option>
+              <option value="38">Mejorar mi balance y equilibrio</option>
+              <option value="39">
+                Aprender la forma correcta de hacer ejercicios y progresarlos
+              </option>
+              <option value="40">Evitar o posponer cirugía</option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="row">&nbsp;</div>
@@ -185,14 +213,12 @@
       <div class="row d-flex justify-content-center">
         <div class="col-10">
           <h4 class="text-justify my-5">
-            <i
-              >Pero ya sabes, este reporte es solo el comienzo y no es
-              suficiente para
-              <b>llevarte al nivel de independencia, movilidad y bienestar</b>
-              que buscas y que <b>mereces</b>. Permítete explorar lo que un
-              <b>fisioterapeuta altamente experimentado</b> puede ofrecerle a tu
-              <b>salud y calidad de vida</b>.</i
-            >
+            Pero ya sabes, este reporte es solo el comienzo y no es suficiente
+            para
+            <b>llevarte al nivel de independencia, movilidad y bienestar</b>
+            que buscas y que <b>mereces</b>. Permítete explorar lo que un
+            <b>fisioterapeuta altamente experimentado</b> puede ofrecerle a tu
+            <b>salud y calidad de vida</b>. >
           </h4>
         </div>
       </div>

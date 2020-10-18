@@ -89,7 +89,7 @@
         @include('website.modulos.header')
         @include('website.modulos.menu')
 
-        <section class="container-fluid d-flex justify-content-center contacto">
+        <section class="container-fluid d-flex justify-content-center contacto punto-partida">
             <div class="row">
                 <div class="align-self-center">
                     <img src="images/flower-decor.png" alt="" style="width: 60px;">
@@ -100,23 +100,28 @@
             </div>
         </section>
 
-        <section class="container-fluid d-flex justify-content-around contacto1">
+        <section class="container d-flex justify-content-center mt-5">
+            <h3 class="font-weight-bold">Fysiopuntura</h3>
+        </section>
+
+        <section class="container-fluid d-flex justify-content-center contacto1">
             <div class="row align-self-center">
                 <div class="col-xs-12 col-md-6 align-self-center">
-                    <h2 class="text-center">Fysiopuntura</h2>
+                    <h3 class="text-center">Teléfono</h3>
                     <ul>
-                        <li><i class="fa fa-phone-square" aria-hidden="true"></i>
+                        <li class="text-primary"><i class="fa fa-phone-square mr-3" aria-hidden="true"></i>
                             {{ $websiteheader[1]->spanish }}</li>
                     </ul>
-                    <h2 class="text-center">Correo Electrónico</h2>
+                    <hr class="my-5">
+                    <h3 class="text-center mb-5">Correo Electrónico</h3>
                     <ul>
-                        <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                        <li class="text-primary"><i class="fa fa-envelope mr-3" aria-hidden="true"></i>
                             {{ $websiteheader[2]->spanish }}</li>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-md-6 align-self-center">
-                    <h2 class="text-center">Horario de Atención</h2>
-                    <p>@php echo $textos[0]->spanish; @endphp</p>
+                    <h3 class="text-center mb-5">Horario de atención</h3>
+                    <h4>@php echo $textos[0]->spanish; @endphp</h4>
                 </div>
             </div>
         </section>
@@ -140,18 +145,23 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/slick/slick.min.js"></script>
     <script src="{{ url('/') }}/js/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url('/') }}/plugins/waypoints/jquery.waypoints.min.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/main.js"></script>
     <script type="text/javascript" src="{{ url('/') }}/js/botonws.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169704393-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169704393-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-169704393-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169704393-1');
+
+    </script>
 </body>
 
 </html>

@@ -138,4 +138,42 @@ class MailController extends Controller
 
         return redirect("/screening_en")->with("respuesta", "");
     }
+
+    public function basic_email_docs($data, $preguntas)
+    {
+        $datos = array(
+            "nombre" => $data["nombres"],
+            "telefono" => $data["telefono"],
+            "email" => $data["email"],
+            "mensaje" => $data["mensaje"]
+        );
+
+        $to_name = $datos["nombre"];
+        $to_email = $datos["email"];
+        $data = array(
+            'name' => 'Adriana Lucía Ramírez Bonilla',
+            "nombre" => $datos["nombre"],
+            "mensaje" => $datos["mensaje"],
+            "telefono" => $datos["telefono"],
+            "pregunta1" => $preguntas["pregunta1"],
+            "pregunta2" => $preguntas["pregunta2"],
+            "pregunta3" => $preguntas["pregunta3"],
+            "pregunta4" => $preguntas["pregunta4"],
+            "pregunta5" => $preguntas["pregunta5"]
+        );
+
+        Mail::send(['html' => 'emails.mail_docs'], $data, function ($message) use ($to_name, $to_email) {
+            $message->to($to_email, $to_name)
+                ->subject('Documento Gratis - Fysipuntura');
+            $message->from('info@fisioterapiaenbogota.com', 'Fisioterapia en Bogotá');
+        });
+
+        Mail::send(['html' => 'emails.mail_docs_info'], $data, function ($message) use ($to_name, $to_email) {
+            $message->to('info@fisioterapiaenbogota.com', $to_name)
+                ->subject('Documento Gratis - Fysipuntura');
+            $message->from('info@fisioterapiaenbogota.com', 'Fisioterapia en Bogotá');
+        });
+
+        return "ok";
+    }
 }

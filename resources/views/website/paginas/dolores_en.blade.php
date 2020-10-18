@@ -14,19 +14,19 @@
                         <ul class="nav nav-pills nav-pill-bordered nav-justified">
                             <li class="nav-item">
                                 <a class="nav-link active" id="active-pill1" data-toggle="pill" href="#cuello"
-                                    aria-expanded="true">Dolor De Cuello y Hombro</a>
+                                    aria-expanded="true">Neck And Shoulder Pain</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="link-pill1" data-toggle="pill" href="#espalda"
-                                    aria-expanded="false">Dolor De Espalda</a>
+                                    aria-expanded="false">Low Back Pain</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="link-pill1" data-toggle="pill" href="#rodilla"
-                                    aria-expanded="false">Dolor De Cadera Y Rodilla</a>
+                                    aria-expanded="false">Knee And Hip Pain</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="link-pill1" data-toggle="pill" href="#deportivas"
-                                    aria-expanded="false">Lesiones Deportivas</a>
+                                    aria-expanded="false">Sports Injuries</a>
                             </li>
                         </ul>
                         <div class="tab-content px-1 pt-1">
@@ -34,28 +34,28 @@
                                 aria-expanded="true">
                                 <div class="mt-5">@php echo $textos[78]->english; @endphp</div>
                                 <div class="text-center mt-5">
-                                    <a href="{{ url('/') }}/neck" class="btn btn-primary">Mas Información</a>
+                                    <a href="{{ url('/') }}/neck" class="btn btn-primary">More Information</a>
                                 </div>
                             </div>
                             <div class="tab-pane" id="espalda" role="tabpanel" aria-labelledby="link-pill1"
                                 aria-expanded="false">
                                 <div class="mt-5">@php echo $textos[79]->english; @endphp</div>
                                 <div class="text-center mt-5">
-                                    <a href="{{ url('/') }}/back" class="btn btn-primary">Mas Información</a>
+                                    <a href="{{ url('/') }}/back" class="btn btn-primary">More Information</a>
                                 </div>
                             </div>
                             <div class="tab-pane" id="rodilla" role="tabpanel" aria-labelledby="dropdownOpt2-pill1"
                                 aria-expanded="false">
                                 <div class="mt-5">@php echo $textos[80]->english; @endphp</div>
                                 <div class="text-center mt-5">
-                                    <a href="{{ url('/') }}/knee" class="btn btn-primary">Mas Información</a>
+                                    <a href="{{ url('/') }}/knee" class="btn btn-primary">More Information</a>
                                 </div>
                             </div>
                             <div class="tab-pane" id="deportivas" role="tabpanel" aria-labelledby="dropdownOpt2-pill2"
                                 aria-expanded="false">
                                 <div class="mt-5">@php echo $textos[81]->english; @endphp</div>
                                 <div class="text-center mt-5">
-                                    <a href="{{ url('/') }}/sports_injuries" class="btn btn-primary">Mas Información</a>
+                                    <a href="{{ url('/') }}/sports_injuries" class="btn btn-primary">More Information</a>
                                 </div>
                             </div>
                         </div>

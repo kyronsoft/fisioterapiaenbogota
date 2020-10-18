@@ -50,7 +50,7 @@ try {
     // Generate response.
     $response = new \StdClass;
     //   $response->link = $protocol.$_SERVER["HTTP_HOST"].dirname($_SERVER["PHP_SELF"]).$fileRoute . $_FILES[$fieldname]["name"];
-    $response->link = 'http://localhost:8000' . $fileRoute . $_FILES[$fieldname]["name"];
+    $response->link = 'http://fisioterapiaenbogota.com' . $fileRoute . $_FILES[$fieldname]["name"];
 
     // Send response.
     echo stripslashes(json_encode($response));

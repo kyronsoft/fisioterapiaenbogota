@@ -49,15 +49,14 @@ class EntradaEnBlogController extends Controller
             "titulo_en" => $request->input("titulo_en"),
             "descripcion_en" => $request->input("descripcion_en"),
             "p_claves_en" => json_encode($p_claves),
-            "imagen_temporal" => $request->file("portada_articulo"),
-            "contenido_en" => $request->input("editor_content"),
-            "idioma" => "EN"
+            "imagen_temporal" => $request->file("portada"),
+            "contenido_en" => $request->input("editor_content")
         );
 
 
         $validar = \Validator::make($datos, [
-            // "titulo_en" => "required|regex:/^[0-9a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/i",
-            // "descripcion_en" => 'required|regex:/^[(\\)\\=\\&\\$\\;\\-\\_\\*\\"\\<\\>\\?\\¿\\!\\¡\\:\\,\\.\\0-9a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/i',
+            "titulo_en" => "required|regex:/^[0-9a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/i",
+            "descripcion_en" => 'required|regex:/^[(\\)\\=\\&\\$\\;\\-\\_\\*\\"\\<\\>\\?\\¿\\!\\¡\\:\\,\\.\\0-9a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/i',
             "imagen_temporal" => "required|image|mimes:jpg,jpeg,png|max:2000000",
         ]);
 
@@ -116,10 +115,9 @@ class EntradaEnBlogController extends Controller
             $detalle->id_cat = $datos["id_cat"];
             $detalle->titulo_en = $datos["titulo_en"];
             $detalle->descripcion_en = $datos["descripcion_en"];
-            $detalle->portada_articulo = $ruta;
+            $detalle->portada = $ruta;
             $detalle->p_claves_en = $datos["p_claves_en"];
             $detalle->contenido_en = $datos["contenido_en"];
-            $detalle->idioma = $datos["idioma"];
 
             $detalle->save();
             $url = "ks-admin/blog/lista_entradas_en";
@@ -166,13 +164,12 @@ class EntradaEnBlogController extends Controller
         $detalle = new Articulos();
         $p_claves = explode(",", $request->input("p_claves_en"));
 
-
         $datos = array(
             "id_cat" => $request->input("categoria"),
             "titulo_en" => $request->input("titulo_en"),
             "descripcion_en" => $request->input("descripcion_en"),
             "p_claves_en" => json_encode($p_claves),
-            "imagen_temporal" => $request->file("portada_articulo"),
+            "imagen_temporal" => $request->file("portada_en"),
             "contenido_en" => $request->input("editor_content")
         );
 
@@ -184,7 +181,7 @@ class EntradaEnBlogController extends Controller
         ]);
 
         if (!$datos["imagen_temporal"] || $validar->fails()) {
-            $url = "ks-admin/blog/lista_entradas";
+            $url = "ks-admin/blog/lista_entradas_en";
 
             return redirect($url)->with("no-validacion", "no-validacion");
         } else {
@@ -238,9 +235,9 @@ class EntradaEnBlogController extends Controller
             $detalle->id_cat = $datos["id_cat"];
             $detalle->titulo_en = $datos["titulo_en"];
             $detalle->descripcion_en = $datos["descripcion_en"];
-            $detalle->portada_articulo = $ruta;
+            $detalle->portada = $ruta;
             $detalle->p_claves_en = $datos["p_claves_en"];
-            $detalle->contenido_en = $datos["contenido_en"];
+            $detalle->contenido_en = $datos["editor_content"];
 
             $detalle->save();
             $url = "ks-admin/blog/lista_entradas_en";
@@ -263,7 +260,7 @@ class EntradaEnBlogController extends Controller
         if (!empty($validar)) {
 
             // capturamos los archivos para eliminarlos uno por uno
-            // $origen = glob('images/blog/' . $validar[0]["ruta_articulo"] . '/*');
+            // $origen = glob('images/blog/' . $validar[0]["ruta_en"] . '/*');
 
             // foreach ($origen as $fichero) {
 
@@ -272,7 +269,7 @@ class EntradaEnBlogController extends Controller
 
             // //Eliminamos directorio
 
-            // rmdir('img/articulos/' . $validar[0]["ruta_articulo"]);
+            // rmdir('img/articulos/' . $validar[0]["ruta_en"]);
 
 
             $articulo = Articulos::where("id_articulo", $validar[0]["id_articulo"])->delete();

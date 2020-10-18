@@ -2236,6 +2236,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["tipo", "url"],
   data: function data() {
@@ -2321,6 +2347,34 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -42192,163 +42246,185 @@ var render = function() {
       [
         _c("div", { staticClass: "row d-flex justify-content-around" }, [
           _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model.trim",
-                  value: _vm.cliente.nombres,
-                  expression: "cliente.nombres",
-                  modifiers: { trim: true }
-                }
-              ],
-              staticClass: "form-control bg-transparent text-white",
-              attrs: { type: "text", placeholder: "Nombres y Apellidos *" },
-              domProps: { value: _vm.cliente.nombres },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "nombre" } }, [_vm._v(" ")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model.trim",
+                    value: _vm.cliente.nombres,
+                    expression: "cliente.nombres",
+                    modifiers: { trim: true }
                   }
-                  _vm.$set(_vm.cliente, "nombres", $event.target.value.trim())
+                ],
+                staticClass: "form-control bg-transparent text-white",
+                attrs: {
+                  type: "text",
+                  placeholder: "Nombres y Apellidos *",
+                  id: "nombre"
                 },
-                blur: function($event) {
-                  return _vm.$forceUpdate()
+                domProps: { value: _vm.cliente.nombres },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.cliente, "nombres", $event.target.value.trim())
+                  },
+                  blur: function($event) {
+                    return _vm.$forceUpdate()
+                  }
                 }
-              }
-            })
+              })
+            ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.preguntas.pregunta1,
-                    expression: "preguntas.pregunta1"
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "area_dolorosa" } }, [
+                _vm._v("Área dolorosa/parte del cuerpo afectada")
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.preguntas.pregunta1,
+                      expression: "preguntas.pregunta1"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { name: "pregunta1", id: "area_dolorosa" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.preguntas,
+                        "pregunta1",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
                   }
-                ],
-                staticClass: "form-control",
-                attrs: { name: "pregunta1", id: "area_dolorosa" },
-                on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.$set(
-                      _vm.preguntas,
-                      "pregunta1",
-                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                },
+                [
+                  _c("option", { attrs: { value: "1" } }, [
+                    _vm._v("Dolor de cuello y hombro")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "2" } }, [
+                    _vm._v("Dolor de espalda/lumbar")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "3" } }, [
+                    _vm._v("Dolor de cadera")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "4" } }, [
+                    _vm._v("Dolor de rodilla")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "5" } }, [
+                    _vm._v("Dolor de tobillo y pie")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "6" } }, [
+                    _vm._v("No sé de donde viene el dolor")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "7" } }, [
+                    _vm._v(
+                      "\n              Lesión muscular deportiva o por ejercicio\n            "
                     )
-                  }
-                }
-              },
-              [
-                _c("option", { attrs: { value: "A" } }, [
-                  _vm._v("Área dolorosa/parte del cuerpo afectada")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "1" } }, [
-                  _vm._v("Dolor de cuello y hombro")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "2" } }, [
-                  _vm._v("Dolor de espalda/lumbar")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "3" } }, [
-                  _vm._v("Dolor de cadera")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "4" } }, [
-                  _vm._v("Dolor de rodilla")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "5" } }, [
-                  _vm._v("Dolor de tobillo y pie")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "6" } }, [
-                  _vm._v("No sé de donde viene el dolor")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "7" } }, [
-                  _vm._v("Lesión muscular deportiva o por ejercicio")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "8" } }, [
-                  _vm._v("Pérdida de balance y equilibrio")
-                ])
-              ]
-            )
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "8" } }, [
+                    _vm._v("Pérdida de balance y equilibrio")
+                  ])
+                ]
+              )
+            ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.preguntas.pregunta2,
-                    expression: "preguntas.pregunta2"
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "preocupacion" } }, [
+                _vm._v(
+                  "Cuál es tu principal preocupación debido a este problema?"
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.preguntas.pregunta2,
+                      expression: "preguntas.pregunta2"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { name: "pregunta2", id: "preocupacion" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.preguntas,
+                        "pregunta2",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
                   }
-                ],
-                staticClass: "form-control",
-                attrs: { name: "pregunta2", id: "preocupacion" },
-                on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.$set(
-                      _vm.preguntas,
-                      "pregunta2",
-                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                },
+                [
+                  _c("option", { attrs: { value: "9" } }, [
+                    _vm._v("Dependencia de analgésicos")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "10" } }, [
+                    _vm._v(
+                      "\n              No saber que es lo que está pasando con mi cuerpo\n            "
                     )
-                  }
-                }
-              },
-              [
-                _c("option", { attrs: { value: "B" } }, [
-                  _vm._v(
-                    "\n            Cuál es tu principal preocupación debido a este problema?\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "9" } }, [
-                  _vm._v("Dependencia de analgésicos")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "10" } }, [
-                  _vm._v(
-                    "\n            No saber que es lo que está pasando con mi cuerpo\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "11" } }, [
-                  _vm._v("Miedo a perder movilidad e independencia")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "12" } }, [
-                  _vm._v("Riesgo de tener que someterme a cirugia")
-                ])
-              ]
-            )
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "11" } }, [
+                    _vm._v(
+                      "\n              Miedo a perder movilidad e independencia\n            "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "12" } }, [
+                    _vm._v(
+                      "\n              Riesgo de tener que someterme a cirugia\n            "
+                    )
+                  ])
+                ]
+              )
+            ])
           ])
         ]),
         _vm._v(" "),
@@ -42356,176 +42432,190 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "row d-flex justify-content-around" }, [
           _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model.trim",
-                  value: _vm.cliente.telefono,
-                  expression: "cliente.telefono",
-                  modifiers: { trim: true }
-                }
-              ],
-              staticClass: "form-control bg-transparent",
-              attrs: {
-                type: "text",
-                name: "telefono",
-                id: "telefono",
-                placeholder: "Teléfono *"
-              },
-              domProps: { value: _vm.cliente.telefono },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "telefono" } }, [_vm._v(" ")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model.trim",
+                    value: _vm.cliente.telefono,
+                    expression: "cliente.telefono",
+                    modifiers: { trim: true }
                   }
-                  _vm.$set(_vm.cliente, "telefono", $event.target.value.trim())
+                ],
+                staticClass: "form-control bg-transparent",
+                attrs: {
+                  type: "text",
+                  name: "telefono",
+                  id: "telefono",
+                  placeholder: "Teléfono *"
                 },
-                blur: function($event) {
-                  return _vm.$forceUpdate()
+                domProps: { value: _vm.cliente.telefono },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.cliente,
+                      "telefono",
+                      $event.target.value.trim()
+                    )
+                  },
+                  blur: function($event) {
+                    return _vm.$forceUpdate()
+                  }
                 }
-              }
-            })
+              })
+            ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.preguntas.pregunta3,
-                    expression: "preguntas.pregunta3"
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "actividades" } }, [
+                _vm._v("Qué actividad no puedes realizar por este problema?")
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.preguntas.pregunta3,
+                      expression: "preguntas.pregunta3"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { name: "pregunta3", id: "actividades" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.preguntas,
+                        "pregunta3",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
                   }
-                ],
-                staticClass: "form-control",
-                attrs: { name: "pregunta3", id: "actividades" },
-                on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.$set(
-                      _vm.preguntas,
-                      "pregunta3",
-                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                    )
-                  }
-                }
-              },
-              [
-                _c("option", { attrs: { value: "C" } }, [
-                  _vm._v(
-                    "\n            Que actividades no puedes realizar o están limitadas por este\n            problema\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "13" } }, [_vm._v("Dormir")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "14" } }, [
-                  _vm._v("Permanecer sentado")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "15" } }, [
-                  _vm._v("Permanecer de pie")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "16" } }, [
-                  _vm._v("Levantar objetos")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "17" } }, [_vm._v("Caminar")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "18" } }, [_vm._v("Trotar")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "19" } }, [
-                  _vm._v("Jugar Tenis")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "20" } }, [
-                  _vm._v("Subir escaleras")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "21" } }, [_vm._v("Viajar")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "22" } }, [
-                  _vm._v("Disfrutar con familia y amigos")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "23" } }, [_vm._v("Otra")])
-              ]
-            )
+                },
+                [
+                  _c("option", { attrs: { value: "13" } }, [_vm._v("Dormir")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "14" } }, [
+                    _vm._v("Permanecer sentado")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "15" } }, [
+                    _vm._v("Permanecer de pie")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "16" } }, [
+                    _vm._v("Levantar objetos")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "17" } }, [_vm._v("Caminar")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "18" } }, [_vm._v("Trotar")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "19" } }, [
+                    _vm._v("Jugar Tenis")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "20" } }, [
+                    _vm._v("Subir escaleras")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "21" } }, [_vm._v("Viajar")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "22" } }, [
+                    _vm._v("Disfrutar con familia y amigos")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "23" } }, [_vm._v("Otra")])
+                ]
+              )
+            ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.preguntas.pregunta4,
-                    expression: "preguntas.pregunta4"
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "actividades1" } }, [
+                _vm._v("Cuanto tiempo llevas sufriendo por este problema?")
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.preguntas.pregunta4,
+                      expression: "preguntas.pregunta4"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { name: "pregunta4", id: "actividades1" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.preguntas,
+                        "pregunta4",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
                   }
-                ],
-                staticClass: "form-control",
-                attrs: { name: "pregunta4", id: "actividades" },
-                on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.$set(
-                      _vm.preguntas,
-                      "pregunta4",
-                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                    )
-                  }
-                }
-              },
-              [
-                _c("option", { attrs: { value: "D" } }, [
-                  _vm._v(
-                    "\n            Cuanto tiempo llevas sufriendo por este problema?\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "24" } }, [
-                  _vm._v("Unos pocos días")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "25" } }, [
-                  _vm._v("1-2 semanas")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "26" } }, [
-                  _vm._v("2-4 semanas")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "27" } }, [_vm._v("1-3 meses")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "28" } }, [
-                  _vm._v("6-12 meses")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "29" } }, [
-                  _vm._v("Varios años")
-                ])
-              ]
-            )
+                },
+                [
+                  _c("option", { attrs: { value: "24" } }, [
+                    _vm._v("Unos pocos días")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "25" } }, [
+                    _vm._v("1-2 semanas")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "26" } }, [
+                    _vm._v("2-4 semanas")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "27" } }, [
+                    _vm._v("1-3 meses")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "28" } }, [
+                    _vm._v("6-12 meses")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "29" } }, [
+                    _vm._v("Varios años")
+                  ])
+                ]
+              )
+            ])
           ])
         ]),
         _vm._v(" "),
@@ -42533,126 +42623,134 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "row d-flex justify-content-start" }, [
           _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model.trim",
-                  value: _vm.cliente.email,
-                  expression: "cliente.email",
-                  modifiers: { trim: true }
-                }
-              ],
-              staticClass: "form-control bg-transparent",
-              attrs: {
-                type: "email",
-                name: "email",
-                id: "email",
-                placeholder: "Email *"
-              },
-              domProps: { value: _vm.cliente.email },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.cliente, "email", $event.target.value.trim())
-                },
-                blur: function($event) {
-                  return _vm.$forceUpdate()
-                }
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c(
-              "select",
-              {
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "email" } }, [_vm._v(" ")]),
+              _vm._v(" "),
+              _c("input", {
                 directives: [
                   {
                     name: "model",
-                    rawName: "v-model",
-                    value: _vm.preguntas.pregunta5,
-                    expression: "preguntas.pregunta5"
+                    rawName: "v-model.trim",
+                    value: _vm.cliente.email,
+                    expression: "cliente.email",
+                    modifiers: { trim: true }
                   }
                 ],
-                staticClass: "form-control",
-                attrs: { name: "pregunta5", id: "metas" },
+                staticClass: "form-control bg-transparent",
+                attrs: {
+                  type: "email",
+                  name: "email",
+                  id: "email",
+                  placeholder: "Email *"
+                },
+                domProps: { value: _vm.cliente.email },
                 on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.$set(
-                      _vm.preguntas,
-                      "pregunta5",
-                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                    )
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.cliente, "email", $event.target.value.trim())
+                  },
+                  blur: function($event) {
+                    return _vm.$forceUpdate()
                   }
                 }
-              },
-              [
-                _c("option", { attrs: { value: "E" } }, [
-                  _vm._v(
-                    "\n            La meta principal que te gustaría que te ayudara a lograr es:\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "30" } }, [
-                  _vm._v("Reducir el dolor")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "31" } }, [
-                  _vm._v("Reducir rigidez y mejorar movilidad")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "32" } }, [
-                  _vm._v("Empezar actividad física")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "33" } }, [
-                  _vm._v("Mantener mi nivel de actividad física")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "34" } }, [
-                  _vm._v("Evitar dependencia a analgésicos")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "35" } }, [
-                  _vm._v("Entender mi patología")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "36" } }, [
-                  _vm._v("Aprender a manejar mi patología")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "37" } }, [
-                  _vm._v(
-                    "\n            Mantenerme activo y resolver mi dolor antes de que empeore\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "38" } }, [
-                  _vm._v("Mejorar mi balance y equilibrio")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "39" } }, [
-                  _vm._v(
-                    "\n            Aprender la forma correcta de hacer ejercicios y progresarlos\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "40" } }, [
-                  _vm._v("Evitar o posponer cirugía")
-                ])
-              ]
-            )
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-xs-12 col-md-4" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "metas" } }, [
+                _vm._v(
+                  "La meta principal que te gustaría que te ayudara a lograr\n            es:"
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.preguntas.pregunta5,
+                      expression: "preguntas.pregunta5"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { name: "pregunta5", id: "metas" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.preguntas,
+                        "pregunta5",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "30" } }, [
+                    _vm._v("Reducir el dolor")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "31" } }, [
+                    _vm._v("Reducir rigidez y mejorar movilidad")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "32" } }, [
+                    _vm._v("Empezar actividad física")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "33" } }, [
+                    _vm._v("Mantener mi nivel de actividad física")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "34" } }, [
+                    _vm._v("Evitar dependencia a analgésicos")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "35" } }, [
+                    _vm._v("Entender mi patología")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "36" } }, [
+                    _vm._v("Aprender a manejar mi patología")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "37" } }, [
+                    _vm._v(
+                      "\n              Mantenerme activo y resolver mi dolor antes de que empeore\n            "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "38" } }, [
+                    _vm._v("Mejorar mi balance y equilibrio")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "39" } }, [
+                    _vm._v(
+                      "\n              Aprender la forma correcta de hacer ejercicios y progresarlos\n            "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "40" } }, [
+                    _vm._v("Evitar o posponer cirugía")
+                  ])
+                ]
+              )
+            ])
           ])
         ]),
         _vm._v(" "),
@@ -42796,23 +42894,19 @@ var staticRenderFns = [
     return _c("div", { staticClass: "row d-flex justify-content-center" }, [
       _c("div", { staticClass: "col-10" }, [
         _c("h4", { staticClass: "text-justify my-5" }, [
-          _c("i", [
-            _vm._v(
-              "Pero ya sabes, este reporte es solo el comienzo y no es\n            suficiente para\n            "
-            ),
-            _c("b", [
-              _vm._v(
-                "llevarte al nivel de independencia, movilidad y bienestar"
-              )
-            ]),
-            _vm._v("\n            que buscas y que "),
-            _c("b", [_vm._v("mereces")]),
-            _vm._v(". Permítete explorar lo que un\n            "),
-            _c("b", [_vm._v("fisioterapeuta altamente experimentado")]),
-            _vm._v(" puede ofrecerle a tu\n            "),
-            _c("b", [_vm._v("salud y calidad de vida")]),
-            _vm._v(".")
-          ])
+          _vm._v(
+            "\n          Pero ya sabes, este reporte es solo el comienzo y no es suficiente\n          para\n          "
+          ),
+          _c("b", [
+            _vm._v("llevarte al nivel de independencia, movilidad y bienestar")
+          ]),
+          _vm._v("\n          que buscas y que "),
+          _c("b", [_vm._v("mereces")]),
+          _vm._v(". Permítete explorar lo que un\n          "),
+          _c("b", [_vm._v("fisioterapeuta altamente experimentado")]),
+          _vm._v(" puede ofrecerle a tu\n          "),
+          _c("b", [_vm._v("salud y calidad de vida")]),
+          _vm._v(". >\n        ")
         ])
       ])
     ])
@@ -42853,157 +42947,177 @@ var render = function() {
       [
         _c("div", { staticClass: "row d-flex justify-content-around" }, [
           _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model.trim",
-                  value: _vm.cliente.nombres,
-                  expression: "cliente.nombres",
-                  modifiers: { trim: true }
-                }
-              ],
-              staticClass: "form-control bg-transparent text-white",
-              attrs: { type: "text", placeholder: "Name and Surname *" },
-              domProps: { value: _vm.cliente.nombres },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "nombre" } }),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model.trim",
+                    value: _vm.cliente.nombres,
+                    expression: "cliente.nombres",
+                    modifiers: { trim: true }
                   }
-                  _vm.$set(_vm.cliente, "nombres", $event.target.value.trim())
+                ],
+                staticClass: "form-control bg-transparent text-white",
+                attrs: {
+                  type: "text",
+                  placeholder: "Name and Surname *",
+                  id: "nombre"
                 },
-                blur: function($event) {
-                  return _vm.$forceUpdate()
+                domProps: { value: _vm.cliente.nombres },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.cliente, "nombres", $event.target.value.trim())
+                  },
+                  blur: function($event) {
+                    return _vm.$forceUpdate()
+                  }
                 }
-              }
-            })
+              })
+            ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.preguntas.pregunta1,
-                    expression: "preguntas.pregunta1"
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "area_dolorosa" } }, [
+                _vm._v("Painful area / part of the body affected")
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.preguntas.pregunta1,
+                      expression: "preguntas.pregunta1"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { name: "pregunta1", id: "area_dolorosa" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.preguntas,
+                        "pregunta1",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
                   }
-                ],
-                staticClass: "form-control",
-                attrs: { name: "pregunta1", id: "area_dolorosa" },
-                on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.$set(
-                      _vm.preguntas,
-                      "pregunta1",
-                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                    )
-                  }
-                }
-              },
-              [
-                _c("option", { attrs: { value: "A" } }, [
-                  _vm._v("Painful area / part of the body affected")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "1" } }, [
-                  _vm._v("Neck and shoulder pain")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "2" } }, [
-                  _vm._v("Back / lumbar pain")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "3" } }, [_vm._v("Hip pain")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "4" } }, [_vm._v("Knee pain")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "5" } }, [
-                  _vm._v("Ankle and foot pain")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "6" } }, [
-                  _vm._v("I don't know where the pain comes from")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "7" } }, [
-                  _vm._v("Sports or exercise muscle injury")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "8" } }, [
-                  _vm._v("Loss of balance and equilibrium")
-                ])
-              ]
-            )
+                },
+                [
+                  _c("option", { attrs: { value: "1" } }, [
+                    _vm._v("Neck and shoulder pain")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "2" } }, [
+                    _vm._v("Back / lumbar pain")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "3" } }, [_vm._v("Hip pain")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "4" } }, [
+                    _vm._v("Knee pain")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "5" } }, [
+                    _vm._v("Ankle and foot pain")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "6" } }, [
+                    _vm._v("I don't know where the pain comes from")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "7" } }, [
+                    _vm._v("Sports or exercise muscle injury")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "8" } }, [
+                    _vm._v("Loss of balance and equilibrium")
+                  ])
+                ]
+              )
+            ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.preguntas.pregunta2,
-                    expression: "preguntas.pregunta2"
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "preocupacion" } }, [
+                _vm._v("What is your main concern due to this problem?")
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.preguntas.pregunta2,
+                      expression: "preguntas.pregunta2"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { name: "pregunta2", id: "preocupacion" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.preguntas,
+                        "pregunta2",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
                   }
-                ],
-                staticClass: "form-control",
-                attrs: { name: "pregunta2", id: "preocupacion" },
-                on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.$set(
-                      _vm.preguntas,
-                      "pregunta2",
-                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                },
+                [
+                  _c("option", { attrs: { value: "9" } }, [
+                    _vm._v("Painkiller dependence")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "10" } }, [
+                    _vm._v(
+                      "\n              Not knowing what is happening to my body\n            "
                     )
-                  }
-                }
-              },
-              [
-                _c("option", { attrs: { value: "B" } }, [
-                  _vm._v(
-                    "\n            What is your main concern due to this problem?\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "9" } }, [
-                  _vm._v("Painkiller dependence")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "10" } }, [
-                  _vm._v("Not knowing what is happening to my body")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "11" } }, [
-                  _vm._v("Fear of losing mobility and independence")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "12" } }, [
-                  _vm._v("Risk of having to undergo surgery")
-                ])
-              ]
-            )
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "11" } }, [
+                    _vm._v(
+                      "\n              Fear of losing mobility and independence\n            "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "12" } }, [
+                    _vm._v("Risk of having to undergo surgery")
+                  ])
+                ]
+              )
+            ])
           ])
         ]),
         _vm._v(" "),
@@ -43011,174 +43125,192 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "row d-flex justify-content-around" }, [
           _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model.trim",
-                  value: _vm.cliente.telefono,
-                  expression: "cliente.telefono",
-                  modifiers: { trim: true }
-                }
-              ],
-              staticClass: "form-control bg-transparent",
-              attrs: {
-                type: "text",
-                name: "telefono",
-                id: "telefono",
-                placeholder: "Phone *"
-              },
-              domProps: { value: _vm.cliente.telefono },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "telefono" } }, [_vm._v(" ")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model.trim",
+                    value: _vm.cliente.telefono,
+                    expression: "cliente.telefono",
+                    modifiers: { trim: true }
                   }
-                  _vm.$set(_vm.cliente, "telefono", $event.target.value.trim())
+                ],
+                staticClass: "form-control bg-transparent",
+                attrs: {
+                  type: "text",
+                  name: "telefono",
+                  id: "telefono",
+                  placeholder: "Phone *"
                 },
-                blur: function($event) {
-                  return _vm.$forceUpdate()
+                domProps: { value: _vm.cliente.telefono },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.cliente,
+                      "telefono",
+                      $event.target.value.trim()
+                    )
+                  },
+                  blur: function($event) {
+                    return _vm.$forceUpdate()
+                  }
                 }
-              }
-            })
+              })
+            ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.preguntas.pregunta3,
-                    expression: "preguntas.pregunta3"
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "actividades" } }, [
+                _vm._v(
+                  "What activities you cannot perform or are limited by this\n            problem"
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.preguntas.pregunta3,
+                      expression: "preguntas.pregunta3"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { name: "pregunta3", id: "actividades" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.preguntas,
+                        "pregunta3",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
                   }
-                ],
-                staticClass: "form-control",
-                attrs: { name: "pregunta3", id: "actividades" },
-                on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.$set(
-                      _vm.preguntas,
-                      "pregunta3",
-                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                    )
-                  }
-                }
-              },
-              [
-                _c("option", { attrs: { value: "C" } }, [
-                  _vm._v(
-                    "\n            What activities you cannot perform or are limited by this problem\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "13" } }, [_vm._v("Sleep")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "14" } }, [
-                  _vm._v("Stay seated")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "15" } }, [
-                  _vm._v("Standing up")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "16" } }, [
-                  _vm._v("Lift objects")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "17" } }, [_vm._v("Walk")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "18" } }, [_vm._v("Jogging")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "19" } }, [
-                  _vm._v("Play tennis")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "20" } }, [
-                  _vm._v("Climbing stairs")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "21" } }, [_vm._v("Travel")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "22" } }, [
-                  _vm._v("Enjoy with family and friends")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "23" } }, [_vm._v("Other")])
-              ]
-            )
+                },
+                [
+                  _c("option", { attrs: { value: "13" } }, [_vm._v("Sleep")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "14" } }, [
+                    _vm._v("Stay seated")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "15" } }, [
+                    _vm._v("Standing up")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "16" } }, [
+                    _vm._v("Lift objects")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "17" } }, [_vm._v("Walk")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "18" } }, [_vm._v("Jogging")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "19" } }, [
+                    _vm._v("Play tennis")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "20" } }, [
+                    _vm._v("Climbing stairs")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "21" } }, [_vm._v("Travel")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "22" } }, [
+                    _vm._v("Enjoy with family and friends")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "23" } }, [_vm._v("Other")])
+                ]
+              )
+            ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.preguntas.pregunta4,
-                    expression: "preguntas.pregunta4"
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "actividades1" } }, [
+                _vm._v("How long have you been suffering from this problem?")
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.preguntas.pregunta4,
+                      expression: "preguntas.pregunta4"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { name: "pregunta4", id: "actividades1" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.preguntas,
+                        "pregunta4",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
                   }
-                ],
-                staticClass: "form-control",
-                attrs: { name: "pregunta4", id: "actividades" },
-                on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.$set(
-                      _vm.preguntas,
-                      "pregunta4",
-                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                    )
-                  }
-                }
-              },
-              [
-                _c("option", { attrs: { value: "D" } }, [
-                  _vm._v(
-                    "\n            How long have you been suffering from this problem?\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "24" } }, [
-                  _vm._v("A few days")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "25" } }, [_vm._v("1-2 weeks")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "26" } }, [_vm._v("2-4 weeks")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "27" } }, [
-                  _vm._v("1-3 months")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "28" } }, [
-                  _vm._v("6-12 months")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "29" } }, [
-                  _vm._v("Several years")
-                ])
-              ]
-            )
+                },
+                [
+                  _c("option", { attrs: { value: "24" } }, [
+                    _vm._v("A few days")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "25" } }, [
+                    _vm._v("1-2 weeks")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "26" } }, [
+                    _vm._v("2-4 weeks")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "27" } }, [
+                    _vm._v("1-3 months")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "28" } }, [
+                    _vm._v("6-12 months")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "29" } }, [
+                    _vm._v("Several years")
+                  ])
+                ]
+              )
+            ])
           ])
         ]),
         _vm._v(" "),
@@ -43186,126 +43318,134 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "row d-flex justify-content-start" }, [
           _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model.trim",
-                  value: _vm.cliente.email,
-                  expression: "cliente.email",
-                  modifiers: { trim: true }
-                }
-              ],
-              staticClass: "form-control bg-transparent",
-              attrs: {
-                type: "email",
-                name: "email",
-                id: "email",
-                placeholder: "Email *"
-              },
-              domProps: { value: _vm.cliente.email },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.cliente, "email", $event.target.value.trim())
-                },
-                blur: function($event) {
-                  return _vm.$forceUpdate()
-                }
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-xs-12 col-md-4" }, [
-            _c(
-              "select",
-              {
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "email" } }, [_vm._v(" ")]),
+              _vm._v(" "),
+              _c("input", {
                 directives: [
                   {
                     name: "model",
-                    rawName: "v-model",
-                    value: _vm.preguntas.pregunta5,
-                    expression: "preguntas.pregunta5"
+                    rawName: "v-model.trim",
+                    value: _vm.cliente.email,
+                    expression: "cliente.email",
+                    modifiers: { trim: true }
                   }
                 ],
-                staticClass: "form-control",
-                attrs: { name: "pregunta5", id: "metas" },
+                staticClass: "form-control bg-transparent",
+                attrs: {
+                  type: "email",
+                  name: "email",
+                  id: "email",
+                  placeholder: "Email *"
+                },
+                domProps: { value: _vm.cliente.email },
                 on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.$set(
-                      _vm.preguntas,
-                      "pregunta5",
-                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                    )
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.cliente, "email", $event.target.value.trim())
+                  },
+                  blur: function($event) {
+                    return _vm.$forceUpdate()
                   }
                 }
-              },
-              [
-                _c("option", { attrs: { value: "E" } }, [
-                  _vm._v(
-                    "\n            The main goal that you would like me to help you achieve is:\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "30" } }, [
-                  _vm._v("Reduce pain")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "31" } }, [
-                  _vm._v("Reduce stiffness and improve mobility")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "32" } }, [
-                  _vm._v("Start physical activity")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "33" } }, [
-                  _vm._v("Maintain my level of physical activity")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "34" } }, [
-                  _vm._v("Avoid dependence on painkillers")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "35" } }, [
-                  _vm._v("Understand my pathology")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "36" } }, [
-                  _vm._v("Learn to manage my pathology")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "37" } }, [
-                  _vm._v(
-                    "\n            Stay active and resolve my pain before it gets worse\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "38" } }, [
-                  _vm._v("Improve my balance and balance")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "39" } }, [
-                  _vm._v(
-                    "\n            Learn the correct way to exercise and progress them\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "40" } }, [
-                  _vm._v("Avoid or postpone surgery")
-                ])
-              ]
-            )
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-xs-12 col-md-4" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "metas" } }, [
+                _vm._v(
+                  "The main goal that you would like me to help you achieve\n            is:"
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.preguntas.pregunta5,
+                      expression: "preguntas.pregunta5"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { name: "pregunta5", id: "metas" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.preguntas,
+                        "pregunta5",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "30" } }, [
+                    _vm._v("Reduce pain")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "31" } }, [
+                    _vm._v("Reduce stiffness and improve mobility")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "32" } }, [
+                    _vm._v("Start physical activity")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "33" } }, [
+                    _vm._v("Maintain my level of physical activity")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "34" } }, [
+                    _vm._v("Avoid dependence on painkillers")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "35" } }, [
+                    _vm._v("Understand my pathology")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "36" } }, [
+                    _vm._v("Learn to manage my pathology")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "37" } }, [
+                    _vm._v(
+                      "\n              Stay active and resolve my pain before it gets worse\n            "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "38" } }, [
+                    _vm._v("Improve my balance and balance")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "39" } }, [
+                    _vm._v(
+                      "\n              Learn the correct way to exercise and progress them\n            "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "40" } }, [
+                    _vm._v("Avoid or postpone surgery")
+                  ])
+                ]
+              )
+            ])
           ])
         ]),
         _vm._v(" "),

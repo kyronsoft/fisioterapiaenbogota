@@ -11,7 +11,7 @@
                 <a class="nav-link menu-inicio" href="{{ url('/init') }}">{{ $websitemenu[0]->english }}</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">{{ $websitemenu[1]->english }}</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item" href="{{ url('/about') }}">{{ $websitemenu[2]->english }}</a></li>
@@ -20,7 +20,7 @@
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">{{ $websitemenu[4]->english }}</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item"
@@ -57,7 +57,7 @@
                 <a class="nav-link" href="{{ url('/contact') }}">{{ $websitemenu[12]->english }}</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">{{ $websitemenu[13]->english }}</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item" href="{{ url('/init') }}"><img
@@ -70,7 +70,7 @@
             </li>
         </ul>
     </div>
-    <a href="{{ url('contact_us') }}" class="btn btn-primary contact-menu btncontact d-none d-sm-block">Contact Us</a>
-    <a href="http://localhost/frontend" class="btn btn-primary btntienda contact-menu"><i class="fa fa-shopping-cart"
+    <a href="{{ url('contact_us') }}" class="btn btn-info contact-menu btncontact d-none d-sm-block">Contact Us</a>
+    <a href="{{ url('/') }}/shoponline" class="btn btn-info btntienda contact-menu"><i class="fa fa-shopping-cart"
             aria-hidden="true"></i> Shop Online</a>
 </nav>

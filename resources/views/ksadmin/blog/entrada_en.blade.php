@@ -6,7 +6,7 @@
                 <div class="col-sm-6 col-md-12">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ url('/') }}/ks-admin">Home</a></li>
-                        <li class="breadcrumb-item active">Article Blog</li>
+                        <li class="breadcrumb-item active">Blog Entry</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -23,32 +23,32 @@
                             <div class="form-group">
                                 <label for="categoria">Category</label>
                                 <select class="form-control" name="categoria" id="categoria" required>
-                                    <option value="0">-- Choose --</option>
+                                    <option value="0">-- Seleccionar --</option>
                                     @foreach ($categorias as $key => $value)
-                                        <option value="{{ $value->id_categoria }}">{{ $value->titulo_categoria }}</option>
+                                        <option value="{{ $value->id_categoria }}">{{ $value->titulo_en }}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="descripcion_en">Description</label>
+                                <label for="descripcion_articulo">Description</label>
                                 <input type="text" class="form-control" name="descripcion_en"
-                                    id="descripcion_en" required>
+                                    id="descripcion_articulo" required>
                             </div>
                             <div class="form-group">
-                                <label for="p_claves_en">Keywords</label>
-                                <input type="text" class="form-control" name="p_claves_en" id="p_claves_en"
+                                <label for="p_claves_articulo">Keywords</label>
+                                <input type="text" class="form-control" name="p_claves_en" id="p_claves_articulo"
                                     data-role="tagsinput" required>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-group">
-                                <label for="titulo_en">Title</label>
-                                <input type="text" class="form-control" name="titulo_en" id="titulo_en"
+                                <label for="titulo_articulo">Title</label>
+                                <input type="text" class="form-control" name="titulo_en" id="titulo_articulo"
                                     required>
                             </div>
                             <div class="form-group">
                                 <label for="portada_articulo">Cover</label>
-                                <input type="file" class="form-control" name="portada_articulo" id="portada_articulo">
+                                <input type="file" class="form-control" name="portada_en" id="portada_articulo">
                             </div>
                         </div>
                     </div>
