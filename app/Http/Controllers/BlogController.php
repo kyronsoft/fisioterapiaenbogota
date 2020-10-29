@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Textos;
+use App\Articulos;
+use App\Opiniones;
+use App\WebsiteMenu;
+use App\Categorias;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Opiniones;
-use App\Articulos;
 
 class BlogController extends Controller
 {
@@ -16,63 +19,115 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $articulos = DB::table('articulos')->where('idioma', '=', 'ES')->orderBy('id_articulo', 'desc')->paginate(5);
-        $destacados = DB::table('articulos')->where('idioma', '=', 'ES')->orderBy('vistas_articulo', 'desc')
-            ->select('articulos.id_articulo', 'articulos.portada_articulo', 'articulos.titulo_articulo', 'articulos.descripcion_articulo')->get();
-        $blog = DB::table('blog')->get();
-
+        $idioma = 'ES';
+        $textos = Textos::all();
+        $articulos = Articulos::where('idioma', '=', 'ES')->paginate(8);
+        $mas_vistos = DB::table('articulos')->where('idioma', '=', 'ES')->select('articulos.*')->orderBy('vistas_articulo', 'desc')->limit(5)->get();
+        $menu = WebsiteMenu::select('website_menu.spanish')->get();
+        $categorias = DB::select("select t1.titulo_categoria, count(t1.titulo_categoria) cantidad from categorias t1, articulos t2 where t2.idioma = ?
+                                    and t1.id_categoria = t2.id_cat group by t1.titulo_categoria", [$idioma]);
         $websiteheader = DB::table('website_header')->get();
-        $websitemenu = DB::table('website_menu')->get();
-        $blinfo = DB::table('website_info')->get();
-        $servicios = DB::table('website_servicios')->get();
-        $footer = DB::table('website_footer')->get();
 
-        return view("blog.portada", array(
-            "blog" => $blog,
-            "articulos" => $articulos,
-            "destacados" => $destacados,
-            "websiteheader" => $websiteheader,
-            "websitemenu" => $websitemenu,
-            "inicioseccion8" => $blinfo,
-            "inicioseccion9" => $servicios,
-            "footer" => $footer,
+        return view('blog.blog', array(
+            'websiteheader' => $websiteheader,
+            'textos' => $textos,
+            'menu' => $menu,
+            'idioma' => $idioma,
+            'articulos' => $articulos,
+            'mas_vistos' => $mas_vistos,
+            'categorias' => $categorias
         ));
+    }
+
+    public function index_en()
+    {
+        $idioma = 'EN';
+        $textos = Textos::all();
+        $articulos = Articulos::where('idioma', '=', 'EN')->paginate(8);
+        $mas_vistos = DB::table('articulos')->where('idioma', '=', 'EN')->select('articulos.*')->orderBy('vistas_articulo', 'desc')->limit(5)->get();
+        $menu = WebsiteMenu::select('website_menu.english')->get();
+        $categorias = DB::select("select t1.titulo_categoria, count(t1.titulo_categoria) cantidad from categorias t1, articulos t2 where t2.idioma = ?
+                                    and t1.id_categoria = t2.id_cat group by t1.titulo_categoria", [$idioma]);
+        $websiteheader = DB::table('website_header')->get();
+
+        return view('blog.blog', array(
+            'websiteheader' => $websiteheader,
+            'textos' => $textos,
+            'menu' => $menu,
+            'idioma' => $idioma,
+            'articulos' => $articulos,
+            'mas_vistos' => $mas_vistos,
+            'categorias' => $categorias
+        ));
+    }
+
+    public function comentarios($id)
+    {
+        $comentarios = DB::table('opiniones')->where('id_art', '=', $id)->count();
+
+        return $comentarios;
+    }
+
+    public function megusta($id)
+    {
+        $megusta = DB::table('articulos')->where('id_articulo', '=', $id)->select('articulos.megusta')->get();
+
+        return $megusta;
+    }
+
+
+    public function vistas($id)
+    {
+        $vistas = DB::table('articulos')->where('id_articulo', '=', $id)->select('articulos.vistas_articulo')->get();
+
+        return $vistas;
+    }
+
+    public function categoria(Request $request)
+    {
+        $criterio = $request->input("search");
+        $idioma = 'ES';
+        $textos = Textos::all();
+        $articulos = DB::table('articulos')
+            ->join('categorias', 'articulos.id_cat', '=', 'categorias.id_categoria')
+            ->where([['articulos.idioma', '=', 'ES'], ['categorias.titulo_categoria', 'like', '%' . $criterio . '%']])->paginate(8);
+        $mas_vistos = DB::table('articulos')->where('idioma', '=', 'ES')->select('articulos.*')->orderBy('vistas_articulo', 'desc')->limit(5)->get();
+        $menu = WebsiteMenu::select('website_menu.spanish')->get();
+        $categorias = DB::select("select t1.titulo_categoria, count(t1.titulo_categoria) cantidad from categorias t1, articulos t2 where t2.idioma = ?
+                                    and t1.id_categoria = t2.id_cat group by t1.titulo_categoria", [$idioma]);
+
+        return view('blog.blog', array('textos' => $textos, 'menu' => $menu, 'idioma' => $idioma, 'articulos' => $articulos, 'mas_vistos' => $mas_vistos, 'categorias' => $categorias));
     }
 
     public function busqueda(Request $request)
     {
-        $criterio = array("criterio" => $request->input("buscar_articulo"));
-
-        $articulos = DB::table('articulos')->where('idioma', '=', 'ES')
-            ->orWhere(function ($query) use ($criterio) {
-                $param = '%' . $criterio["criterio"] . '%';
-                $query->where('titulo_articulo', 'like', $param)
-                    ->where('descripcion_articulo', 'like', $param)
-                    ->where('contenido_articulo', 'like', $param);
-            })
-            ->orderBy('id_articulo', 'desc')->paginate(5);
-
-        $destacados = DB::table('articulos')->where('idioma', '=', 'ES')->orderBy('vistas_articulo', 'desc')
-            ->select('articulos.id_articulo', 'articulos.portada_articulo', 'articulos.titulo_articulo', 'articulos.descripcion_articulo')->get();
-        $blog = DB::table('blog')->get();
-
+        $criterio = $request->input("search");
+        $idioma = 'ES';
+        $textos = Textos::all();
         $websiteheader = DB::table('website_header')->get();
-        $websitemenu = DB::table('website_menu')->get();
-        $blinfo = DB::table('website_info')->get();
-        $servicios = DB::table('website_servicios')->get();
-        $footer = DB::table('website_footer')->get();
+        $articulos = DB::table('articulos')
+            ->where('articulos.idioma', '=', 'ES')
+            ->where(function ($query) use ($criterio) {
+                $query->orWhere('articulos.p_claves_articulo', 'like', '%' . $criterio . '%')
+                    ->orWhere('articulos.titulo_articulo', 'like', '%' . $criterio . '%');
+            })->paginate(8);
 
-        return view("blog.portada", array(
-            "blog" => $blog,
-            "articulos" => $articulos,
-            "destacados" => $destacados,
-            "websiteheader" => $websiteheader,
-            "websitemenu" => $websitemenu,
-            "inicioseccion8" => $blinfo,
-            "inicioseccion9" => $servicios,
-            "footer" => $footer,
+        $mas_vistos = DB::table('articulos')->where('idioma', '=', 'ES')->select('articulos.*')->orderBy('vistas_articulo', 'desc')->limit(5)->get();
+        $menu = WebsiteMenu::select('website_menu.spanish')->get();
+        $categorias = DB::select("select t1.titulo_categoria, count(t1.titulo_categoria) cantidad from categorias t1, articulos t2 where t2.idioma = ?
+                                    and t1.id_categoria = t2.id_cat group by t1.titulo_categoria", [$idioma]);
+
+        return view('blog.blog', array(
+            'websiteheader' => $websiteheader,
+            'textos' => $textos,
+            'menu' => $menu,
+            'idioma' => $idioma,
+            'articulos' => $articulos,
+            'mas_vistos' => $mas_vistos,
+            'categorias' => $categorias
         ));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -90,25 +145,42 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        $datos = array(
-            "id_art" => $request->input("id_comentario"),
-            "nombre_opinion" => $request->input("nombre_opinion"),
-            "correo_opinion" => $request->input("correo_opinion"),
-            "contenido_opinion" => $request->input("contenido_opinion")
+        $data = array(
+            "nombre_opinion" => $request->input("username"),
+            "correo_opinion" => $request->input("email"),
+            "contenido_opinion" => $request->input("usercomment")
         );
 
-        $comentario = new Opiniones();
-        $comentario->nombre_opinion = $datos["nombre_opinion"];
-        $comentario->correo_opinion = $datos["correo_opinion"];
-        $comentario->contenido_opinion = $datos["contenido_opinion"];
-        $comentario->id_art = $datos["id_art"];
+        $opinion = new Opiniones();
+        $opinion->id_art = $id;
+        $opinion->nombre_opinion = $data["nombre_opinion"];
+        $opinion->correo_opinion = $data["correo_opinion"];
+        $opinion->contenido_opinion = $data["contenido_opinion"];
+        $opinion->save();
 
-        $comentario->save();
-        $url = "/articulo/" . $datos["id_art"];
+        $url = '/blog/articulo/' . $id;
+        return redirect($url)->with('opinion-ok', 'Opinion Agregada!');
+    }
 
-        return redirect($url);
+    public function store_en(Request $request, $id)
+    {
+        $data = array(
+            "nombre_opinion" => $request->input("username"),
+            "correo_opinion" => $request->input("email"),
+            "contenido_opinion" => $request->input("usercomment")
+        );
+
+        $opinion = new Opiniones();
+        $opinion->id_art = $id;
+        $opinion->nombre_en = $data["nombre_opinion"];
+        $opinion->correo_en = $data["correo_opinion"];
+        $opinion->contenido_en = $data["contenido_opinion"];
+        $opinion->save();
+
+        $url = '/blog/articulo_en/' . $id;
+        return redirect($url)->with('opinion-ok', 'Opinion Agregada!');
     }
 
     /**
@@ -119,24 +191,49 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        $articulo = DB::table('articulos')->where('id_articulo', '=', $id)->get();
-
-        $categoria = DB::table('categorias')->join('articulos', 'categorias.id_categoria', '=', 'articulos.id_cat')->select('categorias.*')->get();
-        $opiniones = DB::table('opiniones')->join('articulos', 'opiniones.id_art', '=', 'articulos.id_articulo')->select('opiniones.*')->where([['opiniones.id_art', '=', $id], ['opiniones.idioma', '=', 'ES']])->get();
-        $administrador = DB::table('users')->join('opiniones', 'opiniones.id_adm', '=', 'users.id')->where([['opiniones.aprobacion_opinion', '=', 1], ['opiniones.id_art', '=', $id]])->select('opiniones.*', 'users.*')->get();
+        $idioma = 'ES';
+        $textos = Textos::all();
+        $articulo = Articulos::find($id);
+        $mas_vistos = DB::table('articulos')->where('idioma', '=', 'ES')->select('articulos.*')->orderBy('vistas_articulo', 'desc')->limit(5)->get();
+        $menu = WebsiteMenu::select('website_menu.spanish')->get();
+        $categorias = DB::select("select t1.titulo_categoria, count(t1.titulo_categoria) cantidad from categorias t1, articulos t2 where t2.idioma = ?
+                                    and t1.id_categoria = t2.id_cat group by t1.titulo_categoria", [$idioma]);
         $websiteheader = DB::table('website_header')->get();
-        $websitemenu = DB::table('website_menu')->get();
-        $footer = DB::table('website_footer')->get();
+        $opiniones = DB::table('opiniones')->where([['opiniones.id_art', '=', $id], ['opiniones.aprobacion_opinion', '=', '1']])->select('opiniones.*')->get();
 
-        return view('blog.articulo', array(
+        return view('blog.post', array(
+            'textos' => $textos,
+            'websiteheader' => $websiteheader,
+            'menu' => $menu,
+            'idioma' => $idioma,
             'articulo' => $articulo,
-            "id_articulo" => $id,
-            "categoria" => $categoria,
-            "opiniones" => $opiniones,
-            "administrador" => $administrador,
-            "websiteheader" => $websiteheader,
-            "websitemenu" => $websitemenu,
-            "footer" => $footer
+            'mas_vistos' => $mas_vistos,
+            'categorias' => $categorias,
+            'opiniones' => $opiniones
+        ));
+    }
+
+    public function show_en($id)
+    {
+        $idioma = 'EN';
+        $textos = Textos::all();
+        $articulo = Articulos::find($id);
+        $mas_vistos = DB::table('articulos')->where('idioma', '=', 'EN')->select('articulos.*')->orderBy('vistas_articulo', 'desc')->limit(5)->get();
+        $menu = WebsiteMenu::select('website_menu.english')->get();
+        $categorias = DB::select("select t1.titulo_categoria, count(t1.titulo_categoria) cantidad from categorias t1, articulos t2 where t2.idioma = ?
+                                    and t1.id_categoria = t2.id_cat group by t1.titulo_categoria", [$idioma]);
+        $websiteheader = DB::table('website_header')->get();
+        $opiniones = DB::table('opiniones')->where([['opiniones.id_art', '=', $id], ['opiniones.aprobacion_en', '=', '1']])->select('opiniones.*')->get();
+
+        return view('blog.post', array(
+            'textos' => $textos,
+            'websiteheader' => $websiteheader,
+            'menu' => $menu,
+            'idioma' => $idioma,
+            'articulo' => $articulo,
+            'mas_vistos' => $mas_vistos,
+            'categorias' => $categorias,
+            'opiniones' => $opiniones
         ));
     }
 
@@ -160,13 +257,7 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $megusta = DB::table('articulos')->where('id_articulo', '=', $id)->select('megusta')->get();
-
-        $cantidad = $megusta[0]->megusta;
-        $cantidad++;
-        $datos = array("megusta" => $cantidad);
-
-        Articulos::where('id_articulo', $id)->update($datos);
+        //
     }
 
     /**
@@ -178,30 +269,5 @@ class BlogController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function megusta($id)
-    {
-        $cantidad = DB::table('articulos')->where('id_articulo', '=', $id)->select('megusta')->get();
-
-        return $cantidad[0]->megusta;
-    }
-
-    public function vistas($id)
-    {
-        $cantidad = DB::table('articulos')->where('id_articulo', '=', $id)->select('vistas_articulo')->get();
-
-        return $cantidad[0]->vistas_articulo;
-    }
-
-    public function addvista($id)
-    {
-        $vista = DB::table('articulos')->where('id_articulo', '=', $id)->select('vistas_articulo')->get();
-
-        $cantidad = $vista[0]->vistas_articulo;
-        $cantidad++;
-        $datos = array("vistas_articulo" => $cantidad);
-
-        Articulos::where('id_articulo', $id)->update($datos);
     }
 }

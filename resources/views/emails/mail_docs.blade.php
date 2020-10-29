@@ -5,7 +5,7 @@ Hola {{ $nombre }},<br><br>
     Pronto estaremos en contacto para conocer más acerca de tu necesidad.</p>
 <br>
 <p><i>material-cuello-y-hombro-espanol.pdf</i></p>
-<a href="http://fisioterapiaenbogota.com/descargas/material-cuello-y-hombro-espanol.pdf">Descargar Documento</a>
+<a href="http://localhost/storage/descargas/material-cuello-y-hombro-espanol.pdf">Descargar Documento</a>
 <br>
 <br>
 <p>Atentamente,<br>{{ $name }}</p>

@@ -38,7 +38,7 @@ class MailController extends Controller
         Mail::send(['html' => 'emails.mail'], $data, function ($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)
                 ->subject('Solicitud de Información');
-            $message->from('info@fisioterapiaenbogota.com', 'Fisioterapia en Bogotá');
+            $message->from('jaruizr74@gmail.com', 'Fisioterapia en Bogotá');
         });
 
         return redirect("/contactanos")->with("respuesta", "");
@@ -75,7 +75,7 @@ class MailController extends Controller
         Mail::send(['html' => 'emails.mail_en'], $data, function ($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)
                 ->subject('Information Request');
-            $message->from('info@fisioterapiaenbogota.com', 'Physiotherapy in Bogotá');
+            $message->from('jaruizr74@gmail.com', 'Physiotherapy in Bogotá');
         });
 
         return redirect("/contact_us")->with("response", "");
@@ -104,10 +104,10 @@ class MailController extends Controller
         Mail::send(['html' => 'emails.mail_agenda'], $data, function ($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)
                 ->subject('Agendar Consulta Gratis');
-            $message->from('info@fisioterapiaenbogota.com', 'Fisioterapia en Bogotá');
+            $message->from('jaruizr74@gmail.com', 'Fisioterapia en Bogotá');
         });
 
-        return redirect("/screening")->with("respuesta", "");
+        return redirect("/screening_es")->with("respuesta", "");
     }
 
     public function basic_email_agenda_en(Request $request)
@@ -133,10 +133,10 @@ class MailController extends Controller
         Mail::send(['html' => 'emails.mail_agenda'], $data, function ($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)
                 ->subject('Book My Free Consultation');
-            $message->from('info@fisioterapiaenbogota.com', 'Physiotherapy in Bogotá');
+            $message->from('jaruizr74@gmail.com', 'Physiotherapy in Bogotá');
         });
 
-        return redirect("/screening_en")->with("respuesta", "");
+        return redirect("/screening")->with("respuesta", "");
     }
 
     public function basic_email_docs($data, $preguntas)
@@ -166,13 +166,13 @@ class MailController extends Controller
         Mail::send(['html' => 'emails.mail_docs'], $data, function ($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)
                 ->subject('Documento Gratis - Fysipuntura');
-            $message->from('info@fisioterapiaenbogota.com', 'Fisioterapia en Bogotá');
+            $message->from('jaruizr74@gmail.com', 'Fisioterapia en Bogotá');
         });
 
         Mail::send(['html' => 'emails.mail_docs_info'], $data, function ($message) use ($to_name, $to_email) {
-            $message->to('info@fisioterapiaenbogota.com', $to_name)
+            $message->to('jaruizr74@gmail.com', $to_name)
                 ->subject('Documento Gratis - Fysipuntura');
-            $message->from('info@fisioterapiaenbogota.com', 'Fisioterapia en Bogotá');
+            $message->from('jaruizr74@gmail.com', 'Fisioterapia en Bogotá');
         });
 
         return "ok";

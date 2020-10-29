@@ -1,32 +1,30 @@
 <template>
-  <a
-    href="http://localhost:8000/articulo/"
-    {{Id}}
-    class="float-right"
-    @click="vistas"
-    >Leer Más</a
-  >
+  <span>{{ cantidad }}</span>
 </template>
 
 <script>
 export default {
   props: ["id"],
   data() {
-    return { Id: null };
+    return {
+      cantidad: 0,
+    };
+  },
+  mounted() {
+    this.vistas();
   },
   methods: {
     vistas() {
-      this.Id = this.id;
       const params = {
         id: this.id,
       };
       axios
-        .post(`/blog/vistas/${this.id}`, {
+        .get(`/blog/articulo/vistas/${this.id}`, {
           params,
-          _method: "put",
+          _method: "get",
         })
         .then((resp) => {
-          console.log(resp.status);
+          if (resp.status == 200) this.cantidad = resp.data.vistas_articulo;
         })
         .catch((error) => {
           console.log(error);

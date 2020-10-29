@@ -2,7 +2,7 @@
 
 try {
     // File Route.
-    $fileRoute = "/uploads/";
+    $fileRoute = "/storage/blog/";
 
     $fieldname = "file";
 
@@ -26,7 +26,7 @@ try {
     $allowedExts = array("gif", "jpeg", "jpg", "png", "svg", "blob");
  
     // Allowed mime types.
-    $allowedMimeTypes = array("image/gif", "image/jpeg", "image/webp", "image/pjpeg", "image/x-png", "image/png", "image/svg+xml");
+    $allowedMimeTypes = array("image/gif", "image/jpeg", "image/pjpeg", "image/x-png", "image/png", "image/svg+xml");
 
     // Validate image.
     if (!in_array(strtolower($mimeType), $allowedMimeTypes) || !in_array(strtolower($extension), $allowedExts)) {

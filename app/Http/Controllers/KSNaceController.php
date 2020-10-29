@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Textos;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class KSNaceController extends Controller
 {
@@ -14,83 +14,31 @@ class KSNaceController extends Controller
      */
     public function index()
     {
-        $textos = DB::table('textos')->where('pagina', '=', 'Nace')->get();
+        $textos = Textos::where('pagina', 'Nace')->get();
 
-        return view('ksadmin.paginas.nace', array('textos' => $textos));
+        return view('ks-admin.nace', array('textos' => $textos));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\BarraSup  $barraSup
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id, Request $request)
+    public function update(Request $request, $id)
     {
-        if ($id == 68 && $request->input("parrafo1_es") != "") {
-            $datos = array(
-                "spanish" => $request->input("parrafo1_es")
-            );
-        }
+        $data = array(
+            "id" => $id,
+            "spanish" => $request->input("content_spanish"),
+            "english" => $request->input("content_english")
+        );
 
-        if ($id == 68 && $request->input("parrafo1_en") != "") {
-            $datos = array(
-                "english" => $request->input("parrafo1_en")
-            );
-        }
+        $textos = Textos::find($id);
+        $textos->spanish = $data["spanish"];
+        $textos->english = $data["english"];
+        $textos->save();
 
-        if ($id == 69 && $request->input("parrafo2_es") != "") {
-            $datos = array(
-                "spanish" => $request->input("parrafo2_es")
-            );
-        }
-
-        if ($id == 69 && $request->input("parrafo2_en") != "") {
-            $datos = array(
-                "english" => $request->input("parrafo2_en")
-            );
-        }
-
-        if ($id == 70 && $request->input("parrafo3_es") != "") {
-            $datos = array(
-                "spanish" => $request->input("parrafo3_es")
-            );
-        }
-
-        if ($id == 70 && $request->input("parrafo3_en") != "") {
-            $datos = array(
-                "english" => $request->input("parrafo3_en")
-            );
-        }
-
-        if ($id == 71 && $request->input("parrafo4_es") != "") {
-            $datos = array(
-                "spanish" => $request->input("parrafo4_es")
-            );
-        }
-
-        if ($id == 71 && $request->input("parrafo4_en") != "") {
-            $datos = array(
-                "english" => $request->input("parrafo4_en")
-            );
-        }
-
-        if ($id == 72 && $request->input("parrafo5_es") != "") {
-            $datos = array(
-                "spanish" => $request->input("parrafo5_es")
-            );
-        }
-
-        if ($id == 72 && $request->input("parrafo5_en") != "") {
-            $datos = array(
-                "english" => $request->input("parrafo5_en")
-            );
-        }
-
-        DB::table('textos')->where("id", $id)->update($datos);
-        $textos = DB::table('textos')->where('pagina', '=', 'Nace')->get();
-
-        return view('ksadmin.paginas.nace', array('textos' => $textos));
+        return redirect('/ksadmin/nace')->with('status', 'Texto actualizado exitosamente!');
     }
 }

@@ -2,7 +2,7 @@
 
 try {
     // File Route.
-    $fileRoute = "/uploads/";
+    $fileRoute = "/storage/blog/";
 
     $fieldname = "file";
 
@@ -50,11 +50,10 @@ try {
     // Generate response.
     $response = new \StdClass;
     //   $response->link = $protocol.$_SERVER["HTTP_HOST"].dirname($_SERVER["PHP_SELF"]).$fileRoute . $_FILES[$fieldname]["name"];
-    $response->link = 'http://fisioterapiaenbogota.com' . $fileRoute . $_FILES[$fieldname]["name"];
+    $response->link = $_SERVER['HTTP_HOST'] . $fileRoute . $_FILES[$fieldname]["name"];
 
     // Send response.
     echo stripslashes(json_encode($response));
-
 } catch (Exception $e) {
     // Send error response.
     echo $e->getMessage();

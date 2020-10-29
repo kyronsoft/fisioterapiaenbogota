@@ -267,22 +267,22 @@ export default {
       var a = document.createElement("a");
 
       if (parte == "cuello") {
-        a.href = this.url + "/descargas/" + this.folletos[0];
+        a.href = this.url + "/storage/descargas/" + this.folletos[0];
         a.setAttribute("download", this.folletos[0]);
       }
 
       if (parte == "espalda") {
-        a.href = this.url + "/descargas/" + this.folletos[1];
+        a.href = this.url + "/storage/descargas/" + this.folletos[1];
         a.setAttribute("download", this.folletos[1]);
       }
 
       if (parte == "rodilla") {
-        a.href = this.url + "/descargas/" + this.folletos[2];
+        a.href = this.url + "/storage/descargas/" + this.folletos[2];
         a.setAttribute("download", this.folletos[2]);
       }
 
       if (parte == "deportivas") {
-        a.href = this.url + "/descargas/" + this.folletos[3];
+        a.href = this.url + "/storage/descargas/" + this.folletos[3];
         a.setAttribute("download", this.folletos[3]);
       }
 
@@ -298,7 +298,7 @@ export default {
       }
     },
     url_link() {
-      return this.url + "/descargas/" + this.folletos[4];
+      return this.url + "/storage/descargas/" + this.folletos[4];
     },
   },
 };

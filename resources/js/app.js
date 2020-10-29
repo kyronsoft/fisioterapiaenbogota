@@ -3,11 +3,111 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-import VueSweetalert2 from 'vue-sweetalert2';
+
+import 'owl.carousel';
+import 'jquery.cookie';
 
 require('./bootstrap');
+require('summernote');
+require('summernote/dist/summernote-bs4.css');
+require('summernote/dist/summernote-bs4.js');
 
+window.notie = require('notie');
 window.Vue = require('vue');
+window.Swal = require('sweetalert2');
+
+jQuery(document).ready(function () {
+    jQuery('.owl-carousel').owlCarousel({
+        dots: false,
+        loop: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        items: 1
+    });
+    $(".img-services").hover(function () {
+        $(this).addClass("animate__animated animate__flip");
+    });
+    var url = window.location.href;
+    url = url.substr(url.lastIndexOf("/") + 1);
+    $('#navbarNavDropdown li').each(function () {
+        var href = $(this).find('a').attr('href');
+
+        href = href.substr(href.lastIndexOf("/") + 1);
+        if (href == url) {
+            $(this).children().addClass('active');
+        }
+    });
+    $('.counter-count').each(function () {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+
+    var url = window.location.href;
+    url = url.substr(url.lastIndexOf("/") + 1);
+    $('#navbarSupportedContent li').each(function () {
+        var href = $(this).find('a').attr('href');
+
+        href = href.substr(href.lastIndexOf("/") + 1);
+        if (href == url) {
+            $(this).children().addClass('active');
+        }
+    });
+
+    irArriba();
+
+    function irArriba() {
+        $('.ir-arriba').click(function () {
+            $('body,html').animate({
+                scrollTop: '0px'
+            }, 1000);
+        });
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 0) {
+                $('.ir-arriba').slideDown(600);
+            } else {
+                $('.ir-arriba').slideUp(600);
+            }
+        });
+        $('.ir-abajo').click(function () {
+            $('body,html').animate({
+                scrollTop: '1000px'
+            }, 1000);
+        });
+    }
+
+    $('.editor').summernote({
+        height: 100,
+        focus: true,
+        callbacks: {
+            onImageUpload: function (files) {
+                for (let i = 0; i < files.length; i++) {
+                    $.upload(files[i]);
+                }
+            }
+        }
+    });
+
+    $('.editor_blog').summernote({
+        height: 500,
+        focus: true,
+        callbacks: {
+            onImageUpload: function (files) {
+                for (let i = 0; i < files.length; i++) {
+                    $.upload(files[i]);
+                }
+            }
+        }
+    });
+    $("iframe").wrap("<div class='wrapper'></div>");
+    $("img").addClass('img-fluid');
+});
 
 /**
  * The following block of code may be used to automatically register your
@@ -19,17 +119,12 @@ window.Vue = require('vue');
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.use(VueSweetalert2);
-Vue.component('aprobar-component', require('./components/AprobarComponent.vue').default);
-Vue.component('cantidad-gusta', require('./components/CantidadGustaComponent.vue').default);
-Vue.component('cantidad-vistas', require('./components/CantidadVistasComponent.vue').default);
-Vue.component('agregar-vista', require('./components/VistasComponent.vue').default);
-Vue.component('me-gusta', require('./components/MeGustaComponent.vue').default);
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('descargar-folleto', require('./components/DescargarFolletoComponent.vue').default);
 Vue.component('descargar-folleto-en', require('./components/DescargarFolletoEnComponent.vue').default);
-
+Vue.component('comentarios-component', require('./components/ComentariosComponent.vue').default);
+Vue.component('megusta-component', require('./components/MeGustaComponent.vue').default);
+Vue.component('vistas-component', require('./components/VistasComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -40,3 +135,7 @@ Vue.component('descargar-folleto-en', require('./components/DescargarFolletoEnCo
 const app = new Vue({
     el: '#app',
 });
+
+
+
+

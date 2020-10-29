@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Textos;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class KSCuelloController extends Controller
 {
@@ -14,34 +14,31 @@ class KSCuelloController extends Controller
      */
     public function index()
     {
-        $textos = DB::table('textos')->where('pagina', '=', 'Cuello')->get();
-        return view('ksadmin.paginas.cuello', array('textos' => $textos));
+        $textos = Textos::where('pagina', 'Cuello')->get();
+
+        return view('ks-admin.cuello', array('textos' => $textos));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\BarraSup  $barraSup
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id, Request $request)
+    public function update(Request $request, $id)
     {
-        if ($id == 94 && $request->input("parrafo1_es") != "") {
-            $datos = array(
-                "spanish" => $request->input("parrafo1_es")
-            );
-        }
+        $data = array(
+            "id" => $id,
+            "spanish" => $request->input("content_spanish"),
+            "english" => $request->input("content_english")
+        );
 
-        if ($id == 94 && $request->input("parrafo1_en") != "") {
-            $datos = array(
-                "english" => $request->input("parrafo1_en")
-            );
-        }
+        $textos = Textos::find($id);
+        $textos->spanish = $data["spanish"];
+        $textos->english = $data["english"];
+        $textos->save();
 
-        DB::table('textos')->where("id", $id)->update($datos);
-        $textos = DB::table('textos')->where('pagina', '=', 'Cuello')->get();
-
-        return view('ksadmin.paginas.cuello', array('textos' => $textos));
+        return redirect('/ksadmin/cuello')->with('status', 'Texto actualizado exitosamente!');
     }
 }

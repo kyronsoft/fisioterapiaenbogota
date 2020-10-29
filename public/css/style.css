@@ -1,0 +1,1607 @@
+body {
+    overflow-x: hidden;
+    font-size: 14px;
+}
+
+.header {
+    background-color: #f1f1f1;
+    text-align: center;
+    height: 60px;
+}
+
+footer.main-footer {
+    background: #0e0e0e;
+    padding: 100px 0 0;
+    color: #fff;
+}
+
+.content {
+    padding: 16px;
+}
+
+#navbar {
+    z-index: 999999;
+}
+
+#link-logout {
+    color: #fff;
+}
+
+.navbar-nav li:hover>ul.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+}
+
+.nav-item::-ms-expand {
+    display: none;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 60px;
+}
+
+.header p {
+    color: #fff;
+}
+
+.owl-theme img {
+    opacity: 0.4;
+}
+
+.fa-linkedin, .fa-facebook, .fa-instagram, .fa-youtube {
+    color: #0063BF;
+}
+
+/* Estilos del Blog */
+
+main.posts-listing {
+    padding-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+main.posts-listing .post {
+    margin-bottom: 50px;
+}
+
+main.posts-listing .post-footer {
+    font-size: 0.8em;
+}
+
+.post-meta {
+    margin: 10px 0;
+    font-size: 0.8em;
+}
+
+.post-meta .date {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.post-meta .date::after {
+    display: none;
+}
+
+.post .meta-last::after {
+    display: none;
+}
+
+.post p:not(.lead) {
+    font-weight: 400;
+    color: #777;
+    font-size: 0.95em;
+}
+
+.post a {
+    text-decoration: none;
+}
+
+.post a:hover, .post a:focus {
+    text-decoration: none;
+}
+
+.post h3 {
+    line-height: 1.1em;
+    color: #222;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-bottom: 1rem;
+}
+
+.post h3:hover {
+    color: #555;
+}
+
+.post .category a {
+    color: #999;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.post .date {
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+.post .avatar {
+    max-width: 40px;
+    min-width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post .title, .post .date, .post .comments, .post .views {
+    font-weight: 400;
+    color: #999;
+    text-transform: capitalize;
+}
+
+.post .title i, .post .date i, .post .comments i, .post .views i {
+    margin-right: 5px;
+    font-size: 1.1em;
+}
+
+.post .title::after, .post .date::after, .post .comments::after, .post .views::after {
+    content: '|';
+    display: inline-block;
+    margin: 0 7px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.post .post-tags {
+    margin-top: 30px;
+}
+
+.post .post-tags .tag {
+    padding: 5px 25px;
+    border: 1px solid #ddd;
+    margin: 5px;
+    color: #777;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+.post .post-tags .tag:hover {
+    background: #999;
+    color: #fff;
+    border-color: #999;
+}
+
+.post .meta-last::after {
+    display: none;
+}
+
+.blog-post .post-footer {
+    font-size: 0.8em;
+}
+
+.blog-post .post-thumbnail img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.blog-post h1 {
+    color: #444;
+    line-height: 1.1em;
+}
+
+.blog-post h1:hover {
+    color: #444;
+}
+
+.blog-post .post-footer {
+    margin-top: 20px;
+}
+
+.blog-post .post-body {
+    margin-top: 40px;
+}
+
+.blog-post .post-body h2, .blog-post .post-body h3, .blog-post .post-body h4, .blog-post .post-body h5, .blog-post .post-body h6 {
+    color: #333;
+}
+
+.blog-post .post-body p {
+    margin-bottom: 30px;
+}
+
+.blog-post .post-body p:not(.lead) {
+    font-size: 1em;
+    line-height: 1.7em;
+    color: #555;
+}
+
+.blog-post .posts-nav {
+    margin-top: 50px;
+    color: #777;
+    font-size: 0.8em;
+}
+
+.blog-post .posts-nav a {
+    color: inherit;
+    width: calc(50% - 10px);
+    padding: 10px 20px;
+    border: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.blog-post .posts-nav a:hover {
+    border-color: #999;
+}
+
+.blog-post .posts-nav a:hover .icon {
+    background: #999;
+    color: #fff;
+    border-color: #999;
+}
+
+.blog-post .icon {
+    min-width: 35px;
+    max-width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    line-height: 32px;
+    border: 1px solid #ddd;
+    color: #aaa;
+    font-size: 1.5em;
+    text-align: center;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.blog-post .icon.prev {
+    margin-right: 20px;
+}
+
+.blog-post .icon.next {
+    margin-left: 20px;
+}
+
+.blog-post .post-comments {
+    margin-top: 50px;
+}
+
+.blog-post .post-comments span.no-of-comments {
+    color: #777;
+    font-size: 0.8em;
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.blog-post .post-comments header {
+    margin-bottom: 40px;
+}
+
+.blog-post .post-comments .comment:last-of-type .comment-body {
+    border-bottom: none;
+}
+
+.blog-post .post-comments .image {
+    margin-right: 15px;
+}
+
+.blog-post .post-comments .title::after {
+    display: none;
+}
+
+.blog-post .post-comments img {
+    max-width: 40px;
+    min-width: 40px;
+    height: 40px;
+}
+
+.blog-post .post-comments strong {
+    display: block;
+    color: #555;
+}
+
+.blog-post .post-comments span.date {
+    font-size: 0.8em;
+    color: #999;
+}
+
+.blog-post .post-comments span.date::after {
+    display: none;
+}
+
+.blog-post .post-comments .comment-body {
+    margin-left: 55px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 1.2em;
+}
+
+.blog-post .post-comments p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+.blog-post .add-comment {
+    margin-top: 50px;
+}
+
+.blog-post .add-comment header {
+    margin-bottom: 30px;
+}
+
+.blog-post .add-comment input, .blog-post .add-comment textarea {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    border-radius: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.blog-post .add-comment input::-moz-placeholder, .blog-post .add-comment textarea::-moz-placeholder {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #aaa;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+}
+
+.blog-post .add-comment input::-webkit-input-placeholder, .blog-post .add-comment textarea::-webkit-input-placeholder {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #aaa;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+}
+
+.blog-post .add-comment input:-ms-input-placeholder, .blog-post .add-comment textarea:-ms-input-placeholder {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #aaa;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+}
+
+.blog-post .add-comment input:focus, .blog-post .add-comment textarea:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 1px solid #999;
+}
+
+.blog-post .add-comment textarea {
+    min-height: 150px;
+}
+
+blockquote.blockquote {
+    font-size: 1.05em;
+    line-height: 1.7em;
+    border-color: #999;
+    border: 1px solid #eee;
+    border-left: 6px solid #eee;
+    padding: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 30px;
+}
+
+blockquote.blockquote p {
+    margin-bottom: 15px !important;
+}
+
+.widget {
+    margin-bottom: 40px;
+    padding: 30px;
+    border: 1px solid #eee;
+}
+
+.widget header {
+    margin-bottom: 20px;
+}
+
+.category {
+    color: #999;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.category::after {
+    content: ',';
+    color: #ddd;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.category:last-of-type::after {
+    display: none;
+}
+
+.category:hover {
+    color: #000;
+}
+
+section.featured-posts .avatar {
+    max-width: 40px;
+    min-width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 1.4em;
+}
+
+section.featured-posts .title, section.featured-posts .date, section.featured-posts .comments {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #999;
+}
+
+section.featured-posts .title i, section.featured-posts .date i, section.featured-posts .comments i {
+    margin-right: 5px;
+}
+
+section.featured-posts .title::after, section.featured-posts .date::after, section.featured-posts .comments::after {
+    content: '|';
+    display: inline-block;
+    margin: 0 7px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.widget.latest-posts .views, .widget.latest-posts .comments {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #bbb;
+    margin-top: 10px;
+}
+
+.widget.latest-posts .views i, .widget.latest-posts .comments i {
+    margin-right: 5px;
+}
+
+.widget.latest-posts .views::after, .widget.latest-posts .comments::after {
+    content: '|';
+    display: inline-block;
+    margin: 0 7px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.widget.latest-posts .comments::after {
+    display: none;
+}
+
+/* Fin Estilos Blog */
+
+.seccion-uno {
+    background-image: url('/storage/telerehabilitacion-para-bogota.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.seccion-dos {
+    background-image: url('/storage/dudas-fisioterapia.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.seccion-tres {
+    background-image: url('/storage/fisioterapia-en-linea-en-bogota-colombia.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.seccion-cuatro {
+    background-image: url('/storage/Fisioterapia-virtual-en-bogota.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.seccion-seis {
+    background-image: url('/storage/fisioterapia-y-rehabilitacion.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.seccion-diez {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/storage/Telerehabilitacion-bogota.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+}
+
+.seccion-once {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/storage/telerehabilitacion-en-colombia-bogota-1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.acerca-uno {
+    background-image: url('/storage/Doctora-Adriana-Lucia-Ramirez-Bonilla.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.acerca-dos {
+    background-image: url('/storage/Dra-Adriana-Lucia-Ramirez-Bonilla.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.acerca-tres {
+    background-image: url('/storage/Dra-Adriana-Lucia-Ramirez-Bonilla-bogota.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.acerca-cuatro {
+    background-image: url('/storage/dra-adriana-lucia-ramirez.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.acerca-cinco {
+    background-image: url('/storage/Dra-Adriana-lucia-scaled.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.nace-uno {
+    background-image: url('/storage/como-nace-fysiopuntura.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.nace-dos {
+    background-image: url('/storage/telerehabilitacion-y-fisiopuntura-en-bogota.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.nace-tres {
+    background-image: url('/storage/cOMO-NACE-FYSIPUNTURA.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.nace-cuatro {
+    background-image: url('/storage/fisioterapia-online-en-bogota-colombia.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.nace-cinco {
+    background-image: url('/storage/fisioterapia-online-.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.teler-uno {
+    background-image: url('/storage/Telerehabilitacion1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.teler-dos {
+    background-image: url('/storage/Fisioterapia-online-en-bogota-colombioa-fisiopuntura.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.teler-tres {
+    background-image: url('/storage/fisioterapia-online-en-bogota.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.teler-cuatro {
+    background-image: url('/storage/Telerehabilitacion-en-bogota-online.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.teler-cinco {
+    background-image: url('/storage/telerehabilitacion-en-colombia-bogota-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contactanos {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/storage/telerehabilitacion-en-colombia-bogota-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.fisio-uno {
+    background-image: url('/storage/fisioterapia-en-bogota-colombia-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.fisio-dos {
+    background-image: url('/storage/Fisioterapia-en-bogota.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.fisio-tres {
+    background-image: url('/storage/Senior-squatting-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.screening-uno {
+    background-image: url('/storage/david-bouldering.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.screening-dos {
+    background-image: url('/storage/heavy-pulling.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.screening-tres {
+    background-image: url('/storage/sls-knee-valgus-pelvic-drop.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.screening-cuatro {
+    background-image: url('/storage/tennis-serve-screening.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.screening-cinco {
+    background-image: url('/storage/running-screening.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.other-background {
+    background-image: linear-gradient(rgba(0, 17, 252, 0.734), rgba(0, 17, 252, 0.734)), url('/storage/taichi3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+}
+
+.ir-arriba {
+    display: none;
+    padding: 10px;
+    background: #12A1BD;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+@media (min-width: 320px) {
+    .header {
+        height: 80px;
+    }
+    #navbar {
+        font-size: 14px;
+    }
+    #titulo1-carousel {
+        position: absolute;
+        top: 30%;
+        left: 15%;
+        color: #0063BF;
+        font-size: 24px;
+        font-weight: bolder;
+    }
+    #subtitulo1-carousel {
+        position: absolute;
+        top: 46%;
+        left: 17%;
+        color: #0063BF;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    #titulo2-carousel {
+        position: absolute;
+        top: 30%;
+        left: 23%;
+        color: #0063BF;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    #subtitulo2-carousel {
+        position: absolute;
+        top: 46%;
+        left: 10%;
+        color: #0063BF;
+        font-size: 12px;
+    }
+    #slider-icon1 {
+        position: absolute;
+        width: 15px;
+        top: 15%;
+        left: -7%;
+    }
+    #slider-icon2 {
+        position: absolute;
+        width: 15px;
+        top: 15%;
+        left: -15%;
+    }
+    #slider-icon3 {
+        position: absolute;
+        width: 15px;
+        top: 15%;
+        left: -5%;
+    }
+    .btn-masinfo {
+        position: absolute;
+        top: 75%;
+        left: 20%;
+        font-size: 10px;
+    }
+    .seccion-uno {
+        height: 1000px;
+    }
+    .seccion-dos, .seccion-tres {
+        height: 2000px;
+    }
+    .seccion-cuatro, .seccion-seis {
+        height: 1000px;
+    }
+    .columna {
+        padding: 30px;
+    }
+    .columna h2 {
+        font-size: 1.57em;
+    }
+    .columna h3, .titulo-seccion-siete h3 {
+        font-size: 1.42em;
+    }
+    .titulo-seccion-siete {
+        padding: 40px;
+    }
+    .seccion-cuatro p, .item-seccion6, .texto-seccion8, .item-seccion9, .texto-seccionuno, .texto-seccion5 {
+        font-size: 1.22em;
+    }
+    .item-seccion9 {
+        padding: 20px;
+    }
+    .item-seccion2, .item-seccion3 {
+        margin-left: 60px;
+        font-size: 1.22em;
+    }
+    .icono-seccion2, .icono-seccion3 {
+        width: 40px;
+        padding: 5px;
+    }
+    .videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+    }
+    .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .seccion-siete img {
+        width: 45%;
+        margin-bottom: 40px;
+    }
+    .seccion-siete a {
+        margin-left: 40px;
+        margin-bottom: 80px;
+    }
+    .img-services {
+        width: 50%;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+    .seccion-nueve a {
+        margin-bottom: 60px;
+    }
+    .col-counter {
+        margin-top: 60px;
+    }
+    .seccion-once, .seccion-doce {
+        padding-top: 150px;
+        padding-bottom: 60px;
+    }
+    .swiper-slide {
+        font-size: 1.1em;
+    }
+    .fa-star {
+        color: yellow;
+    }
+    .acerca-uno, .acerca-dos, .acerca-tres, .acerca-cuatro, .acerca-cinco {
+        height: 600px;
+    }
+    .nace-uno, .nace-dos, .nace-tres, .nace-cuatro, .nace-cinco {
+        height: 600px;
+    }
+    .teler-dos, .teler-tres, .teler-cuatro {
+        height: 1400px;
+    }
+    .teler-uno, .teler-cinco {
+        height: 1800px;
+    }
+    .fisio-uno {
+        height: 600px;
+    }
+    .fisio-dos, .fisio-tres {
+        height: 1000px;
+    }
+    .texto-fisio, .texto-dolores, .texto-teler, .texto-cuello, .texto-screening {
+        font-size: 1.24em;
+    }
+    .dolores {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .datos-contacto li {
+        font-size: 1.48em;
+    }
+    .documentos-paciente {
+        margin-top: 60px;
+        margin-bottom: 80px;
+    }
+    .folleto-boton a {
+        margin-bottom: 60px;
+    }
+    .post-body p, .post-body ol, .post-body ul {
+        font-size: 1.18em !important;
+    }
+    .screening-uno, .screening-cinco {
+        height: 600px;
+    }
+    .screening-dos, .screening-cuatro {
+        height: 1000px;
+    }
+    .screening-tres {
+        height: 600px;
+    }
+    .teler-cuatro img {
+        width: 80%;
+    }
+    section.featured-posts .text-inner {
+        padding: 15px;
+    }
+    section.featured-posts .post-footer {
+        font-size: 0.75em;
+    }
+}
+
+@media (min-width: 568px) {
+    #navbar {
+        font-size: 18px;
+    }
+    #titulo1-carousel {
+        position: absolute;
+        top: 40%;
+        left: 20%;
+        color: #0063BF;
+        font-size: 34px;
+        font-weight: bolder;
+    }
+    #subtitulo1-carousel {
+        position: absolute;
+        top: 50%;
+        left: 13%;
+        color: #0063BF;
+        font-size: 32px;
+        font-weight: 600;
+    }
+    #titulo2-carousel {
+        position: absolute;
+        top: 40%;
+        left: 23%;
+        color: #0063BF;
+        font-size: 34px;
+        font-weight: 600;
+    }
+    #subtitulo2-carousel {
+        position: absolute;
+        top: 56%;
+        left: 10%;
+        color: #0063BF;
+        font-size: 24px;
+    }
+    #slider-icon1 {
+        position: absolute;
+        width: 20px;
+        top: 15%;
+        left: -7%;
+    }
+    #slider-icon2 {
+        position: absolute;
+        top: 15%;
+        width: 20px;
+        left: -15%;
+    }
+    #slider-icon3 {
+        position: absolute;
+        top: 15%;
+        width: 20px;
+        left: -5%;
+    }
+    .btn-masinfo {
+        position: absolute;
+        top: 75%;
+        left: 30%;
+        font-size: 10px;
+    }
+    .seccion-uno {
+        height: 500px;
+    }
+    .seccion-dos, .seccion-tres {
+        height: 1200px;
+    }
+    .columna {
+        padding: 30px;
+    }
+    .columna h2 {
+        font-size: 1.57em;
+    }
+    .columna h3 {
+        font-size: 1.42em;
+    }
+    .item-seccion2, .item-seccion3 {
+        margin-left: 60px;
+    }
+    .icono-seccion2, .icono-seccion3 {
+        width: 40px;
+        padding: 5px;
+    }
+    section.featured-posts .post-footer {
+        font-size: 0.9em;
+    }
+    .blog-post .title::after {
+        display: none !important;
+    }
+    .blog-post .author {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 767px) {
+    .header .row {
+        height: 60px;
+        padding-top: 25px;
+    }
+    #btn-additional {
+        visibility: hidden;
+    }
+    #navbarSupportedContent {
+        margin-left: 20px;
+    }
+    #social-networks {
+        padding-top: 0px;
+    }
+    #titulo1-carousel {
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        color: #0063BF;
+        font-size: 40px;
+        font-weight: bolder;
+    }
+    #subtitulo1-carousel {
+        position: absolute;
+        top: 40%;
+        left: 15%;
+        color: #0063BF;
+        font-size: 36px;
+        font-weight: 600;
+    }
+    #titulo2-carousel {
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        color: #0063BF;
+        font-size: 40px;
+        font-weight: 600;
+    }
+    #subtitulo2-carousel {
+        position: absolute;
+        top: 46%;
+        left: 10%;
+        color: #0063BF;
+        font-size: 36px;
+    }
+    #slider-icon1 {
+        position: absolute;
+        width: 27px;
+        top: 15%;
+        left: -7%;
+    }
+    #slider-icon2 {
+        position: absolute;
+        top: 15%;
+        width: 27px;
+        left: -10%;
+    }
+    #slider-icon3 {
+        position: absolute;
+        top: 15%;
+        width: 27px;
+        left: -5%;
+    }
+    .btn-masinfo {
+        position: absolute;
+        top: 75%;
+        left: 25%;
+        font-size: 20px;
+    }
+    .seccion-uno {
+        height: 700px;
+    }
+    .seccion-dos, .seccion-tres {
+        height: 1500px;
+    }
+    .columna {
+        padding: 30px;
+    }
+    .columna h2 {
+        font-size: 1.77em;
+        padding-top: 40px;
+    }
+    .columna h3 {
+        font-size: 1.62em;
+    }
+    .item-seccion2, .item-seccion3 {
+        margin-left: 40px;
+        padding-right: 35px;
+        font-size: 1.19em;
+    }
+    .icono-seccion2, .icono-seccion3 {
+        width: 40px;
+        padding: 5px;
+    }
+    .texto-seccion8, .item-seccion9, .texto-seccionuno, .item-seccion2, .item-seccion3, .texto-seccion5, .item-seccion6, .texto-teler, .texto-dolores {
+        font-size: 1.45em;
+    }
+    .col-counter {
+        margin-top: 250px;
+    }
+    .seccion-once {
+        padding-top: 200px;
+    }
+    .teler-dos, .teler-tres, .teler-cuatro {
+        height: 1000px;
+    }
+    .teler-uno, .teler-cinco {
+        height: 1200px;
+    }
+    .swiper-slide {
+        font-size: 1.3em;
+    }
+    .texto-acerca, .texto-nace, .texto-fisio, .texto-screening {
+        font-size: 1.19em;
+    }
+    .acerca-uno, .acerca-dos, .acerca-tres, .acerca-cuatro, .acerca-cinco {
+        height: 800px;
+    }
+    .nace-uno, .nace-dos, .nace-tres, .nace-cuatro, .nace-cinco {
+        height: 800px;
+    }
+    .fisio-uno {
+        height: 800px;
+    }
+    .fisio-dos, .fisio-tres {
+        height: 1500px;
+    }
+    .teler-cuatro img {
+        width: 50%;
+    }
+    section.hero .container {
+        padding: 150px 20px;
+    }
+    .post {
+        margin-bottom: 40px;
+    }
+    .post:last-of-type {
+        margin-bottom: 0;
+    }
+    footer.main-footer div[class*="col-"] {
+        margin-bottom: 40px;
+    }
+    footer.main-footer div[class*="col-"]:last-of-type {
+        margin-bottom: 0;
+    }
+    footer.main-footer .latest-posts>a {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    footer.main-footer .copyrights div[class*="col-"] {
+        margin-bottom: 20px;
+        text-align: center !important;
+    }
+    footer.main-footer .copyrights div[class*="col-"]:last-of-type {
+        margin-bottom: 0;
+    }
+    .posts-nav a {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 991px) {
+    #titulo1-carousel {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        color: #0063BF;
+        font-size: 4.5rem;
+        font-weight: bolder;
+    }
+    #subtitulo1-carousel {
+        position: absolute;
+        top: 45%;
+        left: 15%;
+        color: #0063BF;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    #titulo2-carousel {
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        color: #0063BF;
+        font-size: 4.5rem;
+        font-weight: 600;
+    }
+    #subtitulo2-carousel {
+        position: absolute;
+        top: 46%;
+        left: 15%;
+        color: #0063BF;
+        font-size: 2.5rem;
+    }
+    #slider-icon1 {
+        position: absolute;
+        width: 27px;
+        top: 15%;
+        left: -7%;
+    }
+    #slider-icon2 {
+        position: absolute;
+        top: 15%;
+        width: 27px;
+        left: -10%;
+    }
+    #slider-icon3 {
+        position: absolute;
+        top: 15%;
+        width: 27px;
+        left: -5%;
+    }
+    .btn-masinfo {
+        position: absolute;
+        top: 75%;
+        left: 30%;
+        font-size: 22px;
+    }
+    .list-inline-item {
+        font-size: 1.35em;
+        margin-left: 20px;
+    }
+    .seccion-cinco li {
+        font-size: 1.25em;
+    }
+    .creditos {
+        margin-top: 20px;
+    }
+    .seccion-once {
+        padding-top: 250px;
+    }
+    .swiper-slide {
+        font-size: 1.5em;
+    }
+    .texto-acerca, .texto-nace, .texto-fisio, .texto-cuello, .texto-screening {
+        font-size: 1.35em;
+    }
+    .post-body p, .post-body ol, .post-body ul {
+        font-size: 1.22em !important;
+    }
+    section.featured-posts .image {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+        max-height: 300px;
+        min-height: auto !important;
+    }
+    section.featured-posts .image img {
+        width: 100%;
+        height: auto !important;
+    }
+    section.featured-posts .text {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        height: 70px;
+    }
+    .header .row {
+        height: 60px;
+        padding-top: 20px;
+    }
+    .fa-envelope {
+        display: none;
+    }
+    #navbarSupportedContent {
+        margin-left: 3rem;
+    }
+    .nav-item {
+        margin-left: 7px;
+    }
+    #btn-contactanos {
+        visibility: initial;
+    }
+    #btn-tienda {
+        visibility: none;
+    }
+    #titulo1-carousel {
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        color: #0063BF;
+        font-size: 4rem;
+        font-weight: bolder;
+    }
+    #subtitulo1-carousel {
+        position: absolute;
+        top: 45%;
+        left: 15%;
+        color: #0063BF;
+        font-size: 3.5rem;
+        font-weight: 600;
+    }
+    #titulo2-carousel {
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        color: #0063BF;
+        font-size: 4rem;
+        font-weight: 600;
+    }
+    #subtitulo2-carousel {
+        position: absolute;
+        top: 46%;
+        left: 15%;
+        color: #0063BF;
+        font-size: 2.5rem;
+    }
+    #slider-icon1 {
+        position: absolute;
+        width: 27px;
+        top: 15%;
+        left: -7%;
+    }
+    #slider-icon2 {
+        position: absolute;
+        top: 15%;
+        width: 27px;
+        left: -10%;
+    }
+    #slider-icon3 {
+        position: absolute;
+        top: 15%;
+        width: 27px;
+        left: -5%;
+    }
+    .btn-masinfo {
+        position: absolute;
+        top: 75%;
+        left: 10%;
+        font-size: 26px;
+    }
+    .columna {
+        padding-bottom: 60px;
+    }
+    .columna h2 {
+        font-size: 1.87em;
+        padding-top: 40px;
+    }
+    .columna h3 {
+        font-size: 1.72em;
+    }
+    .item-seccion2, .item-seccion3 {
+        margin-left: 40px;
+        padding-right: 35px;
+        font-size: 1.25em;
+    }
+    .icono-seccion2, .icono-seccion3 {
+        width: 50px;
+        padding: 5px;
+    }
+    .texto-seccion8 {
+        font-size: 1.55em;
+    }
+    .texto-seccion5 ul, .texto-seccion5 li {
+        font-size: 1em;
+    }
+    .item-seccion6 {
+        margin-left: 40px;
+    }
+    .img-services {
+        width: 100%;
+    }
+    #btn-contactanos {
+        margin-top: 33px;
+        margin-left: 15px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .fa-envelope {
+        display: initial;
+    }
+    #btn-additional {
+        visibility: initial;
+    }
+    .nav-item {
+        margin-left: 25px;
+    }
+    #titulo1-carousel {
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        color: #0063BF;
+        font-size: 5rem;
+        font-weight: bolder;
+    }
+    #subtitulo1-carousel {
+        position: absolute;
+        top: 45%;
+        left: 15%;
+        color: #0063BF;
+        font-size: 4.5rem;
+        font-weight: 400;
+    }
+    #titulo2-carousel {
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        color: #0063BF;
+        font-size: 5rem;
+        font-weight: 600;
+    }
+    #subtitulo2-carousel {
+        position: absolute;
+        top: 46%;
+        left: 20%;
+        color: #0063BF;
+        font-size: 3rem;
+    }
+    #slider-icon1 {
+        position: absolute;
+        width: 27px;
+        top: 20%;
+        left: -4%;
+    }
+    #slider-icon2 {
+        position: absolute;
+        top: 20%;
+        width: 27px;
+        left: -10%;
+    }
+    #slider-icon3 {
+        position: absolute;
+        top: 20%;
+        width: 27px;
+        left: -5%;
+    }
+    .btn-masinfo {
+        position: absolute;
+        top: 75%;
+        left: 35%;
+        font-size: 22px;
+    }
+    .columna h2 {
+        font-size: 2.27em;
+        padding-top: 40px;
+    }
+    .columna h3 {
+        font-size: 2.12em;
+    }
+    .seccion-cuatro p {
+        font-size: 1.8em;
+    }
+    .item-seccion2, .item-seccion3 {
+        margin-left: 30px;
+        padding-right: 45px;
+        font-size: 1.25em;
+    }
+    .icono-seccion2, .icono-seccion3 {
+        width: 60px;
+        padding: 5px;
+    }
+    .texto-acerca, .texto-nace, .texto-screening {
+        font-size: 1.45em;
+    }
+    .post-body p, .post-body ol, .post-body ul {
+        font-size: 1.35em !important;
+    }
+    #btn-contactanos {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 1516px) {
+    #navbarSupportedContent {
+        margin-left: 5rem;
+    }
+    .nav-item {
+        margin-left: 50px;
+    }
+    #titulo1-carousel {
+        position: absolute;
+        top: 40%;
+        left: 13%;
+        color: #0063BF;
+        font-size: 6rem;
+        font-weight: 600;
+    }
+    #subtitulo1-carousel {
+        position: absolute;
+        top: 53%;
+        left: 16%;
+        color: #0063BF;
+        font-size: 4rem;
+    }
+    #titulo2-carousel {
+        position: absolute;
+        top: 40%;
+        left: 23%;
+        color: #0063BF;
+        font-size: 6rem;
+        font-weight: 600;
+    }
+    #subtitulo2-carousel {
+        position: absolute;
+        top: 53%;
+        left: 16%;
+        color: #0063BF;
+        font-size: 4rem;
+    }
+    #slider-icon1 {
+        position: absolute;
+        top: 35%;
+        left: -3%;
+    }
+    #slider-icon2 {
+        position: absolute;
+        top: 35%;
+        left: -5%;
+    }
+    #slider-icon3 {
+        position: absolute;
+        top: 35%;
+        left: -3%;
+    }
+    .btn-masinfo {
+        position: absolute;
+        top: 70%;
+        left: 35%;
+    }
+    .seccion-uno, .seccion-dos, .seccion-tres, .seccion-cuatro {
+        height: 1200px;
+    }
+    .seccion-uno p, .seccion-cuatro p {
+        font-size: 1.18em;
+    }
+    .columna {
+        padding: 60px;
+    }
+    .columna h2 {
+        font-size: 1.87em;
+        padding-top: 40px;
+    }
+    .columna h3 {
+        font-size: 2.12em;
+    }
+    .item-seccion2, .item-seccion3 {
+        margin-left: 20px;
+        padding-right: 45px;
+        font-size: 1.55em;
+    }
+    .icono-seccion2, .icono-seccion3 {
+        width: 60px;
+        padding: 5px;
+    }
+    .seccion-cinco li {
+        font-size: 1.45em;
+    }
+    .item-seccion9 {
+        font-size: 1.55em;
+    }
+    #libro_dolor {
+        width: 50%;
+    }
+    .cuello {
+        margin-top: 100px;
+    }
+    .texto-cuello, .texto-espalda, .texto-rodilla, .texto-deportivas, .texto-fisio {
+        font-size: 1.55em;
+    }
+    .post-body p, .post-body ol, .post-body ul {
+        font-size: 1.75em !important;
+    }
+    .texto-seccion5 li {
+        font-size: 1em;
+    }
+}

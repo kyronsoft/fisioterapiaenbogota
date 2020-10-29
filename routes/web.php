@@ -13,134 +13,123 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* Rutas para el website en Español */
-
-Route::get('/', 'TextosEsController@index');
+Route::get('/', 'WebsiteController@index');
+Route::get('/en', 'WebsiteController@index_en');
 Route::get('/acerca', 'AcercaController@index');
+Route::get('/about', 'AcercaController@index_en');
 Route::get('/nace', 'NaceController@index');
-Route::get('/telerehabilitacion', 'TelerController@index');
-Route::get('/fisioterapia', 'FisioController@index');
+Route::get('/born', 'NaceController@index_en');
+
+Route::get('/telerehab', 'TelerehabController@index');
+Route::get('/telerehabilitation', 'TelerehabController@index_en');
+Route::get('/fisio', 'FisioteraController@index');
+Route::get('/physio', 'FisioteraController@index_en');
 Route::get('/cuello', 'CuelloController@index');
+Route::get('/neck', 'CuelloController@index_en');
 Route::get('/espalda', 'EspaldaController@index');
+Route::get('/back', 'EspaldaController@index_en');
 Route::get('/rodilla', 'RodillaController@index');
+Route::get('/knee', 'RodillaController@index_en');
 Route::get('/deportivas', 'DeportivasController@index');
-Route::get('/descargar_cuello', 'DescargarCuelloController@index');
-Route::get('/descargar_espalda', 'DescargarEspaldaController@index');
-Route::get('/descargar_rodilla', 'DescargarRodillaController@index');
-Route::get('/descargar_deportivas', 'DescargarDeportivasController@index');
-Route::get('/contacto', 'ContactoController@index');
-Route::get('/contactanos', 'ContactanosController@index');
-Route::get('/blog', 'BlogController@index');
-Route::get('/blog/busqueda', 'BlogController@busqueda');
-Route::get('/blog/megusta/{id}', 'BlogController@megusta');
-Route::get('/blog/vistas/{id}', 'BlogController@addvista');
-Route::get('/blog/vervistas/{id}', 'BlogController@vistas');
-Route::get('/articulo/{id}', 'BlogController@show');
-Route::put('/articulo/{id}', 'BlogController@update');
-Route::post('/articulo', 'BlogController@store');
-Route::post('/folletos', 'FolletosController@store');
+Route::get('/sports', 'DeportivasController@index_en');
+Route::get('/screening_es', 'ScreeningController@index');
+Route::get('/screening', 'ScreeningController@index_en');
 Route::get('/documentos', 'DocumentosController@index');
+Route::get('/documents', 'DocumentosController@index_en');
+Route::get('/contacto', 'ContactoController@index');
+Route::get('/contact', 'ContactoController@index_en');
+Route::get('/contactanos', 'ContactanosController@index');
+Route::get('/contact_us', 'ContactanosController@index_en');
+
 Route::post('/requisitos', 'DocumentosController@verificar');
-Route::post('/preguntas', 'PreguntasController@store');
-Route::get('/screening', 'ScreeningController@index');
-Route::get('/screening_en', 'ScreeningController@busqueda');
-Route::get('/tiendavirtual', function () {
-    return view('website.paginas.proximamente');
-});
+Route::post('/request', 'DocumentosController@verificar_en');
 
+Route::get('/descargar_cuello', 'DescargarFolletoController@cuello');
+Route::get('/descargar_espalda', 'DescargarFolletoController@espalda');
+Route::get('/descargar_rodilla', 'DescargarFolletoController@rodilla');
+Route::get('/descargar_deportivas', 'DescargarFolletoController@deportivas');
+Route::get('/download_neck', 'DescargarFolletoController@cuello_en');
+Route::get('/download_back', 'DescargarFolletoController@espalda_en');
+Route::get('/download_knee', 'DescargarFolletoController@rodilla_en');
+Route::get('/download_sports', 'DescargarFolletoController@deportivas_en');
 
-/* Rutas para el website en Inglés */
-Route::get('/init', 'TextosEnController@index');
-Route::get('/about', 'AcercaEnController@index');
-Route::get('/born', 'NaceEnController@index');
-Route::get('/telerehabilitation', 'TelerEnController@index');
-Route::get('/physiotherapy', 'FisioEnController@index');
-Route::get('/neck', 'CuelloEnController@index');
-Route::get('/back', 'EspaldaEnController@index');
-Route::get('/knee', 'RodillaEnController@index');
-Route::get('/sports_injuries', 'DeportivasEnController@index');
-Route::get('/download_neck', 'DescargarEnCuelloController@index');
-Route::get('/download_back', 'DescargarEnEspaldaController@index');
-Route::get('/download_knee', 'DescargarEnRodillaController@index');
-Route::get('/download_sports', 'DescargarEnDeportivasController@index');
-Route::get('/contact', 'ContactoEnController@index');
-Route::get('/contact_us', 'ContactanosEnController@index');
-Route::get('/blog_en', 'BlogEnController@index');
-Route::get('/blog_en/likeit/{id}', 'BlogEnController@megusta');
-Route::get('/blog_en/views/{id}', 'BlogEnController@addvista');
-Route::get('/articulo_en/{id}', 'BlogEnController@show');
-Route::put('/articulo_en/{id}', 'BlogEnController@update');
-Route::post('/articulo_en', 'BlogEnController@store');
-Route::get('/documents', 'DocumentosEnController@index');
-Route::post('/requeriments', 'DocumentosEnController@verificar');
-Route::post('/questions', 'PreguntasEnController@store');
-Route::get('/shoponline', function () {
-    return view('website.paginas.comingsoon');
-});
-
-
-/* Rutas para el Administrador del website y Blog */
-Route::get('/ks-admin', 'KSAdminController@showmain');
-Route::get('/ks-admin/barrasup', 'BarraSupController@index');
-Route::put('/ks-admin/barrasup/{id}', 'BarraSupController@update');
-Route::resource('/ks-admin/menu', 'MenuController');
-Route::resource('/ks-admin/sliders', 'SlidersController');
-Route::resource('/ks-admin/inicio/seccion1', 'Seccion1Controller');
-Route::resource('/ks-admin/inicio/seccion2', 'Seccion2Controller');
-Route::resource('/ks-admin/inicio/seccion3', 'Seccion3Controller');
-Route::resource('/ks-admin/inicio/seccion4', 'Seccion4Controller');
-Route::resource('/ks-admin/inicio/seccion5', 'Seccion5Controller');
-Route::resource('/ks-admin/inicio/seccion6', 'Seccion6Controller');
-Route::resource('/ks-admin/inicio/seccion7', 'Seccion7Controller');
-Route::resource('/ks-admin/inicio/seccion8', 'Seccion8Controller');
-Route::resource('/ks-admin/inicio/seccion9', 'Seccion9Controller');
-Route::resource('/ks-admin/inicio/seccion10', 'Seccion10Controller');
-Route::resource('/ks-admin/inicio/seccion11', 'Seccion11Controller');
-Route::resource('/ks-admin/inicio/seccion12', 'Seccion12Controller');
-Route::resource('/ks-admin/nace', 'KSNaceController');
-Route::resource('/ks-admin/acerca', 'KSAcercaController');
-Route::resource('/ks-admin/telerehabilitacion', 'KSTelerController');
-Route::resource('/ks-admin/fisioterapia', 'KSFisioController');
-Route::resource('/ks-admin/cuello', 'KSCuelloController');
-Route::resource('/ks-admin/espalda', 'KSEspaldaController');
-Route::resource('/ks-admin/rodilla', 'KSRodillaController');
-Route::resource('/ks-admin/deportivas', 'KSDeportivasController');
-Route::resource('/ks-admin/clientes', 'ClientesController');
-Route::get('/ks-admin/clave_documentos', 'ClaveDocsController@index');
-Route::put('/ks-admin/clave_documentos/{id}', 'ClaveDocsController@update');
-Route::get('/ks-admin/talleres', 'TalleresController@index');
-Route::put('/ks-admin/talleres/{id}', 'TalleresController@update');
-Route::resource('/ks-admin/inicio/footer', 'FooterController');
-Route::resource('/ks-admin/screening', 'KSScreeningController');
-
-Route::resource('/ks-admin/blog/entrada', 'EntradaBlogController');
-Route::resource('/ks-admin/blog/entrada_en', 'EntradaEnBlogController');
-
-Route::post('/ks-admin/blog/detalle/{id}', 'ListaEntradasController@store');
-Route::get('/ks-admin/blog/lista_entradas', 'ListaEntradasController@index');
-Route::get('/ks-admin/blog/comentarios', 'ComentariosController@index');
-Route::put('/ks-admin/blog/comentarios/{id}', 'ComentariosController@update');
-Route::get('/ks-admin/blog/categorias', 'CategoriasController@index');
-Route::get('/ks-admin/blog/categorias/{id}/edit', 'CategoriasController@show');
-Route::put('/ks-admin/blog/categorias/{id}', 'CategoriasController@update');
-Route::post('/ks-admin/blog/categorias', 'CategoriasController@store');
-Route::delete('/ks-admin/blog/categorias/{id}', 'CategoriasController@destroy');
-
-Route::get('/ks-admin/blog/categorias_en', 'CategoriasEnController@index');
-Route::get('/ks-admin/blog/categorias_en/{id}/edit', 'CategoriasEnController@show');
-Route::put('/ks-admin/blog/categorias_en/{id}', 'CategoriasEnController@update');
-Route::post('/ks-admin/blog/categorias_en', 'CategoriasEnController@store');
-Route::delete('/ks-admin/blog/categorias_en/{id}', 'CategoriasEnController@destroy');
-
-Route::post('/ks-admin/blog/detalle_en/{id}', 'ListaEntradasEnController@store');
-Route::get('/ks-admin/blog/lista_entradas_en', 'ListaEntradasEnController@index');
-Route::get('/ks-admin/blog/comentarios_en', 'ComentariosEnController@index');
-Route::put('/ks-admin/blog/comentarios_en/{id}', 'ComentariosEnController@update');
-Route::resource('/ks-admin/blog/categorias_en', 'CategoriasEnController');
+Route::post('/preguntas', 'PreguntasController@preguntas');
+Route::post('/questions', 'PreguntasController@preguntas_en');
 
 Route::post('sendbasicemail', 'MailController@basic_email');
 Route::post('sendbasicemail_en', 'MailController@basic_email_en');
-Route::post('agenda_gratis', 'MailController@basic_email_agenda');
-Route::post('book_free', 'MailController@basic_email_agenda_en');
 
 Auth::routes();
+
+Route::get('/ksadmin', 'HomeController@index')->name('ksadmin');
+Route::resource('/ksadmin/inicio/header', 'HeaderController');
+Route::resource('/ksadmin/inicio/seccion1', 'InicioSeccion1Controller');
+Route::resource('/ksadmin/inicio/seccion2', 'InicioSeccion2Controller');
+Route::resource('/ksadmin/inicio/seccion3', 'InicioSeccion3Controller');
+Route::resource('/ksadmin/inicio/seccion4', 'InicioSeccion4Controller');
+Route::resource('/ksadmin/inicio/seccion5', 'InicioSeccion5Controller');
+Route::resource('/ksadmin/inicio/seccion6', 'InicioSeccion6Controller');
+Route::resource('/ksadmin/inicio/seccion8', 'InicioSeccion8Controller');
+Route::resource('/ksadmin/inicio/seccion9', 'InicioSeccion9Controller');
+Route::resource('/ksadmin/inicio/seccion10', 'InicioSeccion10Controller');
+
+Route::resource('/ksadmin/acerca', 'KSAcercaController');
+Route::resource('/ksadmin/nace', 'KSNaceController');
+
+Route::resource('/ksadmin/telerehab', 'KSTelerehabController');
+Route::resource('/ksadmin/fisio', 'KSFisioController');
+Route::resource('/ksadmin/cuello', 'KSCuelloController');
+Route::resource('/ksadmin/espalda', 'KSEspaldaController');
+Route::resource('/ksadmin/rodilla', 'KSRodillaController');
+Route::resource('/ksadmin/deportivas', 'KSDeportivasController');
+Route::resource('/ksadmin/screening', 'KSScreeningController');
+
+Route::get('/ksadmin/blog/categorias', 'CategoriasController@index');
+Route::get('/ksadmin/blog/categorias/tabla', 'CategoriasController@cargar');
+Route::post('/ksadmin/blog/categorias', 'CategoriasController@store');
+Route::post('/ksadmin/blog/categorias/{id}/edit', 'CategoriasController@edit');
+Route::post('/ksadmin/blog/categorias/{id}', 'CategoriasController@destroy');
+Route::get('/ksadmin/capacitacion', function () {
+    return view('/ksadmin.capacitacion');
+});
+Route::resource('/ksadmin/cambiarpwd', 'UtilidadesController');
+
+Route::get('/ksadmin/blog/articulos', 'ArticulosController@index');
+Route::get('/ksadmin/blog/articulos/{id}/editar', 'ArticulosController@mostrar_articulo');
+Route::get('/ksadmin/blog/articulos/editar/{id}', 'ArticulosController@show');
+Route::get('/ksadmin/blog/articulos/nuevo', 'ArticulosController@nuevo');
+Route::post('/ksadmin/blog/articulos', 'ArticulosController@store');
+Route::post('/ksadmin/blog/articulos/{id}/edit', 'ArticulosController@edit');
+Route::post('/ksadmin/blog/articulos/{id}/actualizar', 'ArticulosController@update');
+Route::get('/ksadmin/blog/articulos/tabla', 'ArticulosController@cargar');
+Route::post('/ksadmin/blog/articulos/{id}', 'ArticulosController@destroy');
+
+Route::get('/ksadmin/blog/articulos_en', 'ArticulosController@index_en');
+Route::get('/ksadmin/blog/articulos_en/{id}/editar', 'ArticulosController@mostrar_articulo');
+Route::get('/ksadmin/blog/articulos_en/editar/{id}', 'ArticulosController@show_en');
+Route::get('/ksadmin/blog/articulos_en/nuevo', 'ArticulosController@nuevo_en');
+Route::post('/ksadmin/blog/articulos_en', 'ArticulosController@store_en');
+Route::post('/ksadmin/blog/articulos_en/{id}/edit', 'ArticulosController@edit_en');
+Route::post('/ksadmin/blog/articulos_en/{id}/actualizar', 'ArticulosController@update_en');
+Route::get('/ksadmin/blog/articulos_en/tabla', 'ArticulosController@cargar_en');
+Route::post('/ksadmin/blog/articulos_en/{id}', 'ArticulosController@destroy_en');
+
+Route::get('/ksadmin/blog/opiniones', 'OpinionesController@index');
+Route::get('/ksadmin/blog/opiniones/tabla', 'OpinionesController@cargar');
+Route::post('/ksadmin/blog/opiniones/autorizar/{id}', 'OpinionesController@autorizar');
+Route::post('/ksadmin/blog/opiniones/respuesta/{id}/edit', 'OpinionesController@update');
+
+Route::resource('/blog', 'BlogController');
+Route::get('/blog_en', 'BlogController@index_en');
+Route::get('/blog/articulo/comentarios/{id}', 'BlogController@comentarios');
+Route::post('/blog/articulo/comentario/{id}', 'BlogController@store');
+Route::get('/blog/articulo/categoria', 'BlogController@categoria');
+Route::get('/blog/articulo/buscar', 'BlogController@busqueda');
+Route::get('/blog/articulo/{id}', 'BlogController@show');
+Route::get('/blog/articulo_en/{id}', 'BlogController@show_en');
+
+Route::post('agenda_gratis', 'MailController@basic_email_agenda');
+
+Route::get('viewmail', function () {
+    return view('templatemail');
+});

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\WebsiteHeader;
+use App\WebsiteMenu;
+use App\WebsiteYoutube;
 use App\Textos;
 
 class ScreeningController extends Controller
@@ -15,26 +17,28 @@ class ScreeningController extends Controller
      */
     public function index()
     {
-        $textos = DB::table('textos')->where('pagina', '=', 'Screening')->get();
-        $appointlet = DB::table('blog')->select('blog.url_agenda')->get();
-        $websiteheader = DB::table('website_header')->get();
-        $websitemenu = DB::table('website_menu')->get();
-        $footer = DB::table('website_footer')->get();
-        $servicios = DB::table('website_servicios')->get();
+        $textos = Textos::all();
+        $screening = Textos::where('pagina', 'Screening')->get();
+        $websiteheader = WebsiteHeader::all();
+        $menu = WebsiteMenu::select('website_menu.spanish')->get();
+        $youtube = WebsiteYoutube::select('website_youtube.spanish')->get();
 
-        return view('website.paginas.screening', array('textos' => $textos, 'websiteheader' => $websiteheader, 'websitemenu' => $websitemenu, 'footer' => $footer, 'inicioseccion9' => $servicios, 'agenda' => $appointlet));
+        $idioma = 'ES';
+
+        return view('website.screening', array('textos' => $textos, 'menu' => $menu, 'websiteheader' => $websiteheader, 'screening' => $screening, 'youtube' => $youtube, 'idioma' => $idioma));
     }
 
-    public function busqueda(Request $request)
+    public function index_en()
     {
-        $textos = DB::table('textos')->where('pagina', '=', 'Screening')->get();
-        $appointlet = DB::table('blog')->select('blog.url_agenda')->get();
-        $websiteheader = DB::table('website_header')->get();
-        $websitemenu = DB::table('website_menu')->get();
-        $footer = DB::table('website_footer')->get();
-        $servicios = DB::table('website_servicios')->get();
+        $textos = Textos::all();
+        $screening = Textos::where('pagina', 'Screening')->get();
+        $websiteheader = WebsiteHeader::all();
+        $menu = WebsiteMenu::select('website_menu.english')->get();
+        $youtube = WebsiteYoutube::select('website_youtube.english')->get();
 
-        return view('website.paginas.screening_en', array('textos' => $textos, 'websiteheader' => $websiteheader, 'websitemenu' => $websitemenu, 'footer' => $footer, 'inicioseccion9' => $servicios, 'agenda' => $appointlet));
+        $idioma = 'EN';
+
+        return view('website.screening', array('textos' => $textos, 'menu' => $menu, 'websiteheader' => $websiteheader, 'screening' => $screening, 'youtube' => $youtube, 'idioma' => $idioma));
     }
 
     /**
