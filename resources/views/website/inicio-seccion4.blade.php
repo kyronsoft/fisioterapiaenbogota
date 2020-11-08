@@ -37,9 +37,11 @@
                 <div class="col-11 align-self-center">
                     <div class="texto-seccion4 mt-5">@php echo $youtube[2]->english; @endphp</div>
                     <a href="{{ url('/') }}/contactanos" class="btn btn-info btn-block enlace-video">Request more
-                        information</a>
+                        Information</a>
                 </div>
             </div>
         </div>
     </section>
 @endif
+
+

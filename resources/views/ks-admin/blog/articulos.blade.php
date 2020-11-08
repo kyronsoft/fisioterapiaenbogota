@@ -34,7 +34,7 @@
                 <div class="col">
                     <div class="col d-flex justify-content-end mt-3">
                         <form action="/ksadmin/blog/articulos_en/nuevo">
-                            <button id="btnnuevo_en" class="btn btn-info mr-2">Nuevo</button>
+                            <button id="btnnuevo_en" class="btn btn-info mr-2">Nuevo Inglés</button>
                         </form>
                     </div>
                     <div id="articulos_en"></div>

@@ -26,15 +26,18 @@
                 <div class="col">
                     <div id="opiniones_es"></div>
                 </div>
+                <div class="col d-flex justify-content-center mt-3">
+                    <button id="btnactualizar" class="btn btn-success mr-2">Actualizar</button>
+                </div>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                 <div class="col">
-                    <div id="table_tabulator_en"></div>
+                    <div id="opiniones_en"></div>
+                </div>
+                <div class="col d-flex justify-content-center mt-3">
+                    <button id="btnactualizar_en" class="btn btn-success mr-2">Actualizar</button>
                 </div>
             </div>
-        </div>
-        <div class="col d-flex justify-content-center mt-3">
-            <button id="btnactualizar" class="btn btn-success mr-2">Actualizar</button>
         </div>
     </div>
 @endsection
@@ -42,3 +45,4 @@
 @section('scripts')
     <script src="{{ url('/') }}/js/GestorOpiniones.js"></script>
 @endsection
+

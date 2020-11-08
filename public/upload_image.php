@@ -24,7 +24,7 @@ try {
 
     // Allowed extensions.
     $allowedExts = array("gif", "jpeg", "jpg", "png", "svg", "blob");
- 
+
     // Allowed mime types.
     $allowedMimeTypes = array("image/gif", "image/jpeg", "image/pjpeg", "image/x-png", "image/png", "image/svg+xml");
 

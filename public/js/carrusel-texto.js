@@ -1,7 +1,7 @@
 var swiper = new Swiper('.swiper-container', {
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction',
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: true,
     },
     navigation: {
         nextEl: '.swiper-button-next',

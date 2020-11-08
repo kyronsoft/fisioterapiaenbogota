@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="title" content="Fisioterapia en Bogotá ✅ Telerehabilitación en Bogotá 🧿">
     <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="website" />
@@ -179,8 +180,6 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{{ url('/ksadmin/screening') }}">Screening Prevencion De
                             Lesiones</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Acupuntura (Próximamente)</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -196,20 +195,12 @@
                         <a class="dropdown-item" href="{{ '/ksadmin/blog/opiniones' }}">Opiniones</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contactanos</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Utilidades
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
-                        <a class="dropdown-item" href="{{ '/ksadmin/capacitacion' }}">Capacitación</a>
-                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{{ '/ksadmin/cambiarpwd' }}">Cambiar Contraseña</a>
                     </div>
                 </li>

@@ -81,12 +81,13 @@
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="{{ url('/') }}/css/style.css">
     <link rel="stylesheet" href="{{ url('/') }}/css/floating-wpp.min.css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="{{url('/')}}/css/jssocials/jssocials.css">
-    <link rel="stylesheet" type="text/css" href="{{url('/')}}/css/jssocials/jssocials-theme-classic.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/jssocials/jssocials.css">
+    <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/jssocials/jssocials-theme-classic.css">
 </head>
 
-<body>
+<body style="background-color: #fff">
     @php
     $route = Route::current();
     @endphp
@@ -95,42 +96,59 @@
 
     <div id="app">
         @if ($idioma == 'ES')
+            <header class="col-12 text-center">
+                <!-- Widget [Search Bar Widget]-->
+                <div class="widget search" style="border:none;">
+                    <header>
+                        <h3 class="h6">Buscar Artículo</h3>
+                    </header>
+                    <form action="/blog/articulo/buscar" class="search-form">
+                        <div class="form-group">
+                            <input type="search" name="search" placeholder="¿Qué estás buscando?">
+                            <button type="submit" class="submit"><i class="icon-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </header>
             <div class="container-fluid" style="background-color: #fff">
                 <div class="row">
                     <!-- Latest Posts -->
-                    <main class="post blog-post col-lg-8">
+                    <main class="post blog-post col-12">
                         <div class="container mt-5">
                             <div class="post-single">
                                 <div class="post-details">
-                                    <h1>{{ $articulo->titulo_articulo }}<a href="#"></a>
-                                    </h1>
-                                    <div class="post-footer d-flex align-items-center flex-column flex-sm-row"><a
-                                            href="#" class="author d-flex align-items-center flex-wrap">
+                                    <h1>{{ $articulo[0]->titulo_articulo }}<a href="#"></a></h1>
+                                    <div class="post-footer d-flex align-items-center flex-column flex-sm-row">
+                                        <a href="#" class="author d-flex align-items-center flex-wrap">
                                             <div class="avatar"><img src="{{ url('/') }}/storage/admin.jpg"
-                                                    alt="avatar_adriana" class="img-fluid"></div>
-                                            <div class="title"><span>Fysiopuntura</span></div>
+                                                    alt="avatar_adriana" class="img-fluid">
+                                            </div>
+                                            <div class="title" id="fysiopuntura-name">Fysiopuntura</div>
                                         </a>
-                                        <div class="d-flex align-items-center flex-wrap">
-                                            <div class="date"><i class="icon-clock"></i> @php
-                                                $creacion = date('Y-m-d',strtotime($articulo->created_at));
+                                        <div class="row mt-2">
+                                            <div class="etiqueta-icon fecha-articulo"><i class="fas fa-clock"></i></div>
+                                            <div class="etiqueta-text fecha-articulo">@php
+                                                $creacion = date('Y-m-d',strtotime($articulo[0]->created_at));
                                                 echo $creacion;
                                                 @endphp</div>
-                                            <div class="views"><i class="icon-eye"></i> {{ $articulo->vistas_articulo }}
+                                            <div class="etiqueta-icon"><i class="fas fa-comment-alt"></i>
                                             </div>
-                                            <div class="comments meta-last"><i class="icon-comment"></i>
-                                                <comentarios-component id="{{ $articulo->id_articulo }}">
-                                                </comentarios-component>
+                                            <div class="etiqueta-text">
+                                                <comentarios-component id="{{ $articulo[0]->id_articulo }}">
+                                                </comentarios-component> comentarios
                                             </div>
+                                            <div class="etiqueta-icon"><i class="fas fa-eye"></i></div>
+                                            <div class="etiqueta-text">{{ $articulo[0]->vistas_articulo }}</div>
                                         </div>
                                     </div>
                                     <div class="post-body">
                                         @php
-                                        echo $articulo->contenido_articulo;
+                                        echo $articulo[0]->contenido_articulo;
                                         @endphp
                                     </div>
                                     <div class="post-tags">
                                         @php
-                                        $tags = explode(',',$articulo->p_claves_articulo);
+                                        $tags = explode(',',$articulo[0]->p_claves_articulo);
                                         @endphp
                                         @foreach ($tags as $item => $value)
                                             <label class="tag">#{{ $value }}</label>
@@ -147,8 +165,7 @@
                                                 <div class="comment-header d-flex justify-content-between">
                                                     <div class="user d-flex align-items-center">
                                                         <div class="title">
-                                                            <strong>{{ $item->nombre_opinion }}</strong><span
-                                                                class="date">{{ $item->fecha_opinion }}</span>
+                                                            <strong>{{ $item->nombre_opinion }}</strong><small>{{ \Carbon\Carbon::parse($item->fecha_opinion)->format('d/m/Y') }}</small>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -158,8 +175,9 @@
                                                 </div>
                                                 <div class="comment-header d-flex justify-content-between">
                                                     <div class="user d-flex align-items-center">
-                                                        <div class="title"><i><strong>Fysyopuntura</strong></i><span
-                                                                class="date">{{ $item->fecha_respuesta }}</span></div>
+                                                        <div class="title">
+                                                            <i><strong>Fysyopuntura</strong></i><small>{{ \Carbon\Carbon::parse($item->fecha_respuesta)->format('d/m/Y') }}</small>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="comment-body">
@@ -171,7 +189,7 @@
                                             <header>
                                                 <h3 class="h6">Deja un comentario</h3>
                                             </header>
-                                            <form action="/blog/articulo/comentario/{{ $articulo->id_articulo }}"
+                                            <form action="/blog/articulo/comentario/{{ $articulo[0]->id_articulo }}"
                                                 method="POST" class="commenting-form">
                                                 @csrf
                                                 <div class="row">
@@ -189,7 +207,7 @@
                                                             class="form-control"></textarea>
                                                     </div>
                                                     <div class="form-group col-md-12">
-                                                        <button type="submit" class="btn btn-secondary">Enviar
+                                                        <button type="submit" class="btn btn-info">Enviar
                                                             Comentario</button>
                                                     </div>
                                                 </div>
@@ -198,99 +216,50 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </main>
-                    <aside class="col-lg-4">
-                        <!-- Widget [Search Bar Widget]-->
-                        <div class="widget search">
-                            <header>
-                                <h3 class="h6">Buscar Artículo</h3>
-                            </header>
-                            <form action="/blog/articulo/buscar" class="search-form">
-                                <div class="form-group">
-                                    <input type="search" name="search" placeholder="¿Qué estás buscando?">
-                                    <button type="submit" class="submit"><i class="icon-search"></i></button>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Widget [Latest Posts Widget]        -->
-                        <div class="widget latest-posts">
-                            <header>
-                                <h3 class="h6">Artículos mas Vistos</h3>
-                            </header>
-                            <div class="blog-posts">
-                                @foreach ($mas_vistos as $item)
-                                    <a href="/blog/articulo/{{ $item->id_articulo }}">
-                                        <div class="item d-flex align-items-center">
-                                            {{-- <div class="image"><img
-                                                    src="{{ $item->portada_articulo }}" alt="portada_mas_visto"
-                                                    class="img-fluid"></div> --}}
-                                            <div class="title"><strong>{{ $item->titulo_articulo }}</strong>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="views"><i class="icon-eye"></i>
-                                                        {{ $item->vistas_articulo }}
-                                                    </div>
-                                                    <div class="comments"><i class="icon-comment"></i>
-                                                        <comentarios-component id="{{ $item->id_articulo }}">
-                                                        </comentarios-component>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                @endforeach
-                            </div>
-                        </div>
-                        <!-- Widget [Categories Widget]-->
-                        <div class="widget categories">
-                            <header>
-                                <h3 class="h6">Categorias</h3>
-                            </header>
-                            @foreach ($categorias as $item)
-                                <div class="item d-flex justify-content-between"><a
-                                        href="/blog/articulo/categoria?search={{ $item->titulo_categoria }}">{{ $item->titulo_categoria }}</a><span>{{ $item->cantidad }}</span>
-                                </div>
-                            @endforeach
-                        </div>
-                    </aside>
                 </div>
             </div>
         @elseif ($idioma == 'EN')
             <div class="container-fluid" style="background-color: #fff">
                 <div class="row">
                     <!-- Latest Posts -->
-                    <main class="post blog-post col-lg-8">
+                    <main class="post blog-post col-12">
                         <div class="container mt-5">
                             <div class="post-single">
                                 <div class="post-details">
-                                    <h1>{{ $articulo->titulo_en }}<a href="#"></a>
-                                    </h1>
-                                    <div class="post-footer d-flex align-items-center flex-column flex-sm-row"><a
-                                            href="#" class="author d-flex align-items-center flex-wrap">
+                                    <h1>{{ $articulo[0]->titulo_articulo }}<a href="#"></a></h1>
+                                    <div class="post-footer d-flex align-items-center flex-column flex-sm-row">
+                                        <a href="#" class="author d-flex align-items-center flex-wrap">
                                             <div class="avatar"><img src="{{ url('/') }}/storage/admin.jpg"
-                                                    alt="avatar_adriana" class="img-fluid"></div>
-                                            <div class="title"><span>Fysiopuntura</span></div>
+                                                    alt="avatar_adriana" class="img-fluid">
+                                            </div>
+                                            <div class="title" id="fysiopuntura-name">Fysiopuntura</div>
                                         </a>
-                                        <div class="d-flex align-items-center flex-wrap">
-                                            <div class="date"><i class="icon-clock"></i> @php
-                                                $creacion = date('Y-m-d',strtotime($articulo->created_at));
+                                        <div class="row mt-2">
+                                            <div class="etiqueta-icon fecha-articulo"><i class="fas fa-clock"></i></div>
+                                            <div class="etiqueta-text fecha-articulo">@php
+                                                $creacion = date('Y-m-d',strtotime($articulo[0]->created_at));
                                                 echo $creacion;
                                                 @endphp</div>
-                                            <div class="views"><i class="icon-eye"></i> {{ $articulo->vistas_articulo }}
+                                            <div class="etiqueta-icon"><i class="fas fa-comment-alt"></i>
                                             </div>
-                                            <div class="comments meta-last"><i class="icon-comment"></i>
-                                                <comentarios-component id="{{ $articulo->id_articulo }}">
-                                                </comentarios-component>
+                                            <div class="etiqueta-text">
+                                                <comentarios-component id="{{ $articulo[0]->id_articulo }}">
+                                                </comentarios-component> comments
                                             </div>
+                                            <div class="etiqueta-icon"><i class="fas fa-eye"></i></div>
+                                            <div class="etiqueta-text">{{ $articulo[0]->vistas_articulo }}</div>
                                         </div>
                                     </div>
                                     <div class="post-body">
                                         @php
-                                        echo $articulo->contenido_en;
+                                        echo $articulo[0]->contenido_en;
                                         @endphp
                                     </div>
                                     <div class="post-tags">
                                         @php
-                                        $tags = explode(',',$articulo->p_claves_en);
+                                        $tags = explode(',',$articulo[0]->p_claves_en);
                                         @endphp
                                         @foreach ($tags as $item => $value)
                                             <label class="tag">#{{ $value }}</label>
@@ -306,22 +275,24 @@
                                             <div class="comment">
                                                 <div class="comment-header d-flex justify-content-between">
                                                     <div class="user d-flex align-items-center">
-                                                        <div class="title"><strong>{{ $item->nombre_en }}</strong><span
-                                                                class="date">{{ $item->fecha_en }}</span></div>
+                                                        <div class="title">
+                                                            <strong>{{ $item->nombre_opinion }}</strong><small>{{ \Carbon\Carbon::parse($item->fecha_opinion)->format('d/m/Y') }}</small>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="comment-body">
-                                                    <p>{{ $item->contenido_en }}
+                                                    <p>{{ $item->contenido_opinion }}
                                                     </p>
                                                 </div>
                                                 <div class="comment-header d-flex justify-content-between">
                                                     <div class="user d-flex align-items-center">
-                                                        <div class="title"><i><strong>Fysyopuntura</strong></i><span
-                                                                class="date">{{ $item->fecha_respuesta }}</span></div>
+                                                        <div class="title">
+                                                            <i><strong>Fisyopuntura</strong></i><small>{{ \Carbon\Carbon::parse($item->fecha_respuesta)->format('d/m/Y') }}</small>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="comment-body">
-                                                    <p><i>{{ $item->respuesta_en }}</i></p>
+                                                    <p><i>{{ $item->respuesta_opinion }}</i></p>
                                                 </div>
                                             </div>
                                         @endforeach
@@ -329,13 +300,13 @@
                                             <header>
                                                 <h3 class="h6">Leave a comment</h3>
                                             </header>
-                                            <form action="/blog/articulo/comentario/{{ $articulo->id_articulo }}"
+                                            <form action="/blog/articulo_en/comentario/{{ $articulo[0]->id_articulo }}"
                                                 method="POST" class="commenting-form">
                                                 @csrf
                                                 <div class="row">
                                                     <div class="form-group col-md-6">
                                                         <input type="text" name="username" id="username"
-                                                            placeholder="Name" class="form-control">
+                                                            placeholder="Full Name" class="form-control">
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <input type="email" name="email" id="useremail"
@@ -343,11 +314,11 @@
                                                     </div>
                                                     <div class="form-group col-md-12">
                                                         <textarea name="usercomment" id="usercomment"
-                                                            placeholder="Write some comment"
+                                                            placeholder="Write your comment"
                                                             class="form-control"></textarea>
                                                     </div>
                                                     <div class="form-group col-md-12">
-                                                        <button type="submit" class="btn btn-secondary">Send
+                                                        <button type="submit" class="btn btn-info">Send
                                                             Comment</button>
                                                     </div>
                                                 </div>
@@ -356,60 +327,8 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </main>
-                    <aside class="col-lg-4">
-                        <!-- Widget [Search Bar Widget]-->
-                        <div class="widget search">
-                            <header>
-                                <h3 class="h6">Search Article</h3>
-                            </header>
-                            <form action="/blog/articulo/buscar_en" class="search-form">
-                                <div class="form-group">
-                                    <input type="search" name="search" placeholder="What are you looking for?">
-                                    <button type="submit" class="submit"><i class="icon-search"></i></button>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Widget [Latest Posts Widget]        -->
-                        <div class="widget latest-posts">
-                            <header>
-                                <h3 class="h6">Most viewed articles</h3>
-                            </header>
-                            <div class="blog-posts">
-                                @foreach ($mas_vistos as $item)
-                                    <a href="/blog/articulo_en/{{ $item->id_articulo }}">
-                                        <div class="item d-flex align-items-center">
-                                            {{-- <div class="image"><img
-                                                    src="{{ $item->portada_articulo }}" alt="portada_mas_visto"
-                                                    class="img-fluid"></div> --}}
-                                            <div class="title"><strong>{{ $item->titulo_en }}</strong>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="views"><i class="icon-eye"></i>
-                                                        {{ $item->vistas_articulo }}
-                                                    </div>
-                                                    <div class="comments"><i class="icon-comment"></i>
-                                                        <comentarios-component id="{{ $item->id_articulo }}">
-                                                        </comentarios-component>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                @endforeach
-                            </div>
-                        </div>
-                        <!-- Widget [Categories Widget]-->
-                        <div class="widget categories">
-                            <header>
-                                <h3 class="h6">Categories</h3>
-                            </header>
-                            @foreach ($categorias as $item)
-                                <div class="item d-flex justify-content-between"><a
-                                        href="/blog/articulo/categoria?search={{ $item->titulo_categoria }}">{{ $item->titulo_categoria }}</a><span>{{ $item->cantidad }}</span>
-                                </div>
-                            @endforeach
-                        </div>
-                    </aside>
                 </div>
             </div>
         @endif
@@ -435,3 +354,5 @@
 </body>
 
 </html>
+
+

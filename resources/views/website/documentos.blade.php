@@ -98,7 +98,7 @@
                         <img src="{{ url('/') }}/storage/flower-decor.png" alt="" style="width: 60px;">
                     </div>
                     <div class="align-self-center">
-                        <h2 class="text-center ml-3">Protegido: Documentos</h2>
+                        <h2 class="text-center text-white ml-3"><b>Documentos</b></h2>
                     </div>
                 </div>
             </section>
@@ -126,21 +126,22 @@
             <section class="container-fluid d-flex justify-content-center other-background">
                 <div class="row">
                     <div class="align-self-center">
-                        <img src="images/flower-decor.png" alt="" style="width: 60px;">
+                        <img src="{{ url('/') }}/storage/flower-decor.png" alt="" style="width: 60px;">
                     </div>
                     <div class="align-self-center">
-                        <h2 class="text-center ml-3">Protected: Documents</h2>
+                        <h2 class="text-center text-white ml-3"><b>Documents</b></h2>
                     </div>
                 </div>
             </section>
 
-            <section class="container-fluid d-flex justify-content-around contacto1">
+            <section class="container-fluid d-flex justify-content-around">
                 <div class="row align-self-center">
                     <form action="{{ url('/') }}/requisitos" method="POST">
                         @csrf
                         <div class="col-xs-12 align-self-center">
                             <h3 class="text-center my-5">This content is password protected. To see it, by
-                                favor, enter your password below:</h3>
+                                favor,
+                                enter your password below:</h3>
                             <h4 class="text-center">Password:</h4>
                             <div class="text-center my-3">
                                 <input type="password" name="password" required>
@@ -170,7 +171,7 @@
     <script src="{{ url('/') }}/js/main.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169704393-1"></script>
-    
+
 
     @if ($nopassword == 'no-password')
         <script>

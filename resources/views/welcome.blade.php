@@ -81,7 +81,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/ihover.css">
 </head>
 
-<body>
+<body style="background-color: #fff">
     <div id="app">
         @php
         $route = Route::current();
@@ -96,14 +96,15 @@
                         alt="fisioterapia-y-rehabilitacion.jpg">
                     <p id="titulo1-carousel">Fisioterapia en Bogotá</p>
                     <p id="subtitulo1-carousel">Adriana Lucía Ramírez Bonilla</p>
-                    <button class="btn btn-info btn-masinfo">Más Información sobre Fisioterapia</button>
+                    <a class="btn btn-info btn-masinfo" href="{{ url('fisio') }}">Más Información sobre
+                        Fisioterapia</a>
                 </div>
             @elseif ($route->uri == 'en')
                 <div><img src="{{ url('/') }}/storage/fisioterapia-y-rehabilitacion.jpg"
                         alt="fisioterapia-y-rehabilitacion.jpg">
                     <p id="titulo1-carousel">Physiotherapy in Bogotá</p>
                     <p id="subtitulo1-carousel">Adriana Lucía Ramírez Bonilla</p>
-                    <button class="btn btn-info btn-masinfo">More Information on Physiotherapy</button>
+                    <a class="btn btn-info btn-masinfo" href="{{ url('physio') }}">More Information on Physiotherapy</a>
                 </div>
             @endif
             @if ($route->uri == '/')
@@ -127,7 +128,8 @@
                             <p>Conveniencia</p>
                         </div>
                     </div>
-                    <button class="btn btn-info btn-masinfo">Más Información sobre Fisioterapia</button>
+                    <a class="btn btn-info btn-masinfo" href="{{ url('telerehab') }}">Más Información sobre
+                        Telerehabilitación</a>
                 </div>
             @elseif ($route->uri == 'en')
                 <div><img src="{{ url('/') }}/storage/Fisioterapia-y-fisioterapeuta-en-bogota.jpg"
@@ -150,7 +152,8 @@
                             <p>Convenience</p>
                         </div>
                     </div>
-                    <button class="btn btn-info btn-masinfo">More Information on Telerehabilitation</button>
+                    <button class="btn btn-info btn-masinfo" href="{{ url('telerehabilitation') }}">More Information on
+                        Telerehabilitation</button>
                 </div>
             @endif
         </div>

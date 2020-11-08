@@ -87,61 +87,61 @@
 
         @if ($idioma == 'ES')
             <section class="container-fluid d-flex justify-content-start nace-uno">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-nace">@php echo $nace[0]->spanish; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-end nace-dos">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-nace">@php echo $nace[1]->spanish; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-start nace-tres">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-nace">@php echo $nace[2]->spanish; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-end nace-cuatro">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-nace">@php echo $nace[3]->spanish; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-start nace-cinco">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-nace">@php echo $nace[4]->spanish; @endphp</div>
                 </div>
             </section>
         @elseif ($idioma == 'EN')
             <section class="container-fluid d-flex justify-content-start nace-uno">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-nace">@php echo $nace[0]->english; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-end nace-dos">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-nace">@php echo $nace[1]->english; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-start nace-tres">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-nace">@php echo $nace[2]->english; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-end nace-cuatro">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-nace">@php echo $nace[3]->english; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-start nace-cinco">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-nace">@php echo $nace[4]->english; @endphp</div>
                 </div>
             </section>

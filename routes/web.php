@@ -119,6 +119,11 @@ Route::get('/ksadmin/blog/opiniones/tabla', 'OpinionesController@cargar');
 Route::post('/ksadmin/blog/opiniones/autorizar/{id}', 'OpinionesController@autorizar');
 Route::post('/ksadmin/blog/opiniones/respuesta/{id}/edit', 'OpinionesController@update');
 
+Route::get('/ksadmin/blog/opiniones_en', 'OpinionesController@index_en');
+Route::get('/ksadmin/blog/opiniones_en/tabla', 'OpinionesController@cargar_en');
+Route::post('/ksadmin/blog/opiniones_en/autorizar/{id}', 'OpinionesController@autorizar_en');
+Route::post('/ksadmin/blog/opiniones_en/respuesta/{id}/edit', 'OpinionesController@update_en');
+
 Route::resource('/blog', 'BlogController');
 Route::get('/blog_en', 'BlogController@index_en');
 Route::get('/blog/articulo/comentarios/{id}', 'BlogController@comentarios');
@@ -129,6 +134,7 @@ Route::get('/blog/articulo/{id}', 'BlogController@show');
 Route::get('/blog/articulo_en/{id}', 'BlogController@show_en');
 
 Route::post('agenda_gratis', 'MailController@basic_email_agenda');
+Route::post('summer-uploads','CargarImagen@summerUploads');
 
 Route::get('viewmail', function () {
     return view('templatemail');

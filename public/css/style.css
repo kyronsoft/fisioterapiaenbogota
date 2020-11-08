@@ -11,7 +11,7 @@ body {
 
 footer.main-footer {
     background: #0e0e0e;
-    padding: 100px 0 0;
+    padding: 50px 0 0;
     color: #fff;
 }
 
@@ -49,6 +49,7 @@ footer.main-footer {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: -1;
 }
 
 .sticky+.content {
@@ -65,6 +66,11 @@ footer.main-footer {
 
 .fa-linkedin, .fa-facebook, .fa-instagram, .fa-youtube {
     color: #0063BF;
+}
+
+.img-services {
+    border: solid 3px;
+    border-color: #888;
 }
 
 /* Estilos del Blog */
@@ -139,7 +145,21 @@ main.posts-listing .post-footer {
     letter-spacing: 0.05em;
     font-weight: 400;
     text-transform: uppercase;
-    color: #aaa;
+    color: #fff;
+    background-color: #000;
+}
+
+.etiqueta-icon {
+    background-color: rgb(39, 39, 39);
+    color: #fff;
+    padding: 2px;
+}
+
+.etiqueta-text {
+    border: solid 2px;
+    padding-right: 3px;
+    margin-right: 3px;
+    padding-left: 3px;
 }
 
 .post .avatar {
@@ -454,7 +474,7 @@ section.featured-posts .avatar {
 }
 
 .title {
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 section.featured-posts .title, section.featured-posts .date, section.featured-posts .comments {
@@ -496,6 +516,14 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
 
 .widget.latest-posts .comments::after {
     display: none;
+}
+
+.dolores .card {
+    border: none;
+}
+
+.dolores .nav-link {
+    font-size: 1.25em;
 }
 
 /* Fin Estilos Blog */
@@ -725,7 +753,7 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
 }
 
 .other-background {
-    background-image: linear-gradient(rgba(0, 17, 252, 0.734), rgba(0, 17, 252, 0.734)), url('/storage/taichi3.jpg');
+    background-image: linear-gradient(rgba(0, 99, 191, 0.8), rgba(0, 99, 191, 0.8)), url('/storage/taichi3.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -736,21 +764,72 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
     display: none;
     padding: 10px;
     background: #12A1BD;
-    font-size: 20px;
+    font-size: 30px;
     color: #fff;
     cursor: pointer;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 20px 20px 20px 20px;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 30px 30px 30px 30px;
+}
+
+video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+.imgA1 {
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.imgB1 {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    opacity: 0.8;
+}
+.imgA2 {
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.imgB2 {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+}
+.imgA3 {
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.imgB3 {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    opacity: 0.8;
+}
+
+@media (min-width: 319px) {
+    #fysiopuntura-name {
+        display: none;
+    }
 }
 
 @media (min-width: 320px) {
     .header {
-        height: 80px;
+        height: 160px;
     }
     #navbar {
         font-size: 14px;
+    }
+    #fysiopuntura-name {
+        display: initial;
+        margin-right: 25px;
     }
     #titulo1-carousel {
         position: absolute;
@@ -813,8 +892,11 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
     .seccion-dos, .seccion-tres {
         height: 2000px;
     }
-    .seccion-cuatro, .seccion-seis {
+    .seccion-cuatro {
         height: 1000px;
+    }
+    .seccion-seis {
+        height: 1500px;
     }
     .columna {
         padding: 30px;
@@ -835,12 +917,14 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
         padding: 20px;
     }
     .item-seccion2, .item-seccion3 {
-        margin-left: 60px;
         font-size: 1.22em;
     }
     .icono-seccion2, .icono-seccion3 {
-        width: 40px;
+        width: 50px;
         padding: 5px;
+        margin-left: 100px;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
     .videoWrapper {
         position: relative;
@@ -883,23 +967,35 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
     .fa-star {
         color: yellow;
     }
-    .acerca-uno, .acerca-dos, .acerca-tres, .acerca-cuatro, .acerca-cinco {
+    .acerca-uno, .acerca-dos {
+        height: 1000px;
+    }
+    .acerca-tres, .acerca-cuatro, .acerca-cinco {
         height: 600px;
     }
-    .nace-uno, .nace-dos, .nace-tres, .nace-cuatro, .nace-cinco {
+    .nace-uno, .nace-dos, .nace-tres {
+        height: 1000px;
+    }
+    .nace-cuatro, .nace-cinco {
         height: 600px;
     }
-    .teler-dos, .teler-tres, .teler-cuatro {
-        height: 1400px;
+    .teler-dos, .teler-tres {
+        height: 1200px;
     }
-    .teler-uno, .teler-cinco {
+    .teler-cuatro {
+        height: 900px;
+    }
+    .teler-uno {
+        height: 1600px;
+    }
+    .teler-cinco {
         height: 1800px;
     }
     .fisio-uno {
         height: 600px;
     }
     .fisio-dos, .fisio-tres {
-        height: 1000px;
+        height: 1600px;
     }
     .texto-fisio, .texto-dolores, .texto-teler, .texto-cuello, .texto-screening {
         font-size: 1.24em;
@@ -938,6 +1034,9 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
     }
     section.featured-posts .post-footer {
         font-size: 0.75em;
+    }
+    .fecha-articulo {
+        display: none !important;
     }
 }
 
@@ -1034,6 +1133,12 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
 }
 
 @media (min-width: 767px) {
+    #btn-contact320 {
+        visibility: hidden;
+    }
+    .fecha-articulo {
+        display: initial !important;
+    }
     .header .row {
         height: 60px;
         padding-top: 25px;
@@ -1290,7 +1395,7 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1023px) {
     .header {
         height: 70px;
     }
@@ -1304,19 +1409,13 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
     #navbarSupportedContent {
         margin-left: 3rem;
     }
-    .nav-item {
-        margin-left: 7px;
-    }
-    #btn-contactanos {
+    .btn-contactanos, #btn-tienda-es {
         visibility: initial;
-    }
-    #btn-tienda {
-        visibility: none;
     }
     #titulo1-carousel {
         position: absolute;
         top: 30%;
-        left: 20%;
+        left: 28%;
         color: #0063BF;
         font-size: 4rem;
         font-weight: bolder;
@@ -1324,7 +1423,7 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
     #subtitulo1-carousel {
         position: absolute;
         top: 45%;
-        left: 15%;
+        left: 22%;
         color: #0063BF;
         font-size: 3.5rem;
         font-weight: 600;
@@ -1332,7 +1431,7 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
     #titulo2-carousel {
         position: absolute;
         top: 30%;
-        left: 25%;
+        left: 32%;
         color: #0063BF;
         font-size: 4rem;
         font-weight: 600;
@@ -1340,7 +1439,7 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
     #subtitulo2-carousel {
         position: absolute;
         top: 46%;
-        left: 15%;
+        left: 25%;
         color: #0063BF;
         font-size: 2.5rem;
     }
@@ -1365,11 +1464,12 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
     .btn-masinfo {
         position: absolute;
         top: 75%;
-        left: 10%;
+        left: 35%;
         font-size: 26px;
     }
     .columna {
         padding-bottom: 60px;
+        opacity: 0.8;
     }
     .columna h2 {
         font-size: 1.87em;
@@ -1383,9 +1483,15 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
         padding-right: 35px;
         font-size: 1.25em;
     }
+    .item-seccion9 {
+        font-size: 1.15em;
+    }
     .icono-seccion2, .icono-seccion3 {
-        width: 50px;
-        padding: 5px;
+        width: 65px;
+        padding: 8px;
+        margin-left: 45px;
+        margin-bottom: 0;
+        margin-top: 20px;
     }
     .texto-seccion8 {
         font-size: 1.55em;
@@ -1398,14 +1504,14 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
     }
     .img-services {
         width: 100%;
+        object-fit: cover;
     }
-    #btn-contactanos {
-        margin-top: 33px;
-        margin-left: 15px;
+    .img-folleto {
+        width: 80% !important;
     }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1365px) {
     .fa-envelope {
         display: initial;
     }
@@ -1413,7 +1519,7 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
         visibility: initial;
     }
     .nav-item {
-        margin-left: 25px;
+        margin-left: 15px;
     }
     #titulo1-carousel {
         position: absolute;
@@ -1481,7 +1587,6 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
         font-size: 1.8em;
     }
     .item-seccion2, .item-seccion3 {
-        margin-left: 30px;
         padding-right: 45px;
         font-size: 1.25em;
     }
@@ -1495,7 +1600,7 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
     .post-body p, .post-body ol, .post-body ul {
         font-size: 1.35em !important;
     }
-    #btn-contactanos {
+    .btn-contactanos {
         margin-top: 0px;
         margin-left: 0px;
     }
@@ -1506,12 +1611,12 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
         margin-left: 5rem;
     }
     .nav-item {
-        margin-left: 50px;
+        margin-left: 30px;
     }
     #titulo1-carousel {
         position: absolute;
         top: 40%;
-        left: 13%;
+        left: 30%;
         color: #0063BF;
         font-size: 6rem;
         font-weight: 600;
@@ -1519,14 +1624,14 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
     #subtitulo1-carousel {
         position: absolute;
         top: 53%;
-        left: 16%;
+        left: 33%;
         color: #0063BF;
         font-size: 4rem;
     }
     #titulo2-carousel {
         position: absolute;
         top: 40%;
-        left: 23%;
+        left: 30%;
         color: #0063BF;
         font-size: 6rem;
         font-weight: 600;
@@ -1534,7 +1639,7 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
     #subtitulo2-carousel {
         position: absolute;
         top: 53%;
-        left: 16%;
+        left: 22%;
         color: #0063BF;
         font-size: 4rem;
     }
@@ -1556,7 +1661,7 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
     .btn-masinfo {
         position: absolute;
         top: 70%;
-        left: 35%;
+        left: 40%;
     }
     .seccion-uno, .seccion-dos, .seccion-tres, .seccion-cuatro {
         height: 1200px;
@@ -1580,7 +1685,7 @@ section.featured-posts .title::after, section.featured-posts .date::after, secti
         font-size: 1.55em;
     }
     .icono-seccion2, .icono-seccion3 {
-        width: 60px;
+        width: 80px;
         padding: 5px;
     }
     .seccion-cinco li {

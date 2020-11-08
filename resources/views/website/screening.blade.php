@@ -144,67 +144,72 @@
                             <label for="mensaje">Comentarios</label>
                             <textarea class="form-control" name="mensaje" id="mensaje"></textarea>
                         </div>
-                        <button class="btn btn-primary float-right" type="submit">Agendar Consulta
-                            Gratis</button>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-info float-right" type="submit">Agendar Consulta
+                                Gratis</button>
+                        </div>
                     </form>
                 </div>
             </section>
         @elseif ($idioma == 'EN')
-            <section class="container-fluid d-flex justify-content-end screening-uno punto-partida">
-                <div class="col-xs-6 col-md-5 align-self-center bg-white columna1">
+            <section class="container-fluid d-flex justify-content-end screening-uno">
+                <div class="col-xs-6 col-md-5 align-self-center bg-white columna">
                     <div class="texto-screening">@php echo $screening[0]->english; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-center screening-dos">
-                <div class="col-xs-6 col-md-5 align-self-center bg-white columna2">
+                <div class="col-xs-6 col-md-5 align-self-center bg-white columna">
                     <div class="texto-screening">@php echo $screening[1]->english; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-end screening-tres">
-                <div class="col-xs-6 col-md-5 align-self-center bg-white columna3">
+                <div class="col-xs-6 col-md-5 align-self-center bg-white columna">
                     <div class="texto-screening">@php echo $screening[2]->english; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-center screening-cuatro">
-                <div class="col-xs-6 col-md-5 align-self-center bg-white columna4">
+                <div class="col-xs-6 col-md-5 align-self-center bg-white columna">
                     <div class="texto-screening">@php echo $screening[3]->english; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-end screening-cinco">
-                <div class="col-xs-6 col-md-5 align-self-center bg-white columna5">
+                <div class="col-xs-6 col-md-5 align-self-center bg-white columna">
                     <div class="texto-screening">@php echo $screening[4]->english; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-center">
                 <div class="col-xs-6 col-md-5 align-self-center bg-white my-5">
-                    <form action="{{ url('/') }}/book_free" method="POST">
+                    <form action="{{ url('/') }}/agenda_gratis" method="POST">
                         @csrf
                         <div class="form-group">
-                            <label for="nombres">Names and Lastname </label>
-                            <input type="text" class="form-control" name="nombres">
+                            <label for="nombres">Full Name</label>
+                            <input type="text" class="form-control" name="nombres" id="nombres" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" name="email">
+                            <input type="email" class="form-control" name="email" id="email" required>
                         </div>
                         <div class="form-group">
                             <label for="telefono">Phone</label>
-                            <input type="text" class="form-control" name="telefono">
+                            <input type="text" class="form-control" name="telefono" id="telefono" required>
                         </div>
                         <div class="form-group">
                             <label for="hora">Best time to contact you</label>
-                            <input type="text" class="form-control" name="hora">
+                            <input type="text" class="form-control" name="hora" id="hora" required>
                         </div>
                         <div class="form-group">
                             <label for="mensaje">Comments</label>
-                            <textarea class="form-control" name="mensaje" rows="5"></textarea>
+                            <textarea class="form-control" name="mensaje" id="mensaje"></textarea>
                         </div>
-                        <button class="btn btn-primary float-right" type="submit">Book Your Free Consultation</button>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-info float-right" type="submit">Schedule Consultation
+                                Free</button>
+                        </div>
                     </form>
                 </div>
             </section>

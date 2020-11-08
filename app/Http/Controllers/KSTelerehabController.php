@@ -39,6 +39,6 @@ class KSTelerehabController extends Controller
         $textos->english = $data["english"];
         $textos->save();
 
-        return redirect('/ksadmin/teler')->with('status', 'Texto actualizado exitosamente!');
+        return redirect('/ksadmin/telerehab')->with('status', 'Texto actualizado exitosamente!');
     }
 }

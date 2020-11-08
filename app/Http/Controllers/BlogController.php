@@ -193,14 +193,21 @@ class BlogController extends Controller
     {
         $idioma = 'ES';
         $textos = Textos::all();
-        $articulo = Articulos::find($id);
+        $articulo = DB::table('articulos')->where('ruta_articulo', '=', $id)->select('articulos.*')->get();
         $mas_vistos = DB::table('articulos')->where('idioma', '=', 'ES')->select('articulos.*')->orderBy('vistas_articulo', 'desc')->limit(5)->get();
         $menu = WebsiteMenu::select('website_menu.spanish')->get();
         $categorias = DB::select("select t1.titulo_categoria, count(t1.titulo_categoria) cantidad from categorias t1, articulos t2 where t2.idioma = ?
                                     and t1.id_categoria = t2.id_cat group by t1.titulo_categoria", [$idioma]);
         $websiteheader = DB::table('website_header')->get();
-        $opiniones = DB::table('opiniones')->where([['opiniones.id_art', '=', $id], ['opiniones.aprobacion_opinion', '=', '1']])->select('opiniones.*')->get();
+        $opiniones = DB::table('opiniones')->join('articulos', 'opiniones.id_art', '=', 'articulos.id_articulo')->where('articulos.ruta_articulo', '=', $id)->get();
 
+        $vistas = $articulo[0]->vistas_articulo;
+        $id_upd = $articulo[0]->id_articulo;
+        $vistas++;
+        $articulo_upd = Articulos::find($id_upd);
+        $articulo_upd->vistas_articulo = $vistas;
+        $articulo_upd->update();
+        
         return view('blog.post', array(
             'textos' => $textos,
             'websiteheader' => $websiteheader,
@@ -217,14 +224,21 @@ class BlogController extends Controller
     {
         $idioma = 'EN';
         $textos = Textos::all();
-        $articulo = Articulos::find($id);
+        $articulo = DB::table('articulos')->where('ruta_articulo', '=', $id)->select('articulos.*')->get();
         $mas_vistos = DB::table('articulos')->where('idioma', '=', 'EN')->select('articulos.*')->orderBy('vistas_articulo', 'desc')->limit(5)->get();
         $menu = WebsiteMenu::select('website_menu.english')->get();
         $categorias = DB::select("select t1.titulo_categoria, count(t1.titulo_categoria) cantidad from categorias t1, articulos t2 where t2.idioma = ?
                                     and t1.id_categoria = t2.id_cat group by t1.titulo_categoria", [$idioma]);
         $websiteheader = DB::table('website_header')->get();
-        $opiniones = DB::table('opiniones')->where([['opiniones.id_art', '=', $id], ['opiniones.aprobacion_en', '=', '1']])->select('opiniones.*')->get();
+        $opiniones = DB::table('opiniones')->join('articulos', 'opiniones.id_art', '=', 'articulos.id_articulo')->where('articulos.ruta_articulo', '=', $id)->get();
 
+        $vistas = $articulo[0]->vistas_articulo;
+        $id_upd = $articulo[0]->id_articulo;
+        $vistas++;
+        $articulo_upd = Articulos::find($id_upd);
+        $articulo_upd->vistas_articulo = $vistas;
+        $articulo_upd->update();        
+        
         return view('blog.post', array(
             'textos' => $textos,
             'websiteheader' => $websiteheader,

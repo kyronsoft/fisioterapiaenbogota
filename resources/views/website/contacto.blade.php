@@ -96,7 +96,7 @@
                         <img src="{{ url('/') }}/storage/flower-decor.png" alt="" style="width: 60px;">
                     </div>
                     <div class="align-self-center">
-                        <h2 class="text-center ml-3">Contacto</h2>
+                        <h2 class="text-center text-white ml-3"><b>Contacto</b></h2>
                     </div>
                 </div>
             </section>
@@ -108,14 +108,14 @@
             <section class="container-fluid d-flex justify-content-center datos-contacto">
                 <div class="row align-self-center">
                     <div class="col-xs-12 col-md-6 align-self-center mb-5">
-                        <h3 class="text-center">Teléfono</h3>
+                        <h3 class="text-left mb-5">Teléfono</h3>
                         <ul>
                             <li class="text-info"><i class="fa fa-phone-square mr-3" aria-hidden="true"></i>
                                 {{ $websiteheader[1]->spanish }}
                             </li>
                         </ul>
                         <hr class="my-5">
-                        <h3 class="text-center">Correo Electrónico</h3>
+                        <h3 class="text-left mb-5">Correo Electrónico</h3>
                         <ul>
                             <li class="text-info"><i class="fa fa-envelope mr-3" aria-hidden="true"></i>
                                 {{ $websiteheader[2]->spanish }}
@@ -123,7 +123,7 @@
                         </ul>
                     </div>
                     <div class="col-xs-12 col-md-6 align-self-center">
-                        <h3 class="text-center mb-5">Horario de atención</h3>
+                        <h3 class="text-left mb-5">Horario de atención</h3>
                         <h4 class="mb-5">Lunes a Viernes de 7 am a 7 pm ( Cita previa ) Sábados de 7 am a 1pm ( Cita
                             previa )</h4>
                     </div>
@@ -133,40 +133,40 @@
             <section class="container-fluid d-flex justify-content-center other-background">
                 <div class="row">
                     <div class="align-self-center">
-                        <img src="images/flower-decor.png" alt="" style="width: 60px;">
+                        <img src="{{ url('/') }}/storage/flower-decor.png" alt="" style="width: 60px;">
                     </div>
                     <div class="align-self-center">
-                        <h2 class="text-center ml-3">Contacto</h2>
+                        <h2 class="text-left text-white ml-3"><b>Contact</b></h2>
                     </div>
                 </div>
             </section>
 
             <section class="container d-flex justify-content-center mt-5">
-                <h3 class="font-weight-bold">Fysiopuntura</h3>
+                <h3 class="font-weight-bold mb-5">Fysiopuntura</h3>
             </section>
 
-            <section class="container-fluid d-flex justify-content-center">
+            <section class="container-fluid d-flex justify-content-center datos-contacto">
                 <div class="row align-self-center">
                     <div class="col-xs-12 col-md-6 align-self-center mb-5">
-                        <h3 class="text-center">Phone</h3>
+                        <h3 class="text-left mb-5">Phone</h3>
                         <ul>
-                            <li class="text-primary"><i class="fa fa-phone-square mr-3" aria-hidden="true"></i>
+                            <li class="text-info"><i class="fa fa-phone-square mr-3" aria-hidden="true"></i>
                                 {{ $websiteheader[1]->english }}
                             </li>
                         </ul>
                         <hr class="my-5">
-                        <h3 class="text-center mb-5">Correo Electrónico</h3>
+                        <h3 class="text-left mb-5">Email</h3>
                         <ul>
-                            <li class="text-primary"><i class="fa fa-envelope mr-3" aria-hidden="true"></i>
+                            <li class="text-info"><i class="fa fa-envelope mr-3" aria-hidden="true"></i>
                                 {{ $websiteheader[2]->english }}
                             </li>
                         </ul>
                     </div>
                     <div class="col-xs-12 col-md-6 align-self-center">
-                        <h3 class="text-center mb-5">Office Hours</h3>
-                        <h4 class="mb-5">
-                            Monday to Friday from 7 am to 7 pm (By appointment) Saturdays from 7 am to 1pm (By
-                            appointment)</h4>
+                        <h3 class="text-left mb-5">Hours of Operation</h3>
+                        <h4 class="mb-5">Monday to Friday from 7 am to 7 pm (Appointment) Saturdays from 7 am to 1pm
+                            (Appointment
+                            previous )</h4>
                     </div>
                 </div>
             </section>

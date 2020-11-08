@@ -1,5 +1,5 @@
 $("#share").jsSocials({
     showCount: true,
     showLabel: true,
-    shares: ["email", "twitter", "facebook", "googleplus", "linkedin"]
+    shares: ["email", "twitter", "facebook", "whatsapp", "linkedin"]
 });

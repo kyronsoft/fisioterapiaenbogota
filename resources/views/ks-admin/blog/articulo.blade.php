@@ -86,7 +86,7 @@
                 <form class="mb-5" action="/ksadmin/blog/articulos_en" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="col d-flex justify-content-end mt-3">
-                        <button type="submit" class="btn btn-success">Agregar</button>
+                        <button type="submit" class="btn btn-success">Agregar Inglés</button>
                     </div>
                     <div class="col">
                         <div class="row mt-5">

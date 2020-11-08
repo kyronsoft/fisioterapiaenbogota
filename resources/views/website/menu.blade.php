@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white" id="navbar">
     <a class="navbar-brand pb-2" href="{{ url('/') }}"><img
             src="{{ url('/') }}/storage/rsz_logo-fisioterapia-en-bogota.png" alt="logo-menu"></a>
+    <a class="btn btn-primary" id="btn-contact320" href="{{ url('/contactanos') }}">Contactanos</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -84,7 +85,7 @@
                         <a class="dropdown-item" href="{{ url('acupuncture') }}">{{ $menu[18]->english }}</a>
                 @endif
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 @if ($idioma == 'ES')
                     <a class="nav-link" href="{{ url('documentos') }}">{{ $menu[16]->spanish }}</a>
                 @elseif ($idioma == 'EN')
@@ -92,15 +93,15 @@
                 @endif
             </li>
             @if ($idioma == 'ES')
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="{{ url('/') }}/blog">Blog</a>
                 </li>
             @elseif ($idioma == 'EN')
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="{{ url('/') }}/blog_en">Blog</a>
                 </li>
             @endif
-            <li class="nav-item active">
+            <li class="nav-item">
                 @if ($idioma == 'ES')
                     <a class="nav-link" href="{{ url('/contacto') }}">{{ $menu[12]->spanish }}</a>
                 @elseif ($idioma == 'EN')
@@ -144,12 +145,16 @@
         </ul>
         <div id="btn-additional">
             @if ($idioma == 'ES')
-                <a class="btn btn-primary" href="{{ url('/contactanos') }}" id="btn-contactanos">Contactanos</a>
-                <a class="btn btn-primary" href="{{ url('') }}" id="btn-tienda">Tienda Virtual</a>
+                <a class="btn btn-primary btn-contactanos" href="{{ url('/contactanos') }}">Contactanos</a>
+                <a class="btn btn-primary" href="http://localhost/tiendavirtual/frontend" id="btn-tienda-es">Tienda
+                    Virtual</a>
             @elseif ($idioma == 'EN')
-                <a class="btn btn-primary" href="{{ url('contact_us') }}" id="btn-contactanos">Contact us</a>
-                <a class="btn btn-primary" href="{{ url('') }}" id="btn-tienda">Shop Online</a>
+                <a class="btn btn-primary btn-contactanos" href="{{ url('contact_us') }}">Contact us</a>
+                <a class="btn btn-primary" href="https://www.kyronsoft.com/shoponline" id="btn-tienda-en">Shop
+                    Online</a>
             @endif
         </div>
     </div>
 </nav>
+
+

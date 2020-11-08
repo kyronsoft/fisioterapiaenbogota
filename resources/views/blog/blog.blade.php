@@ -79,7 +79,7 @@
     <link rel="stylesheet" href="{{ url('/') }}/css/floating-wpp.min.css">
 </head>
 
-<body>
+<body style="background-color: #fff">
     @php
     $route = Route::current();
     @endphp
@@ -93,43 +93,65 @@
                     <!-- Latest Posts -->
                     <main class="posts-listing col-lg-8">
                         <div class="container">
+                            <header class="d-flex justify-content-center">
+                                <!-- Widget [Search Bar Widget]-->
+                                <div class="widget search" style="border: none;">
+                                    <header>
+                                        <h3 class="h6">Buscar Artículo</h3>
+                                    </header>
+                                    <form action="/blog/articulo/buscar" class="search-form">
+                                        <div class="form-group">
+                                            <input type="search" name="search" placeholder="¿Qué estás buscando?">
+                                            <button type="submit" class="submit"><i class="icon-search"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </header>
                             <div class="row">
                                 @foreach ($articulos as $item)
-                                    <div class="post col-xl-6">
-                                        <div class="post-thumbnail"><a href="post.html"><img
-                                                    src="{{ $item->portada_articulo }}" alt="imagen_portada_articulo"
-                                                    class="img-fluid" style="width: 40%"></a></div>
+                                    <div class="post col-12">
+                                        <div class="post-thumbnail text-center"><a
+                                                href="{{ url('/') }}/blog/articulo/{{ $item->ruta_articulo }}">
+                                                @if ($item->portada_articulo != '/storage/blog/sin_foto.jpg')
+                                                    <img src="{{ $item->portada_articulo }}"
+                                                        alt="imagen_portada_articulo" class="img-fluid mb-3"
+                                                        style="width: 40%">
+                                                @else
+                                                    <div></div>
+                                                @endif
+                                            </a></div>
                                         <div class="post-details">
-                                            <div class="post-meta d-flex justify-content-between">
-                                                <div class="date meta-last">{{ substr($item->created_at, 0, 10) }}</div>
-                                            </div>
-                                            <div class="category">{{ $item->p_claves_articulo }}</div>
+                                            <div class="category text-lowercase">{{ $item->p_claves_articulo }}</div>
                                             <br>
-                                            <a href="{{ url('/') }}/blog/articulo/{{ $item->id_articulo }}">
+                                            <a href="{{ url('/') }}/blog/articulo/{{ $item->ruta_articulo }}">
                                                 <h3 class="h4">{{ $item->titulo_articulo }}</h3>
                                             </a>
-                                            <h6 class="text-muted">{{ $item->descripcion_articulo }}</h6>
+                                            <h6 class="title mb-3">{{ $item->descripcion_articulo }}</h6>
                                             <footer class="post-footer d-flex align-items-center"><a href="#"
                                                     class="author d-flex align-items-center flex-wrap">
                                                     <div class="avatar"><img src="{{ url('/') }}/storage/admin.jpg"
                                                             alt="avatar_adriana" class="img-fluid">
                                                     </div>
-                                                    <div class="title"><span>Fysiopuntura</span></div>
+                                                    <div class="title" id="fysiopuntura-name">Fysiopuntura</div>
                                                 </a>
-                                                <div class="date"><i class="icon-clock"></i>@php
-                                                    $creacion = date('Y-m-d',strtotime($item->created_at));
-                                                    echo $creacion;
-                                                    @endphp</div>
-                                                <div class="comments meta-last"><i class="icon-comment"></i>
-                                                    <comentarios-component id="{{ $item->id_articulo }}">
-                                                    </comentarios-component>
+                                                <div class="row">
+                                                    <div class="etiqueta-icon fecha-articulo"><i
+                                                            class="fas fa-clock"></i>
+                                                    </div>
+                                                    <div class="etiqueta-text fecha-articulo">@php
+                                                        $creacion = date('Y-m-d',strtotime($item->created_at));
+                                                        echo $creacion;
+                                                        @endphp</div>
+                                                    <div class="etiqueta-icon"><i class="fas fa-comment-alt"></i></div>
+                                                    <div class="etiqueta-text">
+                                                        <comentarios-component id="{{ $item->id_articulo }}">
+                                                        </comentarios-component> comentarios
+                                                    </div>
+                                                    <div class="etiqueta-icon"><i class="fas fa-eye"></i></div>
+                                                    <div class="etiqueta-text">{{ $item->vistas_articulo }}</div>
                                                 </div>
-                                                {{-- <div class="comments meta-last"><i
-                                                        class="fas fa-heart"></i>{{ $item->megusta }}</div>
-                                                --}}
-                                                <div class="comments meta-last"><i
-                                                        class="far fa-eye ml-1"></i>{{ $item->vistas_articulo }}</div>
                                             </footer>
+                                            <hr>
                                         </div>
                                     </div>
                                 @endforeach
@@ -142,30 +164,17 @@
                         </div>
                     </main>
                     <aside class="col-lg-4">
-                        <!-- Widget [Search Bar Widget]-->
-                        <div class="widget search">
-                            <header>
-                                <h3 class="h6">Buscar Artículo</h3>
-                            </header>
-                            <form action="/blog/articulo/buscar" class="search-form">
-                                <div class="form-group">
-                                    <input type="search" name="search" placeholder="¿Qué estás buscando?">
-                                    <button type="submit" class="submit"><i class="icon-search"></i></button>
-                                </div>
-                            </form>
-                        </div>
                         <!-- Widget [Latest Posts Widget]        -->
-                        <div class="widget latest-posts">
+                        <div class="widget latest-posts" style="border: none;">
                             <header>
                                 <h3 class="h6">Artículos mas Vistos</h3>
                             </header>
                             <div class="blog-posts">
                                 @foreach ($mas_vistos as $item)
-                                    <a href="/blog/articulo/{{ $item->id_articulo }}">
+                                    <a href="/blog/articulo/{{ $item->ruta_articulo }}">
                                         <div class="item d-flex align-items-center">
-                                            {{-- <div class="image"><img
-                                                    src="{{ $item->portada_articulo }}" alt="portada_mas_visto"
-                                                    class="img-fluid"></div> --}}
+                                            {{-- <div class="image"><img src="{{ $item->portada_articulo }}"
+                                                    alt="portada_mas_visto" style="width:50px;height:50px;position: relative;overflow: hidden;"></div> --}}
                                             <div class="title"><strong>{{ $item->titulo_articulo }}</strong>
                                                 <div class="d-flex align-items-center">
                                                     <div class="views"><i class="icon-eye"></i>
@@ -183,7 +192,7 @@
                             </div>
                         </div>
                         <!-- Widget [Categories Widget]-->
-                        <div class="widget categories">
+                        <div class="widget categories" style="border: none;">
                             <header>
                                 <h3 class="h6">Categorias</h3>
                             </header>
@@ -202,44 +211,65 @@
                     <!-- Latest Posts -->
                     <main class="posts-listing col-lg-8">
                         <div class="container">
+                            <header class="d-flex justify-content-center">
+                                <!-- Widget [Search Bar Widget]-->
+                                <div class="widget search" style="border: none;">
+                                    <header>
+                                        <h3 class="h6">Search Article</h3>
+                                    </header>
+                                    <form action="/blog/articulo/buscar" class="search-form">
+                                        <div class="form-group">
+                                            <input type="search" name="search" placeholder="What are you looking for?">
+                                            <button type="submit" class="submit"><i class="icon-search"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </header>
                             <div class="row">
                                 @foreach ($articulos as $item)
-                                    <div class="post col-xl-6">
-                                        <div class="post-thumbnail"><a href="post.html"><img
-                                                    src="{{ $item->portada_articulo }}" alt="imagen_portada_articulo"
-                                                    class="img-fluid" style="width: 40%"></a></div>
+                                    <div class="post col-12">
+                                        <div class="post-thumbnail text-center"><a
+                                                href="{{ url('/') }}/blog/articulo_en/{{ $item->ruta_articulo }}">
+                                                @if ($item->portada_articulo != '/storage/blog/sin_foto.jpg')
+                                                    <img src="{{ $item->portada_articulo }}"
+                                                        alt="imagen_portada_articulo" class="img-fluid mb-3"
+                                                        style="width: 40%">
+                                                @else
+                                                    <div></div>
+                                                @endif
+                                            </a></div>
                                         <div class="post-details">
-                                            <div class="post-meta d-flex justify-content-between">
-                                                <div class="date meta-last">{{ substr($item->created_at, 0, 10) }}</div>
-                                            </div>
-                                            <div class="category">{{ $item->p_claves_en }}</div>
+                                            <div class="category text-lowercase">{{ $item->p_claves_en }}</div>
                                             <br>
-                                            <a href="{{ url('/') }}/blog/articulo_en/{{ $item->id_articulo }}">
+                                            <a href="{{ url('/') }}/blog/articulo_en/{{ $item->ruta_articulo }}">
                                                 <h3 class="h4">{{ $item->titulo_en }}</h3>
                                             </a>
-                                            <h6 class="text-muted">{{ $item->descripcion_en }}</h6>
+                                            <h6 class="title mb-3">{{ $item->descripcion_en }}</h6>
                                             <footer class="post-footer d-flex align-items-center"><a href="#"
                                                     class="author d-flex align-items-center flex-wrap">
                                                     <div class="avatar"><img src="{{ url('/') }}/storage/admin.jpg"
                                                             alt="avatar_adriana" class="img-fluid">
                                                     </div>
-                                                    <div class="title"><span>Fysiopuntura</span></div>
+                                                    <div class="title" id="fysiopuntura-name">Fysiopuntura</div>
                                                 </a>
-                                                <div class="date"><i class="icon-clock"></i>@php
-                                                    $creacion = date('Y-m-d',strtotime($item->created_at));
-                                                    echo $creacion;
-                                                    @endphp</div>
-                                                <div class="comments meta-last"><i class="icon-comment"></i>
-                                                    <comentarios-component id="{{ $item->id_articulo }}">
-                                                    </comentarios-component>
+                                                <div class="row">
+                                                    <div class="etiqueta-icon fecha-articulo"><i
+                                                            class="fas fa-clock"></i>
+                                                    </div>
+                                                    <div class="etiqueta-text fecha-articulo">@php
+                                                        $creacion = date('Y-m-d',strtotime($item->created_at));
+                                                        echo $creacion;
+                                                        @endphp</div>
+                                                    <div class="etiqueta-icon"><i class="fas fa-comment-alt"></i></div>
+                                                    <div class="etiqueta-text">
+                                                        <comentarios-component id="{{ $item->id_articulo }}">
+                                                        </comentarios-component> comments
+                                                    </div>
+                                                    <div class="etiqueta-icon"><i class="fas fa-eye"></i></div>
+                                                    <div class="etiqueta-text">{{ $item->vistas_articulo }}</div>
                                                 </div>
-                                                {{-- <div class="comments meta-last"><i
-                                                        class="fas fa-heart"></i>{{ $item->megusta }}</div>
-                                                --}}
-                                                <div class="comments meta-last"><i
-                                                        class="far fa-eye ml-1"></i>{{ $item->vistas_articulo }}</div>
-                                                <div class="mt-5" id="share"></div>
                                             </footer>
+                                            <hr>
                                         </div>
                                     </div>
                                 @endforeach
@@ -252,26 +282,14 @@
                         </div>
                     </main>
                     <aside class="col-lg-4">
-                        <!-- Widget [Search Bar Widget]-->
-                        <div class="widget search">
-                            <header>
-                                <h3 class="h6">Search Article</h3>
-                            </header>
-                            <form action="/blog/articulo/buscar_en" class="search-form">
-                                <div class="form-group">
-                                    <input type="search" name="search" placeholder="What are you looking for?">
-                                    <button type="submit" class="submit"><i class="icon-search"></i></button>
-                                </div>
-                            </form>
-                        </div>
                         <!-- Widget [Latest Posts Widget]        -->
-                        <div class="widget latest-posts">
+                        <div class="widget latest-posts" style="border: none;">
                             <header>
                                 <h3 class="h6">Most Viewed Articles</h3>
                             </header>
                             <div class="blog-posts">
                                 @foreach ($mas_vistos as $item)
-                                    <a href="/blog/articulo_en/{{ $item->id_articulo }}">
+                                    <a href="/blog/articulo/{{ $item->ruta_articulo }}">
                                         <div class="item d-flex align-items-center">
                                             {{-- <div class="image"><img
                                                     src="{{ $item->portada_articulo }}" alt="portada_mas_visto"
@@ -293,13 +311,13 @@
                             </div>
                         </div>
                         <!-- Widget [Categories Widget]-->
-                        <div class="widget categories">
+                        <div class="widget categories" style="border: none;">
                             <header>
                                 <h3 class="h6">Categories</h3>
                             </header>
                             @foreach ($categorias as $item)
                                 <div class="item d-flex justify-content-between"><a
-                                        href="/blog/articulo/categoria_en?search={{ $item->titulo_categoria }}">{{ $item->titulo_categoria }}</a><span>{{ $item->cantidad }}</span>
+                                        href="/blog/articulo/categoria?search={{ $item->titulo_categoria }}">{{ $item->titulo_categoria }}</a><span>{{ $item->cantidad }}</span>
                                 </div>
                             @endforeach
                         </div>

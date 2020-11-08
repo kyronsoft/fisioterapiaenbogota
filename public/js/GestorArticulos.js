@@ -8,10 +8,11 @@ var EditIcon = function (cell, formatterParams) {
 var table = new Tabulator("#articulos_es", {
     maxHeight: "100%",
     layout: "fitColumns",
-    responsiveLayout: "collapse",
+    responsiveLayout: "hide",
     cellHozAlign: "center",
     cellVertAlign: "middle",
     headerHozAlign: "center",
+    layoutColumnsOnNewData:true,
     selectable: true,
     paginationSize: 6,
     pagination: "local",

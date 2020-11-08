@@ -17,7 +17,7 @@
                         aria-controls="pills-home" aria-selected="true">Español</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile0" role="tab"
                         aria-controls="pills-profile" aria-selected="false">Inglés</a>
                 </li>
             </ul>

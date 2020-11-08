@@ -24,9 +24,6 @@ jQuery(document).ready(function () {
         autoplayHoverPause: true,
         items: 1
     });
-    $(".img-services").hover(function () {
-        $(this).addClass("animate__animated animate__flip");
-    });
     var url = window.location.href;
     url = url.substr(url.lastIndexOf("/") + 1);
     $('#navbarNavDropdown li').each(function () {
@@ -86,27 +83,62 @@ jQuery(document).ready(function () {
         height: 100,
         focus: true,
         callbacks: {
-            onImageUpload: function (files) {
-                for (let i = 0; i < files.length; i++) {
-                    $.upload(files[i]);
-                }
+            onImageUpload: function (image) {
+                uploadImage(image[0]);
             }
         }
     });
 
     $('.editor_blog').summernote({
-        height: 500,
+        height: ($(window).height() - 300),
         focus: true,
+        toolbar: [
+            // [groupName, [list of button]]
+            ['style', ['bold', 'italic', 'underline', 'clear']],
+            ['font', ['strikethrough', 'superscript', 'subscript']],
+            ['fontsize', ['fontsize']],
+            ['color', ['color', 'forecolor', 'backcolor']],
+            ['para', ['ul', 'ol', 'paragraph', 'height', 'style']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['codeview', 'undo', 'redo', 'help']],
+        ],
         callbacks: {
             onImageUpload: function (files) {
-                for (let i = 0; i < files.length; i++) {
-                    $.upload(files[i]);
-                }
+                url = '/summer-uploads';
+                sendFile(files[0], url, $(this));
             }
         }
     });
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    function sendFile(file, url, editor) {
+        var data = new FormData();
+        data.append("file", file);
+
+        $.ajax({
+            data: data,
+            type: "POST",
+            url: url,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (url) {
+                editor.summernote('editor.insertImage', url);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log(jqXHR);
+            }
+        });
+    }
+
     $("iframe").wrap("<div class='wrapper'></div>");
     $("img").addClass('img-fluid');
+
 });
 
 /**

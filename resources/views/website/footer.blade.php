@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-12 align-self-center text-center">
-                <div class="mb-5">
+                <div class="mb-1">
                     <img src="{{ url('/') }}/storage/footer-logo-fisioterapia-en-bogota.png" alt="logo-footer" />
                 </div>
             </div>
@@ -26,7 +26,7 @@
                                 <a href="{{ url('contacto') }}">Contacto</a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="http://localhost/frontend">Tienda</a>
+                                <a href="https://www.kyronsoft.com/tiendavirtual">Tienda</a>
                             </li>
                         </ul>
                     @elseif ($idioma == 'EN')
@@ -47,7 +47,7 @@
                                 <a href="{{ url('contacto') }}">Contact</a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="http://localhost/frontend">Shop OnLine</a>
+                                <a href="https://www.kyronsoft.com/shoponline">Shop OnLine</a>
                             </li>
                         </ul>
                     @endif

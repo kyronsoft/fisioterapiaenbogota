@@ -78,6 +78,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="{{ url('/') }}/css/style.css">
     <link rel="stylesheet" href="{{ url('/') }}/css/floating-wpp.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/ihover.css">
 </head>
 
 <body>
@@ -99,49 +100,49 @@
             <section class="container-fluid d-flex justify-content-start fisio-dos">
                 <div class="col-xs-12 col-md-8 align-self-center bg-white columna">
                     <div class="text-center">@php echo $fisio[1]->spanish; @endphp</div>
-                    <div class="row d-flex">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt="" class="rounded-circle"
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xs-2 col-md-2 align-content-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt="" class="rounded-circle icono-seccion2"
                                 style="background-color: #ddb2c6;">
                         </div>
-                        <div class="col-xs-10 col-md-11 align-self-center">
+                        <div class="col-xs-10 col-md-10 align-content-center">
                             <div class="texto-fisio">@php echo $fisio[2]->spanish; @endphp</div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-2.png" alt="" class="rounded-circle"
+                        <div class="col-xs-2 col-md-2 align-self-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-2.png" alt="" class="rounded-circle icono-seccion2"
                                 style="background-color: #ddad9f;">
                         </div>
-                        <div class="col-xs-10 col-md-11 align-self-center">
+                        <div class="col-xs-10 col-md-10 align-self-center">
                             <div class="texto-fisio">@php echo $fisio[3]->spanish; @endphp</div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-3.png" alt="" class="rounded-circle"
+                        <div class="col-xs-2 col-md-2 align-self-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-3.png" alt="" class="rounded-circle icono-seccion2"
                                 style="background-color: #b4c0ca;">
                         </div>
-                        <div class="col-xs-10 col-md-11 align-self-center">
+                        <div class="col-xs-10 col-md-10 align-self-center">
                             <div class="texto-fisio">@php echo $fisio[4]->spanish; @endphp</div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt="" class="rounded-circle"
+                        <div class="col-xs-2 col-md-2 align-self-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt="" class="rounded-circle icono-seccion2"
                                 style="background-color: #ddb2c6;">
                         </div>
-                        <div class="col-xs-10 col-md-11 align-self-center">
+                        <div class="col-xs-10 col-md-10 align-self-center">
                             <div class="texto-fisio">@php echo $fisio[5]->spanish; @endphp
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt="" class="rounded-circle"
+                        <div class="col-xs-2 col-md-2 align-self-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt="" class="rounded-circle icono-seccion2"
                                 style="background-color: #ddad9f;">
                         </div>
-                        <div class="col-xs-10 col-md-11 align-self-center">
+                        <div class="col-xs-10 col-md-10 align-self-center">
                             <div class="texto-fisio">@php echo $fisio[6]->spanish; @endphp</div>
                         </div>
                     </div>
@@ -152,29 +153,29 @@
                 <div class="col-xs-5 col-md-8 align-self-center bg-white columna">
                     <div>@php echo $fisio[7]->spanish; @endphp</div>
                     <div class="row">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt="" class="rounded-circle"
-                                style="background-color: #ddb2c6;">
+                        <div class="col-xs-2 col-md-2 align-self-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt=""
+                                class="rounded-circle icono-seccion2" style="background-color: #ddb2c6;">
                         </div>
-                        <div class="col-xs-10 col-md-11">
+                        <div class="col-xs-10 col-md-10">
                             <div class="texto-fisio">@php echo $fisio[8]->spanish; @endphp</div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-2.png" alt="" class="rounded-circle"
-                                style="background-color: #ddad9f;">
+                        <div class="col-xs-2 col-md-2 align-self-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-2.png" alt=""
+                                class="rounded-circle icono-seccion2" style="background-color: #ddad9f;">
                         </div>
-                        <div class="col-xs-10 col-md-11">
+                        <div class="col-xs-10 col-md-10">
                             <div class="texto-fisio">@php echo $fisio[9]->spanish; @endphp</div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-3.png" alt="" class="rounded-circle"
-                                style="background-color: #b4c0ca;">
+                        <div class="col-xs-2 col-md-2 align-self-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-3.png" alt=""
+                                class="rounded-circle icono-seccion2" style="background-color: #b4c0ca;">
                         </div>
-                        <div class="col-xs-10 col-md-11">
+                        <div class="col-xs-10 col-md-10">
                             <div class="texto-fisio">@php echo $fisio[10]->spanish; @endphp</div>
                         </div>
                     </div>
@@ -182,58 +183,58 @@
             </section>
         @elseif ($idioma == 'EN')
             <section class="container-fluid d-flex justify-content-end fisio-uno">
-                <div class="col-xs-12 col-md-8 align-self-center bg-white columna">
-                    <div>@php echo $fisio[0]->english @endphp</div>
+                <div class="col-xs-12 col-md-6 align-self-center bg-white columna">
+                    <div class="texto-fisio">@php echo $fisio[0]->english @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-start fisio-dos">
                 <div class="col-xs-12 col-md-8 align-self-center bg-white columna">
                     <div class="text-center">@php echo $fisio[1]->english; @endphp</div>
-                    <div class="row d-flex">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt="" class="rounded-circle"
+                    <div class="row">
+                        <div class="col-xs-2 col-md-2 align-self-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt="" class="rounded-circle icono-seccion2"
                                 style="background-color: #ddb2c6;">
                         </div>
-                        <div class="col-xs-10 col-md-11 align-self-center">
-                            <p class="texto-fisio">@php echo $fisio[2]->english; @endphp</p>
+                        <div class="col-xs-10 col-md-10 align-self-center">
+                            <div class="texto-fisio">@php echo $fisio[2]->english; @endphp</div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-2.png" alt="" class="rounded-circle"
+                        <div class="col-xs-2 col-md-2 align-self-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-2.png" alt="" class="rounded-circle icono-seccion2"
                                 style="background-color: #ddad9f;">
                         </div>
-                        <div class="col-xs-10 col-md-11 align-self-center">
-                            <p class="texto-fisio">@php echo $fisio[3]->english; @endphp</p>
+                        <div class="col-xs-10 col-md-10 align-self-center">
+                            <div class="texto-fisio">@php echo $fisio[3]->english; @endphp</div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-3.png" alt="" class="rounded-circle"
+                        <div class="col-xs-2 col-md-2 align-self-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-3.png" alt="" class="rounded-circle icono-seccion2"
                                 style="background-color: #b4c0ca;">
                         </div>
-                        <div class="col-xs-10 col-md-11 align-self-center">
-                            <p class="texto-fisio">@php echo $fisio[4]->english; @endphp</p>
+                        <div class="col-xs-10 col-md-10 align-self-center">
+                            <div class="texto-fisio">@php echo $fisio[4]->english; @endphp</div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt="" class="rounded-circle"
+                        <div class="col-xs-2 col-md-2 align-self-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt="" class="rounded-circle icono-seccion2"
                                 style="background-color: #ddb2c6;">
                         </div>
-                        <div class="col-xs-10 col-md-11 align-self-center">
-                            <p class="texto-fisio">@php echo $fisio[5]->english; @endphp
-                            </p>
+                        <div class="col-xs-10 col-md-10 align-self-center">
+                            <div class="texto-fisio">@php echo $fisio[5]->english; @endphp
+                            </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt="" class="rounded-circle"
+                        <div class="col-xs-2 col-md-2 align-self-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt="" class="rounded-circle icono-seccion2"
                                 style="background-color: #ddad9f;">
                         </div>
-                        <div class="col-xs-10 col-md-11 align-self-center">
-                            <p class="texto-fisio">@php echo $fisio[6]->english; @endphp</p>
+                        <div class="col-xs-10 col-md-10 align-self-center">
+                            <div class="texto-fisio">@php echo $fisio[6]->english; @endphp</div>
                         </div>
                     </div>
                 </div>
@@ -243,29 +244,29 @@
                 <div class="col-xs-5 col-md-8 align-self-center bg-white columna">
                     <div>@php echo $fisio[7]->english; @endphp</div>
                     <div class="row">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt="" class="rounded-circle"
-                                style="background-color: #ddb2c6;">
+                        <div class="col-xs-2 col-md-2 align-self-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-1.png" alt=""
+                                class="rounded-circle icono-seccion2" style="background-color: #ddb2c6;">
                         </div>
-                        <div class="col-xs-10 col-md-11">
+                        <div class="col-xs-10 col-md-10">
                             <div class="texto-fisio">@php echo $fisio[8]->english; @endphp</div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-2.png" alt="" class="rounded-circle"
-                                style="background-color: #ddad9f;">
+                        <div class="col-xs-2 col-md-2 align-self-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-2.png" alt=""
+                                class="rounded-circle icono-seccion2" style="background-color: #ddad9f;">
                         </div>
-                        <div class="col-xs-10 col-md-11">
+                        <div class="col-xs-10 col-md-10">
                             <div class="texto-fisio">@php echo $fisio[9]->english; @endphp</div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2 col-md-1 align-self-center">
-                            <img src="{{ url('/') }}/storage/icon-decor-3.png" alt="" class="rounded-circle"
-                                style="background-color: #b4c0ca;">
+                        <div class="col-xs-2 col-md-2 align-self-center">
+                            <img src="{{ url('/') }}/storage/icon-decor-3.png" alt=""
+                                class="rounded-circle icono-seccion2" style="background-color: #b4c0ca;">
                         </div>
-                        <div class="col-xs-10 col-md-11">
+                        <div class="col-xs-10 col-md-10">
                             <div class="texto-fisio">@php echo $fisio[10]->english; @endphp</div>
                         </div>
                     </div>

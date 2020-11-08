@@ -4,12 +4,14 @@
                 <div class="text-center">@php echo $textos[14]->spanish; @endphp</div>
                 <div class="col-12">
                     <div class="row d-flex justify-content-around">
-                        <div class="col-sm-1 align-content-center">
+                        <div class="col-sm-1 align-self-center">
                             <div class="ih-item circle effect4 left_to_right"><a href="#">
-                                    <div class="img"><img src="{{ url('/') }}/storage/icon-decor-1.png" alt="img"
-                                            style="background-color: #ddb2c6"></div>
-                                    <div class="info">
+                                    <div class="img">
                                         <h3>1</h3>
+                                    </div>
+                                    <div class="info">
+                                        <img src="{{ url('/') }}/storage/icon-decor-1.png" class="rounded-circle"
+                                            alt="img" style="background-color: #ddb2c6; padding:5px;">
                                     </div>
                                 </a>
                             </div>
@@ -19,12 +21,14 @@
                         </div>
                     </div>
                     <div class="row d-flex justify-content-around">
-                        <div class="col-sm-1 align-content-center">
+                        <div class="col-sm-1 align-self-center">
                             <div class="ih-item circle effect4 left_to_right"><a href="#">
-                                    <div class="img"><img src="{{ url('/') }}/storage/icon-decor-2.png" alt="img"
-                                            style="background-color: #ddad9f"></div>
-                                    <div class="info">
+                                    <div class="img">
                                         <h3>2</h3>
+                                    </div>
+                                    <div class="info">
+                                        <img src="{{ url('/') }}/storage/icon-decor-2.png" class="rounded-circle"
+                                            alt="img" style="background-color: #C4D4B4; padding:5px;">
                                     </div>
                                 </a>
                             </div>
@@ -34,12 +38,14 @@
                         </div>
                     </div>
                     <div class="row d-flex justify-content-around">
-                        <div class="col-sm-1 align-content-center">
+                        <div class="col-sm-1 align-self-center">
                             <div class="ih-item circle effect4 left_to_right"><a href="#">
-                                    <div class="img"><img src="{{ url('/') }}/storage/icon-decor-3.png" alt="img"
-                                            style="background-color: #b4c0ca"></div>
-                                    <div class="info">
+                                    <div class="img">
                                         <h3>3</h3>
+                                    </div>
+                                    <div class="info">
+                                        <img src="{{ url('/') }}/storage/icon-decor-3.png" class="rounded-circle"
+                                            alt="img" style="background-color: #b4c0ca; padding:5px;">
                                     </div>
                                 </a>
                             </div>
@@ -57,12 +63,14 @@
                 <div class="text-center">@php echo $textos[14]->english; @endphp</div>
                 <div class="col-12">
                     <div class="row d-flex justify-content-around">
-                        <div class="col-sm-1 align-content-center">
+                        <div class="col-sm-1 align-self-center">
                             <div class="ih-item circle effect4 left_to_right"><a href="#">
-                                    <div class="img"><img src="{{ url('/') }}/storage/icon-decor-1.png" alt="img"
-                                            style="background-color: #ddb2c6"></div>
-                                    <div class="info">
+                                    <div class="img">
                                         <h3>1</h3>
+                                    </div>
+                                    <div class="info">
+                                        <img src="{{ url('/') }}/storage/icon-decor-1.png" class="rounded-circle"
+                                            alt="img" style="background-color: #ddb2c6; padding:5px;">
                                     </div>
                                 </a>
                             </div>
@@ -72,12 +80,14 @@
                         </div>
                     </div>
                     <div class="row d-flex justify-content-around">
-                        <div class="col-sm-1 align-content-center">
+                        <div class="col-sm-1 align-self-center">
                             <div class="ih-item circle effect4 left_to_right"><a href="#">
-                                    <div class="img"><img src="{{ url('/') }}/storage/icon-decor-2.png" alt="img"
-                                            style="background-color: #ddad9f"></div>
-                                    <div class="info">
+                                    <div class="img">
                                         <h3>2</h3>
+                                    </div>
+                                    <div class="info">
+                                        <img src="{{ url('/') }}/storage/icon-decor-2.png" class="rounded-circle"
+                                            alt="img" style="background-color: #C4D4B4; padding:5px;">
                                     </div>
                                 </a>
                             </div>
@@ -87,12 +97,14 @@
                         </div>
                     </div>
                     <div class="row d-flex justify-content-around">
-                        <div class="col-sm-1 align-content-center">
+                        <div class="col-sm-1 align-self-center">
                             <div class="ih-item circle effect4 left_to_right"><a href="#">
-                                    <div class="img"><img src="{{ url('/') }}/storage/icon-decor-3.png" alt="img"
-                                            style="background-color: #b4c0ca"></div>
-                                    <div class="info">
+                                    <div class="img">
                                         <h3>3</h3>
+                                    </div>
+                                    <div class="info">
+                                        <img src="{{ url('/') }}/storage/icon-decor-3.png" class="rounded-circle"
+                                            alt="img" style="background-color: #b4c0ca; padding:5px;">
                                     </div>
                                 </a>
                             </div>

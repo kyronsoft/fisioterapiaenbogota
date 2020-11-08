@@ -77,7 +77,7 @@
     <link rel="stylesheet" href="{{ url('/') }}/css/floating-wpp.min.css">
 </head>
 
-<body>
+<body style="background-color: #fff">
     <div id="app">
         @php
         $route = Route::current();
@@ -88,25 +88,25 @@
 
         @if ($idioma == 'ES')
             <section class="container-fluid d-flex justify-content-end teler-uno">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-teler">@php echo $teler[0]->spanish; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-center teler-dos">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-teler">@php echo $teler[1]->spanish; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-end teler-tres">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-teler">@php echo $teler[2]->spanish; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-center teler-cuatro">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-teler">@php echo $teler[3]->spanish; @endphp</div>
                     <div class="text-center mb-5">
                         <img class="animate__animated animate__zoomInDown"
@@ -116,31 +116,31 @@
             </section>
 
             <section class="container-fluid d-flex justify-content-end teler-cinco">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-teler">@php echo $teler[4]->spanish; @endphp</div>
                 </div>
             </section>
         @elseif ($idioma == 'EN')
             <section class="container-fluid d-flex justify-content-end teler-uno">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-teler">@php echo $teler[0]->english; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-center teler-dos">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-teler">@php echo $teler[1]->english; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-end teler-tres">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-teler">@php echo $teler[2]->english; @endphp</div>
                 </div>
             </section>
 
             <section class="container-fluid d-flex justify-content-center teler-cuatro">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-teler">@php echo $teler[3]->english; @endphp</div>
                     <div class="text-center mb-5">
                         <img class="animate__animated animate__zoomInDown"
@@ -150,7 +150,7 @@
             </section>
 
             <section class="container-fluid d-flex justify-content-end teler-cinco">
-                <div class="col-xs-6 col-md-8 align-self-center bg-white columna">
+                <div class="col-xs-10 col-md-6 align-self-center bg-white columna">
                     <div class="texto-teler">@php echo $teler[4]->english; @endphp</div>
                 </div>
             </section>
